@@ -1,0 +1,72 @@
+estrato  n    con top-level  con cualquier prof.  largo mediano (chars, top-level)
+0-2     100            19%                  19%         347
+3-9     100            25%                  45%         458
+>=10    100            44%                  82%         326
+total   300            29%
+
+por época (todos los estratos)
+  2009-2014: 22% de 58
+  2015-2019: 32% de 112
+  2020-2026: 30% de 130
+
+20 ejemplos al azar (con comentario)
+
+[3-9 pts=7 2019] Plectica – Diagram almost anything, together
+  Here's a link to an editable copy of one of those maps to get a feel for how it works (changes won't be saved) -- https://www.plectica.com/maps/embedded/CW8BMJWS3/edit ⏎ We've made some tradeoffs between flexibility and constraints/structure here -- any feedback is most welcome!
+
+[>=10 pts=22 2012] FeelHN - Sentiment analysis for HN comments [Stripe hackathon project]
+  Side note: the detective in me has noted that the mystery mods somehow knew this was a Stripe hackathon project, as the original title didn't have the tag. ⏎ whodunnit?
+
+[3-9 pts=4 2023] Make your live demos perfect by pre-recording them
+  I made this a while ago, but it's been so great for "live" demos that I think people would appreciate hearing about it.
+
+[>=10 pts=18 2018] Etherbots.io – Collectible fighting robots on the blockchain
+  Hey all, inspired by cryptokitties we set out to make a more complex game, but one that also had a great focus on the UI and making it fun. ⏎ I'm happy to answer any questions about web development, ethereum development or any thing else!
+
+[>=10 pts=12 2013] Daily email summaries to keep up with your team
+  We're super excited to launch this and itching to get some feedback. Please let us know here or through email ([email removido]) and we can set you up with a free account in exchange for helping us test everything out.
+
+[3-9 pts=3 2021] Cloudyali.io – Instantly Discover Your Entire AWS Cloud in One Place
+  Hi HN,  ⏎ CloudYali is a service to discover AWS Cloud resources across accounts and regions instantly. I have worked in AWS cloud for last 6 years, and many times I had to get an inventory of resources in one place. The tools I found were not adequate, including AWS Config. ⏎ Two major issues I found that needs to be fixed: ⏎ 1. Coverage: Many these tools cover a limited set of AWS Resources. e.g…
+
+[0-2 pts=1 2024] A community portal built using our open source platform
+  Here is the framework powering it: ⏎ https://github.com/Qbix/Platform ⏎ We are approaching the final runway for releasing Qbix Platform 2.0 – "Where No One Has Gone Before" ⏎ Feel free to poke around. It took us years to build this stuff, especially the videoconferencing piece. It's all re-usable functionality. I would love to get feedback on the site, the good the bad and the ugly. ⏎ A few other …
+
+[>=10 pts=51 2018] Value My Funnel – Figure out the value of a visitor, lead and customer
+  Just launched a simple tool that helps you understand the worth of your marketing funnel, down to a single site visitor. Would love any comments or feedback. ⏎ Full disclosure: we launched on ProductHunt today as well.
+
+[>=10 pts=11 2021] GNU sed eBook with hundreds of one-liners and exercises
+  Hello! ⏎ This post links to the free to read online version. ⏎ PDF/EPUB versions are available from Leanpub/Gumroad [0]. You can either get it as a separate book or part of bundles (which includes grep, awk, etc). ⏎ Code snippets, markdown source and other files related to the book can be obtained from this GitHub repo [1]. ⏎ Hope you find it useful. Happy learning :) ⏎ [0] https://learnbyexample.…
+
+[>=10 pts=55 2023] Internet Speed Test
+  Resizing box, got hugged. One sec.
+
+[0-2 pts=1 2026] Turn text prompts into playable battle pets with stats and skills
+  Hi HN, OP here. ⏎ I built Webattle because I felt most AI character generators stop at the "image" phase. I wanted to turn those generations into a fully playable RPG loop. ⏎ What makes it different: ⏎ Instant Video Generation: It doesn’t just generate a static sprite. The system creates a dynamic video loop for every Buddy, making them feel alive immediately after generation. ⏎ Visual Battles: Co…
+
+[3-9 pts=3 2025] Dashboard to measure the growth of nature-based carbon removal
+  HN - we’ve been measuring the engineered / durable carbon removal market for some time. Today we’re expanding to cover nature-based credits (afforestation, reforestation, agroforestry & more) ⏎ Carbon removal is a key tool in the climate toolbelt and we’re excited to bring more transparency and trust to the market through open data. ⏎ Let us know what you think!
+
+[3-9 pts=3 2021] The easiest way to review the code
+  Hi HN! ⏎ Code reviews can be painfully hard to review. Remember those with 1000+ LOC changed and multiple approves without any comment? Yeah (: ⏎ So we build a tool for easier review, that splits big changes into smaller parts. Also, you can see the architectural diagram for the changed code. It's useful for finding the entry file for review. And with navigation via file dependency, it's really ea…
+
+[0-2 pts=2 2021] Aerial Imagery and Hillshade Map Art of America's National Parks
+  A fellow HNer and I just yesterday released some maps where we take aerial and/or satellite imagery and combine it with hillshade to create high resolution map art. ⏎ The website is our work as well. Would love feedback from the HN crowd. Happy to answer any questions as well.
+
+[0-2 pts=2 2017] How to monitor Amazon customer questions?
+  Please give us feedback :)
+
+[3-9 pts=7 2020] Lightweight Article Text Extractor
+  - Retrieve relevant article text + metadata from a list of URLs ⏎ - Just upload a txt file with newline-separated URLs ⏎ - Download results in JSON or CSV format ⏎ - Your finished jobs persist on any device ⏎ - All new accounts get 500 unique URLs to scrape
+
+[>=10 pts=44 2015] Best Buy Uses WebGL to Create Interactive Appliances
+  This is a project my team has been working on a very long time and I'm really excited to see it in the wild. ⏎ All the 3d urls: ⏎  * 4-Door Refrigerator - http://esd.bbystatic.com/3d/5258309/  ⏎  ⏎  * Top-Load Washer - http://esd.bbystatic.com/3d/8822012/  ⏎   ⏎  * Front-Load Washer w/ Steam and Water Jets - http://esd.bbystatic.com/3d/4995705/
+
+[>=10 pts=13 2018] 99messages, a lightweight olark/intercom alternative
+  Hey folks, this is a small (couple weeks) project spun out of another chat product we're building. ⏎ The idea is that a lot of simpler "chat with us" use cases should not resort to intercom's complexity, and most other simple products really get it wrong by asking for name/email address first (rocket chat) or simply looking pretty ugly (olark). As a bonus, 99messages uses browser push notification…
+
+[0-2 pts=2 2026] Is This Agent Safe? Free AI tool security checker
+  Creator here. This scans any GitHub repo for security issues and gives an instant letter grade. Built it because 32% of OpenClaw skills scored F when we scanned them. Happy to answer questions.
+
+[>=10 pts=114 2016] Live streaming SVG plot microservice that just works
+  Hi, I'm Andrew and I had this stupid frustration: in order to have a live streaming web plot in my page I am required to either read 10+ pages of JS integration docs, or pay $20+/mo, and usually both. ⏎ In the world of HTML5, EventSource and all the modern infrastructure that shouldn't be so complicated! ⏎ So I crafted this microservice in a couple of days to solve this unfairness. ⏎ It generates …

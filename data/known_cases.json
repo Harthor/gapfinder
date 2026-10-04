@@ -1,0 +1,3448 @@
+[
+  {
+    "id": "syn-3282067",
+    "author": "human",
+    "title": "I want to be a good artist and get some ideas",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://news.ycombinator.com/item?id=3282067"
+    ],
+    "expected_item_ids": [
+      "show_hn:3282067"
+    ],
+    "meta": {
+      "date": "2011-11-27",
+      "points": 1,
+      "era": "2009-14",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    },
+    "pair_id": "pair-3282067"
+  },
+  {
+    "id": "syn-3282067-claude",
+    "author": "claude",
+    "title": "I want an online community for illustrators that hands me a fresh drawing prompt each morning plus exercises tailored to my weak spots, and lets others critique what I post.",
+    "pair_id": "pair-3282067",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://news.ycombinator.com/item?id=3282067"
+    ],
+    "expected_item_ids": [
+      "show_hn:3282067"
+    ],
+    "meta": {
+      "date": "2011-11-27",
+      "points": 1,
+      "era": "2009-14",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-4770645",
+    "author": "human",
+    "title": "I want to take a look at some place in real time",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://itunes.apple.com/us/app/live-vibe/id564543684?mt=8&ign-mpt=uo%3D4"
+    ],
+    "expected_item_ids": [
+      "show_hn:4770645"
+    ],
+    "meta": {
+      "date": "2012-11-11",
+      "points": 1,
+      "era": "2009-14",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    },
+    "pair_id": "pair-4770645"
+  },
+  {
+    "id": "syn-4770645-claude",
+    "author": "claude",
+    "title": "Is there an app that lets me see what's happening at a bar, park or venue right now, so I can check the crowd before I go?",
+    "pair_id": "pair-4770645",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://itunes.apple.com/us/app/live-vibe/id564543684?mt=8&ign-mpt=uo%3D4"
+    ],
+    "expected_item_ids": [
+      "show_hn:4770645"
+    ],
+    "meta": {
+      "date": "2012-11-11",
+      "points": 1,
+      "era": "2009-14",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-7034317",
+    "author": "human",
+    "title": "someone that needs to consult a database really often",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/epantry/django-sql-explorer"
+    ],
+    "expected_item_ids": [
+      "show_hn:7034317"
+    ],
+    "meta": {
+      "date": "2014-01-10",
+      "points": 14,
+      "era": "2009-14",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    },
+    "pair_id": "pair-7034317"
+  },
+  {
+    "id": "syn-7034317-claude",
+    "author": "claude",
+    "title": "I want a simple web tool where coworkers can pull data with lookup commands, save and pass them around, and also explore spreadsheet files, with an AI helper suggesting code.",
+    "pair_id": "pair-7034317",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/epantry/django-sql-explorer"
+    ],
+    "expected_item_ids": [
+      "show_hn:7034317"
+    ],
+    "meta": {
+      "date": "2014-01-10",
+      "points": 14,
+      "era": "2009-14",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-13406648",
+    "author": "human",
+    "title": "need to see graphics in the terminal while coding",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/daleroberts/itermplot"
+    ],
+    "expected_item_ids": [
+      "show_hn:13406648"
+    ],
+    "meta": {
+      "date": "2017-01-15",
+      "points": 1,
+      "era": "2015-19",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    },
+    "pair_id": "pair-13406648"
+  },
+  {
+    "id": "syn-13406648-claude",
+    "author": "claude",
+    "title": "I want my Python charts to show up right inside my command-line window when I run a script, instead of opening a separate window or saving image files.",
+    "pair_id": "pair-13406648",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/daleroberts/itermplot"
+    ],
+    "expected_item_ids": [
+      "show_hn:13406648"
+    ],
+    "meta": {
+      "date": "2017-01-15",
+      "points": 1,
+      "era": "2015-19",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-17181315",
+    "author": "human",
+    "title": "I need to see if different microservices can be combined.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/lucperkins/colossus"
+    ],
+    "expected_item_ids": [
+      "show_hn:17181315"
+    ],
+    "meta": {
+      "date": "2018-05-29",
+      "points": 119,
+      "era": "2015-19",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    },
+    "pair_id": "pair-17181315"
+  },
+  {
+    "id": "syn-17181315-claude",
+    "author": "claude",
+    "title": "Looking for a sample codebase showing how to split a server application into small independent pieces in different programming languages that call each other and run on a local container cluster.",
+    "pair_id": "pair-17181315",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/lucperkins/colossus"
+    ],
+    "expected_item_ids": [
+      "show_hn:17181315"
+    ],
+    "meta": {
+      "date": "2018-05-29",
+      "points": 119,
+      "era": "2015-19",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-9373724",
+    "author": "human",
+    "title": "I travel a lot and need the right stuff for it.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://news.ycombinator.com/item?id=9373724"
+    ],
+    "expected_item_ids": [
+      "show_hn:9373724"
+    ],
+    "meta": {
+      "date": "2015-04-14",
+      "points": 14,
+      "era": "2015-19",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    },
+    "pair_id": "pair-9373724"
+  },
+  {
+    "id": "syn-9373724-claude",
+    "author": "claude",
+    "title": "Where can I find a curated list of the best travel equipment, bags and gadgets for people who work remotely while hopping between countries?",
+    "pair_id": "pair-9373724",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://news.ycombinator.com/item?id=9373724"
+    ],
+    "expected_item_ids": [
+      "show_hn:9373724"
+    ],
+    "meta": {
+      "date": "2015-04-14",
+      "points": 14,
+      "era": "2015-19",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-40167406",
+    "author": "human",
+    "title": "I'm learning chemistry",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "http://mendeleej.com/"
+    ],
+    "expected_item_ids": [
+      "show_hn:40167406"
+    ],
+    "meta": {
+      "date": "2024-04-26",
+      "points": 41,
+      "era": "2020-26",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    },
+    "pair_id": "pair-40167406"
+  },
+  {
+    "id": "syn-40167406-claude",
+    "author": "claude",
+    "title": "I'd like a website where I can explore chemical elements and see how their properties, like density or melting point, change across the chart with colors and graphs.",
+    "pair_id": "pair-40167406",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "http://mendeleej.com/"
+    ],
+    "expected_item_ids": [
+      "show_hn:40167406"
+    ],
+    "meta": {
+      "date": "2024-04-26",
+      "points": 41,
+      "era": "2020-26",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-33480679",
+    "author": "human",
+    "title": "I need quick personalized clothing",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://www.1sewn.com/"
+    ],
+    "expected_item_ids": [
+      "show_hn:33480679"
+    ],
+    "meta": {
+      "date": "2022-11-05",
+      "points": 49,
+      "era": "2020-26",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    },
+    "pair_id": "pair-33480679",
+    "leakage_flag": true
+  },
+  {
+    "id": "syn-33480679-claude",
+    "author": "claude",
+    "title": "I want to say out loud what artwork I'd like, have AI create the image, and buy a custom tee or sweatshirt with that picture shipped to my home.",
+    "pair_id": "pair-33480679",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://www.1sewn.com/"
+    ],
+    "expected_item_ids": [
+      "show_hn:33480679"
+    ],
+    "meta": {
+      "date": "2022-11-05",
+      "points": 49,
+      "era": "2020-26",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-3377729",
+    "author": "claude",
+    "title": "I'd like a calendar app on my phone where each month is illustrated with pictures I took myself.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "http://itunes.apple.com/us/app/photocalendar-lite/id424081062?mt=8"
+    ],
+    "expected_item_ids": [
+      "show_hn:3377729"
+    ],
+    "meta": {
+      "date": "2011-12-21",
+      "points": 1,
+      "era": "2009-14",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-2226207",
+    "author": "claude",
+    "title": "Looking for a casual geography game where I plan a journey across several real places and must visit them all before my gas or time is gone.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://news.ycombinator.com/item?id=2226207"
+    ],
+    "expected_item_ids": [
+      "show_hn:2226207"
+    ],
+    "meta": {
+      "date": "2011-02-16",
+      "points": 2,
+      "era": "2009-14",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-5287548",
+    "author": "claude",
+    "title": "I keep writing repetitive code to query my product analytics service for user activity split by various criteria and then combine the numbers.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/sidchilling/mixpanel_select"
+    ],
+    "expected_item_ids": [
+      "show_hn:5287548"
+    ],
+    "meta": {
+      "date": "2013-02-26",
+      "points": 1,
+      "era": "2009-14",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-4965299",
+    "author": "claude",
+    "title": "I want to play the traditional Nepali tigers-and-goats strategy board game against other people on my Android phone.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://news.ycombinator.com/item?id=4965299"
+    ],
+    "expected_item_ids": [
+      "show_hn:4965299"
+    ],
+    "meta": {
+      "date": "2012-12-25",
+      "points": 3,
+      "era": "2009-14",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-8481751",
+    "author": "claude",
+    "title": "I want a lightweight, nice-looking browser front end to look things up in the full-text index I host myself, without installing a heavy admin dashboard.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/romansanchez/Calaca"
+    ],
+    "expected_item_ids": [
+      "show_hn:8481751"
+    ],
+    "meta": {
+      "date": "2014-10-20",
+      "points": 11,
+      "era": "2009-14",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-2774322",
+    "author": "claude",
+    "title": "I lose too much time checking a tech news aggregator all day; I'd rather get just the top stories once a day by email.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://news.ycombinator.com/item?id=2774322"
+    ],
+    "expected_item_ids": [
+      "show_hn:2774322"
+    ],
+    "meta": {
+      "date": "2011-07-17",
+      "points": 14,
+      "era": "2009-14",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-8813313",
+    "author": "claude",
+    "title": "I want a deep learning library for a lazy, strongly typed language where layers are just values I can plug together and experiment with.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/jbarrow/LambdaNet"
+    ],
+    "expected_item_ids": [
+      "show_hn:8813313"
+    ],
+    "meta": {
+      "date": "2014-12-30",
+      "points": 56,
+      "era": "2009-14",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-2229924",
+    "author": "claude",
+    "title": "I'd like to wager on myself so that breaking a personal pledge actually hurts my wallet.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://news.ycombinator.com/item?id=2229924"
+    ],
+    "expected_item_ids": [
+      "show_hn:2229924"
+    ],
+    "meta": {
+      "date": "2011-02-17",
+      "points": 22,
+      "era": "2009-14",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-2205938",
+    "author": "claude",
+    "title": "I want a to-do list and calendar with social features so friends can see and join my plans.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "http://www.socl.in/"
+    ],
+    "expected_item_ids": [
+      "show_hn:2205938"
+    ],
+    "meta": {
+      "date": "2011-02-11",
+      "points": 10,
+      "era": "2009-14",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-2879393",
+    "author": "claude",
+    "title": "I want a recurring monthly package of foreign sweets and treats shipped to my home.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://news.ycombinator.com/item?id=2879393"
+    ],
+    "expected_item_ids": [
+      "show_hn:2879393"
+    ],
+    "meta": {
+      "date": "2011-08-12",
+      "points": 20,
+      "era": "2009-14",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-17800530",
+    "author": "claude",
+    "title": "I need to run computations on encrypted data without decrypting it, fast enough by using the GPU from Python.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/nucypher/nufhe"
+    ],
+    "expected_item_ids": [
+      "show_hn:17800530"
+    ],
+    "meta": {
+      "date": "2018-08-20",
+      "points": 8,
+      "era": "2015-19",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-19286008",
+    "author": "claude",
+    "title": "I'm learning how manipulator arms are modeled and controlled from a standard course and want its reference routines rewritten for a fast scientific computing language.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/ferrolho/ModernRoboticsBook.jl"
+    ],
+    "expected_item_ids": [
+      "show_hn:19286008"
+    ],
+    "meta": {
+      "date": "2019-03-01",
+      "points": 6,
+      "era": "2015-19",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-10384493",
+    "author": "claude",
+    "title": "I need a file transfer server component for my .NET application that keeps uploads in cloud storage rather than on the local disk.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/FubarDevelopment/FtpServer"
+    ],
+    "expected_item_ids": [
+      "show_hn:10384493"
+    ],
+    "meta": {
+      "date": "2015-10-14",
+      "points": 3,
+      "era": "2015-19",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-18642575",
+    "author": "claude",
+    "title": "I want a native editor and REPL for writing Lisp programs on a PC without a Unix compatibility layer.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/sharplispers/cormanlisp/issues/40"
+    ],
+    "expected_item_ids": [
+      "show_hn:18642575"
+    ],
+    "meta": {
+      "date": "2018-12-09",
+      "points": 7,
+      "era": "2015-19",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-13116455",
+    "author": "claude",
+    "title": "I want a small command-line tool to compress and decompress files with a classic entropy-coding algorithm, mainly to learn how compression works.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/MinhasKamal/FileSqueezer"
+    ],
+    "expected_item_ids": [
+      "show_hn:13116455"
+    ],
+    "meta": {
+      "date": "2016-12-06",
+      "points": 2,
+      "era": "2015-19",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-21462993",
+    "author": "claude",
+    "title": "I need to keep tabs on many moving vehicles or animals through video footage in Python, choosing between different neural detectors.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/adipandas/multi-object-tracker"
+    ],
+    "expected_item_ids": [
+      "show_hn:21462993"
+    ],
+    "meta": {
+      "date": "2019-11-06",
+      "points": 105,
+      "era": "2015-19",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-9132881",
+    "author": "claude",
+    "title": "I'd like Python expressions to be evaluated only when their values are actually needed, like in Haskell.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/llllllllll/lazy_python"
+    ],
+    "expected_item_ids": [
+      "show_hn:9132881"
+    ],
+    "meta": {
+      "date": "2015-03-02",
+      "points": 88,
+      "era": "2015-19",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-19261376",
+    "author": "claude",
+    "title": "I want an alert whenever a company I watch starts a new open-source project on its code hosting account.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/follow-github-organisation/follow-github-organisation"
+    ],
+    "expected_item_ids": [
+      "show_hn:19261376"
+    ],
+    "meta": {
+      "date": "2019-02-27",
+      "points": 59,
+      "era": "2015-19",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-13551907",
+    "author": "claude",
+    "title": "I'm looking for an unbiased, continuously maintained record of what states and public authorities across the globe have decided and done.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/govtra/govtracker-data/blob/master/README.md"
+    ],
+    "expected_item_ids": [
+      "show_hn:13551907"
+    ],
+    "meta": {
+      "date": "2017-02-02",
+      "points": 12,
+      "era": "2015-19",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-17719720",
+    "author": "claude",
+    "title": "From my terminal I want to see who has worked on a code project, how much each person did and when each was most recently active.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/gruns/gitauthors"
+    ],
+    "expected_item_ids": [
+      "show_hn:17719720"
+    ],
+    "meta": {
+      "date": "2018-08-08",
+      "points": 22,
+      "era": "2015-19",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-22843070",
+    "author": "claude",
+    "title": "On Linux under a modern non-X11 display server, I want to change what a few keys do on my notebook so it acts like my compact external board.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://github.com/arnarg/waybind"
+    ],
+    "expected_item_ids": [
+      "show_hn:22843070"
+    ],
+    "meta": {
+      "date": "2020-04-11",
+      "points": 3,
+      "era": "2020-26",
+      "text_origin": "current",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-47472735",
+    "author": "claude",
+    "title": "I want a fun quiz about which habits with East Asian eating utensils are considered bad manners.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://hashihabits.com"
+    ],
+    "expected_item_ids": [
+      "show_hn:47472735"
+    ],
+    "meta": {
+      "date": "2026-03-21",
+      "points": 2,
+      "era": "2020-26",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-46434650",
+    "author": "claude",
+    "title": "After a head trauma I keep forgetting things and can't plan my day; I want a phone app built with rehab therapists to help me cope.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://recallify.ai/"
+    ],
+    "expected_item_ids": [
+      "show_hn:46434650"
+    ],
+    "meta": {
+      "date": "2025-12-30",
+      "points": 2,
+      "era": "2020-26",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-44939278",
+    "author": "claude",
+    "title": "Before a trip to Europe from North Africa I need a proof-of-coverage document that consulates accept, available immediately online.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://e-mai.ma/calculateur-dassurance-voyage-maroc/"
+    ],
+    "expected_item_ids": [
+      "show_hn:44939278"
+    ],
+    "meta": {
+      "date": "2025-08-18",
+      "points": 1,
+      "era": "2020-26",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-36030350",
+    "author": "claude",
+    "title": "Very long comment sections on a tech forum are hard to follow on my phone; I want an app that lets me go through one reply chain at a time.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://apps.apple.com/us/app/hackernewt-for-hacker-news/id6448201970"
+    ],
+    "expected_item_ids": [
+      "show_hn:36030350"
+    ],
+    "meta": {
+      "date": "2023-05-22",
+      "points": 94,
+      "era": "2020-26",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-30673502",
+    "author": "claude",
+    "title": "I want to scribble notes on a web page I'm reading and pass that marked-up copy along to someone else.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://www.smort.io/"
+    ],
+    "expected_item_ids": [
+      "show_hn:30673502"
+    ],
+    "meta": {
+      "date": "2022-03-14",
+      "points": 86,
+      "era": "2020-26",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-30183465",
+    "author": "claude",
+    "title": "Our cloud server invoice keeps growing and the team loses hours buying discounted long-term capacity by hand; we want a service that lowers it for us.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://www.usage.ai/"
+    ],
+    "expected_item_ids": [
+      "show_hn:30183465"
+    ],
+    "meta": {
+      "date": "2022-02-02",
+      "points": 123,
+      "era": "2020-26",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-41298789",
+    "author": "claude",
+    "title": "I want visitors' entries on my site's contact fields to arrive by email without me running any server code.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://mailik.dev/"
+    ],
+    "expected_item_ids": [
+      "show_hn:41298789"
+    ],
+    "meta": {
+      "date": "2024-08-20",
+      "points": 29,
+      "era": "2020-26",
+      "text_origin": "native",
+      "worksheet": "synthetic_worksheet.md"
+    }
+  },
+  {
+    "id": "syn-3615558",
+    "author": "claude",
+    "title": "I'm new in San Francisco and want one page listing upcoming tech and founder gatherings and mixers, so I don't have to search multiple sites.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "http://www.howdynetwork.com"
+    ],
+    "expected_item_ids": [
+      "show_hn:3615558"
+    ],
+    "meta": {
+      "date": "2012-02-21",
+      "points": 5,
+      "era": "2009-14",
+      "text_origin": "author_comment",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-2386860",
+    "author": "claude",
+    "title": "I want to draw app screen layouts inside my slideshow software so bosses and customers without coding skills can help shape the interface with a tool they already know.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "http://www.powermockup.com/"
+    ],
+    "expected_item_ids": [
+      "show_hn:2386860"
+    ],
+    "meta": {
+      "date": "2011-03-30",
+      "points": 6,
+      "era": "2009-14",
+      "text_origin": "author_comment",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-8757899",
+    "author": "claude",
+    "title": "I'm looking for an extremely slim cover for my Apple phone that protects it without adding bulk.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "http://www.totalleecase.com/the-scarf"
+    ],
+    "expected_item_ids": [
+      "show_hn:8757899"
+    ],
+    "meta": {
+      "date": "2014-12-16",
+      "points": 13,
+      "era": "2009-14",
+      "text_origin": "author_comment",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-4439874",
+    "author": "claude",
+    "title": "I want a free, self-hosted tool that pulls my subscription payment data and shows figures like monthly recurring income, cancellations and customer lifetime value, without handing my finances to an outside company.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://board.zapier.com/"
+    ],
+    "expected_item_ids": [
+      "show_hn:4439874"
+    ],
+    "meta": {
+      "date": "2012-08-27",
+      "points": 42,
+      "era": "2009-14",
+      "text_origin": "author_comment",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-14460128",
+    "author": "claude",
+    "title": "Is there a desktop app with a visual interface for managing my PHP project's package dependencies, instead of typing commands in the terminal?",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "http://downloads.getcomposercat.com/"
+    ],
+    "expected_item_ids": [
+      "show_hn:14460128"
+    ],
+    "meta": {
+      "date": "2017-06-01",
+      "points": 1,
+      "era": "2015-19",
+      "text_origin": "author_comment",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-13995831",
+    "author": "claude",
+    "title": "Blog syndication only exposes the most recent handful of posts. I want a service that keeps a permanent history so I can look up old entries, and can ping me when something new appears.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://app.pub.center"
+    ],
+    "expected_item_ids": [
+      "show_hn:13995831"
+    ],
+    "meta": {
+      "date": "2017-03-30",
+      "points": 8,
+      "era": "2015-19",
+      "text_origin": "author_comment",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-12848656",
+    "author": "claude",
+    "title": "As a researcher, I want to make a simple personal homepage without learning web coding, and still be able to download the files or host it myself.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "http://my.academic.bio"
+    ],
+    "expected_item_ids": [
+      "show_hn:12848656"
+    ],
+    "meta": {
+      "date": "2016-11-01",
+      "points": 113,
+      "era": "2015-19",
+      "text_origin": "author_comment",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-11889095",
+    "author": "claude",
+    "title": "I'm looking for a new online publication with thoughtful, idea-driven short stories about the future and space, put out as periodic editions.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "http://compellingsciencefiction.com/issue2.html"
+    ],
+    "expected_item_ids": [
+      "show_hn:11889095"
+    ],
+    "meta": {
+      "date": "2016-06-12",
+      "points": 18,
+      "era": "2015-19",
+      "text_origin": "author_comment",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-46716450",
+    "author": "claude",
+    "title": "How can I make an AI coding assistant confirm its changes by running live endpoint checks from the command line, so it catches and repairs its own mistakes rather than making things up?",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://apidog.com/blog/apidog-cli-claude-skills-api-test-automation-guide/"
+    ],
+    "expected_item_ids": [
+      "show_hn:46716450"
+    ],
+    "meta": {
+      "date": "2026-01-22",
+      "points": 4,
+      "era": "2020-26",
+      "text_origin": "author_comment",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-23340711",
+    "author": "claude",
+    "title": "Looking for a minimalist, text-only forum with voting where followers of Indian faith traditions can share links and discuss spiritual topics.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://hindumediawiki.com"
+    ],
+    "expected_item_ids": [
+      "show_hn:23340711"
+    ],
+    "meta": {
+      "date": "2020-05-28",
+      "points": 24,
+      "era": "2020-26",
+      "text_origin": "author_comment",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-6999604",
+    "author": "claude",
+    "title": "I want a news site that automatically groups stories about the same event from many outlets and shows the source that reported it first.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "http://newsplusplus.com/"
+    ],
+    "expected_item_ids": [
+      "show_hn:6999604"
+    ],
+    "meta": {
+      "date": "2014-01-02",
+      "points": 3,
+      "era": "2009-14",
+      "text_origin": "author_reply",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-5709724",
+    "author": "claude",
+    "title": "I want a website where neighbors can rent everyday items to each other, with identity checks and trust ratings so strangers feel safe lending things.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://www.rentything.com/"
+    ],
+    "expected_item_ids": [
+      "show_hn:5709724"
+    ],
+    "meta": {
+      "date": "2013-05-15",
+      "points": 6,
+      "era": "2009-14",
+      "text_origin": "author_reply",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-2341034",
+    "author": "claude",
+    "title": "Is there a community site where people vote audio show episodes up or down, and you can listen to the popular ones straight from the main listing?",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "http://podcastle.us"
+    ],
+    "expected_item_ids": [
+      "show_hn:2341034"
+    ],
+    "meta": {
+      "date": "2011-03-18",
+      "points": 40,
+      "era": "2009-14",
+      "text_origin": "author_reply",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-2320614",
+    "author": "claude",
+    "title": "I want to sort my contacts into separate friend groups and share posts only with specific groups, instead of broadcasting to everyone.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "http://www.circular.io"
+    ],
+    "expected_item_ids": [
+      "show_hn:2320614"
+    ],
+    "meta": {
+      "date": "2011-03-13",
+      "points": 33,
+      "era": "2009-14",
+      "text_origin": "author_reply",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-11202018",
+    "author": "claude",
+    "title": "I need a service that keeps checking my website and alerts me about search ranking problems, slow loading, privacy trackers and downtime.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://nonstop.qa"
+    ],
+    "expected_item_ids": [
+      "show_hn:11202018"
+    ],
+    "meta": {
+      "date": "2016-03-01",
+      "points": 3,
+      "era": "2015-19",
+      "text_origin": "author_reply",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-13063439",
+    "author": "claude",
+    "title": "How can I turn the back of my notebook computer's lid into a writable surface so I can show a message to people nearby at cafes or tech gatherings?",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://www.sketchcase.com/diy/"
+    ],
+    "expected_item_ids": [
+      "show_hn:13063439"
+    ],
+    "meta": {
+      "date": "2016-11-29",
+      "points": 4,
+      "era": "2015-19",
+      "text_origin": "author_reply",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-15180526",
+    "author": "claude",
+    "title": "I'm looking for a tiny, lightweight Python library for building small websites, with simple URL routing that also supports pattern-based paths.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://icepy.readthedocs.io/en/latest/tutorial.html"
+    ],
+    "expected_item_ids": [
+      "show_hn:15180526"
+    ],
+    "meta": {
+      "date": "2017-09-06",
+      "points": 53,
+      "era": "2015-19",
+      "text_origin": "author_reply",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-9522489",
+    "author": "claude",
+    "title": "I need a simple web service that can shuffle cards, draw cards and keep piles for card games, so I don't have to write that logic myself.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "http://deckofcardsapi.com"
+    ],
+    "expected_item_ids": [
+      "show_hn:9522489"
+    ],
+    "meta": {
+      "date": "2015-05-11",
+      "points": 255,
+      "era": "2015-19",
+      "text_origin": "author_reply",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-41599941",
+    "author": "claude",
+    "title": "I want to see what the newest iPhone sells for in different countries, converted into my own money, to find where it's cheapest to buy.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "https://iphone-cost-compare.vercel.app/"
+    ],
+    "expected_item_ids": [
+      "show_hn:41599941"
+    ],
+    "meta": {
+      "date": "2024-09-20",
+      "points": 2,
+      "era": "2020-26",
+      "text_origin": "author_reply",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "syn-22318915",
+    "author": "claude",
+    "title": "I want a cheap app that quickly tidies my overflowing mailbox by bulk-removing newsletters and promo messages and stopping future ones, without selling my information to advertisers.",
+    "kind": "synthetic",
+    "description": "",
+    "expected_urls": [
+      "http://slimboxapp.com"
+    ],
+    "expected_item_ids": [
+      "show_hn:22318915"
+    ],
+    "meta": {
+      "date": "2020-02-13",
+      "points": 11,
+      "era": "2020-26",
+      "text_origin": "author_reply",
+      "worksheet": "synthetic_worksheet_2.md"
+    }
+  },
+  {
+    "id": "real-a6c38804",
+    "kind": "real",
+    "title": "Everyone Builds Agents, Nobody Watches Them",
+    "description": "This neighborhood has self-evolving agents, agents that bypass site blocks, agents reading financial markets (4), plus mature observability and orchestration — but only for infrastructure, not for agents. The missing piece is an agent-native observability and governance layer: tracing what autonomous agents did on the web, what they mutated in their own genome, and kill-switches when behavior drifts. Every ingredient for runaway agents exists here; the monitoring plane for them does not. That gap is bounded, urgent, and shippable as a lightweight SDK plus dashboard.",
+    "verified_by": [
+      "manual",
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "a6c38804",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "manual:yes",
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/AgentOps-AI/agentops",
+      "https://github.com/langfuse/langfuse",
+      "https://github.com/mlflow/mlflow"
+    ],
+    "expected_item_ids": [
+      "github:AgentOps-AI/agentops",
+      "github:langfuse/langfuse",
+      "github:mlflow/mlflow"
+    ]
+  },
+  {
+    "id": "real-25a4c842",
+    "kind": "real",
+    "title": "Diffusion Serving Infrastructure, Not Just LLM Serving",
+    "description": "The neighborhood contains mature LLM inference infrastructure (TPU kernels, MoE mapping, token-phase optimization, edge benchmarks like 3259) and a growing wave of production-bound diffusion applications (climate 1633, medical 2518, time series 2955), with only a hobbyist C++ port bridging them. What's structurally absent is serious serving-systems work for diffusion workloads: batching across denoising steps, caching, hardware-aware schedulers—the vLLM equivalent for diffusion. The internal structure of the set predicts this piece should exist, and it doesn't.",
+    "verified_by": [
+      "manual",
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "25a4c842",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "manual:yes",
+        "web:yes"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/vllm-project/vllm-omni",
+      "https://github.com/xdit-project/xDiT"
+    ],
+    "expected_item_ids": [
+      "github:vllm-project/vllm-omni",
+      "github:xdit-project/xDiT"
+    ]
+  },
+  {
+    "id": "real-6f3848c8",
+    "kind": "real",
+    "title": "Runtime Governance for Commercial Agent Teams",
+    "description": "3599 argues human-in-the-loop is theater, 3600 offers a toy deterministic safety gate, 1348 formalizes coalition dynamics, while 3467 and 750 sell agent teams handling real money and professional work. The gap is glaring: there is no production-grade policy engine that sits between multi-agent decisions and execution—programmable permissions, spend limits, audit trails, and escalation logic for agent teams. Everyone shipping commercial agents needs it; the only artifact here is a no-deps Python script.",
+    "verified_by": [
+      "manual",
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "6f3848c8",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "manual:partially",
+        "web:partially",
+        "web:yes"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/microsoft/agent-governance-toolkit",
+      "https://github.com/openlegion-ai/openlegion",
+      "https://runcycles.io/",
+      "https://preloop.ai",
+      "https://www.osohq.com/"
+    ],
+    "expected_item_ids": [
+      "github:microsoft/agent-governance-toolkit",
+      "github:openlegion-ai/openlegion",
+      "show_hn:47417096",
+      "show_hn:46693373",
+      "show_hn:23976597"
+    ]
+  },
+  {
+    "id": "real-197bf4f9",
+    "kind": "real",
+    "title": "The Glue Layer for Self-Hosters",
+    "description": "This neighborhood is dense with self-hosted apps (identity, marketing, finance, assets, media) but contains nothing that unifies them: no orchestration, SSO wiring, backup, or cross-app dashboard tool. Keycloak exists precisely because each of these apps has its own login, yet integrating it into each one is a manual chore. The missing piece is an opinionated 'self-hosted stack composer' that deploys these apps pre-wired with shared auth, backups, and monitoring — the Vercel of homelab back-offices.",
+    "verified_by": [
+      "manual",
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "197bf4f9",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "manual:yes",
+        "web:no",
+        "web:partially",
+        "web:yes"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/YunoHost/yunohost",
+      "https://github.com/azukaar/Cosmos-Server",
+      "https://github.com/runtipi/runtipi",
+      "https://github.com/SimpleHomelab/Deployrr",
+      "https://www.cloudron.io/?showhn",
+      "https://coolify.io/",
+      "https://umbrel.com"
+    ],
+    "expected_item_ids": [
+      "github:YunoHost/yunohost",
+      "github:azukaar/Cosmos-Server",
+      "github:runtipi/runtipi",
+      "github:SimpleHomelab/Deployrr",
+      "show_hn:9976992",
+      "show_hn:30854912",
+      "show_hn:31657527"
+    ]
+  },
+  {
+    "id": "real-ecad36a5",
+    "kind": "real",
+    "title": "The Orchestrator That Spends Your Tokens Wisely",
+    "description": "The neighborhood has quota monitors, a fallback gateway, an agent-building SDK, and cautionary tales of multi-agent waste — but no tool that actively decides which task deserves which model at which cost. Monitoring and routing exist; budget-aware task allocation does not. The obvious missing piece is a 'chief-of-staff' layer that assigns cheap models to boilerplate and expensive ones to hard reasoning, enforcing a spend budget per project. Every ingredient is already open-source in this list.",
+    "verified_by": [
+      "manual",
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "ecad36a5",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "manual:yes",
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/BerriAI/litellm",
+      "https://github.com/lm-sys/RouteLLM",
+      "https://github.com/musistudio/claude-code-router"
+    ],
+    "expected_item_ids": [
+      "github:BerriAI/litellm",
+      "github:lm-sys/RouteLLM",
+      "github:musistudio/claude-code-router"
+    ]
+  },
+  {
+    "id": "real-01fe2dbe",
+    "kind": "real",
+    "title": "Zero-Knowledge Self-Hosted Messaging",
+    "description": "The neighborhood covers self-hosted networking (Headscale), encrypted storage (Cryptomator), zero-knowledge sharing (PrivateBin), and open email (Thunderbird) — every pillar of a sovereign personal stack except real-time messaging. The privacy stack here handles data at rest and data shared asynchronously, but the highest-value channel, chat, is only represented by WeChat hacks that stay inside a closed platform. The logically implied missing piece is a Headscale-style self-hosted, E2E messaging control server with the polish of these clients.",
+    "verified_by": [
+      "manual",
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "01fe2dbe",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "manual:yes",
+        "web:yes"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/element-hq/synapse",
+      "https://simplex.chat/",
+      "https://rocket.chat/"
+    ],
+    "expected_item_ids": [
+      "github:element-hq/synapse",
+      "show_hn:24862645",
+      "show_hn:10112932"
+    ]
+  },
+  {
+    "id": "real-89c010f2",
+    "kind": "real",
+    "title": "Sandboxes Everywhere, but No Agent Firewall",
+    "description": "Three separate projects (microsandbox, CubeSandbox, OpenShell) solve containment — keeping agents from breaking out — and others (codex, herdr) multiply agent activity. But nothing here governs what agents are *allowed* to do inside their permitted scope: no policy engine, permission prompt system, or audit log of agent actions across tools. The gap is an 'agent firewall': a lightweight layer that intercepts, logs, and approves agent side-effects (file writes, network calls, purchases) across any sandbox. Sniffnet-style observability exists for packets but not for agent intent.",
+    "verified_by": [
+      "manual",
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "89c010f2",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "manual:partially",
+        "web:yes"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/luckyPipewrench/pipelock",
+      "https://preloop.ai",
+      "https://github.com/preloop/preloop"
+    ],
+    "expected_item_ids": [
+      "github:luckyPipewrench/pipelock",
+      "show_hn:46693373",
+      "show_hn:49083015"
+    ]
+  },
+  {
+    "id": "part-e1cc171a",
+    "kind": "partial",
+    "title": "Agents Get Credit Cards Before They Get Credit Scores",
+    "description": "Agents can now spend real money, install unverified skills that may not even exist, inherit unsafe behaviors invisibly through distillation, and we can benchmark their trajectories after the fact or gate them with static guardrails. What's missing is the middle layer: a runtime identity, reputation, and attestation system that scores an agent's trustworthiness before it acts—the equivalent of a credit score plus signed provenance for skills and behaviors. The pieces define the gap precisely: money, capability acquisition, and behavioral inheritance all lack a trust registry. An indie builder could ship a signed skill registry with reputation scores as v1.",
+    "verified_by": [
+      "manual",
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "e1cc171a",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "manual:partially",
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "github:erc-8004/erc-8004-contracts"
+      ]
+    },
+    "expected_urls": [
+      "https://eips.ethereum.org/EIPS/eip-8004",
+      "https://jfrog.com/ai-catalog/skills-registry/",
+      "https://superagentskill.com/",
+      "https://snyk.io/blog/snyk-tessl-partnership/",
+      "https://arxiv.org/pdf/2603.18829",
+      "https://agentgraph.co",
+      "https://docs.agent.tech/agentquay/trust-score/",
+      "https://agentfacts.org/blockchain",
+      "https://knowthat.ai/",
+      "https://agentstamp.org/",
+      "https://www.mnemom.ai/blog/mnemom-research/credit-scores-for-ai-agents/",
+      "https://developer.nvidia.com/blog/nvidia-verified-agent-skills-provide-capability-governance-for-ai-agents/",
+      "https://eco.com/support/en/articles/13221214-what-is-erc-8004-the-ethereum-standard-enabling-trustless-ai-agents",
+      "https://datatracker.ietf.org/doc/draft-sharif-apki-agent-pki/00/",
+      "https://github.com/nolabs-ai/agent-sign"
+    ],
+    "expected_item_ids": [
+      "github:erc-8004/erc-8004-contracts"
+    ]
+  },
+  {
+    "id": "part-aca98da0",
+    "kind": "partial",
+    "title": "Everyone Manages Agents, Nobody Grades Them",
+    "description": "The neighborhood has agent employment (Multica), agent reliability harnesses (Archon), fleet orchestration (Orca), agents with memory (Rowboat), and agent debugging (DevTools-for-agents) — a full HR stack minus one piece: performance evaluation. There is no tool that scores agent output quality over time, compares agents against each other on real tasks, or decides which agent deserves more autonomy. If agents are 'teammates,' the missing product is their performance review — a benchmark/trust layer feeding back into task assignment. This is the piece the whole stack implicitly assumes exists.",
+    "verified_by": [
+      "manual",
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "aca98da0",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "manual:partially",
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://huggingface.co/spaces/galileo-ai/agent-leaderboard",
+      "https://deepeval.com/guides/guides-ai-agent-evaluation",
+      "https://www.langchain.com/langsmith/evaluation",
+      "https://hal.cs.princeton.edu/",
+      "https://cleanlab.ai/blog/agent-tlm-hallucination-benchmarking/"
+    ],
+    "expected_item_ids": [
+      "show_hn:44593356"
+    ]
+  },
+  {
+    "id": "part-81981bec",
+    "kind": "partial",
+    "title": "Everyone builds cloners and detectors; nobody builds provenance",
+    "description": "The neighborhood is dense with generation power — tokenizer-free cloning (6), expressive open TTS families, training-free speech editing — and with reactive forensics that admit they're losing (3138 documents a temporal generalization gap, 2894 retreats to interpretable classical methods). The structurally missing piece is generation-side provenance: robust audio watermarking and signed voice-consent infrastructure baked into these open TTS stacks. Detection-only defense is provably brittle against models that didn't exist when the detector was trained; the ecosystem needs cryptographic attribution at synthesis time. Nothing in the set touches it.",
+    "verified_by": [
+      "manual",
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "81981bec",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "manual:partially",
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/and-mill/Awesome-GenAI-Watermarking",
+      "https://www.resemble.ai/learn/models/chatterbox-turbo",
+      "https://elevenlabs.io/blog/synthid",
+      "https://sokaudiowm.github.io/",
+      "https://arxiv.org/pdf/2605.01515"
+    ],
+    "expected_item_ids": [
+      "github:and-mill/Awesome-GenAI-Watermarking"
+    ]
+  },
+  {
+    "id": "part-75b40b56",
+    "kind": "partial",
+    "title": "A Metric-Trustworthiness Auditor for Practitioners",
+    "description": "Four ideas diagnose that metrics deceive—prompt-optimization gains are noise, proxies fail per-segment, reliability is nonuniform, and competing measurement scores yield divergent conclusions—yet each offers only a bespoke academic framework. The missing piece is a general-purpose tool that takes any evaluation pipeline and reports where its metrics are directionally unreliable: per-segment sign flips, run-to-run variance versus claimed effect, and stratum-level confidence. The neighborhood has four diagnoses and zero product. Any team running A/B tests or LLM evals would pay for this.",
+    "verified_by": [
+      "manual",
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "75b40b56",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "manual:partially",
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "show_hn:27240243"
+      ]
+    },
+    "expected_urls": [
+      "https://www.statsig.com/comparison/dev-first-alternative-statsig",
+      "https://www.geteppo.com/blog/what-are-guardrail-metrics-with-examples",
+      "https://www.microsoft.com/en-us/research/group/experimentation-platform-exp/articles/patterns-of-trustworthy-experimentation-post-experiment-stage/",
+      "https://www.evidentlyai.com/llm-guide/llm-evaluation-metrics",
+      "https://www.confident-ai.com/blog/llm-evaluation-metrics-everything-you-need-for-llm-evaluation"
+    ],
+    "expected_item_ids": [
+      "show_hn:27240243"
+    ]
+  },
+  {
+    "id": "part-1e7eb5cb",
+    "kind": "partial",
+    "title": "A Blast-Radius Firewall for Coding Agents",
+    "description": "We have the symptom (agent modifies three pages outside its spec), the theory (agents need FSM-style constraints), the consequence (silent pipeline failures, AI-generated legacy code), and the audit failure (gates that don't catch sequences). What's absent is the obvious product: a tool that enforces a declared scope on agent edits — file allowlists, diff-radius limits, automatic rejection of out-of-spec changes at commit time. Every idea here circles the need for externally enforced boundaries, yet none builds the enforcement layer itself. It's a bounded, shippable wedge into the agent-reliability market.",
+    "verified_by": [
+      "rubric",
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "1e7eb5cb",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "rubric:partially",
+        "rubric:yes",
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/git-ai-project/git-ai"
+    ],
+    "expected_item_ids": [
+      "github:git-ai-project/git-ai"
+    ]
+  },
+  {
+    "id": "real-47bf5f9f",
+    "kind": "real",
+    "title": "No one monetizes backendless software",
+    "description": "The neighborhood contains fully client-side apps and self-hosted commerce/payment stacks that all assume a PHP server. What's missing is the bridge: a monetization/licensing layer for zero-backend software — selling license keys, unlocks, or subscriptions for apps that have no server to validate against. The backendless builders explicitly avoid servers, while the payment tools require them, leaving indie devs of local-first tools with no native way to charge. A lightweight license-key + edge-verification service for client-side apps and extensions is the obvious gap.",
+    "verified_by": [
+      "rubric",
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "47bf5f9f",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "rubric:yes",
+        "web:yes"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/Cryptolens/cryptolens-python",
+      "https://keygen.sh",
+      "https://keyforge.dev/features/offline"
+    ],
+    "expected_item_ids": [
+      "github:Cryptolens/cryptolens-python",
+      "show_hn:14538351",
+      "show_hn:44635244"
+    ]
+  },
+  {
+    "id": "part-c9d908b1",
+    "kind": "partial",
+    "title": "Everyone Densifies Rewards; Nobody Benchmarks Reward Densification",
+    "description": "Five papers independently convert sparse outcome rewards into dense signals—via transitions, hierarchies, group reflection, counterfactual token credit, and unlearning-specific shaping—each with bespoke evaluation. What's missing is a standardized benchmark or diagnostic suite that measures dense-reward schemes head-to-head on credit-assignment fidelity, hackability, and transfer across tasks. Without it, the field cannot tell whether these methods are complementary, redundant, or reward-hacking in disguise.",
+    "verified_by": [
+      "rubric",
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "c9d908b1",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "rubric:partially",
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/xxzcc/Awesome-Credit-Assignment-in-LLM-RL",
+      "https://arxiv.org/pdf/2501.03124",
+      "https://arxiv.org/abs/2505.23474",
+      "https://arxiv.org/html/2605.02964v1",
+      "https://www.emergentmind.com/topics/reward-hacking-benchmark-rhb",
+      "https://arxiv.org/pdf/2510.08049",
+      "https://arxiv.org/abs/2501.03124",
+      "https://www.emergentmind.com/topics/rewardbench-ef6d937c-a4c4-457d-a060-516a18476bd2",
+      "https://arxiv.org/abs/2605.02964",
+      "https://arxiv.org/abs/2604.09459",
+      "https://arxiv.org/html/2605.21384v1",
+      "https://arxiv.org/abs/2403.13787"
+    ],
+    "expected_item_ids": [
+      "github:xxzcc/Awesome-Credit-Assignment-in-LLM-RL"
+    ]
+  },
+  {
+    "id": "part-730e3203",
+    "kind": "partial",
+    "title": "The missing glue: identity and interop for self-hosted stacks",
+    "description": "Four apps that a single clinic, village office, or small business would plausibly run together — files, health/citizen records, invoicing — each with its own users, backups, and auth. The neighborhood's internal structure screams for the missing piece: a lightweight identity/SSO and data-sync layer that lets these self-hosted PHP monoliths behave like one coherent stack. Enterprise answers (Keycloak, LDAP) exist but are wildly over-scoped for the small institutions these tools target. The gap is an opinionated, small-org 'control plane for self-hosted apps.'",
+    "verified_by": [
+      "rubric",
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "730e3203",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "rubric:partially",
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "show_hn:9976992",
+        "github:YunoHost/yunohost",
+        "github:goauthentik/authentik",
+        "github:authelia/authelia",
+        "github:keycloak/keycloak"
+      ]
+    },
+    "expected_urls": [
+      "https://github.com/lldap/lldap",
+      "https://github.com/pocket-id/pocket-id",
+      "https://www.cloudron.io/store/com.nextcloud.cloudronapp.html",
+      "https://yunohost.org/",
+      "https://goauthentik.io/",
+      "https://www.authelia.com/",
+      "https://www.cloudron.io/",
+      "https://www.keycloak.org/"
+    ],
+    "expected_item_ids": [
+      "github:lldap/lldap",
+      "github:pocket-id/pocket-id",
+      "show_hn:9976992",
+      "github:YunoHost/yunohost",
+      "github:goauthentik/authentik",
+      "github:authelia/authelia",
+      "github:keycloak/keycloak"
+    ]
+  },
+  {
+    "id": "real-8b190bdc",
+    "kind": "real",
+    "title": "Everyone Audits Bias; Nobody Ships the Bias Firewall",
+    "description": "Recommendation bias auditing, ideological drift under temperature, judge/generator asymmetry, and hallucination detection all diagnose how LLM curation and evaluation silently distort content. What's missing is the operational counterpart: a runtime middleware that intercepts LLM curation/judging outputs, scores them for ideological and pragmatic skew, and normalizes or flags them before they reach users. The neighborhood has abundant measurement instruments but no deployable mitigation layer—a clear gap between audit papers and a product.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "8b190bdc",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:yes"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/guardrails-ai/guardrails",
+      "https://github.com/NVIDIA-NeMo/Guardrails"
+    ],
+    "expected_item_ids": [
+      "github:guardrails-ai/guardrails",
+      "github:NVIDIA-NeMo/Guardrails"
+    ],
+    "label_note": "expected items son guardrails genéricos; el top-5 (detección de sesgo) está más cerca de query_core (análisis de fallos iter2, MiniLM+llm5)"
+  },
+  {
+    "id": "real-7c597ec1",
+    "kind": "real",
+    "title": "Everyone Builds Benchmarks, Nobody Builds Benchmark Infrastructure",
+    "description": "This neighborhood contains at least four new domain benchmarks (Vietnamese legal, European medical, advanced math, citation-grounded QA), while 364 explicitly diagnoses the field's failure to accumulate and reuse knowledge. The missing piece is the meta-layer: a system for composing, versioning, deduplicating, and tracking the lifespan of benchmarks so they accumulate rather than pile up. The community keeps shipping one-off evals that ironically reproduce the knowledge-fragmentation problem 364 describes.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "7c597ec1",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:yes"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/EleutherAI/lm-evaluation-harness",
+      "https://github.com/UKGovernmentBEIS/inspect_ai",
+      "https://github.com/open-compass/opencompass"
+    ],
+    "expected_item_ids": [
+      "github:EleutherAI/lm-evaluation-harness",
+      "github:UKGovernmentBEIS/inspect_ai",
+      "github:open-compass/opencompass"
+    ],
+    "label_note": "expected items son harnesses para correr evals; la idea pide infraestructura de datasets (versionado, dedup, saturación); el top-5 está más cerca (análisis de fallos iter2)"
+  },
+  {
+    "id": "part-a3ced3a9",
+    "kind": "partial",
+    "title": "Everyone Edits Models, Nobody Verifies the Edit",
+    "description": "Four papers intervene directly on model internals: pruning unsafe subnetworks, real-time unlearning, activation steering, and mechanistic bias localization. All assume the intervention worked, yet the neighborhood contains no tool for independently auditing whether an edit actually removed the behavior, preserved capabilities, and didn't create new failures. The missing piece is a standardized 'edit verification' layer — a diff-and-regression harness for model surgery, analogous to CI tests for code. Given four intervention methods and zero verification methods, the gap is structural, not accidental.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "a3ced3a9",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:yes"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/zjunlp/EasyEdit"
+    ],
+    "expected_item_ids": [
+      "github:zjunlp/EasyEdit"
+    ]
+  },
+  {
+    "id": "real-6eb5b382",
+    "kind": "real",
+    "title": "Everyone builds agents; nobody builds agent identity",
+    "description": "This neighborhood contains agent protocols, agentic workflows, agent orchestration, a secret scanner for humans' mistakes, and a tunnel client for secure access. What's structurally missing is the piece all of these imply: credential and identity management for autonomous agents — scoped, revocable, auditable secrets that agents can use without leaking them. Gitleaks catches human-committed secrets; nothing here prevents an agent with workflow permissions from exfiltrating or misusing them. Given agents now run CI, manage cloud resources, and open tunnels, the missing 'vault for agents' is the most dangerous gap in the set.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "6eb5b382",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:yes"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/Infisical/agent-vault"
+    ],
+    "expected_item_ids": [
+      "github:Infisical/agent-vault"
+    ]
+  },
+  {
+    "id": "real-fbe3c4c2",
+    "kind": "real",
+    "title": "Skills Get Made and Listed, Never Tested",
+    "description": "This neighborhood has a full skill supply chain: automated generation from books, industrial prompt-template mining, packaging into agent runtimes via MCP, and curation lists. What's structurally missing is the quality layer: nothing here evaluates, benchmarks, or certifies whether a skill actually works, is safe, or degrades across model versions. As skills become distributable artifacts, an 'npm audit / CI for agent skills' is the obvious gap that lists alone can't fill.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "fbe3c4c2",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:yes"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/cisco-ai-defense/skill-scanner",
+      "https://github.com/snyk/agent-scan",
+      "https://github.com/dabit3/skill-audit"
+    ],
+    "expected_item_ids": [
+      "github:cisco-ai-defense/skill-scanner",
+      "github:snyk/agent-scan"
+    ],
+    "label_note": "expected items son escáneres de seguridad de skills; la idea pide testear/certificar skills; el top-5 (testing de agentes y skills) está igual o más cerca (análisis de fallos iter2)"
+  },
+  {
+    "id": "part-128b8602",
+    "kind": "partial",
+    "title": "AI maintenance layer for the legacy PHP long tail",
+    "description": "laravel/boost shows AI tooling arriving for modern PHP, while frontier models (DeepSeek-V4-Flash, MAI-Cyber-1) get cheap and specialized. Meanwhile the actual pain lives in ideas like the WooCommerce free-trial debugging saga and sprawling apps like Invoice Ninja: legacy plugin ecosystems where bugs hide in configuration and caching, not code. The missing piece is an MCP/AI agent purpose-built for WordPress/WooCommerce and legacy PHP maintenance — the market is enormous and utterly unserved compared to greenfield Laravel dev.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "128b8602",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://www.siteground.com/blog/siteground-ai-agent-for-wordpress",
+      "https://elementor.com/products/angie-ai-for-wordpress/",
+      "https://instawp.com/fix-wordpress-bug-ai/",
+      "https://wordpress.org/plugins/wsp-mcp-ai-agents-connector/",
+      "https://developer.woocommerce.com/docs/features/mcp/"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-6ec58e83",
+    "kind": "partial",
+    "title": "Agents Can Talk Cross-Cloud but Nobody Verifies Who They Are",
+    "description": "5156 and 5171 show agent-to-agent protocols working across Google, Azure, and AWS; 4708 shows detectors can't even classify agent traffic; 4621 and 4197 show accountability and threat modeling breaking down under GenAI. The missing piece is an agent identity and attestation layer: verifiable credentials that let a receiving agent or website know which agent, on whose behalf, with what permissions, is calling. Interop is being built faster than identity, and every paper here dances around that gap without naming it.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "6ec58e83",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://www.w3.org/community/agent-identity/",
+      "https://arxiv.org/pdf/2505.10609",
+      "https://www.strata.io/glossary/agent-authentication/",
+      "https://www.dock.io/post/ai-agent-digital-identity-verification",
+      "https://eco.com/support/en/articles/15192005-agent-identity-verification-how-ai-agents-authenticate-purchases-in-2026"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-ba4a9968",
+    "kind": "partial",
+    "title": "Companion AI Has No Wellbeing Monitor",
+    "description": "This neighborhood contains self-hosted AI companions, evaluation of role-play agents for emotional comfort, voice-based psychotherapy training, and speech biomarkers for depression. The missing piece is obvious once laid out: a passive layer that applies clinical speech-biomarker detection inside companion/role-play conversations to flag deteriorating user mental health and adapt or escalate. Everything needed exists — the intimate voice channel, the eval frameworks, the biomarkers — but no one has connected companion AI to actual wellbeing signals rather than engagement metrics.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "ba4a9968",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://www.sondehealth.com/mental-health",
+      "https://www.psychiatry.org/news-room/apa-blogs/vocal-biomarkers-for-mental-health",
+      "https://www.fastcompany.com/90299135/mental-health-crisis-robots-chatbots-listeners",
+      "https://blog.replika.com/posts/creating-a-safe-replika-experience",
+      "https://clinicaltrials.gov/study/NCT05533190"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-eae1d11d",
+    "kind": "partial",
+    "title": "Everyone Audits Internals; Nobody Sells the Audit",
+    "description": "These four ideas verify what happens inside opaque pipelines: certified constraint reformulation, causal audits of latent agent communication, representational probing of RL vs SFT models, and layered poisoning defenses for RAG. Each builds bespoke, one-off verification machinery for its own stack. What's conspicuously missing is a general-purpose, developer-facing 'trust layer'—a standardized toolkit that instruments any LLM pipeline (retrieval, agents, finetuning) with provenance checks and internal-behavior audits. The demand is proven by four independent teams reinventing it; the product doesn't exist.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "eae1d11d",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/truera/trulens",
+      "https://github.com/arize-ai/phoenix",
+      "https://arxiv.org/pdf/2606.09692",
+      "https://arxiv.org/abs/2606.04990"
+    ],
+    "expected_item_ids": [
+      "github:truera/trulens",
+      "github:Arize-ai/phoenix"
+    ]
+  },
+  {
+    "id": "part-024eb0a0",
+    "kind": "partial",
+    "title": "Everyone Builds Deepfake Engines, One Paper Builds Locks",
+    "description": "This neighborhood is dense with generative video editing power: identity-consistent face editing, object insertion, frontier audio-video generation, and fully automated short-video engines. Only 2689 addresses protection, and only preemptively via adversarial perturbation of source content. Missing entirely: post-hoc detection, provenance watermarking, and verification tooling for generated/edited video — the defensive layer that this generative arsenal makes urgent. The gap is a video authenticity verification product for platforms and consumers.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "024eb0a0",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://www.resemble.ai/deepfake-video-detection-guide/",
+      "https://deepmind.google/models/synthid/",
+      "https://contentcredentials.org/",
+      "https://attestiv.com/provenance-vs-forensics-the-best-solution-for-deepfake-detection/",
+      "https://steg.ai/products/content-authentication/"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-ad6c4d56",
+    "kind": "partial",
+    "title": "Everyone Builds Spatial Patches, Nobody Builds Spatial Memory",
+    "description": "Geolocalization, street-view cognition, 3D-from-2D reasoning, temporal change detection, and navigation maps each bolt a domain-specific spatial scaffold onto a VLM. The structural gap: a shared, persistent spatial-temporal representation layer — a queryable world-state memory that any VLM task could read from and write to. Each paper reinvents fragments of it (knowledge graphs, latent anchors, semantic maps) as one-off, non-composable fixes. The missing piece is spatial memory as infrastructure rather than per-paper architecture.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "ad6c4d56",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://superodometry.com/supermap",
+      "https://arxiv.org/abs/2510.01483",
+      "https://sairlab.org/vlm2/",
+      "https://arxiv.org/pdf/2510.08553",
+      "https://arxiv.org/pdf/2606.08992"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-10e73cb1",
+    "kind": "partial",
+    "title": "Everyone Claims Transfer; Nobody Measures It Comparably",
+    "description": "Five papers claim cross-task, cross-scale, cross-domain, or cross-modal graph transfer, and 4163 explicitly complains about incompatible splits and protocols. Yet the neighborhood contains no shared benchmark or evaluation harness that stress-tests these transfer claims under one protocol. The missing piece is a 'transfer-GLUE for graphs': a standardized suite with controlled splits, negative-sampling conventions, and scale/domain/modality axes. Given how loudly each paper claims generalization, its absence is the most conspicuous gap in the cluster.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "10e73cb1",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://arxiv.org/pdf/2603.00618",
+      "https://dl.acm.org/doi/10.1145/3711896.3737410",
+      "https://arxiv.org/html/2512.04475",
+      "https://arxiv.org/abs/2509.06975",
+      "https://arxiv.org/html/2406.10727"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-5f3f3eaa",
+    "kind": "partial",
+    "title": "Everyone Composes Queries; Nobody Built the Composition Layer",
+    "description": "Sketch+text retrieval, recipe-image retrieval via MLLMs, composed image retrieval, and agentic query reformulation for editing all wrestle with the same problem: users express intent through messy multi-modal fragments that must be fused into one query. Each paper builds a bespoke fusion for its modality pair. The missing piece is a modality-agnostic query composition layer—an interface/API that takes any mix of image, sketch, and text fragments, reformulates them (as 456 does for editing), and emits a unified retrieval embedding. That product would sit above all these systems rather than compete with any.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "5f3f3eaa",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/12271983",
+      "https://zilliz.com/blog/combine-image-and-text-how-multimodal-retrieval-transforms-search",
+      "https://blog.voyageai.com/2024/11/12/voyage-multimodal-3/",
+      "https://github.com/api-evangelist/marqo",
+      "https://cloud.google.com/blog/products/ai-machine-learning/combine-text-image-power-with-vertex-ai"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-c4350d18",
+    "kind": "partial",
+    "title": "Everyone Detects Anomalies, Nobody Shares the Machinery",
+    "description": "This neighborhood contains anomaly detectors for pixels, tables, EEG signals, malware binaries, and generated images — each rebuilding notions of normality, thresholds, and drift from scratch. CORE already proves unification pays off within tabular data alone. The missing piece is a modality-agnostic anomaly-detection layer or benchmark suite: shared calibration, threshold-setting, and drift-handling infrastructure that any domain detector plugs into. Its absence is conspicuous given five independent teams solving structurally identical problems.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "c4350d18",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/yzhao062/pyod",
+      "https://pythresh.readthedocs.io/en/stable/",
+      "https://pyod.readthedocs.io/",
+      "https://arxiv.org/html/2510.03363",
+      "https://arxiv.org/abs/2604.19191"
+    ],
+    "expected_item_ids": [
+      "github:yzhao062/pyod"
+    ]
+  },
+  {
+    "id": "part-b36b5f05",
+    "kind": "partial",
+    "title": "Everyone Generates Synthetic Data, Nobody Certifies It",
+    "description": "Procedural scratch rendering, self-play driving simulation, generative multi-date stereo data, and point cloud scene generation all manufacture training data because real annotations are scarce. Yet the neighborhood contains no method for validating that synthetic distributions actually transfer — each pipeline assumes its own realism. The missing piece is a sim-to-real fidelity auditor: a tool that scores a synthetic dataset's predictive value for a target deployment domain before you spend GPU-weeks training on it.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "b36b5f05",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://arxiv.org/abs/2304.10819",
+      "https://arxiv.org/html/2509.11273",
+      "https://www.techrxiv.org/doi/full/10.36227/techrxiv.173933581.11924651/v4",
+      "https://github.com/schneiderkamplab/syntheval",
+      "https://keymakr.com/blog/validating-simulated-sensor-data-against-real-world-annotations-for-autonomous-driving/"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-512fe792",
+    "kind": "partial",
+    "title": "Everyone Measures Untrustworthiness; Nobody Ships a Trust Monitor",
+    "description": "4261 surveys uncertainty quantification, 4989 shows pooled data can silently reverse decisions, 4940 shows GNN explanations are non-canonical under symmetry, and 5068 handles evolving sensor graphs at test time. Each diagnoses a distinct failure mode of deployed models under real-world change, yet the neighborhood lacks the obvious integrating piece: a deployment-time reliability monitor that continuously flags when retraining, data pooling, or graph evolution has invalidated a model's prior decisions and explanations. The gap is a 'regression test suite for model trust' — checking decision-ordering stability and explanation consistency across model updates.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "512fe792",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://www.fiddler.ai/ml-model-monitoring",
+      "https://alexsandu.substack.com/p/ml-model-monitoring-and-observability",
+      "https://aisecurityandsafety.org/en/compare/fiddler-ai-tool-vs-whylabs/",
+      "https://www.evidentlyai.com/ml-in-production/model-monitoring",
+      "https://medium.com/@tanish.kandivlikar1412/comprehensive-comparison-of-ml-model-monitoring-tools-evidently-ai-alibi-detect-nannyml-a016d7dd8219"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-5b6356d3",
+    "kind": "partial",
+    "title": "Everyone Steers Policies, Nobody Audits What Steering Broke",
+    "description": "This neighborhood is full of interventions on trained policies: activation steering, value-guided steering, counterfactual probing, and manifold analysis. What's missing is the diagnostic layer: a tool that measures what a steering or fine-tuning intervention destroyed — lost solution modes, safety regressions, coverage collapse — before deployment. Given the triangulated evidence that post-training silently narrows behavior, a 'behavioral diff' tool comparing pre- and post-intervention policies is the obvious absent piece. It's buildable as a benchmark-plus-dashboard product for teams doing LLM post-training.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "5b6356d3",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://dev.to/nilofer_tweets/llm-behavior-diff-model-update-detector-3e7b",
+      "https://arxiv.org/pdf/2507.21084",
+      "https://openreview.net/pdf/d4bc63faf941967e432dc29c89607f4d35aa8e4e.pdf",
+      "https://redteams.ai/topics/training-pipeline/fine-tuning/alignment-tax",
+      "https://futureagi.com/glossary/llm-regression-testing/"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-39d157d7",
+    "kind": "partial",
+    "title": "Formal Methods for Agents: Everyone Circles, Nobody Ships",
+    "description": "3871 asks why formal methods aren't used; 4277, 4554, and 4609 each document AI systems failing in ways that only formal, layer-aware specifications could catch (invented procedure steps, incomplete deletion, cross-layer grounding faults). The neighborhood defines the gap precisely: a practical specification-and-verification toolkit for agentic LLM systems — contracts on tool calls, memory operations, and execution traces — that sits between benchmarks and full formal proof. Everyone measures failures; nobody offers the guardrail language.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "39d157d7",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://arxiv.org/html/2602.22302v1",
+      "https://arxiv.org/abs/2601.04688",
+      "https://arxiv.org/pdf/2606.06523",
+      "https://arxiv.org/html/2605.21434",
+      "https://dev.to/aws/ai-agent-guardrails-rules-that-llms-cannot-bypass-596d"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-b7aa36fd",
+    "kind": "partial",
+    "title": "IoT Security Policies Are Verified; Fleets Aren't Orchestrated",
+    "description": "ESPHome gives per-device configuration, 4318 formally verifies cross-device access-control information flow, and 4176 shows coupled end-to-end policy optimization for distributed networks. The missing piece is obvious once these are aligned: a tool that treats a home or building's IoT fleet as one coupled system — jointly optimizing and verifying device configs, trust boundaries, and automation policies end-to-end rather than device-by-device. Everything needed exists (declarative configs, flow verification, coupled-policy methods), but no one has composed them into a 'fleet compiler' for smart environments.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "b7aa36fd",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://aws.amazon.com/blogs/iot/how-to-automate-onboarding-of-iot-devices-to-aws-iot-core-at-scale-with-fleet-provisioning/",
+      "https://www.forescout.com/solutions/iot-security/",
+      "https://arxiv.org/pdf/2102.01468",
+      "https://arxiv.org/pdf/2203.01464"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-5018a38d",
+    "kind": "partial",
+    "title": "Medical AI Has Diagnosis, Missing the Trust Layer",
+    "description": "Two of the three medical imaging papers (pancreatic resectability, PNI prediction) push architectural novelty for high-stakes clinical calls, while only the thyroid paper addresses calibration, selective referral, and dataset shift. The gap is a reusable, model-agnostic clinical trust layer: calibrated uncertainty, shift detection, and abstain-and-refer workflows that wrap any diagnostic model. Its absence is glaring given that all three tasks explicitly cite expert variability and high-stakes decisions. Regulatory pressure makes this the most commercially urgent missing piece in the neighborhood.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "5018a38d",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://arxiv.org/pdf/2511.16625",
+      "https://www.medrxiv.org/content/10.1101/2024.12.27.24319715v1.full",
+      "https://arxiv.org/html/2603.21656v1",
+      "https://www.sciencedirect.com/science/article/pii/S0933365724000721",
+      "https://www.sciencedirect.com/science/article/pii/S0169260726003093"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-80942ef6",
+    "kind": "partial",
+    "title": "A CI/CD Certification Suite for Agent Skills",
+    "description": "The neighborhood contains skill-use verification, skill compilation, blind-spot discovery, readiness philosophy, and a production benchmark — but no tooling that ties them into a developer workflow. What's absent is a 'pytest for agent skills': a CI harness that runs counterfactual ablations, checks that skills causally alter decisions, enforces typed control flow, and gates deployment on readiness metrics. Every ingredient exists as research; nobody has shipped the practitioner tool. This is the obvious productization gap for the emerging skills ecosystem (MCP SDK 3699/3700 shows the distribution channel already exists).",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "80942ef6",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "github:confident-ai/deepeval"
+      ]
+    },
+    "expected_urls": [
+      "https://deepeval.com/docs/evaluation-unit-testing-in-ci-cd",
+      "https://github.com/sbroenne/pytest-skill-engineering",
+      "https://www.harness.io/products/ai-evals",
+      "https://github.com/najeed/ai-agent-eval-harness",
+      "https://github.com/Nihal-Srivastava05/agent-test"
+    ],
+    "expected_item_ids": [
+      "github:confident-ai/deepeval"
+    ]
+  },
+  {
+    "id": "part-246e1998",
+    "kind": "partial",
+    "title": "A Portable, Auditable Personal Memory-Permission Layer",
+    "description": "Personalization work builds ever-richer persistent user state and cross-session memory, while safety work shows authorization must be context-dependent and risks accumulate over trajectories. The obvious missing piece is the intersection: a user-owned memory store with attached, evidence-backed permissions — deciding which agent may read, write, or act on which memories, with audit trails. Everyone here assumes memory exists or permissions exist, but nobody builds the substrate binding them. This is the 'personal data vault for agents' that the neighborhood's structure demands.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "246e1998",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "show_hn:41660503"
+      ]
+    },
+    "expected_urls": [
+      "https://blog.getzep.com/unified-agent-memory-in-any-mcp-client/",
+      "https://www.verida.ai/",
+      "https://agentvault.inflectiv.ai/",
+      "https://peta.io/",
+      "https://blog.box.com/why-persistent-agentic-memory-requires-cognitive-vault"
+    ],
+    "expected_item_ids": [
+      "show_hn:41660503"
+    ]
+  },
+  {
+    "id": "part-50a4f12d",
+    "kind": "partial",
+    "title": "A Runtime Abstention Layer for Embodied Agents",
+    "description": "4405 identifies that VLA policies lack failure recovery, 5006 defines graded trustworthiness levels for embodied systems, 4637 provides principled human-in-the-loop abstention for tabular decisions, and 4626 estimates partner capability on the fly. The obvious missing piece is the synthesis: a deployable middleware that gives any robot policy calibrated, cost-sensitive abstention with graceful handoff to humans — conformal prediction ported from spreadsheets to actuators. Everyone circles it; nobody builds it. It would be the 'circuit breaker SDK' for the coming wave of VLA deployments.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "50a4f12d",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://arxiv.org/html/2608.04246",
+      "https://arxiv.org/abs/2510.09459",
+      "https://conformal-decision.github.io/",
+      "https://arxiv.org/html/2501.04823",
+      "https://arxiv.org/html/2604.16677"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-caa34ef5",
+    "kind": "partial",
+    "title": "A Supervision Layer for Autonomous Agents",
+    "description": "Agents are hacking TVs, gambling money unsupervised, and self-improving, while the only oversight tool present (Stage, 242) covers just code review. The neighborhood's structure demands a general-purpose agent supervision product: budget caps, action audit trails, kill switches, and human-approval gates for arbitrary agent actions — not just diffs. Its absence is glaring given how much of the set documents agents misbehaving without guardrails.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "caa34ef5",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "github:humanlayer/humanlayer"
+      ]
+    },
+    "expected_urls": [
+      "https://humanlayer.dev",
+      "https://runtimeai.io/blog/2026-05-12-kill-switch.html",
+      "https://www.kosmoy.com/resources/blog/best-ai-agent-governance-platforms-2026/",
+      "https://www.eesel.ai/blog/lakera-alternatives",
+      "https://www.reco.ai/compare/ai-security-tools-for-enterprises"
+    ],
+    "expected_item_ids": [
+      "github:humanlayer/humanlayer"
+    ]
+  },
+  {
+    "id": "part-a13c1dd2",
+    "kind": "partial",
+    "title": "A Trust Layer for Peer-to-Peer Inference",
+    "description": "The neighborhood has local models beating cloud giants, idle Macs pooled for private inference, websites being audited for agent-readiness, and mesh-style signals surviving blackouts. What's structurally absent is the connective piece: a verification/reputation layer that lets strangers safely rent, route, and audit inference across untrusted consumer hardware. Without attestation of what model ran and whether data leaked, the distributed-AI economy these ideas gesture at can't clear transactions. That trust broker is the obvious missing product.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "a13c1dd2",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "github:RaoFoundation/bittensor"
+      ]
+    },
+    "expected_urls": [
+      "https://www.bittensor.com/whitepaper",
+      "https://compute.0g.ai/",
+      "https://equilibrium.co/writing/state-of-verifiable-inference",
+      "https://www.prnewswire.com/news-releases/opengradient-announces-9-5-million-in-total-funding-to-build-the-compute-layer-for-verifiable-ai-302741614.html",
+      "https://phala.com/"
+    ],
+    "expected_item_ids": [
+      "github:RaoFoundation/bittensor"
+    ]
+  },
+  {
+    "id": "part-e545e760",
+    "kind": "partial",
+    "title": "A Verifier That Tells Models When to Reflect",
+    "description": "The reflection-fails papers show self-critique wastes tokens in small models, while the RSI papers assume self-improvement loops work. The gap is a lightweight external verifier or router that decides per-task whether to resample blindly or invest in feedback-driven repair—the piece that would reconcile both findings. Nobody in this neighborhood is building the meta-controller for when introspection is worth the tokens.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "e545e760",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://arxiv.org/pdf/2310.12963",
+      "https://arxiv.org/pdf/2607.08665",
+      "https://arxiv.org/html/2607.17641",
+      "https://arxiv.org/pdf/2410.13284",
+      "https://www.emergentmind.com/topics/rethinking-or-self-reflection"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-32a82f3a",
+    "kind": "partial",
+    "title": "An Exit Kit for AI Vendor Lock-In",
+    "description": "The neighborhood contains frontier-model dependence, arbitrary account bans, growing resistance, and a post-collapse open-source thesis — but no idea about the practical bridge: tooling that lets builders port prompts, workflows, and fine-tuning investments off a proprietary provider before or after a ban. Given the structure here, an 'AI portability layer' or ban-insurance product is the obvious missing node. Everyone is describing the trap or the aftermath; nobody is building the fire escape.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "32a82f3a",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "github:Kong/kong"
+      ]
+    },
+    "expected_urls": [
+      "https://github.com/BerriAI/litellm",
+      "https://openrouter.ai/",
+      "https://konghq.com/blog/learning-center/vendor-lock-in",
+      "https://gateway.orq.ai/blog/llm-vendor-lock-in"
+    ],
+    "expected_item_ids": [
+      "github:BerriAI/litellm",
+      "github:Kong/kong"
+    ]
+  },
+  {
+    "id": "part-2a3fcc9d",
+    "kind": "partial",
+    "title": "An Independent Audit Service for AI-Generated Research",
+    "description": "The neighborhood contains rubric generation for evaluating agent research, realistic deep-research evaluation, sabotage detection benchmarks, and leakage detection — all the ingredients of research verification, yet all framed as academic benchmarks. What's missing is the productized layer: a service or tool that takes an AI-generated report, paper, or codebase and runs automated integrity checks (leakage, rubric compliance, provenance, sabotage signals) and issues a trust score. As agent-produced research floods journals and firms, this verification layer is the obvious commercial gap none of these papers ships.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "2a3fcc9d",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://www.biorxiv.org/content/10.64898/2026.01.01.697311.full.pdf",
+      "https://www.researchprospect.com/ai-detector-tools/",
+      "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11748667"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-fa53f5d2",
+    "kind": "partial",
+    "title": "CI for Agent Behavior, Not Model Outputs",
+    "description": "The neighborhood has execution-failure evidence, a benchmark, training environments, and testing techniques battling flakiness — but no continuous, developer-facing tool that runs agents through realistic stateful scenarios on every model or prompt change and flags execution-layer regressions. Everyone diagnoses the gap between static metrics and agentic behavior; nobody in this set ships the 'pytest for agents' that closes it. Given the pieces already exist (env generation, semantic UI hooks, fault taxonomies), the missing artifact is an integration layer, not new research.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "fa53f5d2",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://mlflow.org/top-5-agent-evaluation-frameworks/",
+      "https://www.confident-ai.com/knowledge-base/compare/best-ci-cd-tools-testing-ai-agents-before-production-2026",
+      "https://arxiv.org/pdf/2603.02601",
+      "https://www.infoq.com/Regression_Testing/news",
+      "https://dev.to/thedailyagent/5-open-source-tools-for-testing-ai-agents-before-they-break-production-5d9c"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-a3fb5892",
+    "kind": "partial",
+    "title": "Continuous Formal-ish Assurance for Dependencies",
+    "description": "The neighborhood has supply-chain risk detection, the lament that formal verification is unused, and heavyweight post-hoc analysis — but nothing bridging them. Absent is a lightweight tool that automatically checks behavioral properties of third-party dependencies on update: 'did this new version's API contract or side-effect surface change?' Dependency-Track tells you a component has a known CVE; nothing tells you a component quietly changed behavior. This gap is exactly where supply-chain attacks like event-stream lived.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "a3fb5892",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://socket.dev",
+      "https://github.com/google/capslock",
+      "https://github.com/actions/dependency-review-action",
+      "https://www.aikido.dev/blog/software-supply-chain-security-vulnerabilities",
+      "https://blog.deps.dev/capslock/"
+    ],
+    "expected_item_ids": [
+      "show_hn:30515090",
+      "github:google/capslock",
+      "github:actions/dependency-review-action"
+    ]
+  },
+  {
+    "id": "part-69926e60",
+    "kind": "partial",
+    "title": "Deliberate Skill-Building Tooling for the Post-AI Junior",
+    "description": "The neighborhood diagnoses the broken junior pipeline, questions whether learning to code still matters, notes that understanding beats origin, and observes that AI made knowledge cheap but the 'joins' — architectural judgment — expensive. Even LLM-generated code tours only address onboarding, not skill formation. What's conspicuously absent is a product that deliberately trains the judgment layer: tools that force juniors to predict, verify, and debug AI output rather than accept it, converting AI-assisted work into structured deliberate practice.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "69926e60",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://learningto.co/",
+      "https://codesignal.com/resource/ai-assisted-coding-assessments/",
+      "https://www.lanetteam.com/ai-tools-for-training-and-development",
+      "https://www.softwareseni.com/testing-and-debugging-ai-generated-code-systematic-strategies-that-work/",
+      "https://blog.newtum.com/learn-programming-with-ai-safely/"
+    ],
+    "expected_item_ids": [
+      "show_hn:49643992"
+    ]
+  },
+  {
+    "id": "part-26d6adce",
+    "kind": "partial",
+    "title": "One-Click Self-Hosted Business-in-a-Box",
+    "description": "The neighborhood contains self-hosted storage (Nextcloud AIO shows the packaging pattern), self-hosted invoicing, and an argument that email is now buildable from borrowed parts — yet no idea packages these into a single deployable 'solo business OS.' The AIO installer proves the demand for turnkey bundling exists; the gap is a curated, integrated stack (files + invoicing + email + client portal) for freelancers fleeing SaaS subscriptions. Each component exists; the composition layer doesn't.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "26d6adce",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "show_hn:9976992",
+        "github:YunoHost/yunohost",
+        "github:invoiceninja/invoiceninja"
+      ]
+    },
+    "expected_urls": [
+      "https://www.cloudron.io/",
+      "https://yunohost.org/",
+      "https://invoiceninja.com/software/cloudron/",
+      "https://www.g2.com/products/ahsuite/discuss",
+      "https://bloom.io/"
+    ],
+    "expected_item_ids": [
+      "show_hn:9976992",
+      "github:YunoHost/yunohost",
+      "github:invoiceninja/invoiceninja"
+    ]
+  },
+  {
+    "id": "part-36d540d3",
+    "kind": "partial",
+    "title": "Proof-Without-Identity Verification Layer",
+    "description": "The neighborhood contains the political rejection of digital ID and age verification, the cryptographic machinery for privacy-preserving data collection, and infrastructure for trusted information sharing. What's absent is the piece connecting them: practical anonymous credential tooling — proving attributes (age, membership, non-maliciousness) without revealing identity. The internal structure screams for zero-knowledge attestation as the resolution of the ID-versus-privacy standoff, yet no idea occupies that slot. It's the bridge between the policy fight and the crypto research.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "36d540d3",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://www.microsoft.com/en-us/research/blog/vega-zero-knowledge-proofs-for-digital-identity-in-the-age-of-ai/",
+      "https://captaincompliance.com/education/googles-zero-knowledge-proof-open-source-move-promotes-privacy-in-age-assurance/",
+      "https://www.dock.io/feature/zero-knowledge-proofs",
+      "https://arxiv.org/pdf/2205.05847",
+      "https://factually.co/fact-checks/technology/mainstream-apps-using-zero-knowledge-proofs-attribute-based-age-verification-how-they-work-c7b0c1"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-b54b6842",
+    "kind": "partial",
+    "title": "Proof-of-Human Infrastructure for Creators",
+    "description": "The neighborhood contains the demand signal (rising anti-AI sentiment, distrust of manufactured culture), the economic casualty (creator middle class dying), and the cognitive worry (offloaded thinking) — but no idea offering verifiable human provenance for creative work. Given this structure, the gap is a lightweight attestation layer that lets creators prove human authorship and lets audiences pay a premium for it. The market is literally being described by these posts; the tool serving it is absent.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "b54b6842",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://www.verifiedhuman.info/",
+      "https://certifyusa.org/blog/ai-free-content-badge",
+      "https://notbyai.fyi/",
+      "https://www.byhumannotai.com/",
+      "https://arxiv.org/abs/2603.00179"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-4eb18786",
+    "kind": "partial",
+    "title": "Runtime Stance Monitor for Deployed Chatbots",
+    "description": "3232 defines relational lock-in as a measurable risk object, 2847 defines register shift as probeable, and 3125 proves tone causally changes recipient behavior—yet all three measure offline. The obvious missing piece is a runtime middleware that scores stance drift, epistemic register, and dependency-inducing positioning on live conversations and alerts or steers before harm accrues. Companies deploying companions, therapy-adjacent bots, or customer agents have no such instrument today.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "4eb18786",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://spectrum.ieee.org/amp/mental-health-chatbot-guardrails-2676699987",
+      "https://arxiv.org/pdf/2512.06193",
+      "https://finance.biggo.com/news/52d5f5fbe28b3370",
+      "https://witness.ai/blog/monitor-ai-chatbot-live-for-hallucinations/"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-e01b3b33",
+    "kind": "partial",
+    "title": "Sync and Monetization Rails for Backendless Apps",
+    "description": "The no-backend builders here all hit the same walls—frozen tabs, storage limits, no accounts, no way to charge (explicitly catalogued in 5273's 'everything that broke'). The neighborhood is full of fully-client-side tools but contains no infrastructure piece: a lightweight toolkit for licensing, payments, cross-device sync, and WASM/ONNX resource management that preserves the zero-server ethos. That missing layer is what would turn these hobby demos into sellable products, and every author is reinventing fragments of it.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "e01b3b33",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "github:pubkey/rxdb"
+      ]
+    },
+    "expected_urls": [
+      "https://rxdb.info/alternatives.html",
+      "https://overhide.github.io/ledgers.js/",
+      "https://replicache.dev/",
+      "https://www.askantech.com/offline-first-mobile-architecture-apps-without-internet/",
+      "https://stackademic.com/blog/top-payment-apis-and-checkout-sdks-for-developers-in-2026"
+    ],
+    "expected_item_ids": [
+      "github:pubkey/rxdb"
+    ]
+  },
+  {
+    "id": "part-384c5945",
+    "kind": "partial",
+    "title": "The Cost-and-Ops Layer for Self-Hosted AI",
+    "description": "The neighborhood has RAG infrastructure pain, GPU multi-tenancy breaking in unmeasured ways, model export to escape Python runtimes, and license risk when choosing open weights. Everyone is self-hosting AI, yet there's no piece covering the obvious next need: a tool that benchmarks, monitors, and prices self-hosted inference stacks — 'what does this model actually cost me per request on my hardware, and where does it break under load'. The gap sits exactly where these four ideas intersect: teams choosing models legally, deploying them cheaply, and scaling them blindly.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "384c5945",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "github:bentoml/BentoML"
+      ]
+    },
+    "expected_urls": [
+      "https://github.com/vllm-project/guidellm",
+      "https://docs.datadoghq.com/llm_observability/monitoring/cost/",
+      "https://bentoml.com/llm/inference-optimization/llm-performance-benchmarks",
+      "https://docs.vllm.ai/en/latest/contributing/benchmarks.html",
+      "https://mlcommons.org/benchmarks/inference-datacenter/"
+    ],
+    "expected_item_ids": [
+      "github:vllm-project/guidellm",
+      "github:bentoml/BentoML"
+    ]
+  },
+  {
+    "id": "part-0bf9e9ec",
+    "kind": "partial",
+    "title": "The Local-Compute Exit Ramp",
+    "description": "One idea proves consumer GPUs run 27B models at real speed, another shows desktop hardware demand outstripping supply, a third exposes the financial fragility of hyperscale GPU financing, and a fourth shows physical resistance to datacenter buildout. The neighborhood clearly wants an off-ramp from hyperscaler dependence, yet no idea addresses the missing piece: turnkey products and marketplaces that let individuals and small teams run serious AI workloads on owned or pooled consumer hardware. The demand signal, hardware capability, and macro fragility are all present — only the productized exit is absent.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "0bf9e9ec",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "github:ollama/ollama"
+      ]
+    },
+    "expected_urls": [
+      "https://lmstudio.ai/",
+      "https://vast.ai/",
+      "https://ollama.com/",
+      "https://www.runpod.io/",
+      "https://www.spheron.network/"
+    ],
+    "expected_item_ids": [
+      "show_hn:36060435",
+      "github:ollama/ollama"
+    ]
+  },
+  {
+    "id": "part-e3b4803b",
+    "kind": "partial",
+    "title": "The On-Device Mobile Agent Runtime",
+    "description": "This neighborhood has agent languages, agent protocols, JVM agent frameworks, and AI assistants embedded in desktop tools (Xcode, macOS video editing). It also has a dense cluster of native iOS/Android apps. Yet nothing bridges them: there is no native, privacy-first agent runtime that runs on the phone itself, the way Harper does grammar checking offline. Given the local-first ethos of the surrounding projects (Harper, Bitwarden, UTM), an on-device Swift/Kotlin agent host implementing the agent-host-protocol is the obvious missing piece.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "e3b4803b",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/cactus-compute/cactus",
+      "https://github.com/achimala/SwiftAgent",
+      "https://developer.android.com/ai/adk",
+      "https://github.com/topics/android-llm",
+      "https://medium.com/@jc_builds/how-to-run-local-ai-models-on-ios-macos-devices-with-kuzco-42173ba376ce"
+    ],
+    "expected_item_ids": [
+      "github:cactus-compute/cactus"
+    ]
+  },
+  {
+    "id": "part-a9d3aabb",
+    "kind": "partial",
+    "title": "a fidelity benchmark for synthetic humans",
+    "description": "Multiple papers here test whether LLMs can stand in for humans (participants, examinees, judges) and each builds its own ad-hoc comparison against ground-truth human data. What's absent is a standardized, cross-domain benchmark and tooling that scores an LLM's human-simulation fidelity, including variance, individual differences, and belief-update dynamics, before researchers deploy it as a proxy. Given growing use of LLMs in social science and edtech calibration, this gap is glaring and immediately monetizable as a validation service.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "a9d3aabb",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://arxiv.org/abs/2510.17516",
+      "https://arxiv.org/html/2602.00685",
+      "https://arxiv.org/abs/2607.26348",
+      "https://arxiv.org/pdf/2510.17516",
+      "https://arxiv.org/pdf/2509.06337"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-d1d36433",
+    "kind": "partial",
+    "title": "a general-purpose VLM trust auditor",
+    "description": "The neighborhood contains bespoke audits for place recognition, pathology benchmarks, detection confidence, radiology hallucination, and KGQA faithfulness—each a one-off, domain-specific verification pipeline. What's structurally absent is the horizontal piece: a reusable auditing framework or product that stress-tests any deployed VLM for leakage, miscalibration, and hallucination before deployment. Every one of these papers is unknowingly a feature of that missing tool. The demand is proven five times over in this neighborhood alone; the general artifact doesn't exist.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "d1d36433",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "show_hn:40535874",
+        "github:Arize-ai/phoenix"
+      ]
+    },
+    "expected_urls": [
+      "https://www.giskard.ai/",
+      "https://phoenix.arize.com/",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12363988/",
+      "https://arxiv.org/html/2605.00323v1",
+      "https://arxiv.org/html/2603.15557"
+    ],
+    "expected_item_ids": [
+      "show_hn:40535874",
+      "github:Arize-ai/phoenix"
+    ]
+  },
+  {
+    "id": "part-82197c7d",
+    "kind": "partial",
+    "title": "a red-team benchmark for agent security",
+    "description": "The neighborhood has agent governance tooling, real breach post-mortems, a personal attack suite that broke its own defenses, a general agent evaluation framework, and a culture of pre-registered benchmarks. What's conspicuously absent is the connective piece: a standardized, reproducible adversarial benchmark that scores agent deployments against sequence-composition and privilege-escalation attacks the way OWASP scores web apps. Everyone here is either defending, attacking, or evaluating—nobody has productized the attack-eval loop.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "82197c7d",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "github:confident-ai/deepteam"
+      ]
+    },
+    "expected_urls": [
+      "https://www.trydeepteam.com/guides/guide-safety-frameworks",
+      "https://arxiv.org/pdf/2507.20526",
+      "https://arxiv.org/pdf/2606.02240",
+      "https://arxiv.org/html/2606.23927",
+      "https://arxiv.org/pdf/2602.02164"
+    ],
+    "expected_item_ids": [
+      "github:confident-ai/deepteam"
+    ]
+  },
+  {
+    "id": "part-cf6a474e",
+    "kind": "partial",
+    "title": "an audit log and permission layer for agents",
+    "description": "The neighborhood has agents acting on computers, agents needing identity verification, and users discovering unauthorized AI access after the fact. What's structurally absent is the middle piece: a permissions and audit layer — a 'firewall/OAuth for agents' that records what an agent did, under whose delegation, and with what scope. The 922 incident shows demand (people discover access retroactively), and 170 shows the identity primitive exists but not the accountability one.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "cf6a474e",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://workos.com/blog/ai-agent-access-control",
+      "https://prefactor.tech/product/agent-authentication",
+      "https://www.arcade.dev/",
+      "https://www.scalekit.com/blog/delegated-agent-access",
+      "https://www.acttokens.com/why-oauth-is-not-enough"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-c521a33a",
+    "kind": "partial",
+    "title": "merge-based continual learning as the forgetting cure",
+    "description": "491 and 1000 both fight catastrophic forgetting by protecting a single evolving model; 590 shows the root cause is interference within one parameter space; 3124 shows separately-trained experts can be merged post hoc, and that WHEN you merge matters. The obvious synthesis is absent: a continual-learning system that spawns lightweight per-task experts and merges them on a schedule informed by training duration, sidestepping single-model preservation entirely. The pieces exist; nobody in this neighborhood has connected merging to continual adaptation. For a builder, this maps to a 'checkpoint-and-merge' library for continually fine-tuned LLMs or robot policies.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "c521a33a",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://arxiv.org/pdf/2509.17348",
+      "https://arxiv.org/abs/2505.11883",
+      "https://arxiv.org/abs/2504.02666",
+      "https://arxiv.org/pdf/2512.23017",
+      "https://arxiv.org/html/2605.20247"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-a0dfabb1",
+    "kind": "partial",
+    "title": "mission control for swarms of local agents",
+    "description": "Goose runs autonomous agents, worktrunk manages git worktrees explicitly for parallel agent workflows, jcode optimizes the harness for RAM efficiency, and Vector pipes observability data at scale — yet nothing here watches, compares, or arbitrates between the parallel agents these tools clearly anticipate. The gap is an agent-fleet observability and orchestration layer: which of my 8 concurrent agent branches is winning, what did each cost, when should one be killed. Every piece of the substrate exists; the cockpit doesn't.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "a0dfabb1",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "github:nimbalyst/nimbalyst"
+      ]
+    },
+    "expected_urls": [
+      "https://github.com/andyrewlee/awesome-agent-orchestrators",
+      "https://nimbalyst.com/blog/best-git-worktree-tools-ai-coding-2026/",
+      "https://tryweave.io/fleet/",
+      "https://github.com/escapeboy/agent-fleet-o",
+      "https://orchestratia.com/"
+    ],
+    "expected_item_ids": [
+      "github:andyrewlee/awesome-agent-orchestrators",
+      "github:nimbalyst/nimbalyst"
+    ]
+  },
+  {
+    "id": "part-7a687ca9",
+    "kind": "partial",
+    "title": "provenance layer for machine-made artifacts",
+    "description": "We have agents producing code, verifying circuits, training other models, and a cop chasing slop after the fact. What's missing is the upstream piece: a provenance/attestation standard that records which agent, model, and loop produced an artifact, so downstream policing isn't forensic guesswork. The neighborhood defines detection and generation but nothing signs the chain of custody in between. A lightweight 'signed-by-agent' metadata tool for git commits and CI artifacts is the obvious gap.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "7a687ca9",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://github.com/git-ai-project/git-ai",
+      "https://github.com/codeprakhar25/agentdiff",
+      "https://agentmark.dev/",
+      "https://github.com/always-further/agent-sign",
+      "https://www.thinkscientist.com/ai-code-provenance-the-accountability-gap-nobody-has-closed/"
+    ],
+    "expected_item_ids": [
+      "github:git-ai-project/git-ai"
+    ]
+  },
+  {
+    "id": "part-5041f789",
+    "kind": "partial",
+    "title": "security-grade observability for MCP agent traffic",
+    "description": "The neighborhood contains an agent intrusion post-mortem, agent telemetry that shocked its own builders, and a major MCP spec change to stateless transport that makes session-level auditing harder, not easier. What's structurally missing is the piece these four imply: an audit/anomaly-detection layer purpose-built for stateless MCP traffic — a 'flight recorder' for agent-tool interactions. Everyone here is either migrating the protocol or cleaning up after incidents; nobody is building the middle layer that would prevent the next timeline post.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "5041f789",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "github:Kong/kong",
+        "github:obot-platform/obot"
+      ]
+    },
+    "expected_urls": [
+      "https://developer.konghq.com/plugins/ai-mcp-proxy/",
+      "https://obot.ai/blog/the-value-of-an-mcp-proxy-security-control-and-observability-for-enterprise-ai/",
+      "https://www.mintmcp.com/blog/agent-gateway-audit-logging-observability",
+      "https://www.integrate.io/blog/best-mcp-gateways-and-ai-agent-security-tools/",
+      "https://www.gravitee.io/blog/mcp-proxy-how-it-works-and-why-architects-need-one"
+    ],
+    "expected_item_ids": [
+      "github:Kong/kong",
+      "github:obot-platform/obot"
+    ]
+  },
+  {
+    "id": "part-fc5cc4b2",
+    "kind": "partial",
+    "title": "spam-resistant reputation that isn't surveillance",
+    "description": "The neighborhood contains the openness of email and the backlash against identity mandates, but no idea offering the middle layer: portable, privacy-preserving sender reputation or proof-of-humanity that stops abuse without a government ID. Every piece implies its necessity; none proposes it. This is the gap where cryptographic attestations or web-of-trust reputation tooling should sit.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "fc5cc4b2",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "github:BrightID/BrightID"
+      ]
+    },
+    "expected_urls": [
+      "https://www.brightid.org/",
+      "https://passport.human.tech/",
+      "https://docs.kleros.io/products/proof-of-humanity",
+      "https://datatracker.ietf.org/doc/draft-drake-email-hardware-attestation/",
+      "https://lwn.net/Articles/629196/"
+    ],
+    "expected_item_ids": [
+      "github:BrightID/BrightID"
+    ]
+  },
+  {
+    "id": "part-19e97add",
+    "kind": "partial",
+    "title": "No One Benchmarks FL Under Combined Adversity",
+    "description": "The neighborhood contains defenses against server backdoors, client backdoors, privacy-preserving clustering, heterogeneous PEFT, and incentive-stable coalitions—yet each is evaluated in isolation under its own threat model and heterogeneity assumptions. Missing is a standardized adversarial-plus-heterogeneous FL harness, analogous to what 4342 does for data agents, where privacy attacks, backdoors, statistical skew, and strategic dropout co-occur. Without it, every defense's 'zero utility loss' claim is unfalsifiable against the failure modes the others study. The gap is a composable stress-test suite for federated systems as deployed, not as papered.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "19e97add",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://arxiv.org/abs/2505.16850",
+      "https://openreview.net/pdf?id=cmtX6JCqVR",
+      "https://arxiv.org/abs/2507.04903",
+      "https://parsa.epfl.ch/course-info/cs723/papers/fedscale.pdf",
+      "https://arxiv.org/pdf/2206.03436"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-160dbf81",
+    "kind": "partial",
+    "title": "Nobody Benchmarks Whether World Models Actually Predict",
+    "description": "The neighborhood has world model architectures, datasets, causal training, security threat models, and even a kill switch for agents—plus a separate cluster obsessed with broken verifiers and noisy quality gates. What's missing is the intersection: a faithfulness benchmark or runtime monitor that scores whether a world model's predicted futures match reality before an embodied agent acts on them. Security and kill switches assume you can detect a compromised or hallucinating predictive core, but no idea here provides that detection layer. The verifier-calibration lessons from the testing cluster are exactly the tooling the world model cluster lacks.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "160dbf81",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://www.researchgate.net/publication/408106936_Hallucination_in_World_Models_is_Predictable_and_Preventable",
+      "https://arxiv.org/html/2603.25887",
+      "https://physics-iq.github.io/",
+      "https://arxiv.org/pdf/2512.10958",
+      "https://www.researchgate.net/publication/392466733_WorldPrediction_A_Benchmark_for_High-level_World_Modeling_and_Long-horizon_Procedural_Planning"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-7048229f",
+    "kind": "partial",
+    "title": "Nobody Built Interpretable Anomaly Detection for the Edge",
+    "description": "The neighborhood contains interpretable prototype models for critical domains, lightweight edge anomaly detection, zero-shot foundation approaches, and evidence that real industrial data defeats benchmarks. The obvious missing piece: an interpretable, prototype-based, resource-constrained anomaly detector that tells an operator WHY a sensor reading is anomalous, on-device. Every ingredient exists in this cluster, but interpretability and edge efficiency are never combined — precisely the combination plant operators and IoT vendors need, since a black-box alert on a gas turbine is nearly useless.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "7048229f",
+      "runs": [
+        "2026-07-16T18:35:34.438Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://link.springer.com/article/10.1007/s10791-026-10310-x",
+      "https://link.springer.com/article/10.1007/s44397-026-00047-z",
+      "https://www.nature.com/articles/s41598-026-43578-6",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12845731/",
+      "https://www.researchgate.net/publication/362693104_An_edge_computing_based_anomaly_detection_method_in_IoT_industrial_sustainability"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-1fd3aeb9",
+    "kind": "partial",
+    "title": "Nobody Built the Model That Says 'I Don't Know'",
+    "description": "The neighborhood documents confabulation, decoupled reasoning, noisy-feedback overfitting, and temporal blind spots, yet no idea proposes calibrated abstention: a medical VLM layer that detects insufficient evidence and refuses to answer. Given how thoroughly failure modes are mapped here, an evidence-sufficiency gate or confidence-audit wrapper is the obvious missing piece. It could be built as middleware over existing models rather than a new foundation model.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "1fd3aeb9",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/42039377/",
+      "https://arxiv.org/abs/2402.15610",
+      "https://arxiv.org/html/2606.16667v3",
+      "https://ar5iv.labs.arxiv.org/html/2204.13631",
+      "https://arxiv.org/html/2601.12471v2"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-b52fedb0",
+    "kind": "partial",
+    "title": "Nobody Is Building Deepfake Detection for Generated 3D/4D",
+    "description": "The neighborhood contains powerful generative 3D/4D pipelines, a deepfake detector for 2D images, and a quality assessor for 3DGS scenes—but no forensic authenticity tool for generated 3D/4D content. As text-to-4D humans and re-shot videos become indistinguishable from captured footage, the 2D forensic toolkit won't transfer, and 4845 only measures quality, not provenance. The missing piece is a detector that flags whether a 3D scene or re-rendered video was measured or hallucinated—exactly the gap the spectrum in this neighborhood creates.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "b52fedb0",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://arxiv.org/abs/2604.27590",
+      "https://www.researchgate.net/publication/395526840_A_Controllable_3D_Deepfake_Generation_Framework_with_Gaussian_Splatting",
+      "https://arxiv.org/html/2606.03499",
+      "https://arxiv.org/pdf/2509.11624",
+      "https://sightengine.com/detect-ai-generated-videos"
+    ],
+    "expected_item_ids": []
+  },
+  {
+    "id": "part-7918616b",
+    "kind": "partial",
+    "title": "Nobody built access control for agent memory",
+    "description": "The neighborhood has trust scoring (Σ-Mem), value-aware management (MemLens), poisoning tracking (MemSecBench), rollback (ChronoMem), and privacy-conscious storage — yet no idea addresses who and what may read or write which memories: permissions, scopes, provenance-based ACLs per agent, tool, or session. Every security and reliability problem in these papers is downstream of unrestricted write access. The missing piece is an authorization layer for agent memory — essentially IAM for memories — which the internal structure of this cluster all but demands.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "7918616b",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": [
+        "github:cerbos/cerbos"
+      ]
+    },
+    "expected_urls": [
+      "https://www.cerbos.dev/blog/permission-management-for-ai-agents",
+      "https://arxiv.org/pdf/2508.19870",
+      "https://arxiv.org/pdf/2403.16971",
+      "https://www.mintmcp.com/blog/long-term-memory-ai-agents",
+      "https://workos.com/blog/agents-need-authorization-not-just-authentication"
+    ],
+    "expected_item_ids": [
+      "github:cerbos/cerbos"
+    ]
+  },
+  {
+    "id": "part-a5e2487c",
+    "kind": "partial",
+    "title": "Nobody evaluates whether agent memory is worth keeping",
+    "description": "The neighborhood is dense with memory mechanisms — reconstruction, contribution scoring, episodic-to-parametric transfer, self-distillation, and harness evolution — but contains no benchmark or tooling that measures memory quality itself: contamination, staleness, negative transfer, or when accumulated experience actively hurts. Trace-level agent eval exists, but nothing audits the memory layer as a first-class artifact. The missing piece is a memory observability/eval suite: given an agent's memory store, quantify which entries help, hurt, or have decayed. Every team building long-lived agents needs this and currently ships blind.",
+    "verified_by": [
+      "web"
+    ],
+    "meta": {
+      "source": "constellate",
+      "hash": "a5e2487c",
+      "runs": [
+        "2026-07-31T13:40:46.000Z"
+      ],
+      "verdicts": [
+        "web:partially"
+      ],
+      "heuristic_item_ids": []
+    },
+    "expected_urls": [
+      "https://memgram.io/",
+      "https://arxiv.org/html/2605.23723",
+      "https://arxiv.org/pdf/2605.06527",
+      "https://www.emergentmind.com/topics/memoryagentbench",
+      "https://arxiv.org/html/2603.07670v1"
+    ],
+    "expected_item_ids": []
+  }
+]

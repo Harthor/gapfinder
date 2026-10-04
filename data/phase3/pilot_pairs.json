@@ -1,0 +1,302 @@
+[
+ {
+  "case_id": "real-89c010f2",
+  "item_id": "show_hn:49083015",
+  "stratum": "positivo",
+  "rank": 56
+ },
+ {
+  "case_id": "real-6f3848c8",
+  "item_id": "github:microsoft/agent-governance-toolkit",
+  "stratum": "positivo",
+  "rank": 25
+ },
+ {
+  "case_id": "real-47bf5f9f",
+  "item_id": "show_hn:44635244",
+  "stratum": "positivo",
+  "rank": 41
+ },
+ {
+  "case_id": "real-a6c38804",
+  "item_id": "github:AgentOps-AI/agentops",
+  "stratum": "positivo",
+  "rank": 27
+ },
+ {
+  "case_id": "real-8b190bdc",
+  "item_id": "github:NVIDIA-NeMo/Guardrails",
+  "stratum": "positivo",
+  "rank": 668
+ },
+ {
+  "case_id": "real-01fe2dbe",
+  "item_id": "show_hn:10112932",
+  "stratum": "positivo",
+  "rank": 10
+ },
+ {
+  "case_id": "real-7c597ec1",
+  "item_id": "github:EleutherAI/lm-evaluation-harness",
+  "stratum": "positivo",
+  "rank": 965
+ },
+ {
+  "case_id": "syn-2879393",
+  "item_id": "show_hn:2879393",
+  "stratum": "positivo",
+  "rank": 21
+ },
+ {
+  "case_id": "syn-44939278",
+  "item_id": "show_hn:44939278",
+  "stratum": "positivo",
+  "rank": 1
+ },
+ {
+  "case_id": "syn-4770645-claude",
+  "item_id": "show_hn:4770645",
+  "stratum": "positivo",
+  "rank": 16
+ },
+ {
+  "case_id": "syn-13551907",
+  "item_id": "show_hn:13551907",
+  "stratum": "positivo",
+  "rank": 25
+ },
+ {
+  "case_id": "syn-33480679",
+  "item_id": "show_hn:33480679",
+  "stratum": "positivo",
+  "rank": 8
+ },
+ {
+  "case_id": "syn-4770645",
+  "item_id": "show_hn:4770645",
+  "stratum": "positivo",
+  "rank": 98
+ },
+ {
+  "case_id": "syn-13406648",
+  "item_id": "show_hn:13406648",
+  "stratum": "positivo",
+  "rank": 221
+ },
+ {
+  "case_id": "syn-18642575",
+  "item_id": "show_hn:18642575",
+  "stratum": "positivo",
+  "rank": 26
+ },
+ {
+  "case_id": "real-fbe3c4c2",
+  "item_id": "show_hn:47270208",
+  "stratum": "near-miss",
+  "rank": 1
+ },
+ {
+  "case_id": "real-fbe3c4c2",
+  "item_id": "github:FrancyJGLisboa/agent-skills-platform",
+  "stratum": "near-miss",
+  "rank": 2
+ },
+ {
+  "case_id": "real-fbe3c4c2",
+  "item_id": "show_hn:48898280",
+  "stratum": "near-miss",
+  "rank": 3
+ },
+ {
+  "case_id": "real-ecad36a5",
+  "item_id": "github:zscole/model-hierarchy-skill",
+  "stratum": "near-miss",
+  "rank": 1
+ },
+ {
+  "case_id": "real-ecad36a5",
+  "item_id": "show_hn:44454454",
+  "stratum": "near-miss",
+  "rank": 2
+ },
+ {
+  "case_id": "real-ecad36a5",
+  "item_id": "github:adamwlarson/RooCodeMicroManager",
+  "stratum": "near-miss",
+  "rank": 3
+ },
+ {
+  "case_id": "real-7c597ec1",
+  "item_id": "github:evaleval/every_eval_ever",
+  "stratum": "near-miss",
+  "rank": 1
+ },
+ {
+  "case_id": "real-7c597ec1",
+  "item_id": "show_hn:31742441",
+  "stratum": "near-miss",
+  "rank": 2
+ },
+ {
+  "case_id": "real-7c597ec1",
+  "item_id": "show_hn:38893298",
+  "stratum": "near-miss",
+  "rank": 3
+ },
+ {
+  "case_id": "real-8b190bdc",
+  "item_id": "show_hn:47417594",
+  "stratum": "near-miss",
+  "rank": 1
+ },
+ {
+  "case_id": "real-8b190bdc",
+  "item_id": "github:conversationai/unintended-ml-bias-analysis",
+  "stratum": "near-miss",
+  "rank": 2
+ },
+ {
+  "case_id": "real-8b190bdc",
+  "item_id": "github:princeton-nlp/QuRating",
+  "stratum": "near-miss",
+  "rank": 3
+ },
+ {
+  "case_id": "real-197bf4f9",
+  "item_id": "show_hn:42793327",
+  "stratum": "near-miss",
+  "rank": 1
+ },
+ {
+  "case_id": "real-197bf4f9",
+  "item_id": "show_hn:46597062",
+  "stratum": "near-miss",
+  "rank": 2
+ },
+ {
+  "case_id": "real-197bf4f9",
+  "item_id": "github:openrundev/openrun",
+  "stratum": "near-miss",
+  "rank": 3
+ },
+ {
+  "case_id": "syn-17181315",
+  "item_id": "github:baranbartu/microservices-with-fastapi",
+  "stratum": "rank 200-1000",
+  "rank": 777
+ },
+ {
+  "case_id": "syn-13406648-claude",
+  "item_id": "github:microsoft/flint-chart",
+  "stratum": "rank 200-1000",
+  "rank": 833
+ },
+ {
+  "case_id": "syn-17800530",
+  "item_id": "github:Billy1900/Awesome-Differential-Privacy",
+  "stratum": "rank 200-1000",
+  "rank": 708
+ },
+ {
+  "case_id": "real-ecad36a5",
+  "item_id": "show_hn:41487944",
+  "stratum": "rank 200-1000",
+  "rank": 637
+ },
+ {
+  "case_id": "syn-36030350",
+  "item_id": "show_hn:47901504",
+  "stratum": "rank 200-1000",
+  "rank": 676
+ },
+ {
+  "case_id": "real-6eb5b382",
+  "item_id": "show_hn:48323417",
+  "stratum": "rank 200-1000",
+  "rank": 664
+ },
+ {
+  "case_id": "syn-8757899",
+  "item_id": "show_hn:30470578",
+  "stratum": "rank 200-1000",
+  "rank": 506
+ },
+ {
+  "case_id": "syn-21462993",
+  "item_id": "github:chenhaoxing/Awesome-AI-Generated-Video-Detection",
+  "stratum": "rank 200-1000",
+  "rank": 384
+ },
+ {
+  "case_id": "syn-21462993",
+  "item_id": "github:avs-abhishek123/Computer-Vision-Projects",
+  "stratum": "rank 200-1000",
+  "rank": 283
+ },
+ {
+  "case_id": "real-7c597ec1",
+  "item_id": "github:epuerta9/kitchenai",
+  "stratum": "rank 200-1000",
+  "rank": 507
+ },
+ {
+  "case_id": "real-197bf4f9",
+  "item_id": "show_hn:46304050",
+  "stratum": "azar top-1000",
+  "rank": 507
+ },
+ {
+  "case_id": "syn-41298789",
+  "item_id": "show_hn:40270537",
+  "stratum": "azar top-1000",
+  "rank": 747
+ },
+ {
+  "case_id": "syn-2320614",
+  "item_id": "show_hn:4157553",
+  "stratum": "azar top-1000",
+  "rank": 295
+ },
+ {
+  "case_id": "syn-17181315-claude",
+  "item_id": "github:microsoft-foundry/Foundry-Local-Lab",
+  "stratum": "azar top-1000",
+  "rank": 121
+ },
+ {
+  "case_id": "real-25a4c842",
+  "item_id": "github:mosheman5/DNP",
+  "stratum": "azar top-1000",
+  "rank": 429
+ },
+ {
+  "case_id": "syn-2774322",
+  "item_id": "show_hn:39333086",
+  "stratum": "azar top-1000",
+  "rank": 776
+ },
+ {
+  "case_id": "syn-41298789",
+  "item_id": "show_hn:5638479",
+  "stratum": "azar top-1000",
+  "rank": 156
+ },
+ {
+  "case_id": "syn-41599941",
+  "item_id": "show_hn:2779046",
+  "stratum": "azar top-1000",
+  "rank": 432
+ },
+ {
+  "case_id": "syn-7034317-claude",
+  "item_id": "show_hn:44523409",
+  "stratum": "azar top-1000",
+  "rank": 986
+ },
+ {
+  "case_id": "syn-17181315-claude",
+  "item_id": "github:same7ammar/kube-composer",
+  "stratum": "azar top-1000",
+  "rank": 783
+ }
+]

@@ -1,0 +1,2222 @@
+{
+ "real-a6c38804": {
+  "query_core": "A monitoring and control layer purpose-built for autonomous AI agents: record every action an agent takes on the web, log changes it makes to its own code or prompts, and automatically halt it when behavior drifts outside policy.",
+  "missing_piece_quote": "The missing piece is an agent-native observability and governance layer",
+  "reformulations": [
+   "I run autonomous AI agents that browse the web and rewrite their own prompts, and I have no way to see what they actually did or stop them when they go off the rails.",
+   "A lightweight SDK plus dashboard that traces autonomous agent actions end to end, flags behavioral drift, and gives operators an instant kill switch.",
+   "Instrumentation library that captures agent tool calls, web requests and self-modification events as traces, evaluates them against policy rules, and triggers automatic termination on anomalous behavior.",
+   "Observability and runtime governance tooling for autonomous AI agent systems, analogous to APM and policy enforcement for infrastructure."
+  ],
+  "keyword_queries": [
+   "agent observability SDK",
+   "LLM agent tracing dashboard",
+   "agent guardrails kill switch"
+  ],
+  "model": "claude-opus-5",
+  "key": "ff39f22e4b144d0a",
+  "prompt_version": 2
+ },
+ "real-25a4c842": {
+  "query_core": "A production-grade inference serving engine purpose-built for diffusion models, with continuous batching across denoising steps, step/feature caching, and hardware-aware scheduling. Today's high-throughput serving stacks target autoregressive text models, leaving image/video/time-series diffusion workloads without an equivalent.",
+  "missing_piece_quote": "serious serving-systems work for diffusion workloads",
+  "reformulations": [
+   "I run image and video diffusion models in production and my GPU throughput is terrible because requests aren't batched well across denoising steps and nothing is cached between similar requests.",
+   "A high-throughput inference server for diffusion models that batches concurrent requests across sampling steps, caches intermediate activations, and schedules work across GPUs to maximize utilization.",
+   "Serving runtime implementing step-level continuous batching, KV/feature-cache reuse across denoising iterations, and hardware-aware scheduling for multi-step generative sampling workloads.",
+   "Model serving infrastructure and scheduling systems for iterative generative models, comparable to what exists for large language model inference."
+  ],
+  "keyword_queries": [
+   "diffusion inference server",
+   "diffusion batching scheduler",
+   "denoising step caching"
+  ],
+  "model": "claude-opus-5",
+  "key": "3f743e84ed657a97",
+  "prompt_version": 2
+ },
+ "real-6f3848c8": {
+  "query_core": "I need a production-ready policy enforcement layer that sits between autonomous AI agents' decisions and the actual execution of actions, enforcing programmable permissions, budget/spend caps, approval escalation and a full audit trail. It should work for teams of cooperating agents that handle real money and professional work.",
+  "missing_piece_quote": "there is no production-grade policy engine that sits between multi-agent decisions and execution—programmable permissions, spend limits, audit trails, and escalation logic for agent teams",
+  "reformulations": [
+   "My AI agents can spend money and take real actions, and I want a way to set rules on what each one is allowed to do, cap how much it can spend, require human approval past a threshold, and log everything.",
+   "A runtime governance platform for autonomous agent fleets: define fine-grained permissions and budgets per agent, intercept every tool call for approval, escalate risky actions to humans, and keep a tamper-evident audit log.",
+   "Middleware that intercepts agent tool/function calls before execution and evaluates them against a declarative policy engine with per-agent scopes, rate and spend quotas, human-approval callbacks, and structured audit events.",
+   "Authorization and compliance control plane for multi-agent LLM systems operating in production."
+  ],
+  "keyword_queries": [
+   "agent policy engine",
+   "agent action authorization",
+   "agent spend limits audit"
+  ],
+  "model": "claude-opus-5",
+  "key": "468c4de801151c3a",
+  "prompt_version": 2
+ },
+ "real-197bf4f9": {
+  "query_core": "A tool that deploys a whole suite of self-hosted applications together, pre-wired with shared single sign-on, automated backups, monitoring and one unified dashboard, instead of installing and integrating each app by hand.",
+  "missing_piece_quote": "an opinionated 'self-hosted stack composer' that deploys these apps pre-wired with shared auth, backups, and monitoring",
+  "reformulations": [
+   "I run a bunch of self-hosted apps on my home server and I want something that installs them all together with one shared login, automatic backups and a single dashboard instead of me wiring each one up manually.",
+   "An opinionated platform that composes and deploys a complete self-hosted back-office stack with single sign-on, scheduled backups, monitoring and a cross-app control panel out of the box.",
+   "Declarative orchestrator that provisions containerized self-hosted services with pre-configured OIDC/SAML identity provider integration, reverse proxy and TLS, backup jobs and metrics collection from a single config file.",
+   "Self-hosting app store or homelab PaaS that bundles multiple open-source services into one integrated, centrally managed stack."
+  ],
+  "keyword_queries": [
+   "self-hosted stack orchestrator",
+   "homelab SSO backups",
+   "self hosting platform dashboard"
+  ],
+  "model": "claude-opus-5",
+  "key": "8c720dcd9cdc666e",
+  "prompt_version": 2
+ },
+ "real-ecad36a5": {
+  "query_core": "I need a layer that decides which LLM handles each task based on difficulty and cost — cheap models for routine work, expensive ones for hard reasoning — while enforcing a spending budget per project.",
+  "missing_piece_quote": "no tool that actively decides which task deserves which model at which cost",
+  "reformulations": [
+   "I want something that automatically picks a cheaper model for simple prompts and a stronger one for hard problems, and stops me from blowing past a monthly spend limit.",
+   "A cost-aware orchestration layer that assigns each task to the right-sized language model and enforces per-project budget caps across all your agents.",
+   "Implement a routing policy that scores incoming task complexity, selects a model tier by price-performance tradeoff, tracks token spend per project, and downgrades or blocks calls when the budget is exhausted.",
+   "A budget-aware LLM router or model-selection gateway for controlling inference spend in multi-agent workflows."
+  ],
+  "keyword_queries": [
+   "cost-aware LLM router",
+   "budget aware model selection",
+   "llm spend budget orchestrator"
+  ],
+  "model": "claude-opus-5",
+  "key": "2434c64985e32be6",
+  "prompt_version": 2
+ },
+ "real-01fe2dbe": {
+  "query_core": "I need a self-hosted, end-to-end encrypted real-time chat server that I can run on my own hardware, with polished desktop and mobile clients so the server operator never sees message content.",
+  "missing_piece_quote": "self-hosted, E2E messaging control server with the polish of these clients",
+  "reformulations": [
+   "I want to run my own private chat server for my family and friends so nobody but us can read the messages, but with apps that feel as nice as mainstream messengers.",
+   "A self-hostable instant messaging platform with end-to-end encryption by default, federated or single-server deployment, and well-designed clients for desktop, iOS and Android.",
+   "An open-source real-time messaging server implementing E2E encrypted group and direct chat where keys stay on devices and the relay server stores only ciphertext and metadata-minimal routing state.",
+   "Zero-knowledge, sovereign communication infrastructure: self-hosted encrypted chat as the real-time layer of a privacy-first personal stack."
+  ],
+  "keyword_queries": [
+   "self-hosted encrypted chat server",
+   "end-to-end encrypted messenger self-hosted",
+   "zero-knowledge chat server"
+  ],
+  "model": "claude-opus-5",
+  "key": "06090338d54b4aa2",
+  "prompt_version": 2
+ },
+ "real-89c010f2": {
+  "query_core": "I need a policy and approval layer that sits between AI agents and their side effects — intercepting file writes, network calls, shell commands and payments — so each action can be checked against rules, approved interactively, and written to an audit log, regardless of which sandbox or agent framework is used.",
+  "missing_piece_quote": "no policy engine, permission prompt system, or audit log of agent actions across tools",
+  "reformulations": [
+   "My AI coding agent can already run safely in a container, but I want to see and approve every file write, outbound request, or purchase it attempts, with a record of everything it did.",
+   "A lightweight guardrail layer for autonomous agents that enforces allow/deny policies, prompts a human for risky actions, and keeps a tamper-evident audit trail of every tool call.",
+   "Interception of agent tool calls and syscalls (filesystem, network egress, process execution) through a policy engine with rule evaluation, human-in-the-loop confirmation, and structured logging across any runtime.",
+   "Runtime authorization, permissioning and observability for AI agent actions — an agent firewall rather than just sandbox isolation."
+  ],
+  "keyword_queries": [
+   "agent firewall policy",
+   "LLM agent audit log",
+   "agent tool call approval"
+  ],
+  "model": "claude-opus-5",
+  "key": "37f5e88e7a7c121c",
+  "prompt_version": 2
+ },
+ "part-e1cc171a": {
+  "query_core": "I need a runtime trust layer for AI agents: an identity, reputation, and attestation system that scores an agent's or skill's trustworthiness before it acts. Concretely, a signed registry of agent skills with provenance and reputation scores.",
+  "missing_piece_quote": "What's missing is the middle layer: a runtime identity, reputation, and attestation system that scores an agent's trustworthiness before it acts—the equivalent of a credit score plus signed provenance for skills and behaviors.",
+  "reformulations": [
+   "My AI agent can spend money and install plugins from anywhere, and I have no way to check whether a given skill or agent is trustworthy before it runs.",
+   "A registry where agent skills and tools are cryptographically signed, carry provenance, and get reputation scores so you can decide what an agent is allowed to do at runtime.",
+   "Runtime identity and attestation service for autonomous agents that verifies signed tool/skill manifests, tracks provenance of model behaviors, and returns a trust score before execution.",
+   "Trust infrastructure for autonomous software: reputation scoring, signed supply chain provenance, and identity verification for agents and their capabilities."
+  ],
+  "keyword_queries": [
+   "agent trust registry",
+   "signed skill provenance",
+   "agent reputation scoring"
+  ],
+  "model": "claude-opus-5",
+  "key": "8f9658e9a701caa7",
+  "prompt_version": 2
+ },
+ "part-aca98da0": {
+  "query_core": "A need for a continuous evaluation and scoring layer for AI agents in production: something that grades the quality of each agent's output over time, ranks competing agents on the same real tasks, and feeds those trust scores back into how much autonomy or work each agent gets.",
+  "missing_piece_quote": "There is no tool that scores agent output quality over time, compares agents against each other on real tasks, or decides which agent deserves more autonomy.",
+  "reformulations": [
+   "I run several AI agents and have no idea which one is actually doing good work \ninvalid I want something that keeps a running score of each agent's output quality and tells me which one to trust with more responsibility.",
+   "A performance review dashboard for AI agents that continuously grades their outputs, ranks them head-to-head on real production tasks, and adjusts how much autonomy each one is granted.",
+   "An online evaluation service that logs agent trajectories and outputs, applies LLM-as-judge and human-feedback scoring, maintains per-agent quality metrics and leaderboards on live tasks, and exposes trust scores to the task router.",
+   "A benchmarking and trust-scoring layer for multi-agent systems that closes the loop between agent evaluation and task assignment."
+  ],
+  "keyword_queries": [
+   "agent evaluation scoring",
+   "LLM agent leaderboard production",
+   "agent trust score routing"
+  ],
+  "model": "claude-opus-5",
+  "key": "ae44b54cdb33b7f9",
+  "prompt_version": 2
+ },
+ "part-81981bec": {
+  "query_core": "A way to mark synthetic speech at the moment it is generated: robust, imperceptible audio watermarking plus cryptographically signed consent and attribution metadata built directly into text-to-speech and voice cloning pipelines, so origin can be proven rather than guessed by a detector after the fact.",
+  "missing_piece_quote": "The structurally missing piece is generation-side provenance: robust audio watermarking and signed voice-consent infrastructure baked into these open TTS stacks",
+  "reformulations": [
+   "I want my voice cloning setup to automatically stamp every clip it produces with a hidden, tamper-resistant mark and a signed record that the voice owner agreed to it.",
+   "A toolkit that adds inaudible watermarks and cryptographically signed provenance metadata to speech generated by text-to-speech and voice conversion systems, so anyone can verify who made the audio and with whose permission.",
+   "Library for embedding survivable watermarks into synthesized waveforms at inference time, with public-key signatures over speaker consent tokens and generation metadata that can be extracted after compression, resampling and re-recording.",
+   "Content provenance and attribution infrastructure for generative audio, as an alternative to training post-hoc deepfake detectors."
+  ],
+  "keyword_queries": [
+   "audio watermarking TTS",
+   "speech provenance signing",
+   "voice consent watermark"
+  ],
+  "model": "claude-opus-5",
+  "key": "c5464fc8cda6206e",
+  "prompt_version": 2
+ },
+ "part-75b40b56": {
+  "query_core": "A tool that audits any evaluation or experiment pipeline and flags where its metrics are untrustworthy — per-segment sign reversals, run-to-run noise larger than the claimed effect, and confidence at the subgroup level. It should work generically for A/B tests and LLM evaluation harnesses rather than being a one-off academic method.",
+  "missing_piece_quote": "The missing piece is a general-purpose tool that takes any evaluation pipeline and reports where its metrics are directionally unreliable: per-segment sign flips, run-to-run variance versus claimed effect, and stratum-level confidence.",
+  "reformulations": [
+   "I keep seeing wins in my A/B tests and model evals that vanish on a rerun or reverse for certain user groups, and I want something that tells me which of my metrics I can actually trust.",
+   "A metric reliability auditor that plugs into your experiment or evaluation pipeline and reports noise-versus-effect ratios, subgroup sign reversals, and per-stratum confidence for every reported score.",
+   "Tooling that repeatedly reruns an evaluation harness, computes variance across seeds and splits, performs stratified significance testing, and flags directional instability of the reported metric per segment.",
+   "General-purpose statistical validity checking for experimentation and benchmark measurement, surfacing where reported improvements are not robust."
+  ],
+  "keyword_queries": [
+   "metric reliability audit",
+   "eval variance significance",
+   "ab test trustworthiness checker"
+  ],
+  "model": "claude-opus-5",
+  "key": "822659cb5ef8cbb5",
+  "prompt_version": 2
+ },
+ "part-1e7eb5cb": {
+  "query_core": "I need a tool that enforces a declared edit scope for AI coding agents — allowed file lists, limits on how large or wide-reaching a diff can be, and automatic rejection of changes outside the spec before they land.",
+  "missing_piece_quote": "a tool that enforces a declared scope on agent edits — file allowlists, diff-radius limits, automatic rejection of out-of-spec changes at commit time",
+  "reformulations": [
+   "My coding agent keeps touching files it was never asked to touch, and I want something that blocks or rejects those edits automatically before they get committed.",
+   "A guardrail layer that lets you declare which files and how much code an AI assistant may change, and refuses any diff that exceeds those boundaries.",
+   "A pre-commit or CI hook that validates an agent-generated diff against a declarative policy of path allowlists, max changed files and max changed lines, failing the change when it goes out of scope.",
+   "Policy enforcement and sandboxing tooling for autonomous code-writing agents that constrains the impact surface of their changes."
+  ],
+  "keyword_queries": [
+   "agent diff policy enforcement",
+   "AI code change guardrails",
+   "pre-commit file allowlist scope"
+  ],
+  "model": "claude-opus-5",
+  "key": "3fbfae47bd9650b4",
+  "prompt_version": 2
+ },
+ "real-47bf5f9f": {
+  "query_core": "I need a way to sell license keys, one-time unlocks, or subscriptions for software that runs entirely in the client (web apps, desktop apps, browser extensions) with no backend of my own. The licensing service should issue keys at checkout and let the app verify them offline or through a hosted edge endpoint.",
+  "missing_piece_quote": "a monetization/licensing layer for zero-backend software — selling license keys, unlocks, or subscriptions for apps that have no server to validate against",
+  "reformulations": [
+   "I built a local-first app with no server and want to charge users for it — how do I hand out license keys after payment and check them inside the app?",
+   "A hosted licensing and checkout layer that lets indie developers sell keys, unlocks, and subscriptions for client-side apps and browser extensions without running any backend.",
+   "Service that issues cryptographically signed license tokens on purchase which a client-side app can verify offline with a public key or via a serverless edge function, including activation limits and revocation.",
+   "Software licensing and entitlement management infrastructure for serverless, offline-capable applications."
+  ],
+  "keyword_queries": [
+   "license key verification serverless",
+   "offline license signing library",
+   "licensing browser extension payments"
+  ],
+  "model": "claude-opus-5",
+  "key": "e0c132b8a4e7211a",
+  "prompt_version": 2
+ },
+ "part-c9d908b1": {
+  "query_core": "A standardized benchmark and diagnostic suite that compares different dense reward shaping schemes head-to-head, measuring how faithfully they assign credit, how easily they can be gamed, and how well they transfer across tasks. Today each reward densification method is evaluated with its own bespoke setup, so they cannot be compared.",
+  "missing_piece_quote": "What's missing is a standardized benchmark or diagnostic suite that measures dense-reward schemes head-to-head on credit-assignment fidelity, hackability, and transfer across tasks.",
+  "reformulations": [
+   "I want a way to fairly compare the many methods that turn a single success/failure signal into per-step rewards, so I can tell which ones actually help and which just get gamed.",
+   "An evaluation suite that scores reward shaping and process-reward methods on credit assignment accuracy, susceptibility to reward hacking, and cross-task generalization.",
+   "A testbed with tasks of known ground-truth step contributions for benchmarking dense reward models, potential-based shaping, and token-level credit assignment used in RLHF/RL fine-tuning.",
+   "A standardized benchmark and diagnostic toolkit for reinforcement learning reward design and reward model evaluation."
+  ],
+  "keyword_queries": [
+   "reward shaping benchmark",
+   "credit assignment evaluation",
+   "reward hacking diagnostic"
+  ],
+  "model": "claude-opus-5",
+  "key": "9495d7e82777026f",
+  "prompt_version": 2
+ },
+ "part-730e3203": {
+  "query_core": "A lightweight single sign-on and data-sync layer that lets a handful of separately installed self-hosted PHP apps share one user directory and keep records consistent. Essentially a simple control plane for small organizations that is far less complex than enterprise identity servers.",
+  "missing_piece_quote": "a lightweight identity/SSO and data-sync layer that lets these self-hosted PHP monoliths behave like one coherent stack",
+  "reformulations": [
+   "Our small clinic runs three or four separate self-hosted web apps and staff need one login and shared contact records across all of them without setting up a heavyweight enterprise directory.",
+   "A lightweight control plane for self-hosted applications that provides single sign-on, shared user management, backups, and record synchronization for small organizations.",
+   "A minimal OIDC/SAML identity provider plus data synchronization bridge that wires several independently installed PHP web applications into one coherent stack with a common user store.",
+   "Simple identity and interoperability middleware for small on-premise software deployments, an alternative to enterprise IAM and directory servers."
+  ],
+  "keyword_queries": [
+   "lightweight self-hosted SSO",
+   "self-hosted apps control plane",
+   "single sign-on small organizations"
+  ],
+  "model": "claude-opus-5",
+  "key": "eefc0193df931669",
+  "prompt_version": 2
+ },
+ "real-8b190bdc": {
+  "query_core": "A runtime layer that sits in front of LLM outputs (recommendations, rankings, judge scores) and detects ideological or framing bias in real time, then rewrites, rebalances, or flags the output before users see it. Existing work only measures bias offline; this needs to be a deployable inference-time mitigation service.",
+  "missing_piece_quote": "a runtime middleware that intercepts LLM curation/judging outputs, scores them for ideological and pragmatic skew, and normalizes or flags them before they reach users",
+  "reformulations": [
+   "I want something that sits between my app and the model so that biased or slanted LLM recommendations and judgments get caught and corrected before my users ever see them.",
+   "A bias firewall for LLM pipelines: real-time scoring of political, ideological, and framing skew in generated rankings and evaluations, with automatic neutralization or flagging.",
+   "Inference-time middleware or proxy that intercepts completions and LLM-as-a-judge scores, computes skew metrics, and applies rewriting, reweighting, or guardrail flags before returning the response.",
+   "A deployable output moderation and debiasing layer for generative AI systems, going beyond offline bias audits to runtime mitigation."
+  ],
+  "keyword_queries": [
+   "LLM bias middleware",
+   "runtime debiasing proxy",
+   "ideological bias guardrail"
+  ],
+  "model": "claude-opus-5",
+  "key": "f35a26f68a566294",
+  "prompt_version": 2
+ },
+ "real-7c597ec1": {
+  "query_core": "I need infrastructure for managing benchmarks themselves rather than another one-off eval: a registry where evaluation datasets can be composed, versioned, deduplicated against each other, and tracked over their useful lifespan (saturation, contamination, retirement). The goal is that evaluation work accumulates and is reusable instead of fragmenting into isolated one-off suites.",
+  "missing_piece_quote": "a system for composing, versioning, deduplicating, and tracking the lifespan of benchmarks",
+  "reformulations": [
+   "Every team publishes yet another model test set and none of them connect \ninstead I want one place to register, version and reuse evaluation datasets so old ones don't just rot or get duplicated.",
+   "A platform for evaluation suite lifecycle management: compose new test sets from existing ones, track versions and provenance, flag overlapping or duplicated items, and retire saturated or contaminated benchmarks.",
+   "Implementation-level need: a benchmark registry with content-hashed item-level deduplication, semantic versioning of eval datasets, dependency/composition graphs between suites, contamination and saturation detection, and machine-readable metadata for reuse across harnesses.",
+   "Meta-level tooling and shared infrastructure for the evaluation ecosystem, analogous to package management and data versioning but for model benchmarks, so evaluation knowledge compounds instead of fragmenting."
+  ],
+  "keyword_queries": [
+   "benchmark registry versioning",
+   "eval dataset deduplication",
+   "benchmark lifecycle contamination"
+  ],
+  "model": "claude-opus-5",
+  "key": "309f853a7c198be2",
+  "prompt_version": 2
+ },
+ "part-a3ced3a9": {
+  "query_core": "A standardized way to independently verify a model edit — after unlearning, pruning, or activation steering — confirming the target behavior is gone, general capabilities are intact, and no new failures were introduced. Essentially a diff-and-regression test harness for edited model weights, like CI for code.",
+  "missing_piece_quote": "no tool for independently auditing whether an edit actually removed the behavior, preserved capabilities, and didn't create new failures",
+  "reformulations": [
+   "I removed a behavior from my language model by editing its weights, but how do I actually prove the behavior is gone and that I didn't break anything else?",
+   "A verification harness that automatically diffs a pre-edit and post-edit model, re-runs safety and capability benchmarks, and flags regressions or newly introduced failure modes.",
+   "Regression-testing framework for weight-level interventions (machine unlearning, subnetwork pruning, activation steering) that measures forget-set efficacy, retain-set performance drift, and side-effect detection across model checkpoints.",
+   "Continuous-integration style evaluation tooling for audited model modification and post-edit assurance of neural networks."
+  ],
+  "keyword_queries": [
+   "model edit verification",
+   "unlearning evaluation benchmark",
+   "LLM regression testing harness"
+  ],
+  "model": "claude-opus-5",
+  "key": "b9680722b22dfa11",
+  "prompt_version": 2
+ },
+ "real-6eb5b382": {
+  "query_core": "A way to give autonomous AI agents their own identities and credentials — short-lived, narrowly scoped, revocable, and fully audited secrets that the agent can use to call tools and cloud APIs without ever seeing or leaking the raw values.",
+  "missing_piece_quote": "credential and identity management for autonomous agents",
+  "reformulations": [
+   "My AI agents run CI jobs and touch cloud accounts, and I need a way to hand them credentials that expire, are limited to specific actions, and can be yanked instantly if the agent misbehaves.",
+   "An identity and secrets platform for AI agents that issues each agent a verifiable identity, injects scoped short-lived tokens at call time, logs every access, and supports instant revocation.",
+   "A broker that mints ephemeral, least-privilege credentials for LLM agent tool calls, proxying API requests so the raw secret never enters the model context, with per-action policy checks and an audit trail.",
+   "Machine identity and access management for non-human autonomous workloads: authentication, authorization, secret storage, and auditing for software agents."
+  ],
+  "keyword_queries": [
+   "agent identity credentials",
+   "secrets manager AI agents",
+   "ephemeral scoped tokens agents"
+  ],
+  "model": "claude-opus-5",
+  "key": "4e610cf7c8cfe719",
+  "prompt_version": 2
+ },
+ "real-fbe3c4c2": {
+  "query_core": "A way to automatically test, benchmark and audit reusable agent skills/tools before publishing or installing them — checking that each one actually works, is safe, and doesn't regress when the underlying model changes.",
+  "missing_piece_quote": "nothing here evaluates, benchmarks, or certifies whether a skill actually works, is safe, or degrades across model versions",
+  "reformulations": [
+   "I download agent skills and tool plugins from public lists but I have no way to check whether they actually do what they claim, whether they're safe to run, or whether they break when I switch models.",
+   "A continuous integration and audit service for distributable agent skills that runs test suites, security checks and scoring before a skill is published or installed.",
+   "A harness that executes each skill or MCP tool definition against fixture tasks across multiple model versions, records pass rates and regressions, and flags unsafe instructions or prompt injection in the skill payload.",
+   "Quality assurance, benchmarking and certification infrastructure for packaged LLM agent capabilities."
+  ],
+  "keyword_queries": [
+   "agent skill evaluation harness",
+   "MCP tool security audit",
+   "prompt regression testing CI"
+  ],
+  "model": "claude-opus-5",
+  "key": "25969555ead78934",
+  "prompt_version": 2
+ },
+ "part-128b8602": {
+  "query_core": "A need for an AI coding agent (exposed via an MCP server) built specifically for maintaining and debugging legacy PHP sites — WordPress/WooCommerce plugin stacks — where failures come from configuration, hooks and caching rather than source code.",
+  "missing_piece_quote": "an MCP/AI agent purpose-built for WordPress/WooCommerce and legacy PHP maintenance",
+  "reformulations": [
+   "I maintain a bunch of old WordPress and WooCommerce shops and I want an AI assistant that can actually inspect settings, plugins and caches to tell me why a checkout rule is misbehaving.",
+   "An AI maintenance agent for legacy PHP and WordPress sites that diagnoses plugin conflicts, misconfiguration and cache issues, then proposes and applies safe fixes.",
+   "An MCP server exposing WordPress/WooCommerce internals — options, hooks, plugin state, object cache, logs, WP-CLI — as tools so an LLM agent can debug and patch a running PHP site.",
+   "AI agent tooling for maintaining and modernizing legacy PHP codebases and CMS plugin ecosystems, as opposed to greenfield framework development."
+  ],
+  "keyword_queries": [
+   "WordPress MCP server",
+   "WooCommerce AI agent",
+   "legacy PHP AI debugging"
+  ],
+  "model": "claude-opus-5",
+  "key": "c52c990e4de4468b",
+  "prompt_version": 2
+ },
+ "part-6ec58e83": {
+  "query_core": "A way for AI agents calling across clouds and websites to prove who they are, whom they act for, and what they're allowed to do, using verifiable credentials and attestation that the receiving side can check.",
+  "missing_piece_quote": "an agent identity and attestation layer: verifiable credentials that let a receiving agent or website know which agent, on whose behalf, with what permissions, is calling",
+  "reformulations": [
+   "When an automated agent hits my site or my service, I have no way to tell which agent it is, which user it's acting for, and whether that user actually authorized it.",
+   "An identity and attestation layer for AI agents that issues verifiable credentials proving agent identity, delegated authority, and scoped permissions to any receiving service.",
+   "Cryptographically signed, verifiable delegation tokens and attestation for agent-to-agent calls, so a server can verify the calling agent's identity, its principal, and its permission scope across cloud providers.",
+   "Machine identity, authentication and authorization infrastructure for autonomous software agents interoperating across organizational and cloud boundaries."
+  ],
+  "keyword_queries": [
+   "agent identity attestation",
+   "verifiable credentials AI agents",
+   "agent delegated authorization"
+  ],
+  "model": "claude-opus-5",
+  "key": "420914aebcf861eb",
+  "prompt_version": 2
+ },
+ "part-ba4a9968": {
+  "query_core": "A passive safety layer for conversational AI companions that analyzes the user's voice and dialogue for clinical mental-health signals (like depression or crisis markers) and then adapts the agent's behavior or escalates to human help, instead of optimizing for engagement.",
+  "missing_piece_quote": "a passive layer that applies clinical speech-biomarker detection inside companion/role-play conversations to flag deteriorating user mental health and adapt or escalate",
+  "reformulations": [
+   "I talk to an AI chat companion every day and want it to quietly notice if my mood is getting worse over time and point me to real help instead of just keeping me hooked.",
+   "A wellbeing monitoring layer that plugs into voice chatbots and role-play agents, continuously scoring users for signs of depression or crisis and triggering supportive responses or human escalation.",
+   "Middleware that runs acoustic and linguistic biomarker models (prosody, pitch, speech rate, sentiment trajectory) over live companion-agent audio transcripts to detect deteriorating mental state and fire adaptation or escalation hooks.",
+   "Passive mental health risk detection and safety escalation tooling for conversational and voice AI systems."
+  ],
+  "keyword_queries": [
+   "speech biomarkers depression detection",
+   "chatbot mental health safety",
+   "voice wellbeing monitoring agent"
+  ],
+  "model": "claude-opus-5",
+  "key": "21c2db414c7f29df",
+  "prompt_version": 2
+ },
+ "part-eae1d11d": {
+  "query_core": "A reusable, developer-facing toolkit that instruments any LLM pipeline—retrieval, agents, or finetuning—with provenance tracking and audits of the model's internal behavior, instead of each team building one-off verification code. It should provide standardized checks that show whether outputs are traceable to trusted sources and whether internal computations match claimed behavior.",
+  "missing_piece_quote": "a general-purpose, developer-facing 'trust layer'—a standardized toolkit that instruments any LLM pipeline (retrieval, agents, finetuning) with provenance checks and internal-behavior audits",
+  "reformulations": [
+   "I want a drop-in way to check that my chatbot's answers actually come from the documents it cites and that nothing weird is happening inside the model, without writing custom verification scripts for every project.",
+   "A trust and verification layer for AI applications that instruments retrieval, agent, and fine-tuning workflows with source provenance tracking, internal behavior probes, and tamper detection out of the box.",
+   "Instrumentation SDK that hooks into LLM inference, retrieval calls, and agent message passing to log provenance, run activation-level probes, and emit auditable verification traces.",
+   "General-purpose auditing and observability framework for machine learning pipelines covering data lineage, model internals inspection, and runtime integrity checks."
+  ],
+  "keyword_queries": [
+   "LLM pipeline audit toolkit",
+   "RAG provenance verification",
+   "model internals probing observability"
+  ],
+  "model": "claude-opus-5",
+  "key": "25fffaf16b2a504f",
+  "prompt_version": 2
+ },
+ "part-024eb0a0": {
+  "query_core": "A tool that can verify whether a video is real or AI-generated/edited after the fact — detecting synthetic manipulation, embedding and checking provenance watermarks or content credentials, so platforms and ordinary viewers can confirm authenticity.",
+  "missing_piece_quote": "post-hoc detection, provenance watermarking, and verification tooling for generated/edited video",
+  "reformulations": [
+   "I want a way to check whether a video clip someone sent me is real or AI-generated before I believe or share it.",
+   "A video authenticity verification service for platforms and consumers that flags synthetic or manipulated footage and confirms its origin.",
+   "Implementation for detecting face-swapped or diffusion-generated video frames and embedding/validating invisible provenance watermarks and signed capture metadata.",
+   "Tooling for media provenance and synthetic media forensics, covering detection, watermarking, and content credential verification."
+  ],
+  "keyword_queries": [
+   "deepfake video detection",
+   "video provenance watermark",
+   "synthetic media verification"
+  ],
+  "model": "claude-opus-5",
+  "key": "ddc7aca7af825772",
+  "prompt_version": 2
+ },
+ "part-ad6c4d56": {
+  "query_core": "A shared, persistent spatial-temporal memory layer that any vision-language model task can read from and write to, instead of each system building its own one-off semantic map or scene graph. Essentially a queryable world-state store for locations, 3D structure, and changes over time.",
+  "missing_piece_quote": "The missing piece is spatial memory as infrastructure rather than per-paper architecture.",
+  "reformulations": [
+   "I want my vision model agents to remember where things are and how places change over time in one shared place, instead of rebuilding a custom map for every task.",
+   "A persistent world-state memory service that stores spatial and temporal scene knowledge and lets any multimodal model query and update it.",
+   "Implementation of a queryable spatial-temporal representation layer (3D scene graph plus embeddings, geo-anchored, versioned over time) with read/write APIs for VLM pipelines.",
+   "Infrastructure for spatial memory in embodied and multimodal AI: a reusable, composable geospatial and 3D scene knowledge store rather than per-application scaffolding."
+  ],
+  "keyword_queries": [
+   "spatial memory VLM",
+   "persistent 3D scene graph memory",
+   "spatio-temporal world model store"
+  ],
+  "model": "claude-opus-5",
+  "key": "7a7d8ab9feefdb15",
+  "prompt_version": 2
+ },
+ "part-10e73cb1": {
+  "query_core": "A standardized benchmark suite and evaluation harness for testing transfer and generalization claims of graph learning models under one common protocol, with controlled data splits, fixed negative-sampling conventions, and axes for scale, domain, task, and modality.",
+  "missing_piece_quote": "no shared benchmark or evaluation harness that stress-tests these transfer claims under one protocol",
+  "reformulations": [
+   "I want a way to fairly compare graph models that claim they transfer across tasks and domains, because every paper uses its own splits and sampling tricks and the numbers are not comparable.",
+   "A unified benchmark suite for graph representation learning that evaluates cross-task, cross-domain, cross-scale, and cross-modal transfer with fixed splits, standardized negative sampling, and reproducible leaderboards.",
+   "An evaluation harness that loads many graph datasets, enforces deterministic train/validation/test partitions and negative-sampling protocols, and runs pretrained graph encoders zero-shot and fine-tuned across heterogeneous domains and graph sizes.",
+   "A multi-task, multi-domain benchmarking framework for measuring generalization of pretrained models on relational or graph-structured data, analogous to standardized NLP evaluation suites."
+  ],
+  "keyword_queries": [
+   "graph transfer benchmark",
+   "graph foundation model evaluation",
+   "standardized graph benchmark splits"
+  ],
+  "model": "claude-opus-5",
+  "key": "b01cacc0b6feca26",
+  "prompt_version": 2
+ },
+ "part-5f3f3eaa": {
+  "query_core": "I need a general-purpose query composition layer that accepts any mix of text, images, and sketches as input fragments, fuses or rewrites them into one coherent query, and outputs a single embedding usable for retrieval. Today every system hand-builds its own fusion for one specific modality pair instead of offering a reusable API.",
+  "missing_piece_quote": "a modality-agnostic query composition layer—an interface/API that takes any mix of image, sketch, and text fragments",
+  "reformulations": [
+   "I want users to search by combining a photo, a rough sketch, and a few words of description, and I need something that turns that messy mix into one search query.",
+   "An API that accepts any combination of image, sketch, and text fragments and returns a single unified embedding for multimodal search.",
+   "Modality-agnostic fusion module that encodes and reformulates heterogeneous query fragments (image, stroke sketch, natural language edits) into one joint embedding vector for nearest-neighbor retrieval.",
+   "A reusable composition layer for multimodal retrieval systems, sitting above modality-specific encoders and composed-image-retrieval models."
+  ],
+  "keyword_queries": [
+   "composed multimodal retrieval",
+   "multimodal query fusion",
+   "sketch text image search"
+  ],
+  "model": "claude-opus-5",
+  "key": "8b759327f6915dbd",
+  "prompt_version": 2
+ },
+ "part-c4350d18": {
+  "query_core": "I need a shared, data-type-agnostic anomaly detection framework or benchmark suite that handles score calibration, threshold selection, and drift adaptation, so detectors for images, tables, time series, or binaries can plug in instead of reimplementing the same machinery.",
+  "missing_piece_quote": "a modality-agnostic anomaly-detection layer or benchmark suite: shared calibration, threshold-setting, and drift-handling infrastructure that any domain detector plugs into",
+  "reformulations": [
+   "Every team I work with writes its own outlier detector for their data type and reinvents how to pick a cutoff score and cope with changing data — is there a common toolkit that does that part once for all of them?",
+   "A plug-in framework and benchmark suite for anomaly detection that gives any detector, whatever the data type, standardized score calibration, automatic threshold setting, and concept-drift handling out of the box.",
+   "Library that wraps arbitrary anomaly scoring functions with probability calibration, quantile or conformal threshold selection, drift monitoring and recalibration, plus a unified evaluation harness across tabular, image, signal and binary datasets.",
+   "General-purpose, domain-independent outlier and novelty detection infrastructure with shared evaluation protocols and thresholding, rather than one-off detectors per application area."
+  ],
+  "keyword_queries": [
+   "anomaly detection framework",
+   "outlier detection benchmark suite",
+   "anomaly threshold calibration drift"
+  ],
+  "model": "claude-opus-5",
+  "key": "b376da47dacd2d55",
+  "prompt_version": 2
+ },
+ "part-b36b5f05": {
+  "query_core": "A way to measure, before training, how well a synthetic or simulated training dataset will actually transfer to a specific real-world target domain. Essentially a scoring tool that certifies synthetic data quality and predicts downstream model performance instead of assuming the renderer is realistic.",
+  "missing_piece_quote": "a sim-to-real fidelity auditor: a tool that scores a synthetic dataset's predictive value for a target deployment domain before you spend GPU-weeks training on it",
+  "reformulations": [
+   "I generate a lot of simulated training images and I want to know in advance whether models trained on them will actually work on my real camera data, without burning weeks of GPU time to find out.",
+   "A dataset auditing service that scores how faithfully your synthetic data matches a target real-world domain and predicts the accuracy you'll get from training on it.",
+   "Tooling to compute domain-gap and distribution-shift metrics between generated/simulated datasets and a real target dataset, estimating transfer performance before model training.",
+   "Benchmarking and validation frameworks for synthetic training data quality, sim-to-real transfer evaluation, and dataset-level quality certification."
+  ],
+  "keyword_queries": [
+   "synthetic data quality evaluation",
+   "sim-to-real domain gap metric",
+   "dataset distribution shift scoring"
+  ],
+  "model": "claude-opus-5",
+  "key": "6fa9413dbfdaa1b8",
+  "prompt_version": 2
+ },
+ "part-512fe792": {
+  "query_core": "I need a deployment-time monitoring tool that continuously checks whether a model update, retraining run, or change in the input data has invalidated the model's earlier predictions and the explanations behind them. Essentially a regression test suite for model trust that tracks decision-ranking stability and explanation consistency across versions.",
+  "missing_piece_quote": "a deployment-time reliability monitor that continuously flags when retraining, data pooling, or graph evolution has invalidated a model's prior decisions and explanations",
+  "reformulations": [
+   "After we retrain or merge in new data, some of our model's past decisions silently flip and the feature attributions change, and I want something that watches for that and alerts us.",
+   "A monitoring service that runs continuous trust checks on production models, comparing prediction rankings and explanations between versions and raising an alert when reliability degrades.",
+   "Tooling to compute stability metrics across model checkpoints, such as decision-ordering agreement, prediction churn, and attribution/explanation similarity, and fail a CI check when the drift exceeds thresholds.",
+   "A regression testing and observability framework for machine learning model trustworthiness under retraining, data shift, and changing input structure."
+  ],
+  "keyword_queries": [
+   "model regression testing predictions",
+   "explanation stability monitoring",
+   "prediction churn retraining monitor"
+  ],
+  "model": "claude-opus-5",
+  "key": "fc9620879a8825f0",
+  "prompt_version": 2
+ },
+ "part-5b6356d3": {
+  "query_core": "I need a diagnostic tool that compares a language model before and after fine-tuning or activation steering and reports what the intervention broke — lost capabilities, reduced output diversity, and new safety regressions — prior to deployment. Essentially a behavioral diff benchmark plus dashboard for post-training teams.",
+  "missing_piece_quote": "a tool that measures what a steering or fine-tuning intervention destroyed — lost solution modes, safety regressions, coverage collapse — before deployment",
+  "reformulations": [
+   "After fine-tuning or steering my model it feels worse in ways my eval scores don't show, and I want something that tells me exactly which behaviors, answer styles, or safe refusals I lost compared to the original checkpoint.",
+   "A regression-testing dashboard for model post-training that diffs a base checkpoint against the tuned or steered version and flags capability loss, output diversity collapse, and new unsafe responses before release.",
+   "Tooling to run paired evaluations across two model checkpoints, computing per-prompt response deltas, distributional coverage and entropy shifts, and safety classifier regressions introduced by RLHF, LoRA fine-tuning, or activation steering vectors.",
+   "Model behavior diffing and regression benchmarking infrastructure for evaluating the side effects of alignment and post-training interventions."
+  ],
+  "keyword_queries": [
+   "LLM behavioral diff",
+   "finetuning regression evaluation",
+   "model checkpoint comparison eval"
+  ],
+  "model": "claude-opus-5",
+  "key": "889dcb7c4334111a",
+  "prompt_version": 2
+ },
+ "part-39d157d7": {
+  "query_core": "I need a practical way to write and enforce formal specifications over AI agent behavior — contracts and invariants on tool calls, memory reads/writes, and execution traces — checked at runtime rather than just measured by benchmarks.",
+  "missing_piece_quote": "nobody offers the guardrail language",
+  "reformulations": [
+   "My LLM agent invents steps, fails to delete things it claimed to delete, and misuses tools — I want to declare rules it must never break and have them checked automatically as it runs.",
+   "A specification and verification toolkit for agentic AI: define contracts, preconditions and postconditions on tool calls and memory operations, and verify every execution trace against them.",
+   "A runtime verification layer with a declarative assertion DSL that instruments agent tool invocations, state mutations, and trace events, flagging or blocking violations of temporal and data-integrity invariants.",
+   "Lightweight formal methods for LLM-based systems, sitting between evaluation benchmarks and full theorem proving, to specify and enforce correctness properties of autonomous agents."
+  ],
+  "keyword_queries": [
+   "agent runtime verification",
+   "tool call contracts",
+   "LLM execution trace assertions"
+  ],
+  "model": "claude-opus-5",
+  "key": "066055ab1fbc81c7",
+  "prompt_version": 2
+ },
+ "part-b7aa36fd": {
+  "query_core": "I need a whole-fleet compiler for smart home/building IoT: one declarative spec for all devices that jointly optimizes and formally verifies device configurations, trust boundaries and automation rules end-to-end, instead of configuring and checking each device separately.",
+  "missing_piece_quote": "a tool that treats a home or building's IoT fleet as one coupled system — jointly optimizing and verifying device configs, trust boundaries, and automation policies end-to-end rather than device-by-device",
+  "reformulations": [
+   "I configure each smart-home device and automation one at a time and have no way to check that the whole setup is consistent, safe, and doesn't leak access between devices — I want to describe the entire building's devices in one file and have it checked and generated for me.",
+   "A fleet-level configuration compiler for smart environments that takes a single declarative model of all IoT devices, trust zones, and automations, then optimizes and formally verifies the deployment end-to-end before flashing or pushing it.",
+   "Tooling that compiles a whole-building IoT specification into per-device firmware configs and automation rules while running information-flow and access-control verification across device boundaries and solving the coupled policy optimization jointly rather than per node.",
+   "Declarative infrastructure-as-code with formal policy verification for fleets of embedded/IoT devices, treating the deployment as one coupled system."
+  ],
+  "keyword_queries": [
+   "IoT fleet configuration compiler",
+   "smart home policy verification",
+   "declarative device fleet orchestration"
+  ],
+  "model": "claude-opus-5",
+  "key": "03a684e041da88cd",
+  "prompt_version": 2
+ },
+ "part-5018a38d": {
+  "query_core": "A reusable, model-agnostic safety wrapper for clinical diagnostic AI that provides calibrated confidence scores, detects data distribution shift, and lets the model abstain and refer uncertain cases to a human expert. It should work on top of any existing medical imaging or prediction model rather than requiring a new architecture.",
+  "missing_piece_quote": "a reusable, model-agnostic clinical trust layer: calibrated uncertainty, shift detection, and abstain-and-refer workflows that wrap any diagnostic model",
+  "reformulations": [
+   "I have a diagnostic model that is accurate on average, but I need something that tells me when it is unsure so those cases get sent to a clinician instead of being auto-reported.",
+   "A drop-in trust and safety layer for clinical AI that adds confidence calibration, out-of-distribution monitoring, and automatic referral of low-confidence cases to human review.",
+   "Model-agnostic library implementing conformal prediction and post-hoc probability calibration with a selective-prediction abstention threshold plus dataset shift detection for deployed medical models.",
+   "Tooling for trustworthy and regulated deployment of high-stakes machine learning: uncertainty quantification, drift monitoring, and human-in-the-loop escalation."
+  ],
+  "keyword_queries": [
+   "selective prediction abstention",
+   "uncertainty calibration medical imaging",
+   "distribution shift monitoring wrapper"
+  ],
+  "model": "claude-opus-5",
+  "key": "cc886c77adc1a72f",
+  "prompt_version": 2
+ },
+ "part-80942ef6": {
+  "query_core": "A testing framework and CI harness for LLM agent skills/tools that automatically runs ablation experiments to verify a skill actually changes the agent's behavior, validates typed inputs/outputs and control flow, and blocks deployment when quality thresholds aren't met.",
+  "missing_piece_quote": "no tooling that ties them into a developer workflow",
+  "reformulations": [
+   "I'm building tools and skills for an AI agent and I want something that automatically tests, in my pull requests, whether each skill actually changes what the agent does and stops a release if it doesn't.",
+   "A continuous integration test suite for agent skills and tool definitions that runs ablation comparisons, validates schemas and control flow, scores readiness, and gates deployment on the results.",
+   "CI harness that executes counterfactual with/without-skill evaluation runs for LLM tool calls, asserts causal impact on decisions, type-checks tool schemas, and fails the build below configured metric thresholds.",
+   "Testing and evaluation infrastructure for LLM agents and their tool/skill ecosystem, integrated into developer pipelines as a quality gate."
+  ],
+  "keyword_queries": [
+   "agent skill testing framework",
+   "LLM tool eval CI",
+   "agent evaluation deployment gate"
+  ],
+  "model": "claude-opus-5",
+  "key": "f8a29f0e9d88b7ae",
+  "prompt_version": 2
+ },
+ "part-246e1998": {
+  "query_core": "I need a user-owned store for personal memories/context that AI agents use, where each memory carries fine-grained permissions controlling which agent can read, write or act on it, plus a tamper-evident audit log of every access. Nothing today binds memory storage and contextual authorization together in one portable substrate.",
+  "missing_piece_quote": "a user-owned memory store with attached, evidence-backed permissions — deciding which agent may read, write, or act on which memories, with audit trails",
+  "reformulations": [
+   "I want to keep my own personal data and long-term memory in one place that I control, and decide exactly which AI assistant is allowed to read or change each piece, with a log I can review afterwards.",
+   "A personal data vault for AI agents: portable memory storage with per-item access policies, consent prompts, and full audit trails of every read, write, and action.",
+   "Implementation of a memory layer for LLM agents combining persistent cross-session state with fine-grained, context-aware authorization policies and append-only tamper-evident access logging per memory record.",
+   "Tooling at the intersection of personal knowledge storage and access control — permissioned, auditable user-owned data stores that third-party software can query under policy."
+  ],
+  "keyword_queries": [
+   "agent memory permissions",
+   "personal data vault agents",
+   "auditable memory access control"
+  ],
+  "model": "claude-opus-5",
+  "key": "27ef926215816a82",
+  "prompt_version": 2
+ },
+ "part-50a4f12d": {
+  "query_core": "A runtime safety layer that any robot or vision-language-action policy can wrap to detect when it is too uncertain to act, stop or abstain, and hand control to a human operator. It needs calibrated uncertainty (e.g. conformal prediction) plus cost-aware thresholds, packaged as deployable middleware rather than research code.",
+  "missing_piece_quote": "a deployable middleware that gives any robot policy calibrated, cost-sensitive abstention with graceful handoff to humans",
+  "reformulations": [
+   "I want my robot to notice when it isn't confident enough to continue a task, pause safely, and ask a remote human to take over instead of failing.",
+   "Middleware SDK that wraps any robot control policy with calibrated confidence scoring, configurable risk thresholds, automatic abstention, and seamless teleoperation handoff.",
+   "Runtime uncertainty quantification for vision-language-action policies using conformal prediction to produce action-level coverage guarantees and trigger a cost-sensitive reject option with human-in-the-loop escalation.",
+   "Tools for selective prediction and safe fallback in autonomous embodied systems, including circuit-breaker style guardrails and human takeover orchestration."
+  ],
+  "keyword_queries": [
+   "conformal prediction robot policy",
+   "selective prediction abstention runtime",
+   "robot human takeover guardrail"
+  ],
+  "model": "claude-opus-5",
+  "key": "6d4ef8245d1892ef",
+  "prompt_version": 2
+ },
+ "part-caa34ef5": {
+  "query_core": "A general-purpose oversight layer for autonomous AI agents that enforces spending limits, logs every action for audit, provides an emergency stop, and requires human approval before risky actions — covering any agent action, not just code changes.",
+  "missing_piece_quote": "a general-purpose agent supervision product: budget caps, action audit trails, kill switches, and human-approval gates for arbitrary agent actions — not just diffs",
+  "reformulations": [
+   "I'm running autonomous AI agents that can spend money and take real-world actions, and I need a way to cap their budget, see everything they did, approve risky steps, and shut them off instantly.",
+   "A control plane for AI agents that adds spend limits, full action audit logs, human-in-the-loop approval gates, and a one-click kill switch across any tool the agent calls.",
+   "Middleware or proxy that intercepts agent tool calls and API requests to enforce policy rules, quota and cost ceilings, immutable action logging, and blocking approval prompts before execution.",
+   "AI agent governance and runtime guardrails platform for monitoring, permissioning, and halting autonomous agent behavior."
+  ],
+  "keyword_queries": [
+   "agent guardrails approval",
+   "AI agent audit log",
+   "agent kill switch budget"
+  ],
+  "model": "claude-opus-5",
+  "key": "01c2e9ae020caf34",
+  "prompt_version": 2
+ },
+ "part-a13c1dd2": {
+  "query_core": "A trust and verification layer for decentralized GPU inference: a way to prove which model actually ran on someone else's untrusted consumer hardware, confirm that prompts and data weren't leaked, and carry reputation/payment so strangers can safely rent and route inference to each other.",
+  "missing_piece_quote": "a verification/reputation layer that lets strangers safely rent, route, and audit inference across untrusted consumer hardware",
+  "reformulations": [
+   "I want to rent out my idle GPU to strangers for running AI models, but how does either side prove the right model actually ran and that the prompts weren't copied?",
+   "A trust broker for distributed AI compute that attests to model execution, guarantees data privacy, and scores node reputation so inference jobs can be matched and paid for safely.",
+   "Verifiable inference using cryptographic attestation or trusted execution environments on consumer machines, with signed proofs of model weights and outputs plus a reputation and settlement protocol for untrusted worker nodes.",
+   "Trust, verification and reputation infrastructure for peer-to-peer machine learning compute marketplaces."
+  ],
+  "keyword_queries": [
+   "verifiable inference attestation",
+   "decentralized GPU marketplace reputation",
+   "trustless model execution proof"
+  ],
+  "model": "claude-opus-5",
+  "key": "e4a2483930c37147",
+  "prompt_version": 2
+ },
+ "part-e545e760": {
+  "query_core": "A lightweight external verifier or controller that decides, per task, whether an LLM should just retry/resample its answer or spend extra tokens on self-critique and feedback-driven revision. It needs to predict when reflection actually pays off instead of wasting compute.",
+  "missing_piece_quote": "a lightweight external verifier or router that decides per-task whether to resample blindly or invest in feedback-driven repair",
+  "reformulations": [
+   "I want something that tells my model when self-criticism is actually worth the extra tokens versus just trying the answer again.",
+   "A meta-controller that scores each model output and routes it to plain resampling or to an iterative critique-and-repair loop, saving inference cost.",
+   "An external lightweight verifier model that predicts the expected gain from feedback-driven revision per prompt and gates the self-refinement loop accordingly.",
+   "Adaptive inference-time compute allocation for language models: deciding between best-of-n sampling and reflective revision on a per-query basis."
+  ],
+  "keyword_queries": [
+   "LLM self-refinement router",
+   "verifier guided resampling",
+   "adaptive test-time compute"
+  ],
+  "model": "claude-opus-5",
+  "key": "3b801beffe3b75c4",
+  "prompt_version": 2
+ },
+ "part-32a82f3a": {
+  "query_core": "A way to move prompts, agent workflows, and fine-tuned model investments off one proprietary LLM provider to another (or to self-hosted open models) quickly, including automatic failover if an account is suspended.",
+  "missing_piece_quote": "tooling that lets builders port prompts, workflows, and fine-tuning investments off a proprietary provider before or after a ban",
+  "reformulations": [
+   "My whole app depends on one AI provider's API and I want a way to keep running and take my prompts and fine-tunes with me if my account gets banned or prices change.",
+   "A portability layer that makes your AI stack provider-agnostic: export prompts, datasets, and fine-tuning artifacts, translate API calls, and switch models with one config change.",
+   "A unified LLM gateway with a provider-abstraction SDK that normalizes chat/completions and tool-calling APIs, migrates prompt templates and fine-tuning data between vendors, and fails over to open-weight models on error or account suspension.",
+   "Tooling for avoiding vendor lock-in with foundation models, covering multi-provider abstraction, migration, and continuity planning."
+  ],
+  "keyword_queries": [
+   "LLM provider migration",
+   "model agnostic gateway",
+   "prompt portability failover"
+  ],
+  "model": "claude-opus-5",
+  "key": "b280e752f0cc95a6",
+  "prompt_version": 2
+ },
+ "part-2a3fcc9d": {
+  "query_core": "A ready-to-use service that audits AI-generated reports, papers, or code for integrity problems — data leakage, rubric compliance, source provenance, signs of deliberate sabotage — and outputs a trust or reliability score. Today these checks only exist as separate academic benchmarks, not as a usable verification product.",
+  "missing_piece_quote": "a service or tool that takes an AI-generated report, paper, or codebase and runs automated integrity checks (leakage, rubric compliance, provenance, sabotage signals) and issues a trust score",
+  "reformulations": [
+   "I get research reports and code written by AI agents and I need something that automatically checks whether they are trustworthy and flags fabricated citations, leaked test data, or hidden errors before I act on them.",
+   "An independent verification service that scans any AI-produced paper, report, or repository and returns a trust score with a breakdown of integrity issues such as source provenance, evaluation contamination, and rubric compliance.",
+   "Automated pipeline that ingests agent-generated artifacts and runs leakage/contamination detection, citation and provenance validation, rubric-based grading, and sabotage-signal detection, aggregating the results into a single reliability score.",
+   "Tooling for auditing and quality-scoring machine-generated research output, i.e. a research integrity and trust-scoring layer for AI agent deliverables."
+  ],
+  "keyword_queries": [
+   "AI research integrity audit",
+   "LLM report verification trust score",
+   "data leakage citation provenance checker"
+  ],
+  "model": "claude-opus-5",
+  "key": "eb4653f308b74bbc",
+  "prompt_version": 2
+ },
+ "part-fa53f5d2": {
+  "query_core": "A continuous integration test harness for LLM agents that replays them through realistic, stateful task scenarios on every prompt or model change and flags regressions in execution behavior (tool calls, multi-step actions), not just output quality scores.",
+  "missing_piece_quote": "no continuous, developer-facing tool that runs agents through realistic stateful scenarios on every model or prompt change and flags execution-layer regressions",
+  "reformulations": [
+   "I want something that automatically re-runs my AI agent through a set of realistic multi-step tasks whenever I change the prompt or swap the model, and tells me which behaviors broke.",
+   "A developer-facing regression testing service for autonomous agents: define scenarios with real app state, run them in CI on every commit, and get a report of failed tool calls and broken action sequences.",
+   "Test framework that executes agent trajectories against sandboxed stateful environments, asserts on tool-call traces and intermediate steps, handles nondeterminism and flaky runs, and gates pull requests on execution-layer failures.",
+   "Continuous evaluation and behavioral regression testing infrastructure for tool-using LLM agents, analogous to unit testing frameworks but for multi-step agent execution."
+  ],
+  "keyword_queries": [
+   "agent regression testing",
+   "LLM agent CI evaluation",
+   "pytest for agents"
+  ],
+  "model": "claude-opus-5",
+  "key": "3d2575c11022a813",
+  "prompt_version": 2
+ },
+ "part-a3fb5892": {
+  "query_core": "I need a tool that, whenever a third-party dependency is upgraded, automatically checks whether the new version's behavior changed — API contract differences, new side effects like network calls, file or process access — instead of only flagging known vulnerabilities.",
+  "missing_piece_quote": "Absent is a lightweight tool that automatically checks behavioral properties of third-party dependencies on update",
+  "reformulations": [
+   "When a library I depend on releases a new version, I want something that tells me if it quietly started doing new things like making network requests or changing what its functions return, not just whether it has a published CVE.",
+   "A continuous assurance service for package upgrades that diffs the public API contract and observable side-effect surface between two versions of a dependency and blocks the update if behavior changed unexpectedly.",
+   "CI check that runs property-based and contract tests plus sandboxed syscall/network tracing across old and new versions of a package to produce a behavioral diff on every dependency bump.",
+   "Tooling for behavioral or semantic verification of software supply-chain updates, going beyond vulnerability scanning and SBOM inventory to detect unannounced changes in dependency behavior."
+  ],
+  "keyword_queries": [
+   "dependency behavior diff",
+   "API contract breaking change detector",
+   "package update side effect sandbox"
+  ],
+  "model": "claude-opus-5",
+  "key": "24dfb56427debc13",
+  "prompt_version": 2
+ },
+ "part-69926e60": {
+  "query_core": "A training tool that turns AI-assisted coding into deliberate practice for junior developers, forcing them to predict, verify, and debug what the model generates instead of accepting it, so they build architectural judgment and debugging skill.",
+  "missing_piece_quote": "a product that deliberately trains the judgment layer: tools that force juniors to predict, verify, and debug AI output rather than accept it, converting AI-assisted work into structured deliberate practice",
+  "reformulations": [
+   "I want an app that makes me guess and check what the AI coding assistant produced, so I actually learn to review and debug code instead of blindly accepting suggestions.",
+   "A deliberate-practice platform for junior engineers that turns everyday AI-assisted coding into graded exercises in prediction, code review, and debugging.",
+   "An IDE plugin or harness that hides LLM-generated diffs until the developer predicts the output, then scores their verification, bug-spotting, and design reasoning against the real result.",
+   "Developer skill-building and assessment tooling for building engineering judgment in the age of AI code generation."
+  ],
+  "keyword_queries": [
+   "deliberate practice programming",
+   "code review training exercises",
+   "debugging AI generated code"
+  ],
+  "model": "claude-opus-5",
+  "key": "1fcf4a0148f31df5",
+  "prompt_version": 2
+ },
+ "part-26d6adce": {
+  "query_core": "A single one-click self-hosted bundle that installs and integrates the core tools a freelancer or tiny business needs — file storage, invoicing, email, and a client portal — as one pre-wired stack instead of separate apps. The individual pieces exist, but nothing composes them into one turnkey deployment.",
+  "missing_piece_quote": "Each component exists; the composition layer doesn't.",
+  "reformulations": [
+   "I want to stop paying monthly for a pile of business subscriptions and instead run one installer on my own server that gives me file sharing, invoicing, email, and a portal for my clients, all connected.",
+   "A turnkey self-hosted business suite for solo operators: one command deploys an integrated set of apps covering documents, billing, mail, and customer access with shared login and backups.",
+   "An orchestrated multi-container deployment (single installer or compose bundle) that provisions and wires together a file server, invoicing app, mail server, and client portal with unified SSO, reverse proxy, TLS, and backup handled automatically.",
+   "Curated all-in-one self-hosting distribution or app bundle that replaces a stack of SaaS tools for freelancers and small businesses."
+  ],
+  "keyword_queries": [
+   "self-hosted business suite",
+   "all-in-one selfhosted installer",
+   "freelancer invoicing client portal self-hosted"
+  ],
+  "model": "claude-opus-5",
+  "key": "5464b38cf5c27caf",
+  "prompt_version": 2
+ },
+ "part-36d540d3": {
+  "query_core": "A practical toolkit for anonymous credentials that lets someone prove an attribute — such as being over 18, holding a valid membership, or being a real non-abusive user — without disclosing who they are. It should give sites a zero-knowledge attestation check instead of collecting identity documents.",
+  "missing_piece_quote": "practical anonymous credential tooling — proving attributes (age, membership, non-maliciousness) without revealing identity",
+  "reformulations": [
+   "I want to prove I'm over 18 or a paying member to a website without uploading my ID or letting them track who I am.",
+   "A privacy-preserving verification layer that issues unlinkable credentials so users can attest to age, membership, or personhood while sites learn nothing else about them.",
+   "Library and service for zero-knowledge proofs over signed attribute credentials, with blind issuance, selective disclosure, and unlinkable presentation tokens for web integration.",
+   "Anonymous credential and attribute attestation infrastructure as an alternative to centralized digital identity and document-based age checks."
+  ],
+  "keyword_queries": [
+   "anonymous credentials library",
+   "zero-knowledge age verification",
+   "selective disclosure attestation"
+  ],
+  "model": "claude-opus-5",
+  "key": "1a4ccf0b48b6d2dd",
+  "prompt_version": 2
+ },
+ "part-b54b6842": {
+  "query_core": "Creators need a lightweight way to prove that their writing, art, or music was made by a human rather than generated, with an attestation or provenance record audiences can verify and reward with a price premium.",
+  "missing_piece_quote": "no idea offering verifiable human provenance for creative work",
+  "reformulations": [
+   "I write and draw everything myself and I want a simple way to show readers and buyers that my work is genuinely human-made, not machine-generated.",
+   "A certification and badge service that records human authorship of creative work, issues a verifiable proof, and lets fans pay more for verified human-made content.",
+   "An attestation layer that captures authorship signals such as keystroke or edit history and signs a cryptographic content provenance manifest that third parties can verify.",
+   "Content provenance and authenticity infrastructure for distinguishing human-created media from AI-generated media."
+  ],
+  "keyword_queries": [
+   "human authorship verification",
+   "content provenance attestation",
+   "proof of human content"
+  ],
+  "model": "claude-opus-5",
+  "key": "c0ff92905d88523a",
+  "prompt_version": 2
+ },
+ "part-4eb18786": {
+  "query_core": "A need for real-time middleware that monitors live chatbot conversations for shifts in tone and stance, over-confident or authority-like framing, and language that fosters user emotional dependency, raising alerts or steering replies before harm occurs.",
+  "missing_piece_quote": "a runtime middleware that scores stance drift, epistemic register, and dependency-inducing positioning on live conversations and alerts or steers before harm accrues",
+  "reformulations": [
+   "We run a companion and support chatbot and want something that watches live conversations and warns us when the bot's tone drifts or starts making users emotionally dependent on it.",
+   "A real-time safety layer for deployed conversational AI that scores every turn for tone drift, overconfident framing, and dependency-inducing language, then alerts operators or rewrites the response.",
+   "Inference-time middleware or proxy that intercepts LLM chat turns, computes stance and register metrics per message, tracks drift across a session, and triggers thresholds for alerting or response steering.",
+   "Runtime guardrail and observability tooling for production LLM agents covering psychological and relational risk rather than just toxicity or prompt injection."
+  ],
+  "keyword_queries": [
+   "LLM guardrails runtime middleware",
+   "conversation tone drift monitoring",
+   "chatbot safety proxy alerts"
+  ],
+  "model": "claude-opus-5",
+  "key": "4b2ad92167385810",
+  "prompt_version": 2
+ },
+ "part-e01b3b33": {
+  "query_core": "A drop-in toolkit that lets fully client-side, backend-free web apps handle license keys, payments, user accounts, encrypted cross-device sync, and browser storage/WASM model resource management without running a server.",
+  "missing_piece_quote": "a lightweight toolkit for licensing, payments, cross-device sync, and WASM/ONNX resource management that preserves the zero-server ethos",
+  "reformulations": [
+   "I built a browser-only app with no backend and now I need a way to sell licenses, take payments, and sync users' data between their laptop and phone without standing up a server.",
+   "A lightweight SDK that adds paid licensing, checkout, and end-to-end encrypted multi-device sync to static, client-side web apps in a few lines of code.",
+   "Client-side library for license key validation, payment webhooks, CRDT-based sync across devices, and managing IndexedDB/OPFS quotas and cached WASM/ONNX model files in the browser.",
+   "Monetization and data-sync infrastructure for local-first, serverless applications."
+  ],
+  "keyword_queries": [
+   "local-first sync SDK",
+   "client-side licensing payments",
+   "serverless license key validation"
+  ],
+  "model": "claude-opus-5",
+  "key": "dad5da777000eaa4",
+  "prompt_version": 2
+ },
+ "part-384c5945": {
+  "query_core": "A tool that benchmarks, monitors, and calculates the real cost per request of self-hosted LLM inference on your own GPUs, and shows where the stack degrades under load.",
+  "missing_piece_quote": "a tool that benchmarks, monitors, and prices self-hosted inference stacks",
+  "reformulations": [
+   "I run open-weight models on my own GPU servers and I have no idea what each request actually costs me or at what concurrency latency falls apart.",
+   "A cost and performance observability dashboard for self-hosted model serving that reports price per request, tokens per second, GPU utilization and saturation points.",
+   "Load-testing and telemetry harness that sweeps concurrency against an inference server, records throughput, latency percentiles and GPU memory, then converts hardware amortization and power into cost per thousand tokens.",
+   "Benchmarking and cost-attribution tooling for on-premise machine learning inference capacity planning."
+  ],
+  "keyword_queries": [
+   "LLM inference benchmark cost",
+   "self-hosted GPU cost monitoring",
+   "inference load test throughput"
+  ],
+  "model": "claude-opus-5",
+  "key": "b64f3415e8964351",
+  "prompt_version": 2
+ },
+ "part-0bf9e9ec": {
+  "query_core": "I want a ready-to-use way for individuals and small teams to run serious AI workloads on their own consumer GPUs or on pooled hardware shared with others, instead of renting from big cloud providers. That means turnkey local inference appliances/software plus a marketplace for buying and selling idle consumer GPU capacity.",
+  "missing_piece_quote": "turnkey products and marketplaces that let individuals and small teams run serious AI workloads on owned or pooled consumer hardware",
+  "reformulations": [
+   "I have a gaming PC with a decent GPU and want an easy way to run big language models locally, or borrow spare GPU power from other people, instead of paying a cloud provider every month.",
+   "A plug-and-play appliance and marketplace that lets small teams serve large open-weight models on their own desktop GPUs, and rent out unused capacity to others when idle.",
+   "Peer-to-peer GPU compute pooling with scheduling, job distribution and payment settlement across heterogeneous consumer graphics cards for distributed model inference and fine-tuning.",
+   "Decentralized compute marketplaces and self-hosted AI infrastructure as an alternative to hyperscaler GPU rental."
+  ],
+  "keyword_queries": [
+   "decentralized GPU marketplace",
+   "distributed inference consumer GPUs",
+   "self-hosted LLM appliance"
+  ],
+  "model": "claude-opus-5",
+  "key": "aa9534babd6a12e7",
+  "prompt_version": 2
+ },
+ "part-e3b4803b": {
+  "query_core": "I want an AI agent runtime that runs entirely on a phone, natively in Swift or Kotlin, so that an LLM agent can call tools and act locally without sending data to a server. It should implement a standard agent host protocol so clients can connect to the on-device agent.",
+  "missing_piece_quote": "there is no native, privacy-first agent runtime that runs on the phone itself",
+  "reformulations": [
+   "I want an AI assistant on my phone that can actually do things with my apps and files but keeps everything offline, with no cloud calls.",
+   "A privacy-first mobile agent runtime for iOS and Android that hosts LLM agents on-device, with tool calling and a standard agent protocol for client apps.",
+   "A native Swift/Kotlin agent host library that runs a local model inference loop, dispatches tool/function calls, and implements an agent host protocol over an on-device transport.",
+   "Local-first, on-device AI agent frameworks and runtimes for mobile platforms."
+  ],
+  "keyword_queries": [
+   "on-device agent runtime",
+   "mobile LLM agent Swift",
+   "offline AI agent Android"
+  ],
+  "model": "claude-opus-5",
+  "key": "6da8fead44e1fe26",
+  "prompt_version": 2
+ },
+ "part-a9d3aabb": {
+  "query_core": "A standardized, cross-domain benchmark plus tooling that measures how faithfully an LLM reproduces real human responses \"including response variance, individual differences, and how beliefs update\" so researchers can validate a model before using it as a stand-in for human participants, examinees or judges.",
+  "missing_piece_quote": "a standardized, cross-domain benchmark and tooling that scores an LLM's human-simulation fidelity",
+  "reformulations": [
+   "I want to check whether the answers my language model gives really match what actual people would answer in my survey or study before I replace human participants with it.",
+   "A validation suite that scores how closely an AI model's simulated respondents match ground-truth human data across many tasks, reporting distribution match, per-person variability, and belief-update behavior.",
+   "Benchmark harness that compares LLM-generated response distributions against human reference datasets using distributional distance metrics, per-subject calibration, test-retest variance, and sequential belief-updating tests.",
+   "Evaluation framework for silicon-sample or synthetic-respondent fidelity in computational social science and automated assessment."
+  ],
+  "keyword_queries": [
+   "LLM human simulation benchmark",
+   "synthetic respondents evaluation",
+   "silicon sampling survey LLM"
+  ],
+  "model": "claude-opus-5",
+  "key": "b784edd7d578a7e1",
+  "prompt_version": 2
+ },
+ "part-d1d36433": {
+  "query_core": "I need a reusable, domain-agnostic auditing framework that stress-tests any vision-language model before deployment, checking for training-data leakage, confidence miscalibration, and hallucinated outputs. Existing checks are one-off pipelines built for a single domain instead of a general tool.",
+  "missing_piece_quote": "a reusable auditing framework or product that stress-tests any deployed VLM for leakage, miscalibration, and hallucination before deployment",
+  "reformulations": [
+   "Before we ship a multimodal model, I want one tool that tells me whether it memorized benchmark images, whether its confidence scores are trustworthy, and how often it makes things up.",
+   "A pre-deployment audit suite for vision-language models that runs standardized tests for benchmark contamination, calibration error, and hallucination and produces a trust report.",
+   "Framework to evaluate any VLM checkpoint or API with pluggable probes for data leakage detection, confidence calibration metrics, and grounded-vs-hallucinated output scoring across arbitrary image-text datasets.",
+   "General-purpose trustworthiness and safety evaluation harness for multimodal AI models, rather than domain-specific one-off benchmarks."
+  ],
+  "keyword_queries": [
+   "VLM hallucination benchmark toolkit",
+   "multimodal model evaluation calibration",
+   "data contamination audit LLM"
+  ],
+  "model": "claude-opus-5",
+  "key": "3afdb74748804a99",
+  "prompt_version": 2
+ },
+ "part-82197c7d": {
+  "query_core": "A standardized, reproducible adversarial benchmark that red-teams AI agent deployments and scores them against multi-step attack chains and privilege-escalation exploits, similar to how a standard risk list ranks web application vulnerabilities. It should package the attack-and-evaluate loop into a repeatable, comparable test suite.",
+  "missing_piece_quote": "a standardized, reproducible adversarial benchmark that scores agent deployments against sequence-composition and privilege-escalation attacks the way OWASP scores web apps",
+  "reformulations": [
+   "I run an LLM agent in production and want a repeatable way to attack it with multi-step exploits and get a security score I can compare over time.",
+   "A red-teaming benchmark suite that runs a standard library of adversarial scenarios against your AI agent and reports a reproducible security rating.",
+   "Reproducible adversarial evaluation harness that executes chained prompt-injection, tool-misuse, and privilege-escalation test cases against agent deployments and emits scored, comparable results.",
+   "Category-level: security benchmarking and automated red-team evaluation frameworks for autonomous AI agents."
+  ],
+  "keyword_queries": [
+   "agent security benchmark",
+   "LLM red team evaluation",
+   "prompt injection benchmark"
+  ],
+  "model": "claude-opus-5",
+  "key": "331ca328cfd48a82",
+  "prompt_version": 2
+ },
+ "part-cf6a474e": {
+  "query_core": "I need a control layer that sits between AI agents and the systems they act on, enforcing scoped, delegated permissions and recording an immutable audit trail of every action an agent takes on whose behalf. Today identity for agents exists but there is no accountability or approval layer, so users only find out about unauthorized agent access afterward.",
+  "missing_piece_quote": "a permissions and audit layer",
+  "reformulations": [
+   "My AI assistants can click around my accounts and machines and I only find out afterwards what they touched — I want something that asks permission first and keeps a full record of what each agent did on my behalf.",
+   "A permission and audit layer for AI agents: grant scoped, revocable, time-limited access on a user's behalf, approve sensitive actions, and get a tamper-evident log of every agent action.",
+   "An authorization proxy that intercepts agent tool and API calls, checks delegated scopes and policy, enforces human-in-the-loop approval, and writes signed audit records tying each call to a principal and delegation chain.",
+   "Access control, delegation and accountability infrastructure for autonomous software agents — essentially OAuth-style scoped consent plus audit logging for non-human actors."
+  ],
+  "keyword_queries": [
+   "agent authorization audit",
+   "AI agent permissions proxy",
+   "delegated agent access control"
+  ],
+  "model": "claude-opus-5",
+  "key": "1650024789b7cd76",
+  "prompt_version": 2
+ },
+ "part-c521a33a": {
+  "query_core": "A continual-learning toolkit that avoids catastrophic forgetting by training a separate lightweight expert (e.g. an adapter) per new task and periodically merging those experts into the base model on a schedule, instead of trying to protect one model's weights. In practice: a 'checkpoint-and-merge' library for continually fine-tuned language models or robot policies.",
+  "missing_piece_quote": "a continual-learning system that spawns lightweight per-task experts and merges them on a schedule informed by training duration, sidestepping single-model preservation entirely",
+  "reformulations": [
+   "I keep fine-tuning my model on new tasks and it forgets the old ones; I want something that trains a small separate expert for each task and folds them together periodically instead of overwriting one set of weights.",
+   "A library for continual fine-tuning that spawns per-task lightweight adapters and merges them back into the base model on a configurable schedule so nothing is forgotten.",
+   "Tooling for scheduled weight-space merging of independently trained LoRA/task-vector experts to enable sequential task learning without rehearsal or regularization on a single parameter set.",
+   "Frameworks for lifelong or continual learning of neural networks based on modular experts and model merging rather than single-model preservation."
+  ],
+  "keyword_queries": [
+   "continual learning model merging",
+   "LoRA adapter merge scheduler",
+   "catastrophic forgetting task vectors"
+  ],
+  "model": "claude-opus-5",
+  "key": "e385d4a03abc236e",
+  "prompt_version": 2
+ },
+ "part-a0dfabb1": {
+  "query_core": "A control panel for running many autonomous coding agents in parallel: watch all live runs side by side, compare their progress and output quality, track token/dollar cost per run, and kill or promote individual agents. The underlying runtimes and git worktree tooling exist, but there is no unified monitoring and arbitration layer over the fleet.",
+  "missing_piece_quote": "nothing here watches, compares, or arbitrates between the parallel agents these tools clearly anticipate",
+  "reformulations": [
+   "I have several coding agents working on different branches at once and I need one screen that shows me what each is doing, how much it has spent, and lets me stop the ones that are going nowhere.",
+   "A mission-control dashboard for fleets of autonomous coding agents: live run monitoring, side-by-side result comparison, per-run cost tracking, and one-click cancel or merge.",
+   "Orchestration and telemetry layer that supervises concurrent agent processes across git worktrees, streams their traces and token spend to a single UI, scores candidate branches, and terminates underperforming runs.",
+   "Observability and scheduling tooling for multi-agent LLM workloads running locally in parallel."
+  ],
+  "keyword_queries": [
+   "agent fleet dashboard",
+   "parallel coding agents orchestrator",
+   "agent run observability cost"
+  ],
+  "model": "claude-opus-5",
+  "key": "8a921f3a9423ba51",
+  "prompt_version": 2
+ },
+ "part-7a687ca9": {
+  "query_core": "A way to cryptographically record and sign which AI agent, model and run produced a given artifact, attached to git commits and CI build outputs, so downstream consumers can verify origin instead of guessing after the fact.",
+  "missing_piece_quote": "nothing signs the chain of custody in between",
+  "reformulations": [
+   "I want my automated coding agents to leave a verifiable, signed note on every commit and build output saying which model and run created it, so I don't have to guess later whether a human or a bot wrote it.",
+   "A lightweight attestation layer that stamps machine-generated code and build artifacts with signed authorship metadata, giving teams an auditable chain of custody from generation to deployment.",
+   "Tooling that emits signed provenance metadata (agent identity, model version, run parameters) as git commit trailers and CI artifact attestations, verifiable via public keys or a transparency log.",
+   "Standards and libraries for software supply chain provenance and authorship attestation of automatically generated artifacts."
+  ],
+  "keyword_queries": [
+   "agent provenance attestation",
+   "signed commit provenance",
+   "AI authorship metadata CI"
+  ],
+  "model": "claude-opus-5",
+  "key": "12184df459ca861e",
+  "prompt_version": 2
+ },
+ "part-5041f789": {
+  "query_core": "I need a monitoring layer that records and audits every tool call an AI agent makes over the Model Context Protocol, even with stateless transports, and flags anomalous or malicious behavior in real time.",
+  "missing_piece_quote": "an audit/anomaly-detection layer purpose-built for stateless MCP traffic",
+  "reformulations": [
+   "When my AI agent talks to tools, I want a full replayable log of every request and response plus alerts when something looks like an attack or data exfiltration.",
+   "A security observability and audit platform for AI agent tool calls that captures a tamper-evident trail and detects anomalous agent behavior.",
+   "A proxy or middleware sitting in front of Model Context Protocol servers that intercepts JSON-RPC tool invocations over stateless HTTP, correlates them into sessions, persists traces, and runs anomaly detection rules.",
+   "Runtime intrusion detection and auditing tooling for autonomous agent and tool-calling traffic."
+  ],
+  "keyword_queries": [
+   "MCP audit proxy",
+   "agent tool call observability",
+   "MCP security gateway"
+  ],
+  "model": "claude-opus-5",
+  "key": "976fbcad70502fdd",
+  "prompt_version": 2
+ },
+ "part-fc5cc4b2": {
+  "query_core": "A way to prove a sender or user is a real, trustworthy human so spam and abuse can be filtered, without requiring government ID or tracking identity — using portable, privacy-preserving reputation or cryptographic attestations that work across services.",
+  "missing_piece_quote": "portable, privacy-preserving sender reputation or proof-of-humanity that stops abuse without a government ID",
+  "reformulations": [
+   "I want to keep spammers and bots out of my inbox and my forum without forcing everyone to upload a passport or hand over their phone number.",
+   "A privacy-preserving trust layer that gives users a portable reputation or humanity proof they can present to any service to bypass spam filters and rate limits, with no identity disclosure.",
+   "Implementation of anonymous credentials, blind signatures, or zero-knowledge attestations plus web-of-trust scoring so a recipient can verify sender trustworthiness and Sybil-resistance without learning who the sender is.",
+   "Decentralized anti-abuse and proof-of-personhood infrastructure: portable reputation systems that are Sybil-resistant but not surveillance-based."
+  ],
+  "keyword_queries": [
+   "proof of personhood",
+   "anonymous credentials sybil resistance",
+   "web of trust reputation"
+  ],
+  "model": "claude-opus-5",
+  "key": "6fcb9f8a57b3ac54",
+  "prompt_version": 2
+ },
+ "part-19e97add": {
+  "query_core": "A standardized benchmark harness for federated learning that evaluates defenses under several simultaneous stressors — privacy attacks, backdoor poisoning, non-IID data skew, and strategic client dropout — instead of one threat model at a time.",
+  "missing_piece_quote": "a standardized adversarial-plus-heterogeneous FL harness",
+  "reformulations": [
+   "I want a way to test whether my federated learning defense still works when poisoning, inference attacks, uneven client data, and clients quitting all happen at the same time.",
+   "A composable stress-testing suite for federated learning systems that lets you combine attacks, data heterogeneity, and unreliable participants into reproducible evaluation scenarios.",
+   "An extensible FL simulation harness with pluggable threat models (backdoor, model poisoning, membership inference) and configurable non-IID partitioning plus client dropout schedules, reporting utility and robustness metrics jointly.",
+   "A benchmarking framework for robustness and privacy of distributed/collaborative machine learning under realistic deployment conditions."
+  ],
+  "keyword_queries": [
+   "federated learning robustness benchmark",
+   "federated poisoning attack simulator",
+   "non-IID federated stress testing"
+  ],
+  "model": "claude-opus-5",
+  "key": "7a37d567fc750c2c",
+  "prompt_version": 2
+ },
+ "part-160dbf81": {
+  "query_core": "A way to measure whether a learned world model's predicted futures actually match what happens, both as an offline benchmark and as a live monitor that flags divergence before a robot or agent acts on the prediction.",
+  "missing_piece_quote": "a faithfulness benchmark or runtime monitor that scores whether a world model's predicted futures match reality before an embodied agent acts on them",
+  "reformulations": [
+   "I train a model that imagines what will happen next, but I have no way to check how often its imagined rollouts are wrong before my robot commits to an action.",
+   "A benchmark suite and live monitoring dashboard that scores the predictive accuracy and calibration of world models, alerting when imagined futures diverge from observed outcomes.",
+   "Runtime detector that compares a predictive dynamics model's rollout against incoming sensor observations, computing prediction error and calibrated confidence to gate or abort downstream control actions.",
+   "Evaluation and monitoring infrastructure for model-based reinforcement learning and predictive simulators, covering hallucination detection, drift detection, and trustworthiness scoring of model forecasts."
+  ],
+  "keyword_queries": [
+   "world model benchmark",
+   "prediction error monitor",
+   "model-based RL evaluation"
+  ],
+  "model": "claude-opus-5",
+  "key": "0314ddf5776838ae",
+  "prompt_version": 2
+ },
+ "part-7048229f": {
+  "query_core": "I need an anomaly detector that runs on low-power edge devices and, when it flags a sensor reading, explains why it was flagged (e.g. by comparing it to learned prototypes or naming the contributing signals), so an operator can act on the alert.",
+  "missing_piece_quote": "an interpretable, prototype-based, resource-constrained anomaly detector that tells an operator WHY a sensor reading is anomalous, on-device",
+  "reformulations": [
+   "When our machine monitoring system raises an alarm, I want it to tell the technician which sensor and which pattern caused it, and it has to run on the small box attached to the equipment.",
+   "Explainable on-device anomaly detection for industrial sensor streams: every alert comes with a human-readable reason and a closest-matching example, running in a few megabytes on a microcontroller or gateway.",
+   "Prototype-based or attribution-based anomaly scoring for multivariate time series, quantized for embedded inference, returning per-feature contributions along with the anomaly score.",
+   "Interpretable machine learning for predictive maintenance and condition monitoring at the edge, combining model transparency with tight compute and memory budgets."
+  ],
+  "keyword_queries": [
+   "explainable anomaly detection edge",
+   "interpretable time series anomaly",
+   "tinyml sensor anomaly"
+  ],
+  "model": "claude-opus-5",
+  "key": "585b117a30998278",
+  "prompt_version": 2
+ },
+ "part-1fd3aeb9": {
+  "query_core": "A wrapper or middleware layer that sits on top of existing medical vision-language models, judges whether the image and context contain enough evidence to answer, and makes the model abstain or say 'I don't know' instead of guessing. It needs calibrated confidence scoring and an evidence-sufficiency gate rather than a new foundation model.",
+  "missing_piece_quote": "calibrated abstention: a medical VLM layer that detects insufficient evidence and refuses to answer",
+  "reformulations": [
+   "I want my medical imaging AI assistant to admit when the scan or question doesn't give it enough information, and say 'I don't know' instead of inventing a confident diagnosis.",
+   "A drop-in confidence-audit wrapper for clinical vision-language models that scores answer reliability, gates low-evidence queries, and routes uncertain cases to a human reviewer.",
+   "Middleware implementing selective prediction and calibrated uncertainty estimation over a frozen multimodal model, with an abstention threshold triggered when retrieved visual and textual evidence is insufficient.",
+   "Tooling for uncertainty quantification, hallucination detection and refusal behavior in high-stakes AI systems, applied as a post-hoc layer over existing models."
+  ],
+  "keyword_queries": [
+   "selective prediction abstention LLM",
+   "model confidence calibration wrapper",
+   "hallucination detection medical VLM"
+  ],
+  "model": "claude-opus-5",
+  "key": "02d7e8361ad93cf0",
+  "prompt_version": 2
+ },
+ "part-b52fedb0": {
+  "query_core": "A forensic tool that can tell whether a 3D scene or a video re-rendered from one was actually captured from the real world or synthesized by a generative model. Essentially deepfake detection extended from 2D images to 3D/4D representations like radiance fields and Gaussian splats.",
+  "missing_piece_quote": "no forensic authenticity tool for generated 3D/4D content",
+  "reformulations": [
+   "I need a way to check whether a 3D scan or an animated 3D human I was sent was really filmed with cameras or just generated by an AI model.",
+   "An authenticity checker that inspects 3D scenes and re-rendered videos and reports whether the content was captured from reality or synthesized.",
+   "A classifier that takes radiance fields, Gaussian splat scenes, meshes, or novel-view renders and predicts generated versus photogrammetrically reconstructed origin, including provenance signals and artifact fingerprints.",
+   "Media forensics and provenance verification for three-dimensional and dynamic four-dimensional content rather than flat images and video."
+  ],
+  "keyword_queries": [
+   "3D deepfake detection",
+   "gaussian splatting forensics",
+   "synthetic 3D provenance detector"
+  ],
+  "model": "claude-opus-5",
+  "key": "da6bbe557ea23365",
+  "prompt_version": 2
+ },
+ "part-7918616b": {
+  "query_core": "A permissions layer that controls which AI agents, tools, or sessions can read or write specific memory entries, with scoped access rules and provenance-based ACLs enforced at the memory store.",
+  "missing_piece_quote": "an authorization layer for agent memory — essentially IAM for memories",
+  "reformulations": [
+   "My AI agents all share one long-term memory store and I need a way to say which agent, tool, or session is allowed to read or write each memory item.",
+   "An access control service for agent memory that lets you define scopes, roles, and per-entry permissions so untrusted tools can't silently overwrite or read sensitive stored context.",
+   "Policy enforcement layer in front of a vector/memory store that checks identity, session, and provenance metadata on every read and write to memory records.",
+   "Identity and access management for LLM agent memory: fine-grained authorization, scoping, and provenance tracking for retrieval-augmented long-term state."
+  ],
+  "keyword_queries": [
+   "agent memory access control",
+   "LLM memory permissions",
+   "authorization layer vector store"
+  ],
+  "model": "claude-opus-5",
+  "key": "25c1dde533d94e90",
+  "prompt_version": 2
+ },
+ "part-a5e2487c": {
+  "query_core": "A way to evaluate and monitor the quality of an AI agent's stored memory: scoring which memory entries actually help task performance, which hurt it, and which have gone stale or become contaminated. Essentially an eval and observability suite for the memory layer of long-running agents.",
+  "missing_piece_quote": "The missing piece is a memory observability/eval suite: given an agent's memory store, quantify which entries help, hurt, or have decayed.",
+  "reformulations": [
+   "My long-running assistant keeps saving notes about past tasks and I have no idea which of those saved notes are still accurate or are actually making it perform worse.",
+   "An evaluation and observability suite for agent memory stores that scores every retained entry as helpful, harmful, or outdated and flags contamination and stale facts.",
+   "Tooling to run ablation and counterfactual replay over an agent's persistent memory store to attribute task success or regression to individual memory entries and detect negative transfer and decay.",
+   "Benchmarks and quality metrics for long-term memory in LLM agent systems, treating the memory layer as a first-class artifact to be audited rather than just tracing runs."
+  ],
+  "keyword_queries": [
+   "agent memory benchmark",
+   "LLM memory evaluation",
+   "memory store observability"
+  ],
+  "model": "claude-opus-5",
+  "key": "a47bf9f012dc8dff",
+  "prompt_version": 2
+ },
+ "syn-3282067": {
+  "reformulations": [
+   "I want something that gives me random things to draw each day so I can practice and improve my drawing skills",
+   "An app that serves daily creative prompts, pose references and practice exercises to help aspiring illustrators build skills and beat blank-canvas block",
+   "A prompt and reference generator that randomly combines subjects, styles and timed figure-drawing sessions from an image library for art practice",
+   "Tools for creative skill development and idea generation for visual artists"
+  ],
+  "keyword_queries": [
+   "drawing prompt generator",
+   "gesture drawing practice",
+   "art inspiration ideas"
+  ],
+  "model": "claude-opus-5",
+  "key": "0c8535f6632756b3"
+ },
+ "syn-3282067-claude": {
+  "reformulations": [
+   "I'd love a place where I get a new drawing idea every morning, practice drills aimed at the things I'm bad at, and other artists can leave feedback on what I upload.",
+   "A social practice space for artists offering daily art prompts, personalized skill-building exercises, and peer critique on uploaded work.",
+   "Web app with a scheduled prompt generator, a recommendation engine that assigns practice exercises based on tracked skill weaknesses, and image posting with threaded feedback from other users.",
+   "Community-driven creative training platform combining daily challenges, adaptive practice, and peer review."
+  ],
+  "keyword_queries": [
+   "daily drawing prompt",
+   "art critique community",
+   "sketch practice challenge"
+  ],
+  "model": "claude-opus-5",
+  "key": "6adbaeedb1a9f047"
+ },
+ "syn-4770645": {
+  "reformulations": [
+   "I want to see what a specific place looks like right now, as it is happening, without going there",
+   "A site that lets you browse live streaming cameras from cities, beaches and landmarks around the world in real time",
+   "An aggregator that indexes publicly accessible camera streams on a map and plays their current video feeds in the browser",
+   "Tools for real-time remote viewing of physical locations through public video feeds"
+  ],
+  "keyword_queries": [
+   "live webcam map",
+   "public camera streams",
+   "realtime world cams"
+  ],
+  "model": "claude-opus-5",
+  "key": "00f1dfc312555ccb"
+ },
+ "syn-4770645-claude": {
+  "reformulations": [
+   "I want to check how busy and lively a bar, park, or club is right this minute before I leave the house.",
+   "An app showing live crowd levels, wait times, and real-time photos or videos from nearby venues so you can pick where to go tonight.",
+   "Mobile app aggregating real-time occupancy signals (user check-ins, camera feeds, anonymized location density) and mapping current busyness per venue.",
+   "Tools for live situational awareness of public places and nightlife activity."
+  ],
+  "keyword_queries": [
+   "live venue busyness",
+   "real-time crowd app",
+   "nightlife live check-ins"
+  ],
+  "model": "claude-opus-5",
+  "key": "e08483c6270d4db2"
+ },
+ "syn-7034317": {
+  "reformulations": [
+   "I run the same lookups against my database dozens of times a day and I want a faster, less tedious way to pull up records without rewriting queries every time.",
+   "A lightweight database client that lets you save, reuse and instantly run frequent queries with autocomplete, history and one-keystroke access to results.",
+   "A terminal or desktop SQL console with persistent connections, query history, parameterized saved statements and fast result rendering for repeated ad-hoc querying.",
+   "Tools for interactive data exploration and everyday querying of relational databases by developers and analysts."
+  ],
+  "keyword_queries": [
+   "sql client terminal",
+   "saved queries database",
+   "interactive database explorer"
+  ],
+  "model": "claude-opus-5",
+  "key": "df712ef9fd99a1ec"
+ },
+ "syn-7034317-claude": {
+  "reformulations": [
+   "I need a lightweight browser app where my team can run database queries, save them with a name, share the link with colleagues, and also drop in a spreadsheet file to poke around, with an AI assistant writing the query for me.",
+   "A collaborative web-based SQL workspace for teams: write and run queries, save and share them, upload CSV or Excel files to query them directly, and get AI-generated query suggestions from plain English.",
+   "Self-hostable web query editor with connection management, persisted query snippets with shareable URLs, in-browser CSV/XLSX ingestion into a queryable table, and an LLM endpoint that drafts SQL from natural language prompts.",
+   "Team data exploration and lightweight business intelligence tooling that combines an online query console, query sharing, tabular file analysis, and AI code assistance."
+  ],
+  "keyword_queries": [
+   "collaborative sql editor",
+   "share saved queries",
+   "ai sql csv explorer"
+  ],
+  "model": "claude-opus-5",
+  "key": "1541709b499bf9dd"
+ },
+ "syn-13406648": {
+  "reformulations": [
+   "I want to view images and charts right inside my terminal window instead of opening a separate viewer while I'm writing code",
+   "A tool that renders pictures, plots and other visual output directly in your command line session so you never leave the shell",
+   "Library or CLI that draws bitmaps using terminal graphics escape sequences or unicode block characters, with fallback to ANSI color cells",
+   "Approaches to visual and graphical output in text-based console environments"
+  ],
+  "keyword_queries": [
+   "terminal image viewer",
+   "plot in terminal",
+   "console graphics rendering"
+  ],
+  "model": "claude-opus-5",
+  "key": "a63fbb8f8e3f1568"
+ },
+ "syn-13406648-claude": {
+  "reformulations": [
+   "When I run a Python script over SSH I want the graph to be drawn right in my console output instead of popping open a GUI window or writing a PNG I have to download.",
+   "A plotting library that renders line charts, bar charts and scatter plots directly in the text console using characters or inline image protocols.",
+   "How to draw plots using Unicode braille characters, ANSI colors or terminal inline graphics protocols from a Python script instead of a windowed backend.",
+   "Text-mode data visualization tools for headless and remote environments where no graphical display is available."
+  ],
+  "keyword_queries": [
+   "terminal plotting python",
+   "ascii charts console",
+   "plot in terminal"
+  ],
+  "model": "claude-opus-5",
+  "key": "1122efc3eeb402c2"
+ },
+ "syn-17181315": {
+  "reformulations": [
+   "I have a bunch of small backend services and I want to check whether the outputs of one match the inputs of another so I can chain them together.",
+   "A tool that reads the interface definitions of many independent services and shows which ones can be wired together into a combined workflow or composite endpoint.",
+   "Static analysis over service contracts and request/response schemas to compute type-compatible compositions and generate pipelines between endpoints.",
+   "Software for checking interoperability and composability of distributed service APIs."
+  ],
+  "keyword_queries": [
+   "service composition compatibility",
+   "api schema compatibility checker",
+   "microservice composition tool"
+  ],
+  "model": "claude-opus-5",
+  "key": "50dd555be5b96af1"
+ },
+ "syn-17181315-claude": {
+  "reformulations": [
+   "I want an example project I can clone that breaks a backend app into several small services written in different languages, talking to each other, and deployable to a cluster running on my laptop.",
+   "A reference demo application composed of many loosely coupled services in multiple programming languages, with manifests and scripts to run the whole thing locally on a container orchestrator.",
+   "Sample polyglot service architecture with gRPC/REST inter-service calls, container images per service, and local cluster deployment configs for development and testing.",
+   "Educational reference implementations of distributed, service-oriented backend architectures for learning containerized orchestration."
+  ],
+  "keyword_queries": [
+   "polyglot microservices demo",
+   "microservices sample application kubernetes",
+   "reference microservice architecture example"
+  ],
+  "model": "claude-opus-5",
+  "key": "c3f8fd3c6e8acae8"
+ },
+ "syn-9373724": {
+  "reformulations": [
+   "I'm constantly on the road and always forget something — I want help figuring out what to pack and bring for each trip.",
+   "An app that builds personalized packing checklists and gear suggestions based on your destination, weather, trip length and activities.",
+   "A tool that generates a trip checklist by pulling destination forecast and trip metadata, with reusable item templates and syncing across devices.",
+   "Software for frequent travelers to organize trips, luggage contents and equipment recommendations."
+  ],
+  "keyword_queries": [
+   "packing list generator",
+   "travel checklist app",
+   "trip planner gear"
+  ],
+  "model": "claude-opus-5",
+  "key": "74980da3a4beab11"
+ },
+ "syn-9373724-claude": {
+  "reformulations": [
+   "I keep moving between countries while working online and want a trustworthy, curated list of the best backpacks, chargers, and travel gadgets to buy.",
+   "A hand-picked gear guide site recommending laptop bags, packing tools, and portable tech for location-independent remote workers.",
+   "A community-maintained repository or database of recommended travel and work equipment, with categories, reviews, and affiliate links, aimed at people working from anywhere.",
+   "Curated product recommendation directories for long-term travelers and remote professionals."
+  ],
+  "keyword_queries": [
+   "digital nomad gear",
+   "awesome travel gear",
+   "remote work equipment list"
+  ],
+  "model": "claude-opus-5",
+  "key": "24264147963692bc"
+ },
+ "syn-40167406": {
+  "reformulations": [
+   "I'm studying chemistry on my own and want something that helps me practice reactions, balance equations, and remember the elements",
+   "An interactive learning app for chemistry students with visual molecule models, a clickable table of elements, quizzes and step-by-step problem practice",
+   "Open source web tool that renders molecular structures, parses chemical formulas, and generates practice problems with automatic answer checking",
+   "Educational software and simulations for teaching science subjects like chemistry to students and self-learners"
+  ],
+  "keyword_queries": [
+   "chemistry learning app",
+   "interactive periodic table",
+   "molecule visualizer education"
+  ],
+  "model": "claude-opus-5",
+  "key": "a4edaddc5dc1e7b9"
+ },
+ "syn-40167406-claude": {
+  "reformulations": [
+   "I want a website where I can click through the chemical elements and visually compare things like melting point or density using color shading and plots.",
+   "An interactive online periodic table that colors each element by a selected property and draws graphs showing how that property trends across rows and columns.",
+   "A browser-based visualization built from an element dataset that renders the periodic layout as a heatmap and generates charts of atomic properties per element.",
+   "Educational data visualization tools for exploring chemistry reference data about the elements in the browser."
+  ],
+  "keyword_queries": [
+   "interactive periodic table",
+   "periodic table visualization",
+   "chemical elements data explorer"
+  ],
+  "model": "claude-opus-5",
+  "key": "69386e49c49e5427"
+ },
+ "syn-33480679": {
+  "reformulations": [
+   "I want to design my own t-shirt or hoodie and get it made and shipped fast without ordering hundreds of units",
+   "An on-demand service that turns your artwork or measurements into custom-made apparel printed and shipped within days",
+   "A web app with a garment design editor that sends single-item orders straight to print-on-demand or made-to-measure manufacturing APIs",
+   "Tools and platforms for rapid custom fashion and one-off personalized garment production"
+  ],
+  "keyword_queries": [
+   "custom apparel on-demand",
+   "t-shirt design editor",
+   "made to measure clothing"
+  ],
+  "model": "claude-opus-5",
+  "key": "5fb3fa5befe3e3c5"
+ },
+ "syn-33480679-claude": {
+  "reformulations": [
+   "I'd like to just speak a description of a picture, have the computer draw it for me, and then order a t-shirt or hoodie with that image printed on it and mailed to my house.",
+   "An app that turns your spoken words into AI-generated artwork and lets you order the design printed on custom apparel, with printing and shipping handled for you.",
+   "Pipeline combining speech-to-text transcription, a text-to-image generation model, and a print-on-demand fulfillment API for placing apparel orders from generated designs.",
+   "Voice-controlled generative art tools that connect to custom merchandise manufacturing and delivery."
+  ],
+  "keyword_queries": [
+   "voice to image generator",
+   "AI generated t-shirt store",
+   "text to image print on demand"
+  ],
+  "model": "claude-opus-5",
+  "key": "1047cf4305efef32"
+ },
+ "syn-3377729": {
+  "reformulations": [
+   "I want an app on my phone that shows a monthly calendar with one of my own photos as the picture for each month.",
+   "A mobile calendar that turns your personal photo library into a beautiful illustrated month-by-month wall calendar you can browse or print.",
+   "Android/iOS app that reads images from the device gallery and renders a monthly grid view with a user-chosen photo header per month.",
+   "Tools for generating personalized photo calendars from your own pictures, for screen or print."
+  ],
+  "keyword_queries": [
+   "photo calendar app",
+   "personal photo calendar generator",
+   "monthly calendar photos mobile"
+  ],
+  "model": "claude-opus-5",
+  "key": "fb4fc1e32c435f26"
+ },
+ "syn-2226207": {
+  "reformulations": [
+   "I want a relaxing daily map puzzle where I pick a route between real towns and have to reach every stop before running out of fuel or the clock ends",
+   "A browser-based travel puzzle that challenges you to plan the most efficient road trip across real-world locations under a strict fuel and time budget",
+   "A web game using real map and city coordinate data that scores a player's chosen multi-stop route against distance, fuel consumption and a time limit",
+   "Casual geography and map-based games about route planning and visiting multiple destinations with limited resources"
+  ],
+  "keyword_queries": [
+   "road trip game map",
+   "geography route puzzle",
+   "travel planning browser game"
+  ],
+  "model": "claude-opus-5",
+  "key": "793030f74ffc33c5"
+ },
+ "syn-5287548": {
+  "reformulations": [
+   "I'm tired of hand-writing the same boilerplate every time I pull user activity counts from my analytics backend for different segments and then merge the results together.",
+   "A library that lets you define event metrics and user segments once and automatically fetches, groups and combines activity numbers from your analytics data source.",
+   "A declarative query layer that generates and batches segmented event-analytics queries (filters, breakdowns, time buckets) and joins the returned series into a single result set.",
+   "Tooling for building reusable metric and cohort definitions on top of product usage event data instead of ad-hoc analytics API calls."
+  ],
+  "keyword_queries": [
+   "event analytics query builder",
+   "metrics semantic layer",
+   "user segmentation cohort API"
+  ],
+  "model": "claude-opus-5",
+  "key": "3be9f1db0d2d5e25"
+ },
+ "syn-4965299": {
+  "reformulations": [
+   "I'd like an app on my phone where I can play the old tigers-versus-goats board game from Nepal with friends or strangers online instead of alone against the computer.",
+   "Mobile app for a classic South Asian hunt-style board game where one player moves tigers and the other places goats, with online and local two-player matches.",
+   "Android implementation of a 5x5 point-and-line hunt game with move/capture-by-jump rules, supporting turn-based or real-time play between two human players over a network.",
+   "Digital versions of traditional asymmetric folk board games playable against other people on mobile devices."
+  ],
+  "keyword_queries": [
+   "bagh chal android",
+   "tigers goats game",
+   "baghchal multiplayer"
+  ],
+  "model": "claude-opus-5",
+  "key": "bc535a7d6fd57c0d"
+ },
+ "syn-8481751": {
+  "reformulations": [
+   "I run my own full-text search server and just want a simple, good-looking web page where I can type a query and see results, instead of setting up a bulky admin console.",
+   "A minimal, elegant browser-based search interface that connects to your self-hosted search index and renders results instantly, with no heavy management dashboard required.",
+   "A static single-page front end that sends queries to a self-hosted search API endpoint and displays ranked hits with highlighting, configurable by a small config file.",
+   "Lightweight client-side user interfaces for querying self-managed search backends."
+  ],
+  "keyword_queries": [
+   "minimal search UI",
+   "self-hosted search frontend",
+   "full-text search web client"
+  ],
+  "model": "claude-opus-5",
+  "key": "8a25036f432572fa"
+ },
+ "syn-2774322": {
+  "reformulations": [
+   "I keep refreshing a programming link aggregator all day and waste hours; I want one email each morning with only the best stories.",
+   "A daily email digest that collects the highest-ranked posts from a tech link aggregator and delivers them to your inbox once a day.",
+   "Scheduled job that scrapes or queries a link aggregator's API for top-scoring submissions over the past 24 hours and sends them as a formatted email.",
+   "Tools that turn frequently updated feeds or forums into periodic email summaries to reduce compulsive checking."
+  ],
+  "keyword_queries": [
+   "daily digest newsletter",
+   "top stories email",
+   "news aggregator digest"
+  ],
+  "model": "claude-opus-5",
+  "key": "3a34cdcbdf69d1d0"
+ },
+ "syn-8813313": {
+  "reformulations": [
+   "I code in a purely functional, lazily evaluated statically typed language and want a neural network library where I can build models by composing layer values like ordinary functions and tinker interactively.",
+   "A machine learning framework for functional programmers: type-safe, composable network layers as first-class values, automatic differentiation, and an expressive API for rapid experimentation with architectures.",
+   "Implementation of automatic differentiation and tensor operations with strongly typed, dimension-checked layer combinators that can be composed and reused as pure values in a lazy functional language.",
+   "Deep learning tooling outside mainstream imperative ecosystems, built around strong static types and compositional abstractions rather than imperative model definitions."
+  ],
+  "keyword_queries": [
+   "type-safe neural network library",
+   "functional deep learning combinators",
+   "composable layers autodiff"
+  ],
+  "model": "claude-opus-5",
+  "key": "971bd8dafd581d88"
+ },
+ "syn-2229924": {
+  "reformulations": [
+   "I want an app where I put real money on the line for my goals, and I lose it if I don't follow through.",
+   "A goal-tracking service that lets you stake cash on a personal commitment and automatically donates or forfeits it when you fail.",
+   "Build a commitment contract platform with payment holds, a referee or verification step, and automatic charge on missed check-ins.",
+   "Tools that use financial penalties and accountability mechanisms to enforce habit formation and behavior change."
+  ],
+  "keyword_queries": [
+   "commitment contract stakes",
+   "money habit accountability",
+   "goal betting app"
+  ],
+  "model": "claude-opus-5",
+  "key": "b97ba97d624aea97"
+ },
+ "syn-2205938": {
+  "reformulations": [
+   "I'd love an app where my tasks and schedule are visible to close friends so they can tag along or add themselves to my plans.",
+   "A shared planner that combines task lists and a calendar with a social layer, letting friends follow your schedule, join events and coordinate plans together.",
+   "Looking for an implementation of a collaborative task and event store with per-item visibility permissions, friend graph, RSVP/join actions and real-time sync across users' calendars.",
+   "Social group coordination and scheduling software that blends personal productivity tracking with shared availability and event participation."
+  ],
+  "keyword_queries": [
+   "social calendar app",
+   "shared todo friends",
+   "collaborative planner events"
+  ],
+  "model": "claude-opus-5",
+  "key": "9238654822bd0104"
+ },
+ "syn-2879393": {
+  "reformulations": [
+   "I'd love to get a box of candy and snacks from a different country delivered to my door every month.",
+   "A monthly subscription service that curates and ships boxes of international candies, chocolates and regional snacks to your home.",
+   "Recurring-billing e-commerce and fulfillment setup for shipping curated food boxes to subscribers on a monthly cycle.",
+   "Subscription commerce for curated consumer goods delivered on a repeating schedule."
+  ],
+  "keyword_queries": [
+   "snack subscription box",
+   "monthly candy delivery",
+   "international snacks shop"
+  ],
+  "model": "claude-opus-5",
+  "key": "28cf33fb7fead418"
+ },
+ "syn-17800530": {
+  "reformulations": [
+   "I want to process sensitive data that stays encrypted the whole time, and I need it to be fast, so ideally it uses my graphics card and I can call it from Python.",
+   "A Python library that performs arithmetic and machine learning inference directly on ciphertexts, accelerated on GPUs for practical performance.",
+   "CUDA-accelerated implementation of lattice-based encryption schemes supporting addition and multiplication over ciphertexts, exposed through Python bindings.",
+   "Privacy-preserving computation frameworks that let servers compute on data they never see, with hardware acceleration and high-level language APIs."
+  ],
+  "keyword_queries": [
+   "GPU homomorphic encryption",
+   "encrypted computation python",
+   "CUDA ciphertext arithmetic"
+  ],
+  "model": "claude-opus-5",
+  "key": "e6c918b628a86ac8"
+ },
+ "syn-19286008": {
+  "reformulations": [
+   "I'm following a textbook course on robot arm kinematics and dynamics, and I want the book's example code and helper functions available in a fast numerical programming language instead of the original one.",
+   "A library of educational robotics routines — forward and inverse kinematics, Jacobians, trajectory generation and rigid-body dynamics for serial-link arms — reimplemented in a modern high-performance scientific computing language.",
+   "Port of a classic manipulator modeling toolbox: Denavit-Hartenberg link definitions, homogeneous transforms, recursive Newton-Euler inverse dynamics and joint-space trajectory functions, rewritten for a JIT-compiled numerical language.",
+   "Open-source teaching and research package for modeling, simulating and controlling robotic manipulators, translated from the standard course software into a faster language."
+  ],
+  "keyword_queries": [
+   "robotics toolbox port",
+   "manipulator kinematics dynamics library",
+   "serial link robot arm"
+  ],
+  "model": "claude-opus-5",
+  "key": "8691986f53830048"
+ },
+ "syn-10384493": {
+  "reformulations": [
+   "How can I add an FTP server to my C# app so that anything users upload lands directly in cloud object storage instead of the machine's hard drive?",
+   "An embeddable file transfer server component for .NET applications with pluggable storage backends, including cloud buckets, network shares, or in-memory filesystems.",
+   "Managed FTP/SFTP server implementation with a virtual filesystem abstraction so the file system provider can be swapped for a remote object storage API.",
+   "Libraries that let developers host classic file transfer protocol endpoints backed by modern cloud storage rather than local disks."
+  ],
+  "keyword_queries": [
+   "ftp server library",
+   "sftp server dotnet",
+   "ftp object storage backend"
+  ],
+  "model": "claude-opus-5",
+  "key": "f9df273527178152"
+ },
+ "syn-18642575": {
+  "reformulations": [
+   "I code in Lisp on a Windows desktop and want an editor with an integrated interactive prompt that runs natively, without installing a Unix emulation layer first.",
+   "A standalone Lisp programming environment for Windows combining a code editor, interactive evaluation prompt, and compiler in one native application.",
+   "Native Win32 IDE with an embedded read-eval-print loop that evaluates s-expressions from the buffer and supports debugging and image dumping without POSIX shims.",
+   "Self-contained interactive development environments for parenthesized functional languages on desktop operating systems other than Unix-like ones."
+  ],
+  "keyword_queries": [
+   "lisp ide windows",
+   "native repl editor lisp",
+   "common lisp windows environment"
+  ],
+  "model": "claude-opus-5",
+  "key": "2ac2045f4022bdea"
+ },
+ "syn-13116455": {
+  "reformulations": [
+   "I'd like a simple terminal program that can squeeze a file down and restore it again, written in a way I can read the source and actually understand how compression works.",
+   "A tiny command-line utility that compresses and decompresses any file using a classic symbol-frequency coding scheme, built as a readable learning project.",
+   "Implementation of Huffman or arithmetic coding with a bit-level writer, frequency table serialization in the header, and encode/decode subcommands for arbitrary binary files.",
+   "Educational from-scratch data compression tools and lossless codec implementations for studying entropy coders."
+  ],
+  "keyword_queries": [
+   "huffman coding cli",
+   "file compressor from scratch",
+   "entropy coding compression tool"
+  ],
+  "model": "claude-opus-5",
+  "key": "39de49a5e550057e"
+ },
+ "syn-21462993": {
+  "reformulations": [
+   "I have hours of video of cars and animals moving around and I want a Python script that follows each one across frames, with the freedom to swap in whichever detection model works best.",
+   "A Python library that turns any object detection model into a full multi-object tracker, assigning stable IDs to every vehicle or animal as it moves through a video.",
+   "Implementation of multi-object tracking in Python with detector-agnostic input, Kalman filter motion prediction and Hungarian assignment for frame-to-frame identity association.",
+   "Tools and frameworks for video-based object tracking and trajectory analysis in wildlife monitoring and traffic footage."
+  ],
+  "keyword_queries": [
+   "multi object tracking",
+   "python video tracker",
+   "detector agnostic tracking"
+  ],
+  "model": "claude-opus-5",
+  "key": "95a5213225e375b2"
+ },
+ "syn-9132881": {
+  "reformulations": [
+   "I want my Python code to postpone computing a value until something actually reads it, the way a purely functional language delays work.",
+   "A Python library that wraps expressions in deferred placeholders so heavy computations only run at the moment their result is first used, and then get cached.",
+   "Implementing call-by-need semantics in Python via thunk objects or proxies that intercept attribute access and operators to force evaluation on demand.",
+   "Tools bringing non-strict, demand-driven evaluation and infinite data structures to an eagerly evaluated imperative language."
+  ],
+  "keyword_queries": [
+   "lazy evaluation python",
+   "python thunk deferred",
+   "call-by-need proxy"
+  ],
+  "model": "claude-opus-5",
+  "key": "fa4ded610b40973e"
+ },
+ "syn-19261376": {
+  "reformulations": [
+   "I follow a few companies and want to get an email or push notification the moment they publish a brand-new public repository under their account.",
+   "A monitoring service that watches chosen organizations' code hosting accounts and alerts you as soon as a new repository appears.",
+   "A scheduled job that polls an organization's public repository list via the API, diffs it against the last snapshot, and sends a webhook or email for newly created repos.",
+   "Tooling for tracking competitors' and vendors' open-source activity with change notifications."
+  ],
+  "keyword_queries": [
+   "new repository notifier",
+   "watch organization repos alert",
+   "github org monitor notifications"
+  ],
+  "model": "claude-opus-5",
+  "key": "9009aee65950225f"
+ },
+ "syn-13551907": {
+  "reformulations": [
+   "I want a place where I can look up, in a factual and non-partisan way, what governments and public agencies around the world have actually decided and done, kept up to date over time.",
+   "A neutral, continuously updated public database that tracks the decisions, rulings, regulations and actions of national and local authorities worldwide.",
+   "A system that ingests official gazettes, legislative records, ministerial decrees and agency announcements from many countries, normalizes them into structured, timestamped entries, and keeps them versioned and searchable.",
+   "Open civic-data infrastructure for government transparency: a global, fact-based archive of state and public-authority activity."
+  ],
+  "keyword_queries": [
+   "government actions database",
+   "policy decisions tracker",
+   "official gazette scraper"
+  ],
+  "model": "claude-opus-5",
+  "key": "ff52f41eeb7ba7b6"
+ },
+ "syn-17719720": {
+  "reformulations": [
+   "I want a command I can run inside a code repository that prints each contributor, how many commits they made, and the date they last touched the project.",
+   "A command-line tool that summarizes repository authorship: contributor leaderboard with commit counts, lines changed, and most recent activity per person.",
+   "Parse version control history from the shell to aggregate commits by author, computing per-author totals and the timestamp of their latest commit.",
+   "Terminal-based analytics for source code history, showing team contribution breakdowns and activity timelines."
+  ],
+  "keyword_queries": [
+   "git contributor statistics cli",
+   "commit author stats terminal",
+   "repository authorship summary"
+  ],
+  "model": "claude-opus-5",
+  "key": "736ee64ec21fc53d"
+ },
+ "syn-22843070": {
+  "reformulations": [
+   "My laptop's keys are laid out differently from the little external keyboard I like, so I want to swap a handful of them on Linux, but the old X-based tweaking commands no longer have any effect in my current session.",
+   "A system-wide keyboard customization utility for Linux that lets you reassign individual keys and create custom layouts, working the same whether your session uses the legacy windowing system or a newer compositor.",
+   "Remap keycodes at the kernel input device level with a userspace daemon reading and rewriting evdev events, so remapping applies to every application independent of the graphical session protocol.",
+   "Cross-session keyboard layout editing and key reassignment software for Linux desktops and laptops."
+  ],
+  "keyword_queries": [
+   "keyboard remapper linux",
+   "key remapping daemon",
+   "evdev keymap remap"
+  ],
+  "model": "claude-opus-5",
+  "key": "9ecd510acbf5b0a5"
+ },
+ "syn-47472735": {
+  "reformulations": [
+   "I want an interactive online quiz that tests whether I can tell which chopstick habits are rude at the dinner table.",
+   "A playful web app that teaches dining etiquette by asking multiple-choice questions about which uses of chopsticks are considered taboo.",
+   "A browser-based quiz game with a question bank of chopstick etiquette violations, per-question feedback explaining why the habit is offensive, and a final score.",
+   "Gamified cultural learning tools that quiz people on table manners and customs from other countries."
+  ],
+  "keyword_queries": [
+   "chopstick etiquette quiz",
+   "table manners quiz",
+   "dining etiquette game"
+  ],
+  "model": "claude-opus-5",
+  "key": "7af71c1680a4e3bb"
+ },
+ "syn-46434650": {
+  "reformulations": [
+   "I survived a brain injury and my memory and planning are shot, so I need a phone app designed with therapists to remind me of tasks and structure my day",
+   "A mobile assistant for people with memory and organization difficulties after brain injury, developed together with rehabilitation clinicians, offering reminders, daily routines and coping strategies",
+   "Android/iOS app implementing prompting, task scheduling, and compensatory memory strategies for cognitive impairment, validated with occupational therapy input",
+   "Digital cognitive rehabilitation and assistive technology for executive function and memory support in neurological patients"
+  ],
+  "keyword_queries": [
+   "brain injury rehabilitation app",
+   "cognitive rehabilitation mobile",
+   "memory aid reminders impairment"
+  ],
+  "model": "claude-opus-5",
+  "key": "37f7f76f4d07f6d6"
+ },
+ "syn-44939278": {
+  "reformulations": [
+   "I'm applying for a visa to travel from North Africa to Europe and need to buy travel medical cover online right now and get a certificate the embassy will accept.",
+   "An online service that sells short-term travel medical coverage and instantly issues a visa-compliant certificate of insurance as a downloadable PDF.",
+   "Platform with payment and policy issuance API that generates and emails a signed coverage certificate immediately after purchase, meeting consular minimum-coverage requirements.",
+   "Digital insurance distribution for cross-border travelers, including instant underwriting and automated document generation for visa paperwork."
+  ],
+  "keyword_queries": [
+   "travel insurance certificate",
+   "visa insurance online",
+   "instant policy issuance"
+  ],
+  "model": "claude-opus-5",
+  "key": "b09aec246c05c9e3"
+ },
+ "syn-36030350": {
+  "reformulations": [
+   "Reading huge discussion threads on my phone is painful — I want an app that shows me one reply branch at a time instead of a giant wall of nested comments.",
+   "A mobile reader for online discussion boards that lets you drill into a single conversation branch, collapse siblings, and swipe between top-level replies.",
+   "Client app that fetches a forum's comment tree via its API and renders it as navigable subtrees with collapse/expand and next-sibling jump gestures.",
+   "Tools for navigating deeply nested threaded conversations on small screens."
+  ],
+  "keyword_queries": [
+   "threaded comment reader",
+   "mobile discussion thread navigator",
+   "collapsible nested comments app"
+  ],
+  "model": "claude-opus-5",
+  "key": "b1dde6e8476cacf9"
+ },
+ "syn-30673502": {
+  "reformulations": [
+   "When I'm reading an article online I want to highlight sentences and jot comments right on the page, then send that marked-up version to a friend.",
+   "A tool that lets you highlight, draw on and comment over any live website and share a link to the annotated page with others.",
+   "Browser extension or bookmarklet that stores text-range highlights and sticky comments anchored to DOM selectors and serves a shareable annotated snapshot of the URL.",
+   "Collaborative web annotation and markup layer for sharing commentary on pages across the internet."
+  ],
+  "keyword_queries": [
+   "web page annotation sharing",
+   "highlight annotate any website",
+   "browser extension markup comments"
+  ],
+  "model": "claude-opus-5",
+  "key": "5760c902c180bb44"
+ },
+ "syn-30183465": {
+  "reformulations": [
+   "Our monthly bill for rented servers keeps climbing and engineers waste hours manually buying prepaid discount commitments; we want something that handles it automatically.",
+   "A managed service that continuously analyzes compute usage and automatically buys, resells and adjusts long-term capacity commitments so infrastructure spend drops without manual work.",
+   "Tooling that ingests billing and usage data via provider APIs, forecasts steady-state compute demand, and programmatically purchases or modifies reserved capacity and discount plans to minimize spend.",
+   "Automated cloud financial management and spend optimization platform for engineering teams."
+  ],
+  "keyword_queries": [
+   "cloud cost optimization automation",
+   "reserved instance automation",
+   "savings plan optimizer"
+  ],
+  "model": "claude-opus-5",
+  "key": "e0f9e3e5cfb4fab4"
+ },
+ "syn-41298789": {
+  "reformulations": [
+   "I have a plain HTML site with no backend and I just want the message someone types in my contact box to land in my inbox.",
+   "A hosted endpoint you point your HTML form's action at, which validates submissions, blocks spam, and forwards them to your email address.",
+   "Serverless form submission handler: POST form fields to a third-party URL or function that relays them via SMTP and optionally stores them.",
+   "Tools for collecting and delivering web form data on static sites without maintaining server-side code."
+  ],
+  "keyword_queries": [
+   "static site forms",
+   "form to email",
+   "serverless form backend"
+  ],
+  "model": "claude-opus-5",
+  "key": "fbac969d16785d49"
+ },
+ "syn-3615558": {
+  "reformulations": [
+   "I just moved to San Francisco and wish there were a single page showing all the upcoming tech meetups, hacker nights and founder mixers instead of me checking five different sites.",
+   "A curated, always-current calendar of startup and technology gatherings in one city, so newcomers can see everything happening this week in one place.",
+   "A scraper and aggregator that pulls event listings from multiple meetup and ticketing sources, deduplicates them, and renders a single chronological city event feed.",
+   "Tools for aggregating local community events into one unified calendar or listing site."
+  ],
+  "keyword_queries": [
+   "tech events calendar aggregator",
+   "san francisco startup events",
+   "local meetup event scraper"
+  ],
+  "model": "claude-opus-5",
+  "key": "737048789675877f"
+ },
+ "syn-2386860": {
+  "reformulations": [
+   "I want to sketch app screens right inside my slide deck so my manager and clients, who can't code, can help design the interface using software they already know.",
+   "A stencil and template kit that turns ordinary presentation software into a simple wireframing and screen mockup tool for non-designers.",
+   "Reusable shape libraries, master slides and linked-slide interactions for building clickable low-fidelity UI prototypes in a slide-based editor.",
+   "Low-barrier collaborative interface design for non-technical stakeholders using everyday office tools instead of specialized design software."
+  ],
+  "keyword_queries": [
+   "wireframe slide template",
+   "presentation prototyping toolkit",
+   "mockup stencils slides"
+  ],
+  "model": "claude-opus-5",
+  "key": "5aee1ceebabdd2d4"
+ },
+ "syn-8757899": {
+  "reformulations": [
+   "I want a case for my iPhone that keeps it safe from scratches and drops but feels like there's almost nothing on the phone.",
+   "An ultra-thin, lightweight shell that preserves the phone's original slim profile while offering everyday protection.",
+   "A sub-millimeter molded polymer or aramid fiber phone shell engineered for minimal thickness and weight while maintaining edge and camera protection.",
+   "Minimalist mobile device accessories that protect hardware without adding bulk."
+  ],
+  "keyword_queries": [
+   "ultra thin iphone case",
+   "minimalist phone case",
+   "slim phone cover"
+  ],
+  "model": "claude-opus-5",
+  "key": "457c5f68c1c5d482"
+ },
+ "syn-4439874": {
+  "reformulations": [
+   "I run a subscription business and want to see my monthly recurring revenue, churn and average customer lifetime value on my own server instead of uploading my billing data to a third-party analytics service.",
+   "A free, open-source dashboard you host yourself that connects to your payment processor and reports recurring revenue, growth, cancellations, and lifetime value for your subscribers.",
+   "Self-hosted app that syncs subscription and invoice records from a billing API into a local database and computes MRR, ARR, churn rate, expansion revenue and LTV metrics with charts.",
+   "Privacy-preserving revenue analytics software for recurring-billing companies that keeps all financial data in-house."
+  ],
+  "keyword_queries": [
+   "self-hosted MRR dashboard",
+   "subscription analytics churn LTV",
+   "open source revenue metrics"
+  ],
+  "model": "claude-opus-5",
+  "key": "1232763f08a4d922"
+ },
+ "syn-14460128": {
+  "reformulations": [
+   "I hate typing terminal commands to install and update my PHP project's libraries — is there a point-and-click desktop program that does it for me?",
+   "A cross-platform desktop application that gives you a visual dashboard to browse, add, update and remove the packages your PHP project depends on.",
+   "A graphical front end that reads and writes the PHP dependency manifest and lock file, runs install/update operations in the background, and shows version conflicts and outdated packages in a UI.",
+   "Graphical user interfaces for language package managers and project dependency management, as an alternative to command-line workflows."
+  ],
+  "keyword_queries": [
+   "php dependency manager gui",
+   "php package manager ui",
+   "gui dependency management desktop"
+  ],
+  "model": "claude-opus-5",
+  "key": "3fdec408aa58379e"
+ },
+ "syn-13995831": {
+  "reformulations": [
+   "My subscribed blogs only show the latest few entries in their feed, so I want something that saves every post forever and emails or messages me the moment a new one shows up.",
+   "A hosted service that permanently archives every item ever published in a web feed, makes the full back catalog searchable, and sends alerts when new entries appear.",
+   "A polling worker that fetches syndication feeds on a schedule, stores each entry in a database with deduplication so truncated feeds never lose old items, and triggers webhook or email notifications on newly seen entries.",
+   "Tools for long-term preservation and monitoring of syndicated content streams, combining historical archiving with change detection and push alerts."
+  ],
+  "keyword_queries": [
+   "rss feed archive",
+   "feed history notifications",
+   "feed monitor alerts"
+  ],
+  "model": "claude-opus-5",
+  "key": "d917aaca5272afb9"
+ },
+ "syn-12848656": {
+  "reformulations": [
+   "I'm an academic with no web development skills and I just want a clean personal page listing my publications and bio, with the option to download the generated files and put them on my own server.",
+   "A no-code builder that turns a short form or plain text about you into a ready-to-use personal website, with one-click export of the HTML and CSS so you're never locked in.",
+   "Generate a static single-page personal site from a simple config or markdown file, styled with a prebuilt theme, and output a folder of files deployable to any static host.",
+   "Tools for creating and self-hosting a minimal personal or academic web presence without touching code."
+  ],
+  "keyword_queries": [
+   "academic personal website template",
+   "no-code static site builder",
+   "markdown homepage generator"
+  ],
+  "model": "claude-opus-5",
+  "key": "5b03c97d396e7e22"
+ },
+ "syn-11889095": {
+  "reformulations": [
+   "I want to find a newly launched web magazine that publishes short speculative stories about the future, technology and space travel, released in batches every month or quarter.",
+   "An online literary magazine of idea-driven science fiction short stories, delivered as regular numbered issues you can read on the web or subscribe to.",
+   "A digital periodical publishing original short-form speculative fiction, with each edition bundling several stories on futuristic and outer-space themes and shipped to readers by email or RSS.",
+   "Independent small-press outlets for serialized speculative and futurist short fiction published in recurring editions."
+  ],
+  "keyword_queries": [
+   "science fiction magazine",
+   "speculative fiction zine",
+   "short stories issue"
+  ],
+  "model": "claude-opus-5",
+  "key": "6e43cf7c7944d629"
+ },
+ "syn-46716450": {
+  "reformulations": [
+   "I want my AI coding agent to actually test its work by calling the running app's API from a terminal so it notices broken responses and fixes them instead of claiming success.",
+   "A command-line HTTP request runner designed for coding agents that returns structured pass/fail feedback on live endpoints so the agent can self-correct its code changes.",
+   "CLI tool exposing HTTP request execution and response assertions to an LLM agent loop, feeding real server output back into the model for automated verification and repair.",
+   "Tooling that closes the feedback loop between autonomous code generation and real runtime validation to reduce hallucinated or unverified changes."
+  ],
+  "keyword_queries": [
+   "agent api verification cli",
+   "llm self-correcting http testing",
+   "coding agent endpoint checks"
+  ],
+  "model": "claude-opus-5",
+  "key": "7e8801b55382e518"
+ },
+ "syn-23340711": {
+  "reformulations": [
+   "I want a simple, no-frills message board where people who follow Indian spiritual traditions can post links, upvote them, and talk about religious and philosophical topics.",
+   "A lightweight, text-only community site with link submissions, upvoting and threaded comments, built for a niche audience interested in dharmic spirituality and scripture discussion.",
+   "Self-hostable link aggregator with ranked submissions, nested comment threads and minimal CSS, configured as a single-topic board for religious and spiritual discussion.",
+   "Niche community forum software in the style of a minimal link-sharing and voting site, aimed at faith or philosophy communities."
+  ],
+  "keyword_queries": [
+   "minimal link aggregator forum",
+   "text-only discussion board voting",
+   "spirituality community link sharing"
+  ],
+  "model": "claude-opus-5",
+  "key": "67d8430d715f291b"
+ },
+ "syn-6999604": {
+  "reformulations": [
+   "I'd like a news reader that automatically bundles all the articles covering the same story from different outlets and tells me which outlet published it first.",
+   "A news aggregation website that merges duplicate coverage into a single event page, lists every outlet reporting it, and credits the original scoop by publication time.",
+   "Pipeline that ingests RSS and article text from many publishers, clusters near-duplicate stories by event using embeddings or similarity, and orders each cluster by earliest timestamp to identify the originating source.",
+   "Tools for automatic event detection and story clustering across multiple news sources with provenance and first-publication attribution."
+  ],
+  "keyword_queries": [
+   "news clustering aggregator",
+   "group articles same event",
+   "news deduplication first published"
+  ],
+  "model": "claude-opus-5",
+  "key": "5291338a8958fd06"
+ },
+ "syn-5709724": {
+  "reformulations": [
+   "I'd like a site where people living close by can lend and borrow things like tools, ladders or camping gear, with verified profiles and reviews so nobody worries about strangers.",
+   "A local rental marketplace app that lets anyone list spare household items for short-term hire, handling identity verification, deposits, payments and two-way trust ratings between owner and borrower.",
+   "Implementation of a peer-to-peer item-rental web platform with listings, availability calendars, geolocation search, ID document checks, escrow payouts and a reputation scoring system.",
+   "Sharing-economy software for community-based access to underused goods, i.e. a marketplace where private individuals rent physical possessions to each other with built-in trust and safety mechanisms."
+  ],
+  "keyword_queries": [
+   "peer-to-peer rental marketplace",
+   "borrow lend items platform",
+   "rental app reputation verification"
+  ],
+  "model": "claude-opus-5",
+  "key": "cccbc69498c5c2c3"
+ },
+ "syn-2341034": {
+  "reformulations": [
+   "I want a site where listeners upvote or downvote individual podcast episodes and I can hit play on the top-ranked ones right in the feed.",
+   "A community-curated ranking of podcast episodes with crowd voting, comments, and a built-in player so you can listen without leaving the homepage.",
+   "Build a link-aggregator style web app where submitted episode feeds are scored by user votes and streamed via an embedded audio player in the list view.",
+   "Social discovery platforms for spoken-audio content that rank items by popular vote and support in-page playback."
+  ],
+  "keyword_queries": [
+   "podcast episode voting",
+   "podcast aggregator upvote",
+   "crowdsourced episode ranking player"
+  ],
+  "model": "claude-opus-5",
+  "key": "e6bd649566e55dc6"
+ },
+ "syn-2320614": {
+  "reformulations": [
+   "I want to put the people I know into separate lists like close friends, family, and coworkers, and choose which list sees each thing I post instead of showing it to everybody.",
+   "A social sharing app that lets you organize your contacts into private groups and pick the exact audience for every update, photo, or message you share.",
+   "Implementation of per-post audience scoping where each user maintains contact groups and posts carry an access control list restricting visibility to selected groups.",
+   "Privacy-focused social networking with granular audience control and segmented contact circles rather than public broadcast feeds."
+  ],
+  "keyword_queries": [
+   "selective sharing social",
+   "contact groups privacy network",
+   "post audience control"
+  ],
+  "model": "claude-opus-5",
+  "key": "3c28d1d0c5922ca9"
+ },
+ "syn-11202018": {
+  "reformulations": [
+   "I want something that watches my site around the clock and messages me when pages get slow, go offline, lose search visibility, or start loading third-party trackers.",
+   "A continuous website health monitoring service that runs automated SEO, performance, privacy and uptime audits and sends alerts when something breaks or regresses.",
+   "Scheduled crawler that runs page speed and accessibility audits, checks meta tags, broken links, robots and sitemap issues, detects tracking scripts and cookies, pings endpoints for availability, and triggers webhook or email notifications on regressions.",
+   "Tooling for automated site auditing and alerting across quality, speed, discoverability and reliability dimensions."
+  ],
+  "keyword_queries": [
+   "website monitoring alerts",
+   "automated seo audit",
+   "uptime performance checker"
+  ],
+  "model": "claude-opus-5",
+  "key": "98a2ab0656ce5495"
+ },
+ "syn-13063439": {
+  "reformulations": [
+   "I want to display a short message on the outside of my laptop lid so people sitting around me at a coffee shop or meetup can read it — how do I do that?",
+   "A small screen or writable panel that mounts on the back of a laptop lid and shows custom text or graphics to people facing you.",
+   "Driving a low-power secondary display attached to a notebook's outer cover to render user-defined text and images, powered and controlled from the host machine.",
+   "Wearable or portable personal signage that broadcasts a short message to nearby people in public spaces."
+  ],
+  "keyword_queries": [
+   "laptop lid display",
+   "eink laptop cover",
+   "wearable message sign"
+  ],
+  "model": "claude-opus-5",
+  "key": "c6bb886580c35685"
+ },
+ "syn-15180526": {
+  "reformulations": [
+   "I want a really small Python web framework so I can throw together a simple site without a huge framework, and I need URL routing that can match paths with variable segments.",
+   "A minimal Python toolkit for serving web pages, with a decorator-based router that maps URLs, including wildcard and regex patterns, to handler functions.",
+   "Single-file Python WSGI micro framework implementing request dispatch via a routing table with dynamic path parameters and regular expression matching.",
+   "Lightweight micro web frameworks for building small websites and APIs in Python."
+  ],
+  "keyword_queries": [
+   "python micro framework",
+   "minimal wsgi router",
+   "tiny web framework routing"
+  ],
+  "model": "claude-opus-5",
+  "key": "8f15cc3aac72f403"
+ },
+ "syn-9522489": {
+  "reformulations": [
+   "I'm building a card game and want an online service that handles shuffling a deck, dealing cards to players, and keeping track of separate piles so I don't code it myself.",
+   "A hosted REST service that creates virtual decks of playing cards, shuffles them, draws cards, and manages named piles for games.",
+   "HTTP JSON endpoints backed by a deterministic shuffle algorithm that return drawn card objects and let clients add or list cards in per-session stacks.",
+   "Reusable backend building blocks for card game logic such as deck creation, randomization, dealing and hand management."
+  ],
+  "keyword_queries": [
+   "deck of cards API",
+   "playing card shuffle service",
+   "card draw pile REST"
+  ],
+  "model": "claude-opus-5",
+  "key": "4666884b26823ec8"
+ },
+ "syn-41599941": {
+  "reformulations": [
+   "I'd like a simple site that lists the launch price of the latest flagship smartphone in every country and shows each price in my own currency so I can spot the cheapest place to buy it.",
+   "A price comparison tool showing official device prices worldwide, automatically converted with live exchange rates and sorted from cheapest to most expensive country.",
+   "A script or web app that scrapes regional manufacturer store pages for device pricing, normalizes tax and currency using an FX rates API, and ranks countries by converted cost.",
+   "Cross-border shopping tool for comparing the same consumer electronics product's cost across international markets in a single currency."
+  ],
+  "keyword_queries": [
+   "iphone price countries",
+   "global price comparison currency",
+   "cheapest country buy"
+  ],
+  "model": "claude-opus-5",
+  "key": "11267120f2422561"
+ },
+ "syn-22318915": {
+  "reformulations": [
+   "My inbox is drowning in marketing emails and newsletters — I need an affordable tool that deletes them in bulk and unsubscribes me for good, without harvesting my data.",
+   "An inexpensive, privacy-first inbox cleaner that mass-deletes promotional mail, groups messages by sender, and one-click unsubscribes from mailing lists.",
+   "Self-hostable or local client that connects over IMAP or a mail API, clusters messages by sender, performs batch deletion, and automates list-unsubscribe requests without uploading mailbox contents to third parties.",
+   "Email decluttering and subscription management software that does not monetize user data."
+  ],
+  "keyword_queries": [
+   "bulk unsubscribe email",
+   "inbox cleaner IMAP",
+   "mass delete newsletters"
+  ],
+  "model": "claude-opus-5",
+  "key": "dacccea16edec3c6"
+ }
+}

@@ -1,0 +1,18 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+data/*.db*
+data/cache/
+.env
+
+# Logs de corridas largas y veredictos del verificador (datos que crecen; quedan locales)
+*.log
+data/phase3/*.jsonl
+.DS_Store
