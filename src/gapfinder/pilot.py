@@ -309,7 +309,14 @@ def interactive_review(conn: sqlite3.Connection, cases: list[dict], getkey=_getk
     human = load_human()
     queue = [p for p in review_order(pairs, jev) if (p.case_id, p.item_id) not in human]
     width = min(shutil.get_terminal_size((100, 30)).columns, 110)
-    wrap = lambda s, n, lines: textwrap.wrap(re.sub(r"\s+", " ", s)[:n], width - 4)[:lines]
+    by_id = {c["id"]: c for c in cases}
+
+    def wrap(text: str, limit: int | None = None) -> list[str]:
+        """Texto en líneas; con `limit`, cortado en un límite de palabra y con "…" si sigue."""
+        text = re.sub(r"\s+", " ", text).strip()
+        if limit and len(text) > limit:
+            text = text[:limit].rsplit(" ", 1)[0] + " …"
+        return textwrap.wrap(text, width - 12) or [""]
     HUMAN_PATH.parent.mkdir(parents=True, exist_ok=True)
     done_now = 0
     for p in queue:
@@ -317,19 +324,30 @@ def interactive_review(conn: sqlite3.Connection, cases: list[dict], getkey=_getk
         url = (conn.execute("SELECT url FROM items WHERE id = ?", (p.item_id,)).fetchone() or [""])[0]
         fmt = lambda m: f"{m[k].core:.2f}" if k in m else "–"
         out("\033[2J\033[H" if getkey is _getkey else "", end="")
+        case = by_id.get(p.case_id, {})
         out(f"[{len(human) + 1}/{len(pairs)}]  {p.case_id}")
-        out("IDEA:      " + "\n           ".join(wrap(p.idea, 260, 2)))
+        if case.get("kind") in ("real", "partial"):   # el título original da contexto a query_core
+            out("CONTEXTO:  " + "\n           ".join(wrap(case.get("title", ""))))
+        out("IDEA:      " + "\n           ".join(wrap(p.idea)))   # completa: query_core / necesidad
+        out("")
         out(f"CANDIDATO: {p.title}")
-        for line in wrap(p.text, 360, 3):
+        for line in wrap(p.text, 600):
             out("           " + line)
         out(f"           {url}")
+        out("")
         out(f"NÚCLEO:    Jev {fmt(jev)}   |   Haiku {fmt(haiku)}")
-        out("\n[s] núcleo   [p] parcial   [n] no es lo mismo   [?] no sé   [o] abrir URL   [q] guardar y salir")
+        out("\n[s] núcleo  [p] parcial  [n] no es lo mismo  [?] no sé  [m] ver más  [o] abrir URL  [q] guardar y salir")
         while True:
             key = getkey()
             if key == "o":
                 if url:
                     webbrowser.open(url)
+                continue
+            if key == "m":   # texto completo del candidato (lo mismo que vieron Jev y Haiku)
+                out("\n--- texto completo del candidato ---")
+                for line in wrap(p.text):
+                    out("           " + line)
+                out("---")
                 continue
             if key in LABELS or key == "q":
                 break
