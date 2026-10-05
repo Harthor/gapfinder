@@ -297,17 +297,17 @@ def _getkey() -> str:
     return "q" if ch in ("\x03", "\x04") else ch.lower()   # Ctrl-C / Ctrl-D = salir guardando
 
 
-def interactive_review(conn: sqlite3.Connection, cases: list[dict], getkey=_getkey, out=print) -> dict:
+def review_loop(conn: sqlite3.Connection, cases: list[dict], queue: list[Pair], total: int, models: dict,
+                human_path: Path, notes: dict | None = None, getkey=_getkey, out=print) -> int:
+    """Muestra cada par y guarda la tecla al instante en `human_path`. models: {nombre: veredictos}
+    (se muestra su P(núcleo)); notes: línea extra por par (p. ej. el item esperado que se removió).
+    Devuelve cuántos pares se respondieron en esta sesión."""
     import shutil
     import textwrap
     import webbrowser
     from datetime import datetime, timezone
 
-    picked = json.loads(PAIRS_PATH.read_text())
-    pairs = to_pairs(conn, cases, picked)
-    jev, haiku = _jev_verdicts(), load_done("haiku_pilot")
-    human = load_human()
-    queue = [p for p in review_order(pairs, jev) if (p.case_id, p.item_id) not in human]
+    human = load_human(human_path)
     width = min(shutil.get_terminal_size((100, 30)).columns, 110)
     by_id = {c["id"]: c for c in cases}
 
@@ -317,25 +317,29 @@ def interactive_review(conn: sqlite3.Connection, cases: list[dict], getkey=_getk
         if limit and len(text) > limit:
             text = text[:limit].rsplit(" ", 1)[0] + " …"
         return textwrap.wrap(text, width - 12) or [""]
-    HUMAN_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+    human_path.parent.mkdir(parents=True, exist_ok=True)
     done_now = 0
     for p in queue:
         k = (p.case_id, p.item_id)
+        if k in human:
+            continue
         url = (conn.execute("SELECT url FROM items WHERE id = ?", (p.item_id,)).fetchone() or [""])[0]
-        fmt = lambda m: f"{m[k].core:.2f}" if k in m else "–"
         out("\033[2J\033[H" if getkey is _getkey else "", end="")
         case = by_id.get(p.case_id, {})
-        out(f"[{len(human) + 1}/{len(pairs)}]  {p.case_id}")
+        out(f"[{len(human) + 1}/{total}]  {p.case_id}")
         if case.get("kind") in ("real", "partial"):   # el título original da contexto a query_core
             out("CONTEXTO:  " + "\n           ".join(wrap(case.get("title", ""))))
         out("IDEA:      " + "\n           ".join(wrap(p.idea)))   # completa: query_core / necesidad
+        if notes and k in notes:
+            out("           " + "\n           ".join(wrap(notes[k])))
         out("")
         out(f"CANDIDATO: {p.title}")
         for line in wrap(p.text, 600):
             out("           " + line)
         out(f"           {url}")
         out("")
-        out(f"NÚCLEO:    Jev {fmt(jev)}   |   Haiku {fmt(haiku)}")
+        out("NÚCLEO:    " + "   |   ".join(f"{name} {m[k].core:.2f}" if k in m else f"{name} –" for name, m in models.items()))
         out("\n[s] núcleo  [p] parcial  [n] no es lo mismo  [?] no sé  [m] ver más  [o] abrir URL  [q] guardar y salir")
         while True:
             key = getkey()
@@ -343,7 +347,7 @@ def interactive_review(conn: sqlite3.Connection, cases: list[dict], getkey=_getk
                 if url:
                     webbrowser.open(url)
                 continue
-            if key == "m":   # texto completo del candidato (lo mismo que vieron Jev y Haiku)
+            if key == "m":   # texto completo del candidato (lo mismo que vio el verificador)
                 out("\n--- texto completo del candidato ---")
                 for line in wrap(p.text):
                     out("           " + line)
@@ -353,13 +357,93 @@ def interactive_review(conn: sqlite3.Connection, cases: list[dict], getkey=_getk
                 break
         if key == "q":
             break
-        with HUMAN_PATH.open("a") as f:   # se guarda enseguida: cortar y retomar no pierde nada
+        with human_path.open("a") as f:   # se guarda enseguida: cortar y retomar no pierde nada
             f.write(json.dumps({"case_id": p.case_id, "item_id": p.item_id, "label": key,
                                 "at": datetime.now(timezone.utc).isoformat(timespec="seconds")}) + "\n")
         human[k] = key
         done_now += 1
+    return done_now
+
+
+def interactive_review(conn: sqlite3.Connection, cases: list[dict], getkey=_getkey, out=print) -> dict:
+    picked = json.loads(PAIRS_PATH.read_text())
+    pairs = to_pairs(conn, cases, picked)
+    jev, haiku = _jev_verdicts(), load_done("haiku_pilot")
+    done_now = review_loop(conn, cases, review_order(pairs, jev), len(pairs), {"Jev": jev, "Haiku": haiku},
+                           HUMAN_PATH, getkey=getkey, out=out)
     complete = len(load_human()) >= len(pairs)
     text = write_result(conn, picked, pairs, complete)
     out("\n" + text.split("\n## ")[0])
     out(f"{'Revisión completa' if complete else 'Guardado; retomás donde quedaste'}. Resultado en {RESULT_PATH}")
     return {"respondidos_ahora": done_now, "total": len(load_human()), "completo": complete}
+
+
+# --- adjudicación de alarmas (negativos por remoción) ---------------------------------------------------
+
+ALARMS_HUMAN_PATH = Path("data/eval/alarms_review_human.jsonl")
+ALARMS_RESULT_PATH = Path("data/eval/alarms_review_result.md")
+ALARM_MIN = 0.85
+
+
+def alarm_pairs(conn: sqlite3.Connection, cases: list[dict], metrics_path: Path, llm_path: Path,
+                min_core: float = ALARM_MIN) -> tuple[list[Pair], dict]:
+    """La alarma más alta de cada caso (de `phase3 report`) con P(núcleo) >= min_core, de mayor a menor.
+    Devuelve los pares y una nota por par con el item esperado que se removió."""
+    alarms = [a for a in json.loads(metrics_path.read_text())["top_alarms"] if a["core"] >= min_core]
+    alarms.sort(key=lambda a: -a["core"])
+    by_id = {c["id"]: c for c in cases}
+    cand = {a["case"]: [a["item"]] for a in alarms}
+    pairs = {(x.case_id, x.item_id): x for x in phase3.pairs_for(conn, [by_id[c] for c in cand], cand, llm_path)}
+    titles = dict(conn.execute(
+        f"SELECT id, title FROM items WHERE id IN ({','.join('?' * len({i for c in cand for i in by_id[c]['expected_item_ids']}))})",
+        sorted({i for c in cand for i in by_id[c]["expected_item_ids"]})))
+    notes = {(a["case"], a["item"]): "(item esperado, removido: " + "; ".join(
+        titles.get(i, i) for i in by_id[a["case"]]["expected_item_ids"][:3]) + ")" for a in alarms}
+    return [pairs[(a["case"], a["item"])] for a in alarms], notes
+
+
+def write_alarms_result(pairs: list[Pair], verdicts: dict, cases: list[dict], complete: bool) -> str:
+    human = load_human(ALARMS_HUMAN_PATH)
+    kind = {c["id"]: c["kind"] for c in cases}
+    keys = [(p.case_id, p.item_id) for p in pairs]
+    judged = [k for k in keys if human.get(k) in ("s", "p", "n")]
+
+    def row(label: str, ks: list) -> str:
+        j = [k for k in ks if human.get(k) in ("s", "p", "n")]
+        c = {lab: sum(human.get(k) == lab for k in ks) for lab in LABELS}
+        err = f"{c['n'] / len(j):.0%}" if j else "–"
+        return f"| {label} | {len(ks)} | {c['s']} | {c['p']} | {c['n']} | {c['?']} | {err} |"
+
+    L = ["# Adjudicación de alarmas: negativos por remoción (Jev, phase3 report v1)\n",
+         f"{'Revisión completa' if complete else 'Revisión PARCIAL'}: {sum(k in human for k in keys)}/{len(keys)} alarmas "
+         f"(la más alta de cada caso, P(núcleo) >= {ALARM_MIN}). núcleo = implementación real no listada; "
+         "parcial = implementa una parte; no = error del verificador. Error = no / (núcleo + parcial + no).\n",
+         "| grupo | alarmas | núcleo | parcial | no | no sé | error del verificador |", "|---|---|---|---|---|---|---|",
+         row("todas", keys)]
+    for kd in ("real", "synthetic"):
+        L.append(row(kd, [k for k in keys if kind.get(k[0]) == kd]))
+    for lo, hi in ((0.85, 0.9), (0.9, 0.95), (0.95, 1.01)):
+        L.append(row(f"Jev {lo:.2f}-{min(hi, 1):.2f}", [k for k in keys if lo <= verdicts[k].core < hi]))
+    L += ["", "## Errores del verificador (humano: no)\n", "| caso | candidato | Jev núcleo |", "|---|---|---|"]
+    for p in pairs:
+        k = (p.case_id, p.item_id)
+        if human.get(k) == "n":
+            L.append(f"| `{p.case_id}` | {p.title[:70]} | {verdicts[k].core:.2f} |")
+    text = "\n".join(L) + "\n"
+    ALARMS_RESULT_PATH.write_text(text)
+    return text
+
+
+def interactive_alarms(conn: sqlite3.Connection, cases: list[dict], getkey=_getkey, out=print,
+                       metrics_path: Path = OUT_DIR / "metrics_jev_openrouter.json",
+                       llm_path: Path = Path("data/llm_queries.json"), verdicts_name: str = "jev_openrouter") -> dict:
+    pairs, notes = alarm_pairs(conn, cases, metrics_path, llm_path)
+    verdicts = load_done(verdicts_name)
+    done_now = review_loop(conn, cases, pairs, len(pairs), {"Jev": verdicts}, ALARMS_HUMAN_PATH, notes,
+                           getkey=getkey, out=out)
+    complete = all((p.case_id, p.item_id) in load_human(ALARMS_HUMAN_PATH) for p in pairs)
+    text = write_alarms_result(pairs, verdicts, cases, complete)
+    out("\n" + text.split("\n## ")[0])
+    out(f"{'Revisión completa' if complete else 'Guardado; retomás donde quedaste'}. Resultado en {ALARMS_RESULT_PATH}")
+    return {"respondidos_ahora": done_now, "total": len(load_human(ALARMS_HUMAN_PATH)), "alarmas": len(pairs),
+            "completo": complete}

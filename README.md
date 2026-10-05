@@ -167,6 +167,7 @@ uv run gapfinder phase3 verify --verifier jev-openrouter --kinds real --suffix _
     --llm-queries data/llm_queries_v2.json --name jev_openrouter_v2 [--only-new-vs data/phase3/candidates_minilm.json]
 uv run gapfinder pilot select|haiku|jev|jev-openrouter|review    # piloto: los mismos 50 pares -> data/eval/pilot_review.md
 uv run gapfinder phase3 review-pilot                             # revisión humana interactiva de los 50 pares (teclas s/p/n/?/o/q)
+uv run gapfinder phase3 review-alarms                            # adjudicar alarmas (la más alta por caso, núcleo >= 0.85)
 ```
 
 Revisión humana del piloto (`phase3 review-pilot`): muestra cada par (idea, candidato recortado + URL,
@@ -194,7 +195,10 @@ esas etiquetas.
 Las alarmas más altas son mayormente alternativas legítimas (plotext para gráficos en la terminal,
 Snapbyte para digest de HN por mail, Pombo para formularios sin servidor): la remoción asume que el
 item esperado es la única solución, y para necesidades comunes no lo es. Falta adjudicar las alarmas
-a mano para separar errores del verificador de implementaciones no listadas.
+a mano para separar errores del verificador de implementaciones no listadas: `phase3 review-alarms`
+muestra la alarma más alta de cada caso con núcleo >= 0.85 (47 en v1), junto con el item esperado que
+se removió; respuestas en `data/eval/alarms_review_human.jsonl` y resultado (error del verificador por
+kind y por tramo de puntaje) en `data/eval/alarms_review_result.md`.
 
 Piloto (sep-2026, candidatos MiniLM): 50 pares estratificados (15 positivos, 15 near-miss, 10 de
 rank 200-1000, 10 al azar). Haiku 4.5: 50/50 sin errores, ~770 tokens de entrada por par (la salida
