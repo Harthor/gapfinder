@@ -248,8 +248,13 @@ def cmd_phase3(args: argparse.Namespace) -> None:
         print(f"{len(pairs)} pares a verificar ({verifier.name})")
         print(f"{args.verifier}: {len(verifier.verify(pairs))} veredictos")
     elif args.step == "report":
-        m = phase3.metrics(conn, cases, cand, verify.load_done(args.verifier))
-        (verify.OUT_DIR / f"metrics_{args.verifier}.json").write_text(json.dumps(m, indent=1))
+        default_names = {"jev": "jev", "jev-openrouter": "jev_openrouter", "haiku": "haiku"}
+        name = args.name or default_names[args.verifier]   # mismo archivo que escribió `verify`
+        verdicts = verify.load_done(name)
+        if not verdicts:
+            raise SystemExit(f"no hay veredictos en {verify.OUT_DIR / f'verdicts_{name}.jsonl'}")
+        m = phase3.metrics(conn, cases, cand, verdicts)
+        (verify.OUT_DIR / f"metrics_{name}.json").write_text(json.dumps(m, indent=1))
         print(json.dumps({k: v for k, v in m.items() if k != "top_alarms"}, indent=1))
         print("alarmas más altas (revisar a mano):", json.dumps(m["top_alarms"][:20], indent=1))
 

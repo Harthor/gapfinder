@@ -1,0 +1,594 @@
+{
+ "false_alarm": {
+  "real": {
+   "0.5": 1.0,
+   "0.7": 0.75,
+   "0.8": 0.6666666666666666,
+   "0.85": 0.5833333333333334,
+   "0.9": 0.4166666666666667,
+   "0.95": 0.08333333333333333,
+   "n": 12
+  },
+  "synthetic": {
+   "0.5": 0.96875,
+   "0.7": 0.875,
+   "0.8": 0.71875,
+   "0.85": 0.625,
+   "0.9": 0.453125,
+   "0.95": 0.25,
+   "n": 64
+  },
+  "real sin label_note": {
+   "0.5": 1.0,
+   "0.7": 0.8888888888888888,
+   "0.8": 0.7777777777777778,
+   "0.85": 0.6666666666666666,
+   "0.9": 0.5555555555555556,
+   "0.95": 0.1111111111111111,
+   "n": 9
+  }
+ },
+ "positive_recall": {
+  "real": {
+   "0.5": 0.45454545454545453,
+   "0.7": 0.36363636363636365,
+   "0.8": 0.2727272727272727,
+   "0.85": 0.09090909090909091,
+   "0.9": 0.09090909090909091,
+   "0.95": 0.0,
+   "n": 11
+  },
+  "synthetic": {
+   "0.5": 0.9830508474576272,
+   "0.7": 0.8983050847457628,
+   "0.8": 0.7457627118644068,
+   "0.85": 0.6271186440677966,
+   "0.9": 0.4067796610169492,
+   "0.95": 0.05084745762711865,
+   "n": 59
+  },
+  "real sin label_note": {
+   "0.5": 0.625,
+   "0.7": 0.5,
+   "0.8": 0.375,
+   "0.85": 0.125,
+   "0.9": 0.125,
+   "0.95": 0.0,
+   "n": 8
+  }
+ },
+ "top_alarms": [
+  {
+   "case": "syn-4770645",
+   "item": "show_hn:49762099",
+   "core": 0.97,
+   "partial": 0.97,
+   "same_user": 0.96
+  },
+  {
+   "case": "syn-13406648-claude",
+   "item": "github:piccolomo/plotext",
+   "core": 0.97,
+   "partial": 0.98,
+   "same_user": 0.96
+  },
+  {
+   "case": "syn-7034317",
+   "item": "github:Rohithgilla12/data-peek",
+   "core": 0.96,
+   "partial": 0.97,
+   "same_user": 0.93
+  },
+  {
+   "case": "syn-13406648",
+   "item": "github:piccolomo/plotext",
+   "core": 0.96,
+   "partial": 0.97,
+   "same_user": 0.95
+  },
+  {
+   "case": "syn-2774322",
+   "item": "show_hn:47040895",
+   "core": 0.96,
+   "partial": 0.95,
+   "same_user": 0.96
+  },
+  {
+   "case": "syn-2229924",
+   "item": "show_hn:46780456",
+   "core": 0.96,
+   "partial": 0.89,
+   "same_user": 0.92
+  },
+  {
+   "case": "syn-30673502",
+   "item": "show_hn:1768345",
+   "core": 0.96,
+   "partial": 0.96,
+   "same_user": 0.81
+  },
+  {
+   "case": "syn-41298789",
+   "item": "show_hn:15500388",
+   "core": 0.96,
+   "partial": 0.96,
+   "same_user": 0.96
+  },
+  {
+   "case": "syn-6999604",
+   "item": "show_hn:46053076",
+   "core": 0.96,
+   "partial": 0.97,
+   "same_user": 0.88
+  },
+  {
+   "case": "real-89c010f2",
+   "item": "show_hn:49477530",
+   "core": 0.95,
+   "partial": 0.97,
+   "same_user": 0.91
+  },
+  {
+   "case": "syn-33480679-claude",
+   "item": "show_hn:45291271",
+   "core": 0.95,
+   "partial": 0.95,
+   "same_user": 0.95
+  },
+  {
+   "case": "syn-17719720",
+   "item": "github:hjr265/gittop",
+   "core": 0.95,
+   "partial": 0.95,
+   "same_user": 0.94
+  },
+  {
+   "case": "syn-22843070",
+   "item": "github:cyber-sushi/makima",
+   "core": 0.95,
+   "partial": 0.95,
+   "same_user": 0.92
+  },
+  {
+   "case": "syn-36030350",
+   "item": "show_hn:45571963",
+   "core": 0.95,
+   "partial": 0.96,
+   "same_user": 0.94
+  },
+  {
+   "case": "syn-30183465",
+   "item": "show_hn:40779547",
+   "core": 0.95,
+   "partial": 0.89,
+   "same_user": 0.94
+  },
+  {
+   "case": "syn-2320614",
+   "item": "show_hn:25267854",
+   "core": 0.95,
+   "partial": 0.91,
+   "same_user": 0.93
+  },
+  {
+   "case": "syn-15180526",
+   "item": "github:bottlepy/bottle",
+   "core": 0.95,
+   "partial": 0.98,
+   "same_user": 0.94
+  },
+  {
+   "case": "real-6eb5b382",
+   "item": "show_hn:47042470",
+   "core": 0.94,
+   "partial": 0.94,
+   "same_user": 0.95
+  },
+  {
+   "case": "real-6f3848c8",
+   "item": "show_hn:47413969",
+   "core": 0.93,
+   "partial": 0.91,
+   "same_user": 0.94
+  },
+  {
+   "case": "syn-9373724",
+   "item": "show_hn:47561773",
+   "core": 0.93,
+   "partial": 0.92,
+   "same_user": 0.87
+  },
+  {
+   "case": "syn-2205938",
+   "item": "show_hn:44965787",
+   "core": 0.93,
+   "partial": 0.91,
+   "same_user": 0.94
+  },
+  {
+   "case": "syn-12848656",
+   "item": "show_hn:42512657",
+   "core": 0.93,
+   "partial": 0.85,
+   "same_user": 0.82
+  },
+  {
+   "case": "real-01fe2dbe",
+   "item": "github:jihadkhawaja/Egroo",
+   "core": 0.92,
+   "partial": 0.92,
+   "same_user": 0.89
+  },
+  {
+   "case": "syn-40167406-claude",
+   "item": "github:SeanWong17/Future-Style-Periodic-Table",
+   "core": 0.92,
+   "partial": 0.95,
+   "same_user": 0.9
+  },
+  {
+   "case": "syn-10384493",
+   "item": "show_hn:48867722",
+   "core": 0.92,
+   "partial": 0.93,
+   "same_user": 0.81
+  },
+  {
+   "case": "syn-21462993",
+   "item": "github:mikel-brostrom/Yolov7_StrongSORT_OSNet",
+   "core": 0.92,
+   "partial": 0.96,
+   "same_user": 0.9
+  },
+  {
+   "case": "syn-17800530",
+   "item": "github:XTraceAI/cuhepy",
+   "core": 0.91,
+   "partial": 0.94,
+   "same_user": 0.8
+  },
+  {
+   "case": "syn-13116455",
+   "item": "github:lzfse/lzfse",
+   "core": 0.91,
+   "partial": 0.95,
+   "same_user": 0.63
+  },
+  {
+   "case": "syn-22318915",
+   "item": "github:Gururagavendra/gmail-cleaner",
+   "core": 0.91,
+   "partial": 0.92,
+   "same_user": 0.92
+  },
+  {
+   "case": "real-ecad36a5",
+   "item": "github:Francis1998/nexus-llm-router",
+   "core": 0.9,
+   "partial": 0.93,
+   "same_user": 0.86
+  },
+  {
+   "case": "syn-17181315-claude",
+   "item": "github:dockersamples/example-voting-app",
+   "core": 0.9,
+   "partial": 0.95,
+   "same_user": 0.89
+  },
+  {
+   "case": "syn-33480679",
+   "item": "show_hn:43683249",
+   "core": 0.9,
+   "partial": 0.94,
+   "same_user": 0.89
+  },
+  {
+   "case": "syn-14460128",
+   "item": "github:mglaman/conductor",
+   "core": 0.9,
+   "partial": 0.86,
+   "same_user": 0.93
+  },
+  {
+   "case": "syn-13995831",
+   "item": "show_hn:42175340",
+   "core": 0.9,
+   "partial": 0.94,
+   "same_user": 0.8
+  },
+  {
+   "case": "real-fbe3c4c2",
+   "item": "show_hn:48478508",
+   "core": 0.89,
+   "partial": 0.93,
+   "same_user": 0.9
+  },
+  {
+   "case": "syn-4770645-claude",
+   "item": "show_hn:17338335",
+   "core": 0.89,
+   "partial": 0.89,
+   "same_user": 0.94
+  },
+  {
+   "case": "syn-17181315",
+   "item": "show_hn:38012311",
+   "core": 0.89,
+   "partial": 0.91,
+   "same_user": 0.88
+  },
+  {
+   "case": "syn-3615558",
+   "item": "show_hn:15400040",
+   "core": 0.89,
+   "partial": 0.94,
+   "same_user": 0.84
+  },
+  {
+   "case": "syn-23340711",
+   "item": "show_hn:45240362",
+   "core": 0.89,
+   "partial": 0.94,
+   "same_user": 0.64
+  },
+  {
+   "case": "syn-3282067",
+   "item": "show_hn:40438259",
+   "core": 0.88,
+   "partial": 0.92,
+   "same_user": 0.89
+  },
+  {
+   "case": "syn-44939278",
+   "item": "show_hn:44864123",
+   "core": 0.88,
+   "partial": 0.81,
+   "same_user": 0.88
+  },
+  {
+   "case": "real-197bf4f9",
+   "item": "show_hn:48554765",
+   "core": 0.87,
+   "partial": 0.94,
+   "same_user": 0.94
+  },
+  {
+   "case": "syn-8481751",
+   "item": "github:cbess/text-sherlock",
+   "core": 0.86,
+   "partial": 0.92,
+   "same_user": 0.71
+  },
+  {
+   "case": "syn-8757899",
+   "item": "show_hn:12460240",
+   "core": 0.85,
+   "partial": 0.8,
+   "same_user": 0.89
+  },
+  {
+   "case": "syn-4439874",
+   "item": "show_hn:36491975",
+   "core": 0.85,
+   "partial": 0.91,
+   "same_user": 0.77
+  },
+  {
+   "case": "syn-46716450",
+   "item": "show_hn:47613522",
+   "core": 0.85,
+   "partial": 0.89,
+   "same_user": 0.88
+  },
+  {
+   "case": "syn-2341034",
+   "item": "show_hn:22027177",
+   "core": 0.85,
+   "partial": 0.84,
+   "same_user": 0.91
+  },
+  {
+   "case": "syn-9373724-claude",
+   "item": "show_hn:47561773",
+   "core": 0.84,
+   "partial": 0.87,
+   "same_user": 0.66
+  },
+  {
+   "case": "syn-8813313",
+   "item": "github:HuwCampbell/grenade",
+   "core": 0.84,
+   "partial": 0.91,
+   "same_user": 0.8
+  },
+  {
+   "case": "syn-40167406",
+   "item": "show_hn:47218651",
+   "core": 0.83,
+   "partial": 0.91,
+   "same_user": 0.91
+  },
+  {
+   "case": "syn-7034317-claude",
+   "item": "show_hn:47141207",
+   "core": 0.82,
+   "partial": 0.92,
+   "same_user": 0.73
+  },
+  {
+   "case": "real-a6c38804",
+   "item": "github:secureagentics/Adrian",
+   "core": 0.81,
+   "partial": 0.84,
+   "same_user": 0.9
+  },
+  {
+   "case": "syn-5287548",
+   "item": "show_hn:30938109",
+   "core": 0.81,
+   "partial": 0.87,
+   "same_user": 0.8
+  },
+  {
+   "case": "syn-19261376",
+   "item": "show_hn:20887497",
+   "core": 0.81,
+   "partial": 0.87,
+   "same_user": 0.88
+  },
+  {
+   "case": "syn-11202018",
+   "item": "show_hn:23966932",
+   "core": 0.79,
+   "partial": 0.88,
+   "same_user": 0.83
+  },
+  {
+   "case": "syn-5709724",
+   "item": "show_hn:37517509",
+   "core": 0.78,
+   "partial": 0.7,
+   "same_user": 0.91
+  },
+  {
+   "case": "syn-9522489",
+   "item": "github:crobertsbmw/deckofcards",
+   "core": 0.78,
+   "partial": 0.89,
+   "same_user": 0.88
+  },
+  {
+   "case": "syn-41599941",
+   "item": "show_hn:4623927",
+   "core": 0.78,
+   "partial": 0.77,
+   "same_user": 0.92
+  },
+  {
+   "case": "syn-19286008",
+   "item": "github:JuliaRobotics/RigidBodyDynamics.jl",
+   "core": 0.77,
+   "partial": 0.9,
+   "same_user": 0.8
+  },
+  {
+   "case": "syn-3377729",
+   "item": "show_hn:44352937",
+   "core": 0.76,
+   "partial": 0.7,
+   "same_user": 0.87
+  },
+  {
+   "case": "syn-2386860",
+   "item": "show_hn:9849072",
+   "core": 0.76,
+   "partial": 0.78,
+   "same_user": 0.86
+  },
+  {
+   "case": "syn-2226207",
+   "item": "show_hn:43767409",
+   "core": 0.72,
+   "partial": 0.76,
+   "same_user": 0.83
+  },
+  {
+   "case": "syn-9132881",
+   "item": "show_hn:45050547",
+   "core": 0.72,
+   "partial": 0.84,
+   "same_user": 0.29
+  },
+  {
+   "case": "syn-11889095",
+   "item": "show_hn:11469135",
+   "core": 0.72,
+   "partial": 0.8,
+   "same_user": 0.75
+  },
+  {
+   "case": "real-47bf5f9f",
+   "item": "github:Glench/ExtPay",
+   "core": 0.7,
+   "partial": 0.84,
+   "same_user": 0.81
+  },
+  {
+   "case": "syn-2879393",
+   "item": "show_hn:7659448",
+   "core": 0.68,
+   "partial": 0.78,
+   "same_user": 0.2
+  },
+  {
+   "case": "syn-13551907",
+   "item": "show_hn:47970178",
+   "core": 0.68,
+   "partial": 0.83,
+   "same_user": 0.73
+  },
+  {
+   "case": "real-8b190bdc",
+   "item": "show_hn:41246643",
+   "core": 0.66,
+   "partial": 0.83,
+   "same_user": 0.73
+  },
+  {
+   "case": "syn-46434650",
+   "item": "show_hn:46755099",
+   "core": 0.64,
+   "partial": 0.81,
+   "same_user": 0.64
+  },
+  {
+   "case": "real-25a4c842",
+   "item": "github:vipshop/cache-dit",
+   "core": 0.63,
+   "partial": 0.84,
+   "same_user": 0.79
+  },
+  {
+   "case": "syn-4965299",
+   "item": "show_hn:31950375",
+   "core": 0.63,
+   "partial": 0.69,
+   "same_user": 0.74
+  },
+  {
+   "case": "syn-47472735",
+   "item": "github:twchn/quiz-game",
+   "core": 0.56,
+   "partial": 0.61,
+   "same_user": 0.43
+  },
+  {
+   "case": "syn-18642575",
+   "item": "show_hn:46259671",
+   "core": 0.55,
+   "partial": 0.79,
+   "same_user": 0.56
+  },
+  {
+   "case": "real-7c597ec1",
+   "item": "github:NVIDIA/SkillEvaluator",
+   "core": 0.53,
+   "partial": 0.83,
+   "same_user": 0.61
+  },
+  {
+   "case": "syn-13063439",
+   "item": "github:dupontgu/now-playing-bumper-sticker",
+   "core": 0.47,
+   "partial": 0.68,
+   "same_user": 0.68
+  },
+  {
+   "case": "syn-3282067-claude",
+   "item": "show_hn:14401839",
+   "core": 0.43,
+   "partial": 0.56,
+   "same_user": 0.39
+  }
+ ]
+}

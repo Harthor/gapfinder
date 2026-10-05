@@ -180,8 +180,21 @@ top-1000), `data/phase3/verdicts_jev_openrouter.jsonl`, 0 errores, $2.41 factura
 p50 291 ms. La primera tanda se cortó con 402 (cuenta sin créditos); la reanudación solo saltea
 veredictos válidos (los fallidos nunca se escriben) y el verificador ahora se detiene ante 401/402/403.
 v2 de los reales (idea = query_core v2, 12.000 pares completos para no mezclar ideas v1/v2):
-`data/phase3/verdicts_jev_openrouter_v2.jsonl`. `phase3 report` todavía no se corrió (primero la
-revisión humana del piloto, para no anclarse a las curvas).
+`data/phase3/verdicts_jev_openrouter_v2.jsonl`.
+
+Revisión humana del piloto (oct-2026, `data/eval/pilot_review_result.md`): 4 núcleo, 4 parcial,
+26 no, 16 no sé. Sobre los 34 juzgados, acuerdo en núcleo a 0.5: Jev 88%, Haiku 88%; los 4
+desacuerdos son el modelo diciendo núcleo donde el humano ve parcial/no. Los núcleo humanos tienen
+Jev >= 0.87 y ningún parcial/no supera 0.82: en esta muestra 0.85 separa el núcleo (se agregó a los
+umbrales). 10 de los 16 "no sé" caen en Jev 0.68-0.93. En 4 positivos el humano dijo "no": revisar
+esas etiquetas.
+
+`phase3 report` (`data/phase3/metrics_jev_openrouter*.json`): a 0.85, falsa alarma por remoción
+58% reales / 62% sintéticos; recall de positivos 9% reales / 63% sintéticos (v2 reales: 18%).
+Las alarmas más altas son mayormente alternativas legítimas (plotext para gráficos en la terminal,
+Snapbyte para digest de HN por mail, Pombo para formularios sin servidor): la remoción asume que el
+item esperado es la única solución, y para necesidades comunes no lo es. Falta adjudicar las alarmas
+a mano para separar errores del verificador de implementaciones no listadas.
 
 Piloto (sep-2026, candidatos MiniLM): 50 pares estratificados (15 positivos, 15 near-miss, 10 de
 rank 200-1000, 10 al azar). Haiku 4.5: 50/50 sin errores, ~770 tokens de entrada por par (la salida

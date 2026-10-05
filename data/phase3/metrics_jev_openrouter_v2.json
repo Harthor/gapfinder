@@ -1,0 +1,146 @@
+{
+ "false_alarm": {
+  "real": {
+   "0.5": 0.9166666666666666,
+   "0.7": 0.75,
+   "0.8": 0.75,
+   "0.85": 0.6666666666666666,
+   "0.9": 0.5833333333333334,
+   "0.95": 0.0,
+   "n": 12
+  },
+  "synthetic": {
+   "0.5": null,
+   "0.7": null,
+   "0.8": null,
+   "0.85": null,
+   "0.9": null,
+   "0.95": null,
+   "n": 0
+  },
+  "real sin label_note": {
+   "0.5": 1.0,
+   "0.7": 0.8888888888888888,
+   "0.8": 0.8888888888888888,
+   "0.85": 0.7777777777777778,
+   "0.9": 0.6666666666666666,
+   "0.95": 0.0,
+   "n": 9
+  }
+ },
+ "positive_recall": {
+  "real": {
+   "0.5": 0.6363636363636364,
+   "0.7": 0.5454545454545454,
+   "0.8": 0.2727272727272727,
+   "0.85": 0.18181818181818182,
+   "0.9": 0.18181818181818182,
+   "0.95": 0.0,
+   "n": 11
+  },
+  "synthetic": {
+   "0.5": null,
+   "0.7": null,
+   "0.8": null,
+   "0.85": null,
+   "0.9": null,
+   "0.95": null,
+   "n": 0
+  },
+  "real sin label_note": {
+   "0.5": 0.7777777777777778,
+   "0.7": 0.6666666666666666,
+   "0.8": 0.3333333333333333,
+   "0.85": 0.2222222222222222,
+   "0.9": 0.2222222222222222,
+   "0.95": 0.0,
+   "n": 9
+  }
+ },
+ "top_alarms": [
+  {
+   "case": "real-89c010f2",
+   "item": "github:KeyArgo/custodian-kernel",
+   "core": 0.93,
+   "partial": 0.91,
+   "same_user": 0.94
+  },
+  {
+   "case": "real-6eb5b382",
+   "item": "github:The-17/agentsecrets",
+   "core": 0.92,
+   "partial": 0.8,
+   "same_user": 0.95
+  },
+  {
+   "case": "real-a6c38804",
+   "item": "show_hn:49435908",
+   "core": 0.91,
+   "partial": 0.91,
+   "same_user": 0.88
+  },
+  {
+   "case": "real-197bf4f9",
+   "item": "show_hn:48554765",
+   "core": 0.91,
+   "partial": 0.94,
+   "same_user": 0.96
+  },
+  {
+   "case": "real-ecad36a5",
+   "item": "github:Francis1998/nexus-llm-router",
+   "core": 0.91,
+   "partial": 0.94,
+   "same_user": 0.89
+  },
+  {
+   "case": "real-6f3848c8",
+   "item": "show_hn:49083015",
+   "core": 0.9,
+   "partial": 0.93,
+   "same_user": 0.9
+  },
+  {
+   "case": "real-fbe3c4c2",
+   "item": "show_hn:48478508",
+   "core": 0.9,
+   "partial": 0.93,
+   "same_user": 0.91
+  },
+  {
+   "case": "real-01fe2dbe",
+   "item": "github:balzack/databag",
+   "core": 0.87,
+   "partial": 0.93,
+   "same_user": 0.88
+  },
+  {
+   "case": "real-47bf5f9f",
+   "item": "show_hn:14358238",
+   "core": 0.83,
+   "partial": 0.82,
+   "same_user": 0.91
+  },
+  {
+   "case": "real-25a4c842",
+   "item": "github:daydreamlive/DEMON",
+   "core": 0.66,
+   "partial": 0.83,
+   "same_user": 0.29
+  },
+  {
+   "case": "real-8b190bdc",
+   "item": "github:dreji18/Fairness-in-AI",
+   "core": 0.55,
+   "partial": 0.79,
+   "same_user": 0.48
+  },
+  {
+   "case": "real-7c597ec1",
+   "item": "show_hn:39992718",
+   "core": 0.44,
+   "partial": 0.62,
+   "same_user": 0.53
+  }
+ ]
+}

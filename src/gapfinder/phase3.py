@@ -27,7 +27,7 @@ from gapfinder.verify import CANDIDATE_CHARS, OUT_DIR, Pair, Verdict
 log = logging.getLogger(__name__)
 
 K = 1000
-THRESHOLDS = (0.5, 0.7, 0.8, 0.9, 0.95)
+THRESHOLDS = (0.5, 0.7, 0.8, 0.85, 0.9, 0.95)   # 0.85: en el piloto separa el núcleo según la revisión humana
 KINDS = ("real", "synthetic")
 
 
