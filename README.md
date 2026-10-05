@@ -167,7 +167,7 @@ uv run gapfinder phase3 verify --verifier jev-openrouter --kinds real --suffix _
     --llm-queries data/llm_queries_v2.json --name jev_openrouter_v2 [--only-new-vs data/phase3/candidates_minilm.json]
 uv run gapfinder pilot select|haiku|jev|jev-openrouter|review    # piloto: los mismos 50 pares -> data/eval/pilot_review.md
 uv run gapfinder phase3 review-pilot                             # revisión humana interactiva de los 50 pares (teclas s/p/n/?/o/q)
-uv run gapfinder phase3 review-alarms                            # adjudicar alarmas (la más alta por caso, núcleo >= 0.85)
+uv run gapfinder phase3 review-alarms [--per-bin 6]              # adjudicar alarmas (la más alta por caso, núcleo >= 0.85; muestra por tramo)
 ```
 
 Revisión humana del piloto (`phase3 review-pilot`): muestra cada par (idea, candidato recortado + URL,

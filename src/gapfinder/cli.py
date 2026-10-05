@@ -228,7 +228,7 @@ def cmd_phase3(args: argparse.Namespace) -> None:
         return
     if args.step == "review-alarms":  # adjudicación humana de las alarmas más altas (negativos por remoción)
         from gapfinder import pilot
-        print(pilot.interactive_alarms(conn, json.loads(args.cases.read_text())))
+        print(pilot.interactive_alarms(conn, json.loads(args.cases.read_text()), per_bin=args.per_bin))
         return
     cases = _phase3_cases(args)
     cand_path = verify.OUT_DIR / f"candidates_{args.model}{args.suffix}.json"
@@ -419,6 +419,7 @@ def main() -> None:
     p.add_argument("--verifier", choices=["jev", "jev-openrouter", "haiku"], default="haiku")
     p.add_argument("--kinds", default="real,synthetic", help="kinds de casos, separados por coma")
     p.add_argument("--concurrency", type=int, default=6, help="requests en paralelo (Jev: límite ~1.200 req/min)")
+    p.add_argument("--per-bin", type=int, help="review-alarms: muestra de hasta N alarmas por tramo de puntaje")
     p.add_argument("--llm-queries", type=Path, default=Path("data/llm_queries.json"), help="consultas/idea (v1 o v2)")
     p.add_argument("--suffix", default="", help="sufijo del archivo de candidatos (p. ej. _v2_real)")
     p.add_argument("--name", help="nombre del archivo de veredictos (verdicts_<name>.jsonl)")

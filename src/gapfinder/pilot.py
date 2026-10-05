@@ -383,6 +383,7 @@ def interactive_review(conn: sqlite3.Connection, cases: list[dict], getkey=_getk
 ALARMS_HUMAN_PATH = Path("data/eval/alarms_review_human.jsonl")
 ALARMS_RESULT_PATH = Path("data/eval/alarms_review_result.md")
 ALARM_MIN = 0.85
+ALARM_BINS = ((0.85, 0.9), (0.9, 0.95), (0.95, 1.01))
 
 
 def alarm_pairs(conn: sqlite3.Connection, cases: list[dict], metrics_path: Path, llm_path: Path,
@@ -422,7 +423,7 @@ def write_alarms_result(pairs: list[Pair], verdicts: dict, cases: list[dict], co
          row("todas", keys)]
     for kd in ("real", "synthetic"):
         L.append(row(kd, [k for k in keys if kind.get(k[0]) == kd]))
-    for lo, hi in ((0.85, 0.9), (0.9, 0.95), (0.95, 1.01)):
+    for lo, hi in ALARM_BINS:
         L.append(row(f"Jev {lo:.2f}-{min(hi, 1):.2f}", [k for k in keys if lo <= verdicts[k].core < hi]))
     L += ["", "## Errores del verificador (humano: no)\n", "| caso | candidato | Jev núcleo |", "|---|---|---|"]
     for p in pairs:
@@ -436,10 +437,26 @@ def write_alarms_result(pairs: list[Pair], verdicts: dict, cases: list[dict], co
 
 def interactive_alarms(conn: sqlite3.Connection, cases: list[dict], getkey=_getkey, out=print,
                        metrics_path: Path = OUT_DIR / "metrics_jev_openrouter.json",
-                       llm_path: Path = Path("data/llm_queries.json"), verdicts_name: str = "jev_openrouter") -> dict:
+                       llm_path: Path = Path("data/llm_queries.json"), verdicts_name: str = "jev_openrouter",
+                       per_bin: int | None = None, seed: int = 0) -> dict:
+    """per_bin: en vez de recorrer las 47 de mayor a menor, una muestra al azar (semilla fija) de hasta
+    `per_bin` alarmas por tramo de puntaje; lo ya respondido cuenta para su tramo. Tramos más bajos primero."""
+    import random
+
     pairs, notes = alarm_pairs(conn, cases, metrics_path, llm_path)
     verdicts = load_done(verdicts_name)
-    done_now = review_loop(conn, cases, pairs, len(pairs), {"Jev": verdicts}, ALARMS_HUMAN_PATH, notes,
+    queue, total = pairs, len(pairs)
+    if per_bin:
+        human = load_human(ALARMS_HUMAN_PATH)
+        rng = random.Random(seed)
+        queue = []
+        for lo, hi in ALARM_BINS:
+            in_bin = [p for p in pairs if lo <= verdicts[(p.case_id, p.item_id)].core < hi]
+            answered = [p for p in in_bin if (p.case_id, p.item_id) in human]
+            pending = [p for p in in_bin if (p.case_id, p.item_id) not in human]
+            queue += rng.sample(pending, max(0, min(per_bin - len(answered), len(pending))))
+        total = len(load_human(ALARMS_HUMAN_PATH)) + len(queue)
+    done_now = review_loop(conn, cases, queue, total, {"Jev": verdicts}, ALARMS_HUMAN_PATH, notes,
                            getkey=getkey, out=out)
     complete = all((p.case_id, p.item_id) in load_human(ALARMS_HUMAN_PATH) for p in pairs)
     text = write_alarms_result(pairs, verdicts, cases, complete)
