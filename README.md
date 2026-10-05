@@ -200,6 +200,13 @@ muestra la alarma más alta de cada caso con núcleo >= 0.85 (47 en v1), junto c
 se removió; respuestas en `data/eval/alarms_review_human.jsonl` y resultado (error del verificador por
 kind y por tramo de puntaje) en `data/eval/alarms_review_result.md`.
 
+Adjudicación (oct-2026, 23 de 47 alarmas: las 11 más altas + muestra de 6 por tramo): Jev >= 0.90 ->
+15/15 juzgadas son implementaciones reales no listadas (0 errores; 2 "no sé"); Jev 0.85-0.90 -> 2 núcleo,
+2 parcial, 1 error (un Reddit genérico para un foro religioso), 1 "no sé". Lectura: a >= 0.90 las alarmas
+por remoción son casi todas alternativas legítimas, no errores del verificador; 0.85-0.90 es zona de
+revisión. Junto con el piloto (núcleo humano siempre >= 0.87), regla propuesta: >= 0.90 "ya construido",
+0.85-0.90 "revisar a mano", < 0.85 "no".
+
 Piloto (sep-2026, candidatos MiniLM): 50 pares estratificados (15 positivos, 15 near-miss, 10 de
 rank 200-1000, 10 al azar). Haiku 4.5: 50/50 sin errores, ~770 tokens de entrada por par (la salida
 estructurada suma ~37% sobre el conteo sin schema), $0.046, p50 1.15 s. Usa pocos valores discretos
