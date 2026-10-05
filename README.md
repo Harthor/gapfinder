@@ -154,7 +154,14 @@ Plan original:
   alguna presente en el item. Los heurísticos quedan en `meta.heuristic_item_ids`.
   `constellate.db` se abre siempre en solo lectura (`file:...?mode=ro`).
 
-## Fase 3 — verificador (preparada, sin correr contra Jev)
+## Fase 3 — verificador (cerrada, oct-2026: ver `data/eval/phase3_report.md`)
+
+Resultado: Jev 1.13 vía OpenRouter sobre el top-1000 de MiniLM + llm5, con la regla calibrada por
+revisión humana (P(núcleo) >= 0.90 ya construido, 0.85-0.90 revisar, < 0.85 no). Detección punta a punta
+("ya construido" en algún candidato): reales 42% (v1) / 58% (v2), sintéticos 58%. El item esperado
+llega a >= 0.90 en pocos reales (9% v1 / 18% v2; muchos esperados de reales son parciales) y en 41% de
+los sintéticos. Las alarmas por remoción >= 0.90 adjudicadas fueron todas implementaciones reales no
+listadas (15/15). Costo total $2.83. Reporte reproducible: `uv run python data/eval/phase3_final.py`.
 
 ```bash
 uv run gapfinder phase3 candidates --model <mejor modelo>        # top-1000 por caso, embeddings + llm5 (RRF)
