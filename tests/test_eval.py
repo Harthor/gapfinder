@@ -125,3 +125,18 @@ def test_pilot_review_order_and_agreement(tmp_path):
     path = tmp_path / "h.jsonl"
     path.write_text('{"case_id": "c", "item_id": "x1", "label": "n"}\n{"case_id": "c", "item_id": "x1", "label": "s"}\n')
     assert pilot.load_human(path) == {("c", "x1"): "s"}   # la última respuesta pisa la anterior
+
+
+def test_holdout_decide_leakage_terms_and_relaunch_filter():
+    from gapfinder import holdout
+
+    assert [holdout.decide(x) for x in (0.95, 0.90, 0.87, 0.85, 0.5)] == \
+        ["ya construido", "ya construido", "revisar", "revisar", "no"]
+    terms = holdout.leakage_terms(None, {"title": "Petrichor – a free, open-source, offline music player",
+                                         "url": "https://github.com/kushalpandya/Petrichor"})
+    assert "petrichor" in terms and "music" not in terms
+    # sin separador de nombre, el título no aporta términos (no es un nombre de producto)
+    assert holdout.leakage_terms(None, {"title": "A free tool to visualise scales on a guitar",
+                                        "url": "https://news.ycombinator.com/item?id=1"}) == []
+    assert holdout._RELAUNCH_RE.search("Foo v2 – now faster") and holdout._RELAUNCH_RE.search("Bar 2.0 is here")
+    assert not holdout._RELAUNCH_RE.search("A tool for scales on a guitar")

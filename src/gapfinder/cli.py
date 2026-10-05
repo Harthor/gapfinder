@@ -226,6 +226,10 @@ def cmd_phase3(args: argparse.Namespace) -> None:
         from gapfinder import pilot
         print(pilot.interactive_review(conn, json.loads(args.cases.read_text())))
         return
+    if args.step == "review-labels":  # las 4 etiquetas de positivos reales que la revisión del piloto juzgó "no"
+        from gapfinder import pilot
+        print(pilot.interactive_labels(conn, json.loads(args.cases.read_text())))
+        return
     if args.step == "review-alarms":  # adjudicación humana de las alarmas más altas (negativos por remoción)
         from gapfinder import pilot
         print(pilot.interactive_alarms(conn, json.loads(args.cases.read_text()), per_bin=args.per_bin))
@@ -288,6 +292,25 @@ def cmd_pilot(args: argparse.Namespace) -> None:
                       "acuerdo_jev_openrouter_vs_haiku": pilot.agreement(pairs, "jev_openrouter_pilot", "haiku_pilot")},
                      indent=1))
     print(f"revisión en {pilot.REVIEW_PATH}")
+
+
+def cmd_holdout(args: argparse.Namespace) -> None:
+    from gapfinder import holdout
+
+    conn = db.connect(args.db)
+    chosen, cases, queries = holdout.selected_cases(conn)
+    if args.step == "retrieve":
+        cand = holdout.retrieve(conn, cases, queries)
+        print(f"holdout: top-{holdout.K} para {len(cand)} ideas en {holdout.DIR / 'candidates.json'}")
+    elif args.step == "verify":
+        cand = json.loads((holdout.DIR / "candidates.json").read_text())
+        print(holdout.verify_with_budget(holdout.pairs(conn, cand, queries), args.budget))
+    elif args.step == "review":
+        from gapfinder import pilot
+        print(pilot.interactive_holdout(conn, cases))
+    elif args.step == "report":
+        holdout.report(conn)
+        print("reporte en data/eval/holdout_temporal.md")
 
 
 def cmd_census(args: argparse.Namespace) -> None:
@@ -414,7 +437,7 @@ def main() -> None:
     p.set_defaults(func=cmd_eval2)
 
     p = sub.add_parser("phase3", help="Fase 3: candidatos top-1000, estimación de costo, verificador y métricas")
-    p.add_argument("step", choices=["candidates", "estimate", "verify", "report", "review-pilot", "review-alarms"])
+    p.add_argument("step", choices=["candidates", "estimate", "verify", "report", "review-pilot", "review-alarms", "review-labels"])
     p.add_argument("--model", choices=["minilm", "bge"], default="minilm", help="modelo de embeddings de los candidatos")
     p.add_argument("--verifier", choices=["jev", "jev-openrouter", "haiku"], default="haiku")
     p.add_argument("--kinds", default="real,synthetic", help="kinds de casos, separados por coma")
@@ -432,6 +455,11 @@ def main() -> None:
     p.add_argument("--model", choices=["minilm", "bge"], default="minilm")
     p.add_argument("--cases", type=Path, default=Path("data/known_cases.json"))
     p.set_defaults(func=cmd_pilot)
+
+    p = sub.add_parser("holdout", help="holdout temporal: retrieval sobre el corpus anterior a T y verificación con Jev")
+    p.add_argument("step", choices=["retrieve", "verify", "review", "report"])
+    p.add_argument("--budget", type=float, default=1.26, help="tope de gasto de Jev en USD (usage.cost real)")
+    p.set_defaults(func=cmd_holdout)
 
     p = sub.add_parser("census", help="GitHub: repos por año de creación y umbral de estrellas")
     p.add_argument("--stars", type=int, nargs="+", default=[20, 50, 100])

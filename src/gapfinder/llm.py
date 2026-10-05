@@ -72,6 +72,19 @@ SCHEMA_IDEA = {
     "additionalProperties": False,
 }
 SCHEMA_NEED = {"type": "object", "properties": _LIST_FIELDS, "required": list(_LIST_FIELDS), "additionalProperties": False}
+# Holdout temporal: el input es un producto existente; se describe la necesidad que cubre sin nombrarlo.
+SCHEMA_PRODUCT = {
+    "type": "object",
+    "properties": {
+        "query_core": {"type": "string", "description": "The need this product addresses, 1-2 sentences, "
+                       "as someone searching for such a tool would state it, without naming the product."},
+        "is_software_tool": {"type": "boolean", "description": "True if this is a software product, tool, "
+                             "library, app or service; false for articles, art, data dumps, games-as-content, etc."},
+        **_LIST_FIELDS,
+    },
+    "required": ["query_core", "is_software_tool", *_LIST_FIELDS],
+    "additionalProperties": False,
+}
 
 
 def _lists(data: dict) -> dict:
@@ -82,6 +95,13 @@ def _lists(data: dict) -> dict:
 
 
 def _prompt(case: dict) -> tuple[str, dict]:
+    if case["kind"] == "holdout":
+        return (f"Existing product (title and description from its launch post):\nTitle: {case['title']}\n\n"
+                f"DESCRIPTION:\n{case.get('description', '')}\n\n"
+                "Write query_core: the need or problem this product addresses, in 1-2 plain English sentences, "
+                "as someone who does not know this product exists would state it when searching for a tool. "
+                "Never mention the product's name, brand, author, domain or URL, in any field. Then write the "
+                "reformulations and keyword queries for query_core, and say whether it is a software tool."), SCHEMA_PRODUCT
     if case["kind"] in ("real", "partial"):
         return (f"Idea title: {case['title']}\n\nDESCRIPTION:\n{case.get('description', '')}\n\n"
                 "Extract query_core: the central need or missing piece of this idea in 1-2 plain English "
@@ -113,6 +133,7 @@ def _call(client: anthropic.Anthropic, case: dict, system: str = SYSTEM) -> dict
             raise RuntimeError(f"{case['id']}: refusal ({resp.stop_details})")
         data = _lists(json.loads(next(b.text for b in resp.content if b.type == "text")))
         quote = data.get("missing_piece_quote")
+        data["usage"] = {"input_tokens": resp.usage.input_tokens, "output_tokens": resp.usage.output_tokens}
         if quote is None or quote in case.get("description", ""):
             data["model"] = resp.model
             return data

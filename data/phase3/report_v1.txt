@@ -1,0 +1,202 @@
+{
+ "false_alarm": {
+  "real": {
+   "0.5": 1.0,
+   "0.7": 0.75,
+   "0.8": 0.6666666666666666,
+   "0.85": 0.5833333333333334,
+   "0.9": 0.4166666666666667,
+   "0.95": 0.08333333333333333,
+   "n": 12
+  },
+  "synthetic": {
+   "0.5": 0.96875,
+   "0.7": 0.875,
+   "0.8": 0.71875,
+   "0.85": 0.625,
+   "0.9": 0.453125,
+   "0.95": 0.25,
+   "n": 64
+  },
+  "real sin label_note": {
+   "0.5": 1.0,
+   "0.7": 0.8888888888888888,
+   "0.8": 0.7777777777777778,
+   "0.85": 0.6666666666666666,
+   "0.9": 0.5555555555555556,
+   "0.95": 0.1111111111111111,
+   "n": 9
+  }
+ },
+ "positive_recall": {
+  "real": {
+   "0.5": 0.45454545454545453,
+   "0.7": 0.36363636363636365,
+   "0.8": 0.2727272727272727,
+   "0.85": 0.09090909090909091,
+   "0.9": 0.09090909090909091,
+   "0.95": 0.0,
+   "n": 11
+  },
+  "synthetic": {
+   "0.5": 0.9830508474576272,
+   "0.7": 0.8983050847457628,
+   "0.8": 0.7457627118644068,
+   "0.85": 0.6271186440677966,
+   "0.9": 0.4067796610169492,
+   "0.95": 0.05084745762711865,
+   "n": 59
+  },
+  "real sin label_note": {
+   "0.5": 0.625,
+   "0.7": 0.5,
+   "0.8": 0.375,
+   "0.85": 0.125,
+   "0.9": 0.125,
+   "0.95": 0.0,
+   "n": 8
+  }
+ }
+}
+alarmas más altas (revisar a mano): [
+ {
+  "case": "syn-4770645",
+  "item": "show_hn:49762099",
+  "core": 0.97,
+  "partial": 0.97,
+  "same_user": 0.96
+ },
+ {
+  "case": "syn-13406648-claude",
+  "item": "github:piccolomo/plotext",
+  "core": 0.97,
+  "partial": 0.98,
+  "same_user": 0.96
+ },
+ {
+  "case": "syn-7034317",
+  "item": "github:Rohithgilla12/data-peek",
+  "core": 0.96,
+  "partial": 0.97,
+  "same_user": 0.93
+ },
+ {
+  "case": "syn-13406648",
+  "item": "github:piccolomo/plotext",
+  "core": 0.96,
+  "partial": 0.97,
+  "same_user": 0.95
+ },
+ {
+  "case": "syn-2774322",
+  "item": "show_hn:47040895",
+  "core": 0.96,
+  "partial": 0.95,
+  "same_user": 0.96
+ },
+ {
+  "case": "syn-2229924",
+  "item": "show_hn:46780456",
+  "core": 0.96,
+  "partial": 0.89,
+  "same_user": 0.92
+ },
+ {
+  "case": "syn-30673502",
+  "item": "show_hn:1768345",
+  "core": 0.96,
+  "partial": 0.96,
+  "same_user": 0.81
+ },
+ {
+  "case": "syn-41298789",
+  "item": "show_hn:15500388",
+  "core": 0.96,
+  "partial": 0.96,
+  "same_user": 0.96
+ },
+ {
+  "case": "syn-6999604",
+  "item": "show_hn:46053076",
+  "core": 0.96,
+  "partial": 0.97,
+  "same_user": 0.88
+ },
+ {
+  "case": "real-89c010f2",
+  "item": "show_hn:49477530",
+  "core": 0.95,
+  "partial": 0.97,
+  "same_user": 0.91
+ },
+ {
+  "case": "syn-33480679-claude",
+  "item": "show_hn:45291271",
+  "core": 0.95,
+  "partial": 0.95,
+  "same_user": 0.95
+ },
+ {
+  "case": "syn-17719720",
+  "item": "github:hjr265/gittop",
+  "core": 0.95,
+  "partial": 0.95,
+  "same_user": 0.94
+ },
+ {
+  "case": "syn-22843070",
+  "item": "github:cyber-sushi/makima",
+  "core": 0.95,
+  "partial": 0.95,
+  "same_user": 0.92
+ },
+ {
+  "case": "syn-36030350",
+  "item": "show_hn:45571963",
+  "core": 0.95,
+  "partial": 0.96,
+  "same_user": 0.94
+ },
+ {
+  "case": "syn-30183465",
+  "item": "show_hn:40779547",
+  "core": 0.95,
+  "partial": 0.89,
+  "same_user": 0.94
+ },
+ {
+  "case": "syn-2320614",
+  "item": "show_hn:25267854",
+  "core": 0.95,
+  "partial": 0.91,
+  "same_user": 0.93
+ },
+ {
+  "case": "syn-15180526",
+  "item": "github:bottlepy/bottle",
+  "core": 0.95,
+  "partial": 0.98,
+  "same_user": 0.94
+ },
+ {
+  "case": "real-6eb5b382",
+  "item": "show_hn:47042470",
+  "core": 0.94,
+  "partial": 0.94,
+  "same_user": 0.95
+ },
+ {
+  "case": "real-6f3848c8",
+  "item": "show_hn:47413969",
+  "core": 0.93,
+  "partial": 0.91,
+  "same_user": 0.94
+ },
+ {
+  "case": "syn-9373724",
+  "item": "show_hn:47561773",
+  "core": 0.93,
+  "partial": 0.92,
+  "same_user": 0.87
+ }
+]

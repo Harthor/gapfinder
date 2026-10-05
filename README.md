@@ -247,6 +247,42 @@ no reetiquetada) se reportan con y sin ellos.
   ~$35 con Batches (~$70 estándar, medido en el piloto: ~770 tokens/par) para 76.000 pares; Jev: ~$1.8 (solo entrada, $0.042/Mtok),
   ~63 min al límite de 1.200 req/min. Parciales opcionales: +29.000 pares (Haiku ~$13 batch, Jev ~$0.9).
 
+## Holdout temporal (oct-2026): negativos plausibles
+
+Todo el set de evaluación son cosas que ya existen; la remoción no sirve como negativo (las alarmas
+adjudicadas eran implementaciones reales). El holdout mide qué dice el sistema de ideas que todavía no
+existían en una fecha T. Reporte: `data/eval/holdout_temporal.md`.
+
+```bash
+uv run gapfinder holdout retrieve        # top-1000 sobre el corpus anterior a T (embeddings MiniLM filtrados)
+uv run gapfinder holdout verify --budget 1.26   # Jev vía OpenRouter por tandas, con tope de gasto real
+uv run gapfinder holdout report          # data/eval/holdout_temporal.md
+uv run gapfinder holdout review          # adjudicación humana (data/eval/holdout_review_human.jsonl)
+```
+
+Decisiones de la sesión (sin supervisión; documentadas también en el reporte):
+- **T = 2024-01-01**: ~136 mil Show HN y ~402 mil repos antes; ~82 mil Show HN después.
+- Corpus restringido: Show HN publicados y repos creados antes de T (528.865 items), con los embeddings
+  MiniLM existentes y los posteriores a T enmascarados (sin re-embeber).
+- Ideas: Show HN posteriores a T con >= 20 puntos y >= 400 caracteres de texto real; fuera títulos de
+  versión/relanzamiento, repos enlazados creados antes de T y dominios con Show HN previo (3.926
+  elegibles). Muestra barajada (semilla 11); Claude clasifica si es software y se quedan las primeras 35.
+- Descripciones con el mismo método que los known cases (Claude `claude-opus-5`, prompt v2, llm5 + RRF),
+  sin nombrar producto/marca/URL; `leakage_flag` en 2 ideas cuyo nombre es un término de categoría.
+- **35 ideas y no 50**: el tope de $2.00 se aplicó a todo el gasto de la sesión (Claude + Jev). Costo
+  real: Claude $0.731 (40 ideas con consultas) + Jev $1.171 (35.000 pares, 0 errores) = **$1.90**.
+  Saldo de OpenRouter antes de empezar: $2.17.
+- Resultado: 8 ya construido (23%), 7 revisar (20%), 20 no (57%). Requiere adjudicación humana.
+
+Revisiones preparadas para la adjudicación humana:
+- `uv run gapfinder phase3 review-labels`: las 4 etiquetas de positivos reales juzgadas "no" en el piloto
+  (mantener / parcial / descartar / no sé) -> `data/eval/label_review_human.jsonl`; no toca known_cases.json.
+- `uv run gapfinder holdout review`: 75 pares (3 mejores candidatos de cada "no", el mejor de cada
+  "revisar"/"ya construido") -> `data/eval/holdout_review_human.jsonl` y `data/eval/holdout_review_result.md`.
+
+Lado de demanda: `data/ideas.json` nunca existió y las ideas de Constellate también son de oferta.
+Notas y opciones (Ask HN, Reddit, Twitter) en `data/eval/demand_side_notes.md`.
+
 ## Tests
 
 ```bash

@@ -1,0 +1,882 @@
+{
+ "hold-48190121": {
+  "query_core": "I want to discover and explore little-known historical religious art sites in detail — richly illustrated guides to temple sculpture and architecture, with the historical context of how and why they were made, without traveling there.",
+  "is_software_tool": false,
+  "reformulations": [
+   "I'd love a way to visit remote old temples and see their painted statues up close, with background on the era that produced them.",
+   "An illustrated online guide to overlooked heritage sites, presenting high-resolution photography of religious sculpture alongside the history behind each site.",
+   "A web-based cultural heritage archive with deep-zoom imagery and 3D/photogrammetry documentation of temple interiors and polychrome clay figures.",
+   "Virtual tours and digital documentation projects for art history and architectural heritage."
+  ],
+  "keyword_queries": [
+   "virtual temple tour",
+   "cultural heritage photogrammetry",
+   "art history archive"
+  ],
+  "usage": {
+   "input_tokens": 1442,
+   "output_tokens": 440
+  },
+  "model": "claude-opus-5",
+  "key": "9aa6c1a4e9383b7b",
+  "prompt_version": 2
+ },
+ "hold-41683407": {
+  "query_core": "I have node-based image generation workflows that are too complex for non-technical users, and I want to expose them as a simple web app with input fields for text and images and an output gallery.",
+  "is_software_tool": true,
+  "reformulations": [
+   "My teammates can't handle a graph editor full of nodes, so I need a way to give them a plain form where they type a prompt, upload an image, hit run, and get the result from my existing generation pipeline.",
+   "Open-source tool that turns a node-based diffusion workflow into a shareable web app with an auto-generated, easy-to-use interface.",
+   "Wrap a ComfyUI workflow JSON behind a web frontend and API that maps workflow inputs to form controls and streams back generated images, with planned video output support.",
+   "Framework for building end-user UIs on top of AI image generation pipelines without writing frontend code."
+  ],
+  "keyword_queries": [
+   "comfyui workflow app",
+   "workflow to web app",
+   "stable diffusion UI builder"
+  ],
+  "usage": {
+   "input_tokens": 1330,
+   "output_tokens": 549
+  },
+  "model": "claude-opus-5",
+  "key": "255bf664f0716acd",
+  "prompt_version": 2
+ },
+ "hold-44515266": {
+  "query_core": "I have a large collection of local music files and want a desktop app for macOS that can organize, browse, and play them offline, with playlists, a play queue, and fast search across thousands of tracks.",
+  "is_software_tool": true,
+  "reformulations": [
+   "I have thousands of MP3 and FLAC files on my Mac and need a decent app to browse my library and play them without any streaming service.",
+   "A free, open-source offline music player for macOS that maps your music folders, organizes your library by artist/album/year, supports playlists and a play queue, and searches big collections instantly.",
+   "Native SwiftUI desktop audio player that indexes local music directories, reads tags into a browsable library database, and integrates with menubar and dock playback controls.",
+   "Local media library player software for managing and playing personal music collections on the desktop."
+  ],
+  "keyword_queries": [
+   "offline music player macOS",
+   "local music library player",
+   "SwiftUI audio player"
+  ],
+  "usage": {
+   "input_tokens": 1619,
+   "output_tokens": 337
+  },
+  "model": "claude-opus-5",
+  "key": "76a94f523fef024a",
+  "prompt_version": 2
+ },
+ "hold-45485986": {
+  "query_core": "I disable Windows privacy and telemetry options, but updates silently turn them back on. I want something that monitors those settings and tells me when any of them have changed from how I set them.",
+  "is_software_tool": true,
+  "reformulations": [
+   "After every Windows update my privacy and telemetry toggles get re-enabled without asking, and I need a way to find out which ones changed instead of checking each one by hand.",
+   "A command-line utility that scans all known Windows privacy and telemetry settings, compares them to your preferred configuration, and reports or logs any drift.",
+   "Python script that reads registry keys and group policy values for telemetry/data-collection settings, diffs them against a user-defined baseline, and emits alerts and audit logs.",
+   "Configuration drift detection and compliance auditing for operating system privacy settings on a desktop machine."
+  ],
+  "keyword_queries": [
+   "windows privacy settings monitor",
+   "telemetry registry drift checker",
+   "settings change detection audit"
+  ],
+  "usage": {
+   "input_tokens": 1498,
+   "output_tokens": 353
+  },
+  "model": "claude-opus-5",
+  "key": "699de23bc5f941be",
+  "prompt_version": 2
+ },
+ "hold-41243901": {
+  "query_core": "I want a free, customizable way to see guitar scales mapped out on the fretboard, including position systems like CAGED and three-notes-per-string, so I can practice and teach without paying for basic features.",
+  "is_software_tool": true,
+  "reformulations": [
+   "I'm learning guitar and need something that shows me where the notes of any scale sit on the fretboard in different positions without a subscription.",
+   "A free online fretboard visualizer that renders scales, modes and positions across the neck with fully customizable display options.",
+   "Web app that computes scale note sets for a given root and tuning and draws them on an interactive fretboard diagram with position filtering.",
+   "Music theory practice software for stringed instruments that visualizes scales, chords and harmony on the neck."
+  ],
+  "keyword_queries": [
+   "guitar fretboard scale visualizer",
+   "interactive fretboard diagram",
+   "guitar scales web app"
+  ],
+  "usage": {
+   "input_tokens": 1598,
+   "output_tokens": 344
+  },
+  "model": "claude-opus-5",
+  "key": "623409e6a3845e48",
+  "prompt_version": 2
+ },
+ "hold-41124112": {
+  "query_core": "I'm tired of monthly subscriptions and want a curated list of software I can buy once or self-host instead, organized by the SaaS tools they replace.",
+  "is_software_tool": true,
+  "reformulations": [
+   "Where can I find apps that charge a one-time fee instead of a recurring subscription, listed as replacements for the subscription services I currently pay for?",
+   "A browsable directory of pay-once and lifetime-license software, categorized so you can find an alternative to any subscription app.",
+   "A curated catalog site mapping SaaS products to non-subscription equivalents, including self-hosted and locally installed options, with category filters and submissions.",
+   "Software alternative discovery platform focused on subscription-free pricing models."
+  ],
+  "keyword_queries": [
+   "no subscription alternatives directory",
+   "one-time purchase software list",
+   "awesome SaaS alternatives"
+  ],
+  "usage": {
+   "input_tokens": 1390,
+   "output_tokens": 368
+  },
+  "model": "claude-opus-5",
+  "key": "ea33e73040604a9b",
+  "prompt_version": 2
+ },
+ "hold-44447233": {
+  "query_core": "I need a place to find collaborators for my side project — someone with complementary skills like a developer, designer or marketer — with profile pages so I can see who they are and what they've built before reaching out.",
+  "is_software_tool": true,
+  "reformulations": [
+   "I have a side project but I'm missing a technical or marketing partner, and I don't know anyone — where can I find people to team up with?",
+   "A community platform where indie makers post their projects and profiles to match with co-founders and collaborators.",
+   "A web app with user profiles, project listings and matching so builders and idea owners can connect and form side-project teams.",
+   "A co-founder and collaborator matchmaking marketplace for hobby and startup projects."
+  ],
+  "keyword_queries": [
+   "cofounder matching platform",
+   "side project collaborators community",
+   "find project teammates app"
+  ],
+  "usage": {
+   "input_tokens": 1785,
+   "output_tokens": 299
+  },
+  "model": "claude-opus-5",
+  "key": "c76570a3fc48d0ac",
+  "prompt_version": 2
+ },
+ "hold-43946066": {
+  "query_core": "I want to automate my repetitive AI coding assistant workflow by calling the agent CLI programmatically from a script, instead of typing prompts by hand each time.",
+  "is_software_tool": true,
+  "reformulations": [
+   "I keep repeating the same plan-then-implement loop with my terminal AI coding assistant and want to drive it from a Python script instead of typing prompts manually.",
+   "A lightweight Python SDK that wraps a command-line AI coding agent so you can script, batch and automate code-generation tasks programmatically.",
+   "Programmatic wrapper around an agentic coding CLI that spawns the process, streams its output, and lets you pass prompts and working directories from code.",
+   "Tooling for automating and orchestrating AI coding agents as part of scripted developer workflows."
+  ],
+  "keyword_queries": [
+   "coding agent SDK",
+   "CLI agent python wrapper",
+   "automate AI coding workflow"
+  ],
+  "usage": {
+   "input_tokens": 1365,
+   "output_tokens": 395
+  },
+  "model": "claude-opus-5",
+  "key": "04922ab4af2449f6",
+  "prompt_version": 2
+ },
+ "hold-48180924": {
+  "query_core": "I want a realistic WWII submarine warfare simulation that focuses on navigation plotting and manual torpedo targeting — listening on hydrophones, estimating enemy course, speed and range, and solving the geometry on a chart — ideally playable in a browser.",
+  "is_software_tool": false,
+  "reformulations": [
+   "I love the map plotting and manual torpedo aiming part of submarine games and want something that is almost entirely about that instead of walking around a 3D boat.",
+   "A tactical, chart-centered WWII submarine simulator where you use hydrophone bearings, a periscope stadimeter and mast heights to build a firing solution while evading escorts.",
+   "A browser-based TypeScript naval simulation implementing target motion analysis, bearing-only tracking, stadimeter range estimation and destroyer AI hunting logic.",
+   "Historical naval warfare simulation games emphasizing realistic instruments, navigation geometry and weapon targeting solutions."
+  ],
+  "keyword_queries": [
+   "submarine simulator browser",
+   "naval tactical plotting game",
+   "torpedo firing solution simulation"
+  ],
+  "usage": {
+   "input_tokens": 1747,
+   "output_tokens": 561
+  },
+  "model": "claude-opus-5",
+  "key": "99fbb4cde9e8d2ad",
+  "prompt_version": 2
+ },
+ "hold-44960594": {
+  "query_core": "When using AI coding agents, context and specs get lost between tasks, so I need a lightweight way to turn requirements documents into epics and tasks tracked in the issue tracker of my repository, keeping parallel agent work traceable to the original spec.",
+  "is_software_tool": true,
+  "reformulations": [
+   "My AI coding assistant forgets what we decided in earlier sessions, and I want a simple way to store specs, tasks and progress in my repo so multiple agents can work in parallel without losing track.",
+   "A CLI workflow that brainstorms a requirements document, breaks it into an epic and tasks, and syncs them to issues in your repository so AI-driven development stays organized and traceable.",
+   "Shell scripts and markdown command definitions that use GitHub Issues as the task database for spec-driven development with coding agents, tracking dependencies and parallel work streams.",
+   "Spec-driven project management and task tracking layer for autonomous coding agents, built on top of version-controlled markdown and an issue tracker."
+  ],
+  "keyword_queries": [
+   "spec driven agent workflow",
+   "github issues task management AI coding",
+   "PRD epic task decomposition CLI"
+  ],
+  "usage": {
+   "input_tokens": 1525,
+   "output_tokens": 463
+  },
+  "model": "claude-opus-5",
+  "key": "8040ac7b7f37dc79",
+  "prompt_version": 2
+ },
+ "hold-45304911": {
+  "query_core": "I want to run very large language models with 100k-token contexts on a consumer GPU with only 8GB of VRAM, without quantizing the weights, by streaming layers and KV cache from SSD or CPU memory.",
+  "is_software_tool": true,
+  "reformulations": [
+   "My GPU only has 8GB of VRAM but I need to run an 80B model over a huge document offline, even if it takes seconds per token — is there a way to stream the weights from disk instead of fitting them in memory?",
+   "A lightweight Python inference library that runs large-context models on cheap consumer GPUs by offloading model weights and KV cache to SSD, keeping full fp16/bf16 precision.",
+   "Layer-by-layer weight streaming from NVMe to GPU plus disk-backed KV cache offload and chunked MLP/FlashAttention to cap VRAM usage during long-context transformer decoding.",
+   "Memory-offloading inference engine for running LLMs that far exceed available GPU memory on low-end hardware."
+  ],
+  "keyword_queries": [
+   "LLM disk offload inference",
+   "KV cache SSD offloading",
+   "large model low VRAM"
+  ],
+  "usage": {
+   "input_tokens": 2193,
+   "output_tokens": 461
+  },
+  "model": "claude-opus-5",
+  "key": "c40159c11a391484",
+  "prompt_version": 2
+ },
+ "hold-47461529": {
+  "query_core": "I need a way for my hiking group to see each other's locations on a map when there's no cell service, using only our phones with no servers or extra radios. It should work over short-range wireless between devices and show offline maps with last-known positions when someone goes out of range.",
+  "is_software_tool": true,
+  "reformulations": [
+   "When my group splits up in the backcountry with no signal, I want everyone's phone to show where the others are without any cell towers or satellite subscription.",
+   "An offline-first mobile app that shares team member positions directly phone-to-phone over Bluetooth, with encrypted sessions and downloadable topographic maps.",
+   "BLE mesh location sharing with CRDT-based state sync, small encrypted payloads, reconnection backoff, and stale-peer handling on an offline map view.",
+   "Serverless peer-to-peer situational awareness and location tracking for small teams operating without internet connectivity."
+  ],
+  "keyword_queries": [
+   "offline location sharing bluetooth",
+   "peer-to-peer team tracking app",
+   "BLE mesh offline map"
+  ],
+  "usage": {
+   "input_tokens": 1712,
+   "output_tokens": 381
+  },
+  "model": "claude-opus-5",
+  "key": "8d5e5b296ba59f11",
+  "prompt_version": 2
+ },
+ "hold-48871547": {
+  "query_core": "I want to turn my Lua scripts into standalone native executables that run fast without shipping an interpreter, ideally by compiling ahead of time with my normal system compiler toolchain.",
+  "is_software_tool": true,
+  "reformulations": [
+   "I have programs written in Lua and I want to ship them as a single fast binary that doesn't need the interpreter installed.",
+   "An ahead-of-time compiler that turns a dynamic scripting language into standalone optimized native executables for Windows, macOS and Linux.",
+   "A transpiler that emits C or C++ source from Lua code and hands it to GCC/Clang/MSVC to produce an optimized native binary, with coroutines and 64-bit integers supported.",
+   "Tools for AOT compilation of scripting languages to machine code using an existing compiler as the backend instead of writing a custom code generator or using LLVM."
+  ],
+  "keyword_queries": [
+   "lua native compiler",
+   "lua to c++ transpiler",
+   "ahead-of-time script compiler executable"
+  ],
+  "usage": {
+   "input_tokens": 1517,
+   "output_tokens": 369
+  },
+  "model": "claude-opus-5",
+  "key": "f9b94836f6622891",
+  "prompt_version": 2
+ },
+ "hold-48907681": {
+  "query_core": "I want to run local LLM and speech-to-text inference directly inside a Java application without spawning a separate HTTP server process, with low latency and no garbage-collection overhead on the inference path.",
+  "is_software_tool": true,
+  "reformulations": [
+   "How can I call a local language model from my Java app without running a separate REST sidecar process and without copying data between heap and native memory?",
+   "A JVM library that embeds local LLM and speech recognition inference natively, bundling precompiled binaries in the jar for drop-in deployment.",
+   "Java bindings to a C/C++ inference engine using the Foreign Function & Memory API, with off-heap memory segments, confined arenas and zero-allocation hot paths for tokens and prompts.",
+   "Native interop bindings for running on-device machine learning inference from a managed runtime like the JVM."
+  ],
+  "keyword_queries": [
+   "java panama llama bindings",
+   "jvm local llm inference",
+   "foreign function memory whisper"
+  ],
+  "usage": {
+   "input_tokens": 1703,
+   "output_tokens": 360
+  },
+  "model": "claude-opus-5",
+  "key": "c7579f138a8c8277",
+  "prompt_version": 2
+ },
+ "hold-46579612": {
+  "query_core": "I want to build a simple one-dimensional Pong game on an addressable LED strip using a microcontroller, with open firmware and button controls that speed up as play continues.",
+  "is_software_tool": false,
+  "reformulations": [
+   "I have an LED strip and a couple of buttons and want code to turn it into a simple two-player reflex game where a light bounces back and forth and gets faster.",
+   "Open source hardware project and firmware for a one-dimensional Pong built on an addressable LED strip with arcade buttons, ready to build yourself.",
+   "Microcontroller firmware driving WS2812 addressable LEDs that implements 1D Pong with debounced button input, timing-based ball physics and increasing difficulty.",
+   "DIY electronics game projects that use LED strips and microcontrollers for simple interactive multiplayer party games."
+  ],
+  "keyword_queries": [
+   "1D pong LED",
+   "LED strip game firmware",
+   "addressable LED pong arduino"
+  ],
+  "usage": {
+   "input_tokens": 1491,
+   "output_tokens": 527
+  },
+  "model": "claude-opus-5",
+  "key": "a85fb4aea01027d3",
+  "prompt_version": 2
+ },
+ "hold-44501076": {
+  "query_core": "I need a way to find out what technologies specific teams inside large companies use, what projects they're working on, and who is involved, so I can target sales outreach precisely.",
+  "is_software_tool": true,
+  "reformulations": [
+   "How can I figure out which internal team at a big enterprise uses a particular database or cloud tool, what initiative they're running, and which people to email about it?",
+   "A sales intelligence platform that lets go-to-market teams query a knowledge graph of company tech stacks, active projects, and the people behind them to build targeted prospect lists.",
+   "Pipeline that extracts entities (company, team, project, technology, person) from job postings, resumes and company sites with LLMs and links them into a queryable graph.",
+   "Technographic and firmographic B2B prospecting data enriched down to team level for account-based marketing."
+  ],
+  "keyword_queries": [
+   "technographic sales intelligence",
+   "company tech stack graph",
+   "b2b prospect data enrichment"
+  ],
+  "usage": {
+   "input_tokens": 1896,
+   "output_tokens": 391
+  },
+  "model": "claude-opus-5",
+  "key": "af4a3b791b18bbfc",
+  "prompt_version": 2
+ },
+ "hold-42203895": {
+  "query_core": "I want a simple, ad-free desktop music player that plays my local audio files and can also fetch and download tracks from online streaming sources into my library.",
+  "is_software_tool": true,
+  "reformulations": [
+   "I'm tired of ads and subscriptions in streaming apps — is there a lightweight desktop app that plays my downloaded songs and can also grab new tracks from the web for offline listening?",
+   "A minimal cross-platform open source music player with a clean interface that handles local playback and built-in track downloading from online music services.",
+   "A Python desktop GUI music player built with a Tkinter-based toolkit that wraps an async downloader to fetch songs by name or playlist URL and plays them locally.",
+   "Offline-first desktop audio player software with integrated music downloading and library management."
+  ],
+  "keyword_queries": [
+   "offline music player downloader",
+   "python tkinter music player",
+   "open source desktop audio player"
+  ],
+  "usage": {
+   "input_tokens": 1948,
+   "output_tokens": 331
+  },
+  "model": "claude-opus-5",
+  "key": "962ee694eefb0776",
+  "prompt_version": 2
+ },
+ "hold-45656952": {
+  "query_core": "I need to run untrusted or AI-generated code in strongly isolated sandboxes, packing many lightweight VMs onto each server, without the risks and complexity of nested containers. I want a simple CLI and Python API instead of hand-rolling VM orchestration and networking.",
+  "is_software_tool": true,
+  "reformulations": [
+   "How can I safely execute code my LLM agent writes, so a bad script can't escape into my host, while running many sandboxes per machine?",
+   "Self-hosted sandbox platform that spins up dozens of microVMs per node for secure code execution, with a CLI and Python SDK.",
+   "Orchestrate hardware-virtualized microVMs with automated networking and snapshots on a cluster for high-density untrusted workload isolation, avoiding Docker-in-Docker.",
+   "Secure multi-tenant compute isolation layer for untrusted code, CI runners and agent workloads."
+  ],
+  "keyword_queries": [
+   "microVM sandbox orchestration",
+   "secure code execution sandbox",
+   "lightweight VM isolation SDK"
+  ],
+  "usage": {
+   "input_tokens": 1371,
+   "output_tokens": 396
+  },
+  "model": "claude-opus-5",
+  "key": "933f453be5aa252d",
+  "prompt_version": 2
+ },
+ "hold-49361478": {
+  "query_core": "I need a way to let users prove they're over 18 to my site without collecting or exposing their identity documents or personal data, ideally with a single sign-on flow where the user's ID data stays encrypted on their own device and doesn't have to be re-uploaded each time.",
+  "is_software_tool": true,
+  "reformulations": [
+   "How can my app check that a visitor is an adult without ever seeing their ID or storing personal information about them?",
+   "A privacy-first identity service that issues short-lived 18+ age proofs over an OAuth sign-in flow while keeping users' documents encrypted and under their own control.",
+   "Implementation using the WebAuthn PRF extension to derive a client-held encryption key during passkey authentication so sensitive identity data is encrypted before storage and only decryptable by the user, backed by OAuth 2.0 authorization code flow.",
+   "Self-sovereign or zero-knowledge identity and age attestation infrastructure that shares verified attributes without personally identifiable information."
+  ],
+  "keyword_queries": [
+   "anonymous age verification",
+   "webauthn PRF encryption",
+   "privacy preserving identity OAuth"
+  ],
+  "usage": {
+   "input_tokens": 1726,
+   "output_tokens": 478
+  },
+  "model": "claude-opus-5",
+  "key": "b2780155f41c9c69",
+  "prompt_version": 2
+ },
+ "hold-46331364": {
+  "query_core": "I need an easy way to connect my computers, servers, NAS and IoT devices across different networks as if they were on the same LAN, without port forwarding, VPN appliances or exposing anything to the internet. It should handle NAT traversal automatically and give each device a stable address for remote desktop and SSH.",
+  "is_software_tool": true,
+  "reformulations": [
+   "I want to reach my home PC, NAS and headless Linux boxes from anywhere without opening ports on the router or fighting with IPsec configs.",
+   "A simple peer-to-peer overlay network that installs on every device, gives it a fixed private IP and hostname, and encrypts all traffic directly between devices.",
+   "WireGuard-based mesh networking with UDP hole punching, STUN-style endpoint discovery and encrypted relay fallback for symmetric NAT and CGNAT.",
+   "Zero-config private overlay networking / remote access software for small teams and fleets of remote devices."
+  ],
+  "keyword_queries": [
+   "mesh VPN wireguard",
+   "NAT traversal overlay network",
+   "peer-to-peer remote access LAN"
+  ],
+  "usage": {
+   "input_tokens": 1811,
+   "output_tokens": 410
+  },
+  "model": "claude-opus-5",
+  "key": "892a3082e6fd0572",
+  "prompt_version": 2
+ },
+ "hold-40539471": {
+  "query_core": "I want a place to read other people's accounts of major life decisions and whether they ended up regretting them, so I can get perspective while facing a tough choice of my own.",
+  "is_software_tool": true,
+  "reformulations": [
+   "When I'm stuck on a huge life choice, I'd love to browse short stories from people who made the same call and hear if they regret it and why.",
+   "A searchable, crowdsourced collection of big life decisions with first-hand verdicts on regret and the reasoning behind them.",
+   "A web app with a user-submitted database of life decisions tagged by category and regret outcome, browsable and filterable with short written rationales.",
+   "A community-driven decision-support site aggregating anecdotal outcomes and hindsight from people's major choices."
+  ],
+  "keyword_queries": [
+   "life decisions regrets directory",
+   "crowdsourced decision stories",
+   "regret database site"
+  ],
+  "usage": {
+   "input_tokens": 1389,
+   "output_tokens": 360
+  },
+  "model": "claude-opus-5",
+  "key": "f616f0dc9709a731",
+  "prompt_version": 2
+ },
+ "hold-42041368": {
+  "query_core": "I want AI agents that understand my whole codebase so they can help with debugging, low-level design, writing integration tests and reviewing pull requests, and I'd like to configure custom agents for my own engineering workflows.",
+  "is_software_tool": true,
+  "reformulations": [
+   "How can I get an AI assistant that actually knows my entire repository, so it can trace bugs, propose designs, write tests and review PRs instead of guessing from a few files?",
+   "An open-source platform for building and running customizable AI coding agents for debugging, design, testing and code review, grounded in a graph of your repository.",
+   "Index a code base into a knowledge graph and expose retrieval tools (symbol lookup, keyword search, file tree, branch diffs) to LLM agents with configurable prompts and goals.",
+   "Codebase-aware autonomous agent framework for software engineering tasks."
+  ],
+  "keyword_queries": [
+   "codebase knowledge graph agents",
+   "AI agents code review debugging",
+   "custom coding agent framework"
+  ],
+  "usage": {
+   "input_tokens": 1506,
+   "output_tokens": 373
+  },
+  "model": "claude-opus-5",
+  "key": "4d99628b990b129d",
+  "prompt_version": 2
+ },
+ "hold-38852257": {
+  "query_core": "I have thousands of audio samples from sound packs scattered in folders and need a fast desktop app to browse, tag, audition and search them by key, BPM and type. Ideally it extracts that info automatically from messy file names.",
+  "is_software_tool": true,
+  "reformulations": [
+   "My sample library is a mess of folders from dozens of sound packs and I want a quick way to preview and find the right drum hit or loop by tempo and musical key.",
+   "A fast, clutter-free sample browser for music producers that auto-tags your audio library with key, BPM and instrument type and lets you audition sounds instantly.",
+   "Desktop audio file indexer that parses filenames with regex and analyzes waveforms to detect key and tempo, exposing a keyboard-driven search UI over a local sample database.",
+   "Media asset management software for local audio collections with metadata extraction and instant preview."
+  ],
+  "keyword_queries": [
+   "audio sample manager",
+   "sample library browser",
+   "bpm key detection tagger"
+  ],
+  "usage": {
+   "input_tokens": 1477,
+   "output_tokens": 422
+  },
+  "model": "claude-opus-5",
+  "key": "fa0bbae8098e4822",
+  "prompt_version": 2
+ },
+ "hold-44650567": {
+  "query_core": "I want a single unified way to call many different large language model providers from my code, so switching between models or vendors is just a config/string change instead of rewriting integration code. It should be a lightweight library I can import, not a separate proxy or gateway server to run.",
+  "is_software_tool": true,
+  "reformulations": [
+   "How can I avoid rewriting my code every time I switch from one AI model vendor to another in my app?",
+   "A lightweight Python library that gives you one consistent API for 20+ LLM providers, where changing models is just changing a string.",
+   "A client-side LLM router that wraps official provider SDKs behind a single chat-completion interface with provider/model identifier strings, no proxy or gateway process required.",
+   "Unified abstraction layer or SDK for multi-provider language model access and vendor interoperability."
+  ],
+  "keyword_queries": [
+   "unified LLM API",
+   "LLM provider router",
+   "multi-provider LLM SDK"
+  ],
+  "usage": {
+   "input_tokens": 1381,
+   "output_tokens": 338
+  },
+  "model": "claude-opus-5",
+  "key": "5a3db836c72bec52",
+  "prompt_version": 2
+ },
+ "hold-39407162": {
+  "query_core": "I need a way to reduce overwhelm for new users of a feature-heavy app by hiding advanced UI controls at first and revealing them gradually as the user becomes more experienced, instead of relying on onboarding walkthroughs. It should also track which features and UI elements actually get used so I know what to hide.",
+  "is_software_tool": true,
+  "reformulations": [
+   "Our app has too many buttons and menus and new signups get lost — is there a tool that shows beginners a stripped-down interface and unlocks the rest as they get comfortable?",
+   "A no-code platform that adds adaptive 'simple mode' onboarding to your web app, hiding non-essential UI elements for new users and progressively revealing them based on usage conditions.",
+   "JavaScript SDK that tags UI elements via data attributes or a visual picker and conditionally hides or shows them per user based on interaction history and feature-usage analytics.",
+   "Progressive disclosure and adaptive user interface tooling as an alternative to product tours and onboarding checklists."
+  ],
+  "keyword_queries": [
+   "progressive disclosure onboarding",
+   "adaptive UI simple mode",
+   "feature usage analytics hide elements"
+  ],
+  "usage": {
+   "input_tokens": 1510,
+   "output_tokens": 479
+  },
+  "model": "claude-opus-5",
+  "key": "f81f542ee80ceb06",
+  "prompt_version": 2
+ },
+ "hold-40010050": {
+  "query_core": "I want to run an experimental hobby operating system and its native programs directly on my existing desktop OS, without booting a virtual machine, so files are shared seamlessly and I can use its language from a normal command line.",
+  "is_software_tool": true,
+  "reformulations": [
+   "I'd like to try out a quirky self-hosted hobby OS and its apps without the hassle of setting up a VM and copying files in and out of a virtual disk image.",
+   "A userspace port that runs an entire niche operating system as a regular application on Linux or Windows, with native filesystem access, networking via FFI, and a headless command-line mode for its own programming language.",
+   "Reimplement an OS kernel's syscalls and JIT runtime as a hosted process so its binaries execute natively in user space instead of under hardware virtualization.",
+   "Tools for running a foreign operating system's environment and executables on top of a host OS without emulation or a hypervisor."
+  ],
+  "keyword_queries": [
+   "userspace operating system port",
+   "HolyC JIT runtime",
+   "run OS without virtualization"
+  ],
+  "usage": {
+   "input_tokens": 1457,
+   "output_tokens": 380
+  },
+  "model": "claude-opus-5",
+  "key": "b70bf9d485bb6e6d",
+  "prompt_version": 2
+ },
+ "hold-46483550": {
+  "query_core": "I want my AI coding assistant to be able to handle tasks on websites that have no API — logging into dashboards, clicking through admin panels, generating keys — by delegating the browsing to an autonomous browser agent instead of driving every click itself and filling up its context window.",
+  "is_software_tool": true,
+  "reformulations": [
+   "My AI coding agent stops and asks me to click through unfamiliar web dashboards myself; I need something that lets it hand off those point-and-click tasks to a browser that can navigate on its own.",
+   "A connector that gives an AI assistant a real browser agent it can instruct in plain language to log in, navigate sites, and return the data or credentials it needs.",
+   "An MCP server that bridges a coding agent to an agentic browser over the Chrome DevTools Protocol so high-level web tasks are delegated rather than executed step-by-step by the model.",
+   "Tooling for browser automation driven by LLM agents, where web navigation is offloaded to a separate autonomous agent to conserve the main model's context."
+  ],
+  "keyword_queries": [
+   "MCP browser agent",
+   "agentic browser automation CDP",
+   "browser MCP server delegate"
+  ],
+  "usage": {
+   "input_tokens": 1574,
+   "output_tokens": 478
+  },
+  "model": "claude-opus-5",
+  "key": "8d3f9b926a1294c7",
+  "prompt_version": 2
+ },
+ "hold-45226277": {
+  "query_core": "I need a quick way to send a snippet of text or a file to someone else over the web without creating an account, with links that expire after a short time.",
+  "is_software_tool": true,
+  "reformulations": [
+   "I just want to paste some text or drop a file and get a link I can send to a friend, and have it disappear after a day.",
+   "A minimal web service for sharing text snippets and files via temporary, auto-expiring links with no signup required.",
+   "Self-hostable pastebin and ephemeral file upload backend with configurable retention, random URL slugs, and a simple HTTP API for CLI uploads.",
+   "Anonymous ephemeral file and text sharing tools, i.e. pastebin and temporary file host alternatives."
+  ],
+  "keyword_queries": [
+   "ephemeral file sharing",
+   "pastebin file upload",
+   "temporary upload expiring links"
+  ],
+  "usage": {
+   "input_tokens": 1423,
+   "output_tokens": 311
+  },
+  "model": "claude-opus-5",
+  "key": "0500c6336cb0168e",
+  "prompt_version": 2
+ },
+ "hold-43760452": {
+  "query_core": "I want to read physical books in a foreign language without constantly stopping to look up words: an app that photographs a printed page, extracts the text, lets me tap any word for a translation, save it to flashcards, hear it read aloud, and ask questions about the passage.",
+  "is_software_tool": true,
+  "reformulations": [
+   "Reading a Chinese novel on paper is slow because I have to look up every unknown character and manually type it into my flashcard deck — is there an app that does this from a photo of the page?",
+   "An immersive reading app that turns a snapshot of any printed or on-screen foreign text into tappable words with instant dictionary definitions, one-tap spaced-repetition flashcard creation, text-to-speech audio, and an AI tutor for the passage.",
+   "Mobile app using OCR to digitize book pages, with word segmentation and per-word dictionary lookup, export to a spaced repetition system, TTS playback, and LLM-based comprehension Q&A for language learners.",
+   "Tools for extensive reading and vocabulary acquisition in a second language, combining camera text recognition, pop-up dictionaries, and flashcard generation."
+  ],
+  "keyword_queries": [
+   "OCR reading language learning",
+   "tap word dictionary flashcards",
+   "Chinese reader vocabulary app"
+  ],
+  "usage": {
+   "input_tokens": 1738,
+   "output_tokens": 513
+  },
+  "model": "claude-opus-5",
+  "key": "4edf007e9a4dcea1",
+  "prompt_version": 2
+ },
+ "hold-44118174": {
+  "query_core": "I want a free collection of coding interview problems with worked solutions, plus a way to practice them interactively with an AI interviewer that gives hints and feedback at chosen topics and difficulty levels.",
+  "is_software_tool": true,
+  "reformulations": [
+   "I'm preparing for software engineering interviews and need a big set of practice problems with detailed solutions and something that can mock-interview me instead of just showing answers.",
+   "A free technical interview prep platform offering hundreds of algorithm problems, full solution write-ups, and an AI-powered mock interviewer you can configure by topic and difficulty.",
+   "An LLM-based interview simulator paired with a curated data structures and algorithms problem bank, supporting hint generation, solution evaluation, and adaptive difficulty.",
+   "Tools for coding interview practice and automated mock interviews with feedback."
+  ],
+  "keyword_queries": [
+   "AI mock interviewer",
+   "coding interview problems solutions",
+   "technical interview practice platform"
+  ],
+  "usage": {
+   "input_tokens": 1509,
+   "output_tokens": 391
+  },
+  "model": "claude-opus-5",
+  "key": "a25fc209132b4434",
+  "prompt_version": 2
+ },
+ "hold-39613021": {
+  "query_core": "I want to pipe the output of any terminal command into a browser-based viewer so I can read, search and filter streaming logs in real time instead of squinting at the terminal.",
+  "is_software_tool": true,
+  "reformulations": [
+   "My terminal scrollback is useless for finding things in long log output; I want to send the output of a command straight to a web page where I can search and follow it live.",
+   "A command-line tool that starts a local web server and opens a browser log viewer showing piped stdout in real time with search, filtering and highlighting.",
+   "CLI utility that reads stdin from a pipe, streams it over websockets to a local HTTP server, and renders it in a browser UI with live tailing and text search.",
+   "Web-based real-time log viewer and tail tool for arbitrary command output."
+  ],
+  "keyword_queries": [
+   "pipe stdout browser log viewer",
+   "web log tail websocket cli",
+   "stdin to web ui"
+  ],
+  "usage": {
+   "input_tokens": 1945,
+   "output_tokens": 365
+  },
+  "model": "claude-opus-5",
+  "key": "419f19823cd05b04",
+  "prompt_version": 2
+ },
+ "hold-41393005": {
+  "query_core": "I want a better way to search and discover stories and comments on Hacker News, with semantic/vector search, filters by site, recommendations and AI chat over results, instead of plain keyword search.",
+  "is_software_tool": true,
+  "reformulations": [
+   "The built-in keyword search for that tech news aggregator is limited, so I want a tool that lets me find relevant old posts semantically and surfaces related stories I didn't know to look for.",
+   "A discovery-oriented search front end for a tech link aggregator offering semantic search, domain include/exclude filters, recommendations, query suggestions and AI chat over matched discussions.",
+   "Self-hostable search service that indexes aggregator stories and comments with dense vector embeddings plus sparse learned full-text retrieval, exposing filters, sorting by comment count, and retrieval-augmented chat.",
+   "Semantic search and recommendation engine over a large public discussion forum archive."
+  ],
+  "keyword_queries": [
+   "hacker news semantic search",
+   "hn search discovery",
+   "vector search comments archive"
+  ],
+  "usage": {
+   "input_tokens": 1516,
+   "output_tokens": 385
+  },
+  "model": "claude-opus-5",
+  "key": "9a8a1ad2ab5adbfe",
+  "prompt_version": 2
+ },
+ "hold-42021380": {
+  "query_core": "I want a quick browser-based twist on rock paper scissors where winning rounds lets me buy upgrades and build a stronger character, playable solo endlessly or against another person without creating an account.",
+  "is_software_tool": false,
+  "reformulations": [
+   "Looking for a free game I can play in my browser right now that turns rock paper scissors into something deeper with perks and power-ups between rounds.",
+   "A web game combining classic hand-sign matchups with roguelike progression: an endless run mode, a perk shop after each win, and optional real-time matches against other players, no signup required.",
+   "A React front end with a Node WebSocket server powering both real-time player-versus-player matches and a single-player endless roguelike loop with upgradeable modifiers.",
+   "Casual browser roguelike games built on simple classic mechanics with run-based upgrades and online multiplayer."
+  ],
+  "keyword_queries": [
+   "rock paper scissors roguelike",
+   "browser roguelike upgrades react",
+   "websocket multiplayer rps game"
+  ],
+  "usage": {
+   "input_tokens": 1461,
+   "output_tokens": 434
+  },
+  "model": "claude-opus-5",
+  "key": "aa3ea25c2a0b9c05",
+  "prompt_version": 2
+ },
+ "hold-43930554": {
+  "query_core": "I want to search the full text of pages I've visited before, not just URLs and titles, so I can find a page I remember reading but can't recall the site name, with everything stored locally on my machine.",
+  "is_software_tool": true,
+  "reformulations": [
+   "I can never find that article I read last week because my browser only searches history by title and address, not the actual words on the page.",
+   "A browser add-on that indexes the content of every page you visit so you can search your browsing history by any phrase, filter by date or visit count, and keep all data on your device.",
+   "Browser extension that captures page text on visit, stores it in a local IndexedDB full-text index, and provides ranked search plus optional LLM-based querying with your own API key.",
+   "Tools for personal web archiving and searchable local history of everything you read online."
+  ],
+  "keyword_queries": [
+   "full-text history extension",
+   "browsing history search",
+   "local page content index"
+  ],
+  "usage": {
+   "input_tokens": 1444,
+   "output_tokens": 334
+  },
+  "model": "claude-opus-5",
+  "key": "add555ef201c7f4c",
+  "prompt_version": 2
+ },
+ "hold-47230620": {
+  "query_core": "I need a way to observe coroutine state transitions in an M:N scheduler from outside the process, with minimal overhead, so I can diagnose hangs like lost wakeups where a task never gets resumed and memory sanitizers show nothing.",
+  "is_software_tool": true,
+  "reformulations": [
+   "My async runtime sometimes stalls completely under load because a task stops being scheduled, and sanitizers and debuggers don't show anything \ns I need something that records what each coroutine was doing and when it stopped transitioning.",
+   "An out-of-process trace collector that captures coroutine lifecycle and state-change events with near-zero overhead and exports the raw traces to JSONL, CSV, or a SQL database for offline analysis.",
+   "Low-overhead shared-memory or ring-buffer based instrumentation for user-space M:N schedulers that records per-coroutine state machine transitions without copying or pausing the target process, for postmortem analysis of stuck tasks.",
+   "Observability and tracing tooling for lightweight threads, fibers, and async tasks to debug scheduling deadlocks and starvation."
+  ],
+  "keyword_queries": [
+   "coroutine tracing scheduler",
+   "fiber state tracer",
+   "async task stuck debugging"
+  ],
+  "usage": {
+   "input_tokens": 1865,
+   "output_tokens": 503
+  },
+  "model": "claude-opus-5",
+  "key": "f10e63ac78d5334e",
+  "prompt_version": 2
+ },
+ "hold-49524469": {
+  "query_core": "I want an interactive browser-based gravity and orbital mechanics simulator where I can create and edit planets, run and rewind the simulation, and try preset scenarios, so students can explore how orbits work beyond simple two-body demos.",
+  "is_software_tool": true,
+  "reformulations": [
+   "My kid loves simple online gravity sims but has outgrown them — is there something where you can build your own solar system, drag planets around, speed up or rewind time, and see what happens?",
+   "An interactive space playground in the browser with editable celestial bodies, preset star systems, guided challenges, and time scrubbing for learning how gravity and orbits behave.",
+   "Deterministic n-body gravity simulation running in the browser (canvas/WebGL) with adjustable mass and velocity vectors, reversible time stepping, and save/share of custom systems.",
+   "Educational physics simulation software for teaching orbital mechanics and Newtonian gravity interactively."
+  ],
+  "keyword_queries": [
+   "gravity simulator browser",
+   "n-body orbit sandbox",
+   "solar system simulation web"
+  ],
+  "usage": {
+   "input_tokens": 1577,
+   "output_tokens": 398
+  },
+  "model": "claude-opus-5",
+  "key": "882993828f5275b2",
+  "prompt_version": 2
+ },
+ "hold-44004827": {
+  "query_core": "I want to write SQL queries inline in Python using string interpolation syntax without risking SQL injection, with interpolated values automatically turned into bound parameters and identifiers validated against an allowlist. I also need parts of the WHERE clause to drop out automatically when a value isn't supplied, so I don't hand-build dynamic queries.",
+  "is_software_tool": true,
+  "reformulations": [
+   "How can I write SQL directly in my Python code with interpolated variables so that it's still safe from injection, and have optional filter conditions disappear when I don't pass a value?",
+   "A lightweight Python SQL builder that turns interpolated template strings into parameterized queries with a values list, validates column and table names, and rewrites clauses at runtime for optional filters.",
+   "Library using PEP 750 template strings to compile SQL with placeholders and a bound-parameter list, raising an error for non-parameterizable identifiers unless declared in a context allowlist.",
+   "Safe dynamic SQL query construction in Python without a full ORM: parameter binding, injection protection, and conditional clause composition."
+  ],
+  "keyword_queries": [
+   "t-string SQL builder",
+   "python parameterized query builder",
+   "safe dynamic SQL interpolation"
+  ],
+  "usage": {
+   "input_tokens": 2036,
+   "output_tokens": 447
+  },
+  "model": "claude-opus-5",
+  "key": "bde9cd56f07263f0",
+  "prompt_version": 2
+ },
+ "hold-45558611": {
+  "query_core": "I want a simple app that plays and mixes background ambient sounds like rain, waves, and wind for focus or sleep, with no ads, paywalls, or subscriptions, and that works offline.",
+  "is_software_tool": true,
+  "reformulations": [
+   "I need something to play rain and ocean sounds all night while I sleep without ads popping up or being asked to subscribe for basic sounds.",
+   "A free, offline white noise and ambient sound player that lets you blend multiple nature loops and set individual volume levels, with no in-app purchases.",
+   "Mobile app that loops and mixes multiple bundled audio tracks locally with per-track gain control and background playback, no network or account required.",
+   "Open or ad-free focus and sleep soundscape generator for noise masking and relaxation."
+  ],
+  "keyword_queries": [
+   "white noise app",
+   "ambient sound mixer",
+   "offline sleep sounds"
+  ],
+  "usage": {
+   "input_tokens": 1441,
+   "output_tokens": 330
+  },
+  "model": "claude-opus-5",
+  "key": "3551af8eaaf975dc",
+  "prompt_version": 2
+ },
+ "hold-46422812": {
+  "query_core": "Clinicians need a fast, affordable way to ask clinical questions in plain language and get cited, evidence-based answers drawn from the latest medical literature and guidelines, plus help drafting patient notes.",
+  "is_software_tool": true,
+  "reformulations": [
+   "As a doctor I want to type a clinical question and instantly get a short answer backed by citations to recent studies and guidelines, without paying for an expensive subscription full of drug ads.",
+   "An AI-powered clinical evidence search engine that synthesizes answers from biomedical literature, trial registries and practice guidelines with strict source citations, and can also generate structured encounter notes.",
+   "A retrieval-augmented generation backend that queries biomedical literature APIs in real time, ranks abstracts, and feeds them to an LLM with enforced citation mapping, with full-text search over locally stored guidelines.",
+   "Tools for evidence-based medicine question answering and clinical documentation support at the point of care."
+  ],
+  "keyword_queries": [
+   "clinical evidence search LLM",
+   "PubMed RAG question answering",
+   "SOAP note generator"
+  ],
+  "usage": {
+   "input_tokens": 1948,
+   "output_tokens": 439
+  },
+  "model": "claude-opus-5",
+  "key": "0cb56ce3a4cc4376",
+  "prompt_version": 2
+ },
+ "hold-46974515": {
+  "query_core": "I want my LLM coding agent to navigate a large codebase through a precomputed symbol index — looking up definitions, implementations, and callers — instead of burning context on repeated glob, grep and whole-file reads.",
+  "is_software_tool": true,
+  "reformulations": [
+   "My AI coding assistant wastes tokens blindly grepping and reading entire files; I need something that gives it a structured map of my repo so it can fetch only the code it needs.",
+   "A code indexing server that parses a project into a cross-referenced symbol table and exposes search, structure, implementation and caller lookups as tools for AI agents.",
+   "Tree-sitter based static index with cross-references served over an API/MCP so an agent can query symbols, definitions and call sites across Rust, Python, TypeScript and Go.",
+   "Semantic code search and repository navigation infrastructure for retrieval-augmented LLM agents working on large codebases."
+  ],
+  "keyword_queries": [
+   "code index LLM agents",
+   "tree-sitter symbol index server",
+   "code navigation MCP server"
+  ],
+  "usage": {
+   "input_tokens": 1840,
+   "output_tokens": 396
+  },
+  "model": "claude-opus-5",
+  "key": "c9c319c41fc260f1",
+  "prompt_version": 2
+ }
+}

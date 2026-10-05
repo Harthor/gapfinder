@@ -1,0 +1,557 @@
+{
+ "T": "2024-01-01",
+ "filters": {
+  "min_points": 20,
+  "min_chars": 400,
+  "seed": 11,
+  "relaunch_title_regex": "\\b(v\\d+(\\.\\d+)*|\\d+\\.\\d+(\\.\\d+)?|version \\d+|relaunch\\w*|re-launch\\w*|launch\\w* again|new version|now with|is back|returns|reborn|rewrit\\w*|revisited|redesign\\w*|reboot\\w*|updated?|updates)\\b"
+ },
+ "eligible": 3926,
+ "excluded": {
+  "titulo_relanzamiento": 100,
+  "repo_anterior_a_T": 241,
+  "dominio_con_show_hn_anterior": 235
+ },
+ "ideas": [
+  {
+   "item_id": "show_hn:48190121",
+   "title": "The Hanging Sculptures of the Xiaoxitian",
+   "url": "https://funes.world/apps/the-hanging-sculptures-of-the-xiaoxitian",
+   "created_at": "2026-05-19T06:54:20Z",
+   "points": 27,
+   "text_origin": "author_comment",
+   "text_chars": 749
+  },
+  {
+   "item_id": "show_hn:41683407",
+   "title": "Open-source app builder for comfy workflows",
+   "url": "https://github.com/ViewComfy/ViewComfy",
+   "created_at": "2024-09-28T22:36:34Z",
+   "points": 59,
+   "text_origin": "native",
+   "text_chars": 489
+  },
+  {
+   "item_id": "show_hn:44515266",
+   "title": "Petrichor – a free, open-source, offline music player for macOS",
+   "url": "https://github.com/kushalpandya/Petrichor",
+   "created_at": "2025-07-09T22:17:31Z",
+   "points": 202,
+   "text_origin": "native",
+   "text_chars": 1415
+  },
+  {
+   "item_id": "show_hn:45485986",
+   "title": "DidMySettingsChange – A tool that checks changed windows settings",
+   "url": "https://github.com/nolesapex/DidMySettingsChange",
+   "created_at": "2025-10-05T22:49:27Z",
+   "points": 51,
+   "text_origin": "native",
+   "text_chars": 961
+  },
+  {
+   "item_id": "show_hn:41243901",
+   "title": "A free tool to visualise scales on a guitar",
+   "url": "https://stringscales.com/",
+   "created_at": "2024-08-14T08:30:42Z",
+   "points": 27,
+   "text_origin": "native",
+   "text_chars": 1338
+  },
+  {
+   "item_id": "show_hn:41124112",
+   "title": "Non SaaS – Directory of Non SaaS Apps",
+   "url": "https://nonsaas.com",
+   "created_at": "2024-07-31T22:19:18Z",
+   "points": 76,
+   "text_origin": "author_reply",
+   "text_chars": 609
+  },
+  {
+   "item_id": "show_hn:44447233",
+   "title": "a community for collaborating on sideprojects",
+   "url": "https://relentlessly.no/",
+   "created_at": "2025-07-02T18:32:33Z",
+   "points": 48,
+   "text_origin": "native",
+   "text_chars": 2000
+  },
+  {
+   "item_id": "show_hn:43946066",
+   "title": "Code Claude Code",
+   "url": "https://github.com/RVCA212/codesys",
+   "created_at": "2025-05-10T14:47:12Z",
+   "points": 117,
+   "text_origin": "native",
+   "text_chars": 577
+  },
+  {
+   "item_id": "show_hn:48180924",
+   "title": "I made a tactical map-based WWII submarine simulator (public beta)",
+   "url": "https://silentshark.app/alpha/",
+   "created_at": "2026-05-18T15:08:21Z",
+   "points": 125,
+   "text_origin": "native",
+   "text_chars": 1658
+  },
+  {
+   "item_id": "show_hn:44960594",
+   "title": "Project management system for Claude Code",
+   "url": "https://github.com/automazeio/ccpm",
+   "created_at": "2025-08-20T10:32:12Z",
+   "points": 175,
+   "text_origin": "native",
+   "text_chars": 1051
+  },
+  {
+   "item_id": "show_hn:45304911",
+   "title": "Run Qwen3-Next-80B on 8GB GPU at 1tok/2s throughput",
+   "url": "https://github.com/Mega4alik/ollm",
+   "created_at": "2025-09-19T18:36:38Z",
+   "points": 123,
+   "text_origin": "github_corpus",
+   "text_chars": 2000
+  },
+  {
+   "item_id": "show_hn:47461529",
+   "title": "Red Grid Link – peer-to-peer team tracking over Bluetooth, no servers",
+   "url": "https://github.com/RedGridTactical/RedGridLink",
+   "created_at": "2026-03-20T22:25:51Z",
+   "points": 54,
+   "text_origin": "native",
+   "text_chars": 1481
+  },
+  {
+   "item_id": "show_hn:48871547",
+   "title": "Clx – Compile Lua to Native Executables Through C++20",
+   "url": "https://github.com/samyeyo/clx",
+   "created_at": "2026-07-11T12:40:24Z",
+   "points": 143,
+   "text_origin": "native",
+   "text_chars": 980
+  },
+  {
+   "item_id": "show_hn:48907681",
+   "title": "Low-latency local LLM runner via OpenJDK Panama FFM (Java 22)",
+   "url": "https://github.com/projectargus-cc/libargus.cc",
+   "created_at": "2026-07-14T14:40:46Z",
+   "points": 38,
+   "text_origin": "native",
+   "text_chars": 1427
+  },
+  {
+   "item_id": "show_hn:46579612",
+   "title": "1D-Pong Game at 39C3",
+   "url": "https://github.com/ogermer/1d-pong",
+   "created_at": "2026-01-11T20:23:14Z",
+   "points": 69,
+   "text_origin": "native",
+   "text_chars": 875
+  },
+  {
+   "item_id": "show_hn:44501076",
+   "title": "Sumble – knowledge graph for GTM data – query tech stack, key projects",
+   "url": "https://sumble.com",
+   "created_at": "2025-07-08T15:42:34Z",
+   "points": 91,
+   "text_origin": "native",
+   "text_chars": 2000
+  },
+  {
+   "item_id": "show_hn:42203895",
+   "title": "Yami – An Open Source Music Player with Spotdl Integration",
+   "url": "https://github.com/DevER-M/yami",
+   "created_at": "2024-11-21T12:57:44Z",
+   "points": 88,
+   "text_origin": "github_corpus",
+   "text_chars": 2051
+  },
+  {
+   "item_id": "show_hn:45656952",
+   "title": "Katakate – Dozens of VMs per node for safe code exec",
+   "url": "https://github.com/Katakate/k7",
+   "created_at": "2025-10-21T15:22:25Z",
+   "points": 124,
+   "text_origin": "native",
+   "text_chars": 472
+  },
+  {
+   "item_id": "show_hn:49361478",
+   "title": "Anonymous age verification with passkey-powered encryption",
+   "url": "https://loginwithone.com/",
+   "created_at": "2026-08-19T13:41:10Z",
+   "points": 45,
+   "text_origin": "native",
+   "text_chars": 1652
+  },
+  {
+   "item_id": "show_hn:46331364",
+   "title": "Netrinos – A keep it simple Mesh VPN for small teams",
+   "url": "https://netrinos.com",
+   "created_at": "2025-12-19T21:50:52Z",
+   "points": 93,
+   "text_origin": "native",
+   "text_chars": 1722
+  },
+  {
+   "item_id": "show_hn:40539471",
+   "title": "I built a directory about big life decisions/regrets",
+   "url": "https://www.didyouregretit.com/",
+   "created_at": "2024-05-31T19:49:18Z",
+   "points": 121,
+   "text_origin": "author_comment",
+   "text_chars": 640
+  },
+  {
+   "item_id": "show_hn:42041368",
+   "title": "AI Agents for engineering use cases like debugging, LLD,testing etc.",
+   "url": "https://github.com/potpie-ai/potpie",
+   "created_at": "2024-11-04T13:32:51Z",
+   "points": 26,
+   "text_origin": "native",
+   "text_chars": 984
+  },
+  {
+   "item_id": "show_hn:38852257",
+   "title": "Clutter-free, powerful Mac-native sample manager",
+   "url": "https://www.kickspro.app",
+   "created_at": "2024-01-03T09:41:04Z",
+   "points": 47,
+   "text_origin": "author_reply",
+   "text_chars": 897
+  },
+  {
+   "item_id": "show_hn:44650567",
+   "title": "Any-LLM – Lightweight router to access any LLM Provider",
+   "url": "https://github.com/mozilla-ai/any-llm",
+   "created_at": "2025-07-22T17:40:40Z",
+   "points": 125,
+   "text_origin": "native",
+   "text_chars": 575
+  },
+  {
+   "item_id": "show_hn:39407162",
+   "title": "I built an alternative to product tours",
+   "url": "https://vykee.co/",
+   "created_at": "2024-02-17T07:14:25Z",
+   "points": 69,
+   "text_origin": "native",
+   "text_chars": 1018
+  },
+  {
+   "item_id": "show_hn:40010050",
+   "title": "Running TempleOS in user space without virtualization",
+   "url": "https://github.com/1fishe2fishe/EXODUS",
+   "created_at": "2024-04-12T06:57:50Z",
+   "points": 228,
+   "text_origin": "native",
+   "text_chars": 838
+  },
+  {
+   "item_id": "show_hn:46483550",
+   "title": "Comet MCP – Give Claude Code a browser that can click",
+   "url": "https://github.com/hanzili/comet-mcp",
+   "created_at": "2026-01-04T00:48:38Z",
+   "points": 28,
+   "text_origin": "native",
+   "text_chars": 1072
+  },
+  {
+   "item_id": "show_hn:45226277",
+   "title": "I made a small site to share text and files",
+   "url": "https://www.dum.pt/",
+   "created_at": "2025-09-12T20:17:23Z",
+   "points": 41,
+   "text_origin": "author_reply",
+   "text_chars": 751
+  },
+  {
+   "item_id": "show_hn:43760452",
+   "title": "I built an app so I could read the 3 Body-Problem in Chinese",
+   "url": "https://readly.ink/",
+   "created_at": "2025-04-22T09:48:22Z",
+   "points": 29,
+   "text_origin": "native",
+   "text_chars": 1552
+  },
+  {
+   "item_id": "show_hn:44118174",
+   "title": "Every problem and solution in Beyond Cracking the Coding Interview",
+   "url": "https://news.ycombinator.com/item?id=44118174",
+   "created_at": "2025-05-28T17:06:13Z",
+   "points": 151,
+   "text_origin": "native",
+   "text_chars": 990
+  },
+  {
+   "item_id": "show_hn:39613021",
+   "title": "Piping logs, visualizing in a web app – just suffix \"| npx logscreen\"",
+   "url": "https://github.com/soorajshankar/logScreen",
+   "created_at": "2024-03-06T06:42:45Z",
+   "points": 128,
+   "text_origin": "github_corpus",
+   "text_chars": 2103
+  },
+  {
+   "item_id": "show_hn:41393005",
+   "title": "A discovery-focused search engine for Hacker News",
+   "url": "https://hn.trieve.ai/",
+   "created_at": "2024-08-29T17:08:20Z",
+   "points": 193,
+   "text_origin": "native",
+   "text_chars": 901
+  },
+  {
+   "item_id": "show_hn:42021380",
+   "title": "I Built a Rock, Paper, Scissors roguelike in React",
+   "url": "https://xtremerps.com",
+   "created_at": "2024-11-01T20:45:00Z",
+   "points": 39,
+   "text_origin": "native",
+   "text_chars": 788
+  },
+  {
+   "item_id": "show_hn:43930554",
+   "title": "Extension for full-text browser history search",
+   "url": "https://rearview-ai.vercel.app/",
+   "created_at": "2025-05-08T19:48:08Z",
+   "points": 29,
+   "text_origin": "native",
+   "text_chars": 697
+  },
+  {
+   "item_id": "show_hn:47230620",
+   "title": "I made a zero-copy coroutine tracer to find my scheduler's lost wakeups",
+   "url": "https://github.com/lixiasky-back/coroTracer",
+   "created_at": "2026-03-03T10:41:26Z",
+   "points": 49,
+   "text_origin": "current",
+   "text_chars": 2000
+  },
+  {
+   "item_id": "show_hn:49524469",
+   "title": "Newton's Orchard – Browser-based space/gravity playground",
+   "url": "https://newtonsorchard.app",
+   "created_at": "2026-09-01T16:43:40Z",
+   "points": 33,
+   "text_origin": "native",
+   "text_chars": 1097
+  },
+  {
+   "item_id": "show_hn:44004827",
+   "title": "SQL-tString a t-string SQL builder in Python",
+   "url": "https://github.com/pgjones/sql-tstring",
+   "created_at": "2025-05-16T12:48:22Z",
+   "points": 85,
+   "text_origin": "native",
+   "text_chars": 2000
+  },
+  {
+   "item_id": "show_hn:45558611",
+   "title": "I built a simple ambient sound app with no ads or subscriptions",
+   "url": "https://ambisounds.app/",
+   "created_at": "2025-10-12T14:49:50Z",
+   "points": 314,
+   "text_origin": "native",
+   "text_chars": 729
+  },
+  {
+   "item_id": "show_hn:46422812",
+   "title": "Evidex – AI Clinical Search (RAG over PubMed/OpenAlex and SOAP Notes)",
+   "url": "https://www.getevidex.com",
+   "created_at": "2025-12-29T17:17:01Z",
+   "points": 36,
+   "text_origin": "native",
+   "text_chars": 1909
+  },
+  {
+   "item_id": "show_hn:46974515",
+   "title": "CodeRLM – Tree-sitter-backed code indexing for LLM agents",
+   "url": "https://github.com/JaredStewart/coderlm/blob/main/server/REPL_to_API.md",
+   "created_at": "2026-02-11T13:10:23Z",
+   "points": 81,
+   "text_origin": "native",
+   "text_chars": 2000
+  },
+  {
+   "item_id": "show_hn:39843392",
+   "title": "I made a set of devtools for small projects",
+   "url": "https://github.com/zumerlab/zumerbox",
+   "created_at": "2024-03-27T19:16:21Z",
+   "points": 28,
+   "text_origin": "current",
+   "text_chars": 2000
+  },
+  {
+   "item_id": "show_hn:41358490",
+   "title": "Remove-bg – open-source remove background using WebGPU",
+   "url": "https://bannerify.co/tools/remove-bg",
+   "created_at": "2024-08-26T15:58:09Z",
+   "points": 286,
+   "text_origin": "native",
+   "text_chars": 430
+  },
+  {
+   "item_id": "show_hn:41954399",
+   "title": "A text-only blog engine using Cloudflare workers and KV store",
+   "url": "https://github.com/jonfraser/simpletext",
+   "created_at": "2024-10-26T12:40:58Z",
+   "points": 103,
+   "text_origin": "current",
+   "text_chars": 1322
+  },
+  {
+   "item_id": "show_hn:47006248",
+   "title": "OpenWhisper – free, local, and private voice-to-text macOS app",
+   "url": "https://github.com/richardwu/openwhisper",
+   "created_at": "2026-02-13T18:51:20Z",
+   "points": 37,
+   "text_origin": "native",
+   "text_chars": 860
+  },
+  {
+   "item_id": "show_hn:41379408",
+   "title": "Relari – Auto Prompt Optimizer as Lightweight Alternative to Finetuning",
+   "url": "https://news.ycombinator.com/item?id=41379408",
+   "created_at": "2024-08-28T13:40:33Z",
+   "points": 32,
+   "text_origin": "native",
+   "text_chars": 2000
+  },
+  {
+   "item_id": "show_hn:40456457",
+   "title": "JACoB – Open-Source AI Coding Agent for Real-World Productivity",
+   "url": "https://github.com/jacob-ai-bot/jacob",
+   "created_at": "2024-05-23T16:05:47Z",
+   "points": 40,
+   "text_origin": "native",
+   "text_chars": 2000
+  },
+  {
+   "item_id": "show_hn:43878987",
+   "title": "Pipask – safer pip without compromising convenience",
+   "url": "https://github.com/feynmanix/pipask",
+   "created_at": "2025-05-03T13:43:53Z",
+   "points": 52,
+   "text_origin": "native",
+   "text_chars": 615
+  },
+  {
+   "item_id": "show_hn:40522244",
+   "title": "I built a tiny-VPS friendly RSS aggregator and reader",
+   "url": "https://github.com/0x2E/fusion",
+   "created_at": "2024-05-30T10:53:09Z",
+   "points": 187,
+   "text_origin": "native",
+   "text_chars": 861
+  },
+  {
+   "item_id": "show_hn:48447484",
+   "title": "Startup sci-fi novel that took me 5 years to write",
+   "url": "https://www.blockchainednovel.com/",
+   "created_at": "2026-06-08T16:29:38Z",
+   "points": 27,
+   "text_origin": "native",
+   "text_chars": 2000
+  },
+  {
+   "item_id": "show_hn:46696283",
+   "title": "Coi – A language that compiles to WASM, beats React/Vue",
+   "url": "https://news.ycombinator.com/item?id=46696283",
+   "created_at": "2026-01-20T19:01:53Z",
+   "points": 225,
+   "text_origin": "native",
+   "text_chars": 2000
+  },
+  {
+   "item_id": "show_hn:44792005",
+   "title": "I've been building an ERP for manufacturing for the last 3 years",
+   "url": "https://github.com/crbnos/carbon",
+   "created_at": "2025-08-04T22:24:20Z",
+   "points": 322,
+   "text_origin": "github_corpus",
+   "text_chars": 2291
+  },
+  {
+   "item_id": "show_hn:44260649",
+   "title": "ChatToSTL – AI text-to-CAD for 3D printing",
+   "url": "https://huggingface.co/spaces/flowfulai/ChatToSTL",
+   "created_at": "2025-06-12T17:58:11Z",
+   "points": 52,
+   "text_origin": "native",
+   "text_chars": 1201
+  },
+  {
+   "item_id": "show_hn:48389586",
+   "title": "Mnemo – local-first AI memory layer for any LLM (Rust, SQLite,petgraph)",
+   "url": "https://github.com/zaydmulani09/mnemo",
+   "created_at": "2026-06-03T20:32:10Z",
+   "points": 60,
+   "text_origin": "github_corpus",
+   "text_chars": 2180
+  },
+  {
+   "item_id": "show_hn:45118302",
+   "title": "Entropy-Guided Loop – How to make small models reason",
+   "url": "https://github.com/monostate/weave-logprobs-reasoning-loop",
+   "created_at": "2025-09-03T17:19:10Z",
+   "points": 33,
+   "text_origin": "native",
+   "text_chars": 2000
+  },
+  {
+   "item_id": "show_hn:46962641",
+   "title": "Rowboat – AI coworker that turns your work into a knowledge graph (OSS)",
+   "url": "https://github.com/rowboatlabs/rowboat",
+   "created_at": "2026-02-10T16:47:29Z",
+   "points": 205,
+   "text_origin": "native",
+   "text_chars": 2000
+  },
+  {
+   "item_id": "show_hn:39191870",
+   "title": "Open-source x64 and Arm GitHub runners",
+   "url": "https://www.ubicloud.com/use-cases/github-actions",
+   "created_at": "2024-01-30T16:14:42Z",
+   "points": 475,
+   "text_origin": "native",
+   "text_chars": 1472
+  },
+  {
+   "item_id": "show_hn:41846636",
+   "title": "Pumpkin – A Modern Minecraft server written in Rust",
+   "url": "https://github.com/Snowiiii/Pumpkin",
+   "created_at": "2024-10-15T09:18:16Z",
+   "points": 419,
+   "text_origin": "current",
+   "text_chars": 2000
+  },
+  {
+   "item_id": "show_hn:41425150",
+   "title": "Gov.uk Vue, a Vue Component Library for the Gov.uk Design System",
+   "url": "https://govukvue.org/",
+   "created_at": "2024-09-02T13:15:45Z",
+   "points": 223,
+   "text_origin": "native",
+   "text_chars": 515
+  },
+  {
+   "item_id": "show_hn:43373163",
+   "title": "Fashion Shopping with Nearest Neighbors",
+   "url": "https://vibewall.shop/",
+   "created_at": "2025-03-15T15:33:21Z",
+   "points": 76,
+   "text_origin": "native",
+   "text_chars": 799
+  },
+  {
+   "item_id": "show_hn:47826104",
+   "title": "Faceoff – A terminal UI for following NHL games",
+   "url": "https://www.vincentgregoire.com/faceoff/",
+   "created_at": "2026-04-19T17:44:44Z",
+   "points": 136,
+   "text_origin": "native",
+   "text_chars": 416
+  }
+ ]
+}
