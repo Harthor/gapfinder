@@ -166,7 +166,22 @@ uv run gapfinder phase3 candidates --kinds real --llm-queries data/llm_queries_v
 uv run gapfinder phase3 verify --verifier jev-openrouter --kinds real --suffix _v2_real \
     --llm-queries data/llm_queries_v2.json --name jev_openrouter_v2 [--only-new-vs data/phase3/candidates_minilm.json]
 uv run gapfinder pilot select|haiku|jev|jev-openrouter|review    # piloto: los mismos 50 pares -> data/eval/pilot_review.md
+uv run gapfinder phase3 review-pilot                             # revisión humana interactiva de los 50 pares (teclas s/p/n/?/o/q)
 ```
+
+Revisión humana del piloto (`phase3 review-pilot`): muestra cada par (idea, candidato recortado + URL,
+núcleo de Jev y de Haiku) en orden Jev núcleo >= 0.5 -> 0.3-0.5 -> < 0.3; cada respuesta se guarda
+al instante en `data/eval/pilot_review_human.jsonl` (se retoma donde quedó; una respuesta nueva pisa
+la anterior). Al completar, `data/eval/pilot_review_result.md` con acuerdo humano vs Jev y vs Haiku a
+umbral 0.5 (núcleo; y parcial-o-más) y la tabla de desacuerdos. No toca `pilot_review.md`.
+
+Corridas completas con Jev vía OpenRouter (oct-2026): v1 = 76.000 pares (12 reales + 64 sintéticos ×
+top-1000), `data/phase3/verdicts_jev_openrouter.jsonl`, 0 errores, $2.41 facturado (usage.cost),
+p50 291 ms. La primera tanda se cortó con 402 (cuenta sin créditos); la reanudación solo saltea
+veredictos válidos (los fallidos nunca se escriben) y el verificador ahora se detiene ante 401/402/403.
+v2 de los reales (idea = query_core v2, 12.000 pares completos para no mezclar ideas v1/v2):
+`data/phase3/verdicts_jev_openrouter_v2.jsonl`. `phase3 report` todavía no se corrió (primero la
+revisión humana del piloto, para no anclarse a las curvas).
 
 Piloto (sep-2026, candidatos MiniLM): 50 pares estratificados (15 positivos, 15 near-miss, 10 de
 rank 200-1000, 10 al azar). Haiku 4.5: 50/50 sin errores, ~770 tokens de entrada por par (la salida

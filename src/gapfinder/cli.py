@@ -222,6 +222,10 @@ def cmd_phase3(args: argparse.Namespace) -> None:
     from gapfinder import phase3, verify
 
     conn = db.connect(args.db)
+    if args.step == "review-pilot":  # revisión humana de los 50 pares del piloto
+        from gapfinder import pilot
+        print(pilot.interactive_review(conn, json.loads(args.cases.read_text())))
+        return
     cases = _phase3_cases(args)
     cand_path = verify.OUT_DIR / f"candidates_{args.model}{args.suffix}.json"
     if args.step == "candidates":
@@ -401,7 +405,7 @@ def main() -> None:
     p.set_defaults(func=cmd_eval2)
 
     p = sub.add_parser("phase3", help="Fase 3: candidatos top-1000, estimación de costo, verificador y métricas")
-    p.add_argument("step", choices=["candidates", "estimate", "verify", "report"])
+    p.add_argument("step", choices=["candidates", "estimate", "verify", "report", "review-pilot"])
     p.add_argument("--model", choices=["minilm", "bge"], default="minilm", help="modelo de embeddings de los candidatos")
     p.add_argument("--verifier", choices=["jev", "jev-openrouter", "haiku"], default="haiku")
     p.add_argument("--kinds", default="real,synthetic", help="kinds de casos, separados por coma")

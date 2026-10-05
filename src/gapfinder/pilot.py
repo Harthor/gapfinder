@@ -192,3 +192,156 @@ def review(conn: sqlite3.Connection, cases: list[dict], picked: list[dict], pair
     text = "\n".join(head + rows) + "\n"
     REVIEW_PATH.write_text(text)
     return text
+
+
+# --- revisión humana interactiva -----------------------------------------------------------------------
+
+HUMAN_PATH = Path("data/eval/pilot_review_human.jsonl")
+RESULT_PATH = Path("data/eval/pilot_review_result.md")
+LABELS = {"s": "núcleo", "p": "parcial", "n": "no", "?": "no sé"}
+JEV_PILOT = ("jev_openrouter_pilot", "jev_pilot")
+
+
+def _jev_verdicts() -> dict:
+    for name in JEV_PILOT:
+        if (v := load_done(name)):
+            return v
+    return {}
+
+
+def review_order(pairs: list[Pair], jev: dict) -> list[Pair]:
+    """Primero Jev núcleo >= 0.5 (de mayor a menor), después cerca del umbral (0.3-0.5), al final < 0.3."""
+    def key(p: Pair):
+        core = jev[(p.case_id, p.item_id)].core if (p.case_id, p.item_id) in jev else 0.0
+        group = 0 if core >= 0.5 else 1 if core >= 0.3 else 2
+        return (group, -core if group == 0 else abs(core - 0.5))
+    return sorted(pairs, key=key)
+
+
+def load_human(path: Path | None = None) -> dict[tuple[str, str], str]:
+    """Última respuesta por par (se puede cortar y retomar; una respuesta nueva pisa la anterior)."""
+    path = path or HUMAN_PATH
+    out = {}
+    if path.exists():
+        for line in path.read_text().splitlines():
+            if line.strip():
+                d = json.loads(line)
+                out[(d["case_id"], d["item_id"])] = d["label"]
+    return out
+
+
+def agreement_vs_human(human: dict, jev: dict, haiku: dict, threshold: float = 0.5) -> dict:
+    """Acuerdo a umbral: modelo núcleo >= umbral vs humano 's'; y parcial >= umbral vs humano 's' o 'p'.
+    Los '?' no cuentan."""
+    out = {}
+    judged = {k: v for k, v in human.items() if v in ("s", "p", "n")}
+    for name, model in (("jev", jev), ("haiku", haiku)):
+        keys = [k for k in judged if k in model]
+        if not keys:
+            out[name] = {"n": 0}
+            continue
+        core_ok = sum((model[k].core >= threshold) == (judged[k] == "s") for k in keys)
+        part_ok = sum((model[k].partial >= threshold) == (judged[k] in ("s", "p")) for k in keys)
+        out[name] = {"n": len(keys), "nucleo": core_ok / len(keys), "parcial_o_mas": part_ok / len(keys)}
+    return out
+
+
+def write_result(conn: sqlite3.Connection, picked: list[dict], pairs: list[Pair], complete: bool) -> str:
+    human, jev, haiku = load_human(), _jev_verdicts(), load_done("haiku_pilot")
+    agr = agreement_vs_human(human, jev, haiku)
+    strata = {(p["case_id"], p["item_id"]): p["stratum"] for p in picked}
+    counts = {lab: sum(v == lab for v in human.values()) for lab in LABELS}
+    L = ["# Piloto Fase 3: revisión humana vs Jev y Haiku\n",
+         f"{'Revisión completa' if complete else 'Revisión PARCIAL'}: {len(human)}/{len(pairs)} pares respondidos "
+         f"({', '.join(f'{LABELS[k]} {v}' for k, v in counts.items())}). Umbral 0.5. "
+         "Núcleo: modelo P(núcleo) >= 0.5 vs humano = núcleo. Parcial o más: P(parcial) >= 0.5 vs humano = "
+         "núcleo o parcial. Los \"no sé\" no cuentan.\n",
+         "| modelo | pares | acuerdo núcleo | acuerdo parcial o más |", "|---|---|---|---|"]
+    for name in ("jev", "haiku"):
+        a = agr[name]
+        L.append(f"| {name} | {a['n']} | " + (f"{a['nucleo']:.0%} | {a['parcial_o_mas']:.0%} |" if a["n"] else "– | – |"))
+    L += ["", "## Desacuerdos en núcleo (umbral 0.5)\n",
+          "| # | estrato | caso | candidato | humano | Jev núcleo | Haiku núcleo | quién difiere |", "|---|---|---|---|---|---|---|---|"]
+    order = {(p.case_id, p.item_id): n for n, p in enumerate(pairs, 1)}  # numeración de pilot_review.md
+    for p in pairs:
+        k = (p.case_id, p.item_id)
+        if human.get(k) not in ("s", "p", "n"):
+            continue
+        h_pos = human[k] == "s"
+        who = [name for name, m in (("Jev", jev), ("Haiku", haiku)) if k in m and (m[k].core >= 0.5) != h_pos]
+        if who:
+            fmt = lambda m: f"{m[k].core:.2f}" if k in m else "–"
+            L.append(f"| {order[k]} | {strata.get(k, '')} | `{p.case_id}` | {p.title[:50]} | {LABELS[human[k]]} | "
+                     f"{fmt(jev)} | {fmt(haiku)} | {' y '.join(who)} |")
+    text = "\n".join(L) + "\n"
+    RESULT_PATH.write_text(text)
+    return text
+
+
+def _getkey() -> str:
+    """Una tecla sin Enter si hay terminal; si no (tests, pipes), una línea."""
+    import sys
+
+    if not sys.stdin.isatty():
+        return (sys.stdin.readline() or "q").strip()[:1].lower()
+    import termios
+    import tty
+
+    fd = sys.stdin.fileno()
+    old = termios.tcgetattr(fd)
+    try:
+        tty.setraw(fd)
+        ch = sys.stdin.read(1)
+    finally:
+        termios.tcsetattr(fd, termios.TCSADRAIN, old)
+    return "q" if ch in ("\x03", "\x04") else ch.lower()   # Ctrl-C / Ctrl-D = salir guardando
+
+
+def interactive_review(conn: sqlite3.Connection, cases: list[dict], getkey=_getkey, out=print) -> dict:
+    import shutil
+    import textwrap
+    import webbrowser
+    from datetime import datetime, timezone
+
+    picked = json.loads(PAIRS_PATH.read_text())
+    pairs = to_pairs(conn, cases, picked)
+    jev, haiku = _jev_verdicts(), load_done("haiku_pilot")
+    human = load_human()
+    queue = [p for p in review_order(pairs, jev) if (p.case_id, p.item_id) not in human]
+    width = min(shutil.get_terminal_size((100, 30)).columns, 110)
+    wrap = lambda s, n, lines: textwrap.wrap(re.sub(r"\s+", " ", s)[:n], width - 4)[:lines]
+    HUMAN_PATH.parent.mkdir(parents=True, exist_ok=True)
+    done_now = 0
+    for p in queue:
+        k = (p.case_id, p.item_id)
+        url = (conn.execute("SELECT url FROM items WHERE id = ?", (p.item_id,)).fetchone() or [""])[0]
+        fmt = lambda m: f"{m[k].core:.2f}" if k in m else "–"
+        out("\033[2J\033[H" if getkey is _getkey else "", end="")
+        out(f"[{len(human) + 1}/{len(pairs)}]  {p.case_id}")
+        out("IDEA:      " + "\n           ".join(wrap(p.idea, 260, 2)))
+        out(f"CANDIDATO: {p.title}")
+        for line in wrap(p.text, 360, 3):
+            out("           " + line)
+        out(f"           {url}")
+        out(f"NÚCLEO:    Jev {fmt(jev)}   |   Haiku {fmt(haiku)}")
+        out("\n[s] núcleo   [p] parcial   [n] no es lo mismo   [?] no sé   [o] abrir URL   [q] guardar y salir")
+        while True:
+            key = getkey()
+            if key == "o":
+                if url:
+                    webbrowser.open(url)
+                continue
+            if key in LABELS or key == "q":
+                break
+        if key == "q":
+            break
+        with HUMAN_PATH.open("a") as f:   # se guarda enseguida: cortar y retomar no pierde nada
+            f.write(json.dumps({"case_id": p.case_id, "item_id": p.item_id, "label": key,
+                                "at": datetime.now(timezone.utc).isoformat(timespec="seconds")}) + "\n")
+        human[k] = key
+        done_now += 1
+    complete = len(load_human()) >= len(pairs)
+    text = write_result(conn, picked, pairs, complete)
+    out("\n" + text.split("\n## ")[0])
+    out(f"{'Revisión completa' if complete else 'Guardado; retomás donde quedaste'}. Resultado en {RESULT_PATH}")
+    return {"respondidos_ahora": done_now, "total": len(load_human()), "completo": complete}

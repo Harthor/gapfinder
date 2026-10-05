@@ -108,3 +108,20 @@ def test_jev_stops_on_account_error(tmp_path, monkeypatch):
     with pytest.raises(RuntimeError, match="error de cuenta"):
         verify.JevVerifier(concurrency=1, name="t").verify(pairs)
     assert len(calls) < 10   # no sigue disparando requests después del primer 402
+
+
+def test_pilot_review_order_and_agreement(tmp_path):
+    from gapfinder import pilot
+    from gapfinder.verify import Pair, Verdict
+
+    pairs = [Pair("c", "i", f"x{n}", "t", "") for n in range(5)]
+    cores = [0.2, 0.9, 0.45, 0.6, 0.05]
+    jev = {(p.case_id, p.item_id): Verdict(p.case_id, p.item_id, c, c, 0.5) for p, c in zip(pairs, cores)}
+    assert [p.item_id for p in pilot.review_order(pairs, jev)] == ["x1", "x3", "x2", "x0", "x4"]
+    human = {("c", "x1"): "s", ("c", "x3"): "n", ("c", "x2"): "p", ("c", "x0"): "?"}
+    a = pilot.agreement_vs_human(human, jev, {})
+    assert a["jev"]["n"] == 3 and a["jev"]["nucleo"] == 2 / 3   # x3: Jev 0.6 dice núcleo, humano dice no
+    assert a["haiku"] == {"n": 0}
+    path = tmp_path / "h.jsonl"
+    path.write_text('{"case_id": "c", "item_id": "x1", "label": "n"}\n{"case_id": "c", "item_id": "x1", "label": "s"}\n')
+    assert pilot.load_human(path) == {("c", "x1"): "s"}   # la última respuesta pisa la anterior
