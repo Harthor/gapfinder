@@ -474,7 +474,7 @@ def report(conn, top: int = 5) -> str:
             L.append("")
     block(gaps_full, f"Huecos confirmados (top-{K_FULL})")
     if gaps_200:
-        block(gaps_200, f"Huecos solo con top-{K_FIRST} (faltan re-correr por saldo)")
+        block(gaps_200, f"Huecos solo con top-{K_FIRST} (pendientes de re-correr con top-{K_FULL})")
     text = "\n".join(L) + "\n"
     REPORT.write_text(text)
     return text

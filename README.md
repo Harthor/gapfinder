@@ -332,6 +332,27 @@ Decisiones (documentadas también en el reporte):
 - **Tope de gasto**: $0.90 al principio; con la recarga de OpenRouter, $2.40 para las 40 ideas (~$0.051 por idea:
   Claude $0.017 + Jev $0.034).
 
+## Candidatos a hueco (oct-2026): extracción automática y lista para revisar
+
+En vez de etiquetar a mano los 397 Asks, un LLM hace la extracción y lo que se revisa es la lista final de
+huecos (`data/eval/gap_candidates.md`). Código: `gaps.py`.
+
+```bash
+uv run gapfinder gaps extract --limit 10   # prueba; sin --limit procesa los 397 (cache JSONL por id, reanudable)
+uv run gapfinder gaps compare              # opción barata vs método completo sobre los 40 de la Fase 4
+uv run gapfinder gaps run                  # pedidos reales: top-200 para todos y K=1000 para los huecos; reanudable
+uv run gapfinder gaps report               # data/eval/gap_candidates.md
+```
+
+- Extracción v2 (`gpt-oss-120b` vía OpenRouter, $0.075 los 397): `{id, pedido_real, etiqueta e/p/n/?,
+  pedido_resumido, justificacion}`, prompt con la definición de las etiquetas y 4 ejemplos few-shot
+  (`data/askhn/extract_v2.jsonl`). 242 pedidos reales.
+- Retrieval: query_core = pedido_resumido, reformulaciones con gpt-oss y el prompt v2 (no Opus 5: costo), corpus
+  anterior a la fecha del Ask, top-200 y Jev; los que quedan sin match >= 0.85 se re-corren con K=1000 antes de
+  entrar a la lista. En los 40 de la Fase 4, la opción barata pasó 2 de 18 matches a hueco
+  (`data/eval/gap_compare_k200.md`).
+- Frena ante 401/402/403 y si el saldo de OpenRouter baja de $0.50.
+
 ## Tests
 
 ```bash

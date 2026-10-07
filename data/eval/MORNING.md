@@ -1,15 +1,19 @@
-# Buen día — sesión nocturna (holdout temporal)
+# Estado (oct-2026): Fase 4 y candidatos a hueco
 
-- **Qué corrió:** holdout temporal con T = 2024-01-01. 35 Show HN posteriores a T (≥20 pts, ≥400 caracteres, sin relanzamientos, solo software) contra el corpus anterior a T (528.865 items), con top-1000 MiniLM + llm5 y Jev vía OpenRouter: 35.000 pares, 0 errores.
-- **Costo:** $1,90 de $2 (Claude $0,73 + Jev $1,17). Bajé de 50 a 35 ideas porque apliqué el tope a todo el gasto; las 15 restantes saldrían ~$0,80.
-- **Resultado:** 8 ya construido (23%), 7 revisar (20%), 20 "no" (57%). En los known cases, que existen todos, daba "ya construido" en 42–58%: el sistema distingue algo. Ver `data/eval/holdout_temporal.md`.
-- **Candidatas a hueco interesantes:** gestor de proyectos para Claude Code, constructor de SQL con t-strings de Python, tracer de corrutinas para wakeups perdidos (sus mejores candidatos son parecidos, no iguales).
-- **Fugas:** 2 ideas con `leakage_flag` (`saas`, `mcp`): son términos de categoría que coinciden con el nombre.
-- **Lado de demanda:** `data/ideas.json` nunca existió y Constellate también es oferta. Opciones en `data/eval/demand_side_notes.md` (recomiendo Ask HN).
-- **Qué falló:** nada. Ajusté el control de fuga (marcaba palabras comunes como "workflows") antes de usarlo.
+**Qué corrió**: 397 Ask HN "¿hay una herramienta para…?" (de 8.568) → extracción automática (gpt-oss) → 242 pedidos reales →
+retrieval contra el corpus anterior a cada Ask + Jev (top-200, y top-1000 para los huecos). Además, 40 Asks con el método completo (Opus 5).
 
-**Lo que tenés que hacer vos** (desde `~/dev/projects/gapfinder`):
-1. Las 4 etiquetas: `uv run gapfinder phase3 review-labels` (k mantener · p parcial · d descartar · ? no sé)
-2. El holdout, 75 pares, empezando por los "no": `uv run gapfinder holdout review` (s equivalente real anterior a T · p parcial · n no · ? no sé)
-3. Leer `data/eval/holdout_temporal.md` y `data/eval/demand_side_notes.md`.
-4. Rotar las claves de Anthropic y OpenRouter. Saldo de OpenRouter restante: ~$1.
+**Costo por proveedor**: OpenRouter $7.02 (Jev $6.24, extracciones $0.20, consultas Opus 5 $0.55, reformulaciones gpt-oss $0.04);
+Anthropic $0.016 (quedó sin crédito, se siguió con Opus vía OpenRouter). Saldo OpenRouter: $3.93.
+
+**Resultados**
+- `data/eval/gap_candidates.md`: **119 huecos** (de 242), cada uno con etiqueta e/p/n/?, pedido, link y top-5 matches con score.
+- Hueco por etiqueta de los comentarios: no existe 20/23 (87%), parcial 30/60 (50%), **existe 69/159 (43%)**: los "e" suelen ser
+  productos que no están en el corpus (Ubuntu Studio, GovTrack…), es decir, límite de cobertura.
+- Opción barata vs método completo (40 Asks): 2 de 18 matches pasan a hueco (`gap_compare_k200.md`). Cobertura: la mitad de las
+  herramientas sugeridas como equivalentes (con URL) no está en el corpus (`phase4_askhn.md`).
+
+**Qué te queda por revisar**
+1. Leer `data/eval/gap_candidates.md` (empieza por los de menor score).
+2. `uv run gapfinder review` → d) Fase 4, 84 pares. (a y b terminadas; c está oculta: `--evaluar`.)
+3. Rotar las keys de Anthropic y OpenRouter.
