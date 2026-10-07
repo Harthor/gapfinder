@@ -306,11 +306,55 @@ def cmd_holdout(args: argparse.Namespace) -> None:
         cand = json.loads((holdout.DIR / "candidates.json").read_text())
         print(holdout.verify_with_budget(holdout.pairs(conn, cand, queries), args.budget))
     elif args.step == "review":
-        from gapfinder import pilot
-        print(pilot.interactive_holdout(conn, cases))
+        from gapfinder import review
+        print(review.interactive_holdout(conn))
     elif args.step == "report":
         holdout.report(conn)
         print("reporte en data/eval/holdout_temporal.md")
+
+
+def cmd_askhn(args: argparse.Namespace) -> None:
+    from gapfinder import askhn
+
+    if args.step == "collect":
+        print(json.dumps(askhn.collect(), indent=1, ensure_ascii=False))
+    elif args.step == "extract":
+        print(json.dumps(askhn.extract(db.connect(args.db), limit=args.limit), indent=1, ensure_ascii=False))
+    elif args.step == "select":
+        order = askhn.select()
+        print(f"elegidos: {len(order)} en {askhn.SELECTED}")
+    elif args.step == "run":
+        print(json.dumps(askhn.run(db.connect(args.db), budget=args.budget), indent=1, ensure_ascii=False))
+    elif args.step == "report":
+        askhn.report(db.connect(args.db))
+        print(f"reporte en {askhn.REPORT}")
+    elif args.step == "remap":
+        print(f"remapeados: {askhn.remap(db.connect(args.db))}")
+
+
+def cmd_gaps(args: argparse.Namespace) -> None:
+    from gapfinder import gaps
+
+    if args.step == "extract":
+        res = gaps.extract(limit=args.limit)
+        muestra = res.pop("muestra")
+        print(json.dumps(res, indent=1, ensure_ascii=False))
+        print(muestra)
+        return
+    conn = db.connect(args.db)
+    if args.step == "compare":
+        print(gaps.compare(conn))
+    elif args.step == "run":
+        print(json.dumps(gaps.run(conn, rerun_first=args.rerun_first), indent=1, ensure_ascii=False))
+    elif args.step == "report":
+        gaps.report(conn)
+        print(f"lista en {gaps.REPORT}")
+
+
+def cmd_review(args: argparse.Namespace) -> None:
+    from gapfinder import review
+
+    review.menu(db.connect(args.db), json.loads(args.cases.read_text()), evaluar=args.evaluar)
 
 
 def cmd_census(args: argparse.Namespace) -> None:
@@ -460,6 +504,23 @@ def main() -> None:
     p.add_argument("step", choices=["retrieve", "verify", "review", "report"])
     p.add_argument("--budget", type=float, default=1.26, help="tope de gasto de Jev en USD (usage.cost real)")
     p.set_defaults(func=cmd_holdout)
+
+    p = sub.add_parser("askhn", help="Fase 4: Ask HN \"¿hay una herramienta para…?\" (demanda)")
+    p.add_argument("step", choices=["collect", "extract", "remap", "select", "run", "report"])
+    p.add_argument("--budget", type=float, default=2.40, help="run: tope de gasto total de la Fase 4 en USD (todos los proveedores)")
+    p.add_argument("--limit", type=int, help="extract: solo los primeros N que faltan (validación)")
+    p.set_defaults(func=cmd_askhn)
+
+    p = sub.add_parser("gaps", help="candidatos a hueco: extracción automática de Ask HN y lista final para revisar")
+    p.add_argument("step", choices=["extract", "compare", "run", "report"])
+    p.add_argument("--limit", type=int, help="extract: solo los primeros N que faltan (prueba)")
+    p.add_argument("--rerun-first", type=int, default=40, help="run: huecos a re-correr primero con K=1000")
+    p.set_defaults(func=cmd_gaps)
+
+    p = sub.add_parser("review", help="menú único de revisión humana: etiquetas, holdout, Ask HN, Fase 4")
+    p.add_argument("--cases", type=Path, default=Path("data/known_cases.json"))
+    p.add_argument("--evaluar", action="store_true", help="mostrar también la cola c) de confirmación manual de la extracción")
+    p.set_defaults(func=cmd_review)
 
     p = sub.add_parser("census", help="GitHub: repos por año de creación y umbral de estrellas")
     p.add_argument("--stars", type=int, nargs="+", default=[20, 50, 100])

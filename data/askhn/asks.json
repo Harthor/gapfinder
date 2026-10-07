@@ -1,0 +1,4075 @@
+{
+ "filters": {
+  "min_points": 5,
+  "min_comments": 3,
+  "min_date": "2015-01-01",
+  "request_title_regex": "\\b(is there (a|an|any|some)\\b|are there (any|good)\\b|does (anything|something|such|any\\w*)\\b.*\\bexists?\\b|looking for (a|an|some)\\b|anyone know (of )?(a|an|any)\\b|any (good )?(tool|app|library|service|software|way)s?\\b|what (tool|app|software|service|library)s? (do|would|should|can)\\b|how do you\\b|i wish there (was|were)\\b|recommend (a|an|me a)\\b|need (a|an) (tool|app|library|service)\\b)",
+  "software_regex": "\\b(tool|tools|app|apps|application|library|libraries|lib|software|service|saas|extension|plugin|add-?on|program|script|cli|api|framework|utility|package|website|web ?site|platform|editor|ide|bot|dashboard|open[- ]source|self[- ]hosted|github|android|ios|macos|linux|windows|browser)\\b",
+  "off_topic_regex": "\\b(hiring|job|jobs|career|salary|interview|who is hiring|freelanc\\w*|cofounder|co-founder)\\b"
+ },
+ "queries": {
+  "is there a tool": {
+   "hits": 1000,
+   "nuevos": 1000,
+   "pasan_filtro": 63
+  },
+  "is there an app": {
+   "hits": 1000,
+   "nuevos": 914,
+   "pasan_filtro": 43
+  },
+  "is there a library": {
+   "hits": 438,
+   "nuevos": 349,
+   "pasan_filtro": 13
+  },
+  "is there a service": {
+   "hits": 1000,
+   "nuevos": 754,
+   "pasan_filtro": 43
+  },
+  "is there software": {
+   "hits": 1000,
+   "nuevos": 700,
+   "pasan_filtro": 50
+  },
+  "is there anything": {
+   "hits": 1000,
+   "nuevos": 668,
+   "pasan_filtro": 13
+  },
+  "does anything exist": {
+   "hits": 88,
+   "nuevos": 59,
+   "pasan_filtro": 1
+  },
+  "does something exist": {
+   "hits": 243,
+   "nuevos": 169,
+   "pasan_filtro": 6
+  },
+  "looking for a tool": {
+   "hits": 628,
+   "nuevos": 462,
+   "pasan_filtro": 12
+  },
+  "looking for an app": {
+   "hits": 1000,
+   "nuevos": 738,
+   "pasan_filtro": 14
+  },
+  "looking for software": {
+   "hits": 1000,
+   "nuevos": 594,
+   "pasan_filtro": 14
+  },
+  "what tool do you use": {
+   "hits": 954,
+   "nuevos": 629,
+   "pasan_filtro": 49
+  },
+  "how do you": {
+   "hits": 1000,
+   "nuevos": 898,
+   "pasan_filtro": 52
+  },
+  "I wish there was": {
+   "hits": 222,
+   "nuevos": 134,
+   "pasan_filtro": 1
+  },
+  "recommend a tool": {
+   "hits": 186,
+   "nuevos": 93,
+   "pasan_filtro": 8
+  },
+  "any tool for": {
+   "hits": 1000,
+   "nuevos": 407,
+   "pasan_filtro": 15
+  }
+ },
+ "funnel": {
+  "bajados_unicos": 8568,
+  "descartados": {
+   "antes_de_2015-01-01": 2791,
+   "titulo_no_es_pedido": 4440,
+   "empleo_o_carrera": 77,
+   "no_software": 475,
+   "how_do_you_sin_software_en_titulo": 388
+  },
+  "filtrados": 397
+ },
+ "asks": [
+  {
+   "id": "10015983",
+   "title": "Ask HN: Does any good software exist for browsing / organizing digital photos?",
+   "created_at": "2015-08-06T12:42:09Z",
+   "points": 8,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=10015983",
+   "query": "does anything exist",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "10473925",
+   "title": "Ask HN: Is there a better way to manage assets and transactions aside from Mint",
+   "created_at": "2015-10-29T20:10:32Z",
+   "points": 17,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=10473925",
+   "query": "is there software",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "10533306",
+   "title": "Ask HN: Is there a masterbation-free site where I can have random conversations?",
+   "created_at": "2015-11-09T14:54:29Z",
+   "points": 16,
+   "num_comments": 28,
+   "hn_url": "https://news.ycombinator.com/item?id=10533306",
+   "query": "is there software",
+   "comments_downloaded": 28
+  },
+  {
+   "id": "10738430",
+   "title": "Ask HN: How do you keep sane while developing for Android?",
+   "created_at": "2015-12-15T15:50:58Z",
+   "points": 11,
+   "num_comments": 18,
+   "hn_url": "https://news.ycombinator.com/item?id=10738430",
+   "query": "is there a library",
+   "comments_downloaded": 18
+  },
+  {
+   "id": "10873151",
+   "title": "Ask HN: Is there an app that reminds me where I stashed stuff?",
+   "created_at": "2016-01-09T22:29:48Z",
+   "points": 5,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=10873151",
+   "query": "is there an app",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "10888502",
+   "title": "Ask HN: What software would you pay for right now?",
+   "created_at": "2016-01-12T16:54:04Z",
+   "points": 20,
+   "num_comments": 49,
+   "hn_url": "https://news.ycombinator.com/item?id=10888502",
+   "query": "looking for software",
+   "comments_downloaded": 49
+  },
+  {
+   "id": "11036735",
+   "title": "Ask HN: How do you manage Facebook/Whats App/Twitter/Email/Etc addiction?",
+   "created_at": "2016-02-04T20:02:40Z",
+   "points": 48,
+   "num_comments": 76,
+   "hn_url": "https://news.ycombinator.com/item?id=11036735",
+   "query": "how do you",
+   "comments_downloaded": 76
+  },
+  {
+   "id": "11074625",
+   "title": "Ask HN: Looking for a Windows 7 Update curator",
+   "created_at": "2016-02-10T18:11:01Z",
+   "points": 5,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=11074625",
+   "query": "looking for software",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "11164013",
+   "title": "Ask HN: How does your team write documentation? What tools do you use?",
+   "created_at": "2016-02-24T02:10:49Z",
+   "points": 77,
+   "num_comments": 90,
+   "hn_url": "https://news.ycombinator.com/item?id=11164013",
+   "query": "what tool do you use",
+   "comments_downloaded": 90
+  },
+  {
+   "id": "11183056",
+   "title": "Ask HN: How do you measure risk with an open source project?",
+   "created_at": "2016-02-26T18:29:06Z",
+   "points": 8,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=11183056",
+   "query": "looking for an app",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "11238113",
+   "title": "Ask HN: What tools do you use to diagram micro-service architectures?",
+   "created_at": "2016-03-07T10:30:48Z",
+   "points": 19,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=11238113",
+   "query": "what tool do you use",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "11290199",
+   "title": "Ask HN: What software do you use that you wish it had a pretty web dashboard?",
+   "created_at": "2016-03-15T15:11:43Z",
+   "points": 14,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=11290199",
+   "query": "is there software",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "11352382",
+   "title": "AskHN: Looking for a collaborator to do something cool with neural networks",
+   "created_at": "2016-03-24T13:02:34Z",
+   "points": 7,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=11352382",
+   "query": "looking for software",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "11427316",
+   "title": "Ask HN: How do you build a service?",
+   "created_at": "2016-04-05T02:13:33Z",
+   "points": 5,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=11427316",
+   "query": "is there a service",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "11532852",
+   "title": "Ask HN: Leaking hours and money. I need a tool to keep digital projects in check",
+   "created_at": "2016-04-20T07:42:43Z",
+   "points": 15,
+   "num_comments": 13,
+   "hn_url": "https://news.ycombinator.com/item?id=11532852",
+   "query": "recommend a tool",
+   "comments_downloaded": 13
+  },
+  {
+   "id": "11595129",
+   "title": "Ask HN: How do you write concepts? (Structure / Tools / Howto)",
+   "created_at": "2016-04-29T12:07:42Z",
+   "points": 63,
+   "num_comments": 21,
+   "hn_url": "https://news.ycombinator.com/item?id=11595129",
+   "query": "how do you",
+   "comments_downloaded": 21
+  },
+  {
+   "id": "11699668",
+   "title": "Ask HN: Is there a reasonable, actually integrated Web IDE out there?",
+   "created_at": "2016-05-15T05:54:41Z",
+   "points": 49,
+   "num_comments": 38,
+   "hn_url": "https://news.ycombinator.com/item?id=11699668",
+   "query": "is there a tool",
+   "comments_downloaded": 38
+  },
+  {
+   "id": "11883293",
+   "title": "Is there an existing “Stack” for getting into robotics?",
+   "created_at": "2016-06-11T13:02:20Z",
+   "points": 25,
+   "num_comments": 17,
+   "hn_url": "https://news.ycombinator.com/item?id=11883293",
+   "query": "is there software",
+   "comments_downloaded": 17
+  },
+  {
+   "id": "11938009",
+   "title": "Ask HN: How do you install developer tools on a fresh system?",
+   "created_at": "2016-06-20T13:53:50Z",
+   "points": 126,
+   "num_comments": 124,
+   "hn_url": "https://news.ycombinator.com/item?id=11938009",
+   "query": "how do you",
+   "comments_downloaded": 124
+  },
+  {
+   "id": "12168866",
+   "title": "Ask HN: Is there a JavaScript library for arbitrary precision complex mathematics?",
+   "created_at": "2016-07-26T21:29:22Z",
+   "points": 5,
+   "num_comments": 16,
+   "hn_url": "https://news.ycombinator.com/item?id=12168866",
+   "query": "is there a library",
+   "comments_downloaded": 16
+  },
+  {
+   "id": "12242115",
+   "title": "Ask HN: Are there any software companies that hire people without a gauntlet?",
+   "created_at": "2016-08-07T14:07:14Z",
+   "points": 21,
+   "num_comments": 13,
+   "hn_url": "https://news.ycombinator.com/item?id=12242115",
+   "query": "is there software",
+   "comments_downloaded": 13
+  },
+  {
+   "id": "12277689",
+   "title": "Ask HN: Are there any opportunities for an old generalist?",
+   "created_at": "2016-08-12T18:23:57Z",
+   "points": 40,
+   "num_comments": 25,
+   "hn_url": "https://news.ycombinator.com/item?id=12277689",
+   "query": "looking for an app",
+   "comments_downloaded": 25
+  },
+  {
+   "id": "12363846",
+   "title": "Ask HN: Is there any use nowadays for a proprietary C compiler?",
+   "created_at": "2016-08-26T01:54:35Z",
+   "points": 8,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=12363846",
+   "query": "is there software",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "12373421",
+   "title": "Ask HN: Is there a programming language with embedded testing support?",
+   "created_at": "2016-08-27T18:05:09Z",
+   "points": 15,
+   "num_comments": 11,
+   "hn_url": "https://news.ycombinator.com/item?id=12373421",
+   "query": "is there a library",
+   "comments_downloaded": 11
+  },
+  {
+   "id": "12488842",
+   "title": "Ask HN: Is there any tool for testing a site's CSS specificity etc..?",
+   "created_at": "2016-09-13T14:59:58Z",
+   "points": 6,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=12488842",
+   "query": "is there a tool",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "12548656",
+   "title": "Ask HN: How do you manage your personal software projects?",
+   "created_at": "2016-09-21T14:50:44Z",
+   "points": 73,
+   "num_comments": 62,
+   "hn_url": "https://news.ycombinator.com/item?id=12548656",
+   "query": "looking for a tool",
+   "comments_downloaded": 62
+  },
+  {
+   "id": "12715530",
+   "title": "Ask HN: How do you make Windows sufferable?",
+   "created_at": "2016-10-15T20:27:08Z",
+   "points": 9,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=12715530",
+   "query": "is there a tool",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "12786569",
+   "title": "Ask HN: How do you present your SaaS offer to potential customers?",
+   "created_at": "2016-10-25T09:51:15Z",
+   "points": 48,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=12786569",
+   "query": "how do you",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "12843118",
+   "title": "Ask HN: what tool do you use to manage your todo list?",
+   "created_at": "2016-11-01T03:26:18Z",
+   "points": 10,
+   "num_comments": 19,
+   "hn_url": "https://news.ycombinator.com/item?id=12843118",
+   "query": "what tool do you use",
+   "comments_downloaded": 19
+  },
+  {
+   "id": "12843440",
+   "title": "Ask HN: What tools do you use to prototype web UI?",
+   "created_at": "2016-11-01T04:32:26Z",
+   "points": 21,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=12843440",
+   "query": "what tool do you use",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "12878466",
+   "title": "Ask HN: Is there a resume/CV version management app?",
+   "created_at": "2016-11-05T06:29:43Z",
+   "points": 9,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=12878466",
+   "query": "is there a service",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "13124134",
+   "title": "Ask HN: How do you choose a name for your product / service?",
+   "created_at": "2016-12-07T17:13:08Z",
+   "points": 27,
+   "num_comments": 15,
+   "hn_url": "https://news.ycombinator.com/item?id=13124134",
+   "query": "how do you",
+   "comments_downloaded": 15
+  },
+  {
+   "id": "13277155",
+   "title": "Ask HN: How do you find time for open source?",
+   "created_at": "2016-12-29T13:36:18Z",
+   "points": 32,
+   "num_comments": 21,
+   "hn_url": "https://news.ycombinator.com/item?id=13277155",
+   "query": "how do you",
+   "comments_downloaded": 21
+  },
+  {
+   "id": "13378594",
+   "title": "Ask HN: Is any tool lacking for more companies embrace remote work?",
+   "created_at": "2017-01-11T23:50:46Z",
+   "points": 6,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=13378594",
+   "query": "is there a tool",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "13455283",
+   "title": "Ask HN: Is there a way to sell my MVP?",
+   "created_at": "2017-01-22T14:26:44Z",
+   "points": 44,
+   "num_comments": 44,
+   "hn_url": "https://news.ycombinator.com/item?id=13455283",
+   "query": "is there a service",
+   "comments_downloaded": 44
+  },
+  {
+   "id": "13488795",
+   "title": "Ask HN: Is there an open source equivalent to Palantir?",
+   "created_at": "2017-01-26T04:42:25Z",
+   "points": 159,
+   "num_comments": 45,
+   "hn_url": "https://news.ycombinator.com/item?id=13488795",
+   "query": "is there software",
+   "comments_downloaded": 43
+  },
+  {
+   "id": "13490297",
+   "title": "Ask HN: Is there any GitHub based/supporting gamification service out there?",
+   "created_at": "2017-01-26T10:46:06Z",
+   "points": 21,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=13490297",
+   "query": "is there a service",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "13504608",
+   "title": "Ask HN: What tools do you use for creating diagrams?",
+   "created_at": "2017-01-28T02:57:26Z",
+   "points": 16,
+   "num_comments": 13,
+   "hn_url": "https://news.ycombinator.com/item?id=13504608",
+   "query": "what tool do you use",
+   "comments_downloaded": 13
+  },
+  {
+   "id": "13588495",
+   "title": "Ask HN: Is there a platform for remote devs to meetup?",
+   "created_at": "2017-02-07T10:45:17Z",
+   "points": 9,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=13588495",
+   "query": "does something exist",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "13771753",
+   "title": "Ask HN: Data scientists, what tools do you use the most on a daily basis?",
+   "created_at": "2017-03-02T05:44:35Z",
+   "points": 35,
+   "num_comments": 17,
+   "hn_url": "https://news.ycombinator.com/item?id=13771753",
+   "query": "what tool do you use",
+   "comments_downloaded": 17
+  },
+  {
+   "id": "13821967",
+   "title": "Ask HN: How do you focus? tools and other",
+   "created_at": "2017-03-08T17:50:29Z",
+   "points": 18,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=13821967",
+   "query": "what tool do you use",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "13852719",
+   "title": "Ask HN: Is there any IMDB for softwares?",
+   "created_at": "2017-03-12T20:00:36Z",
+   "points": 7,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=13852719",
+   "query": "is there software",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "13891020",
+   "title": "Ask HN: What tools do you use for project management?",
+   "created_at": "2017-03-17T02:56:41Z",
+   "points": 15,
+   "num_comments": 16,
+   "hn_url": "https://news.ycombinator.com/item?id=13891020",
+   "query": "looking for software",
+   "comments_downloaded": 16
+  },
+  {
+   "id": "13963698",
+   "title": "Ask HN: Is there a “product launch as a service” company?",
+   "created_at": "2017-03-26T22:26:04Z",
+   "points": 82,
+   "num_comments": 58,
+   "hn_url": "https://news.ycombinator.com/item?id=13963698",
+   "query": "is there a service",
+   "comments_downloaded": 58
+  },
+  {
+   "id": "14008085",
+   "title": "Ask HN: Is there a powerful open-source Google Calendar replacement?",
+   "created_at": "2017-03-31T20:54:22Z",
+   "points": 219,
+   "num_comments": 101,
+   "hn_url": "https://news.ycombinator.com/item?id=14008085",
+   "query": "is there a tool",
+   "comments_downloaded": 101
+  },
+  {
+   "id": "14053666",
+   "title": "Ask HN: Is there a realtime mechanical turk service?",
+   "created_at": "2017-04-06T19:17:10Z",
+   "points": 5,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=14053666",
+   "query": "is there a service",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "14115151",
+   "title": "Ask HN: How do you design a website in 2017?",
+   "created_at": "2017-04-14T15:51:53Z",
+   "points": 28,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=14115151",
+   "query": "what tool do you use",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "14135838",
+   "title": "Ask HN: Are there any open-source alternatives to AWS Lambda",
+   "created_at": "2017-04-18T01:25:48Z",
+   "points": 8,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=14135838",
+   "query": "is there a service",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "14242104",
+   "title": "Ask HN: What tools do you use for fundraising?",
+   "created_at": "2017-05-01T21:59:50Z",
+   "points": 16,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=14242104",
+   "query": "what tool do you use",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "14342229",
+   "title": "Ask HN: What tools do you use for Developer Portals / API Docs?",
+   "created_at": "2017-05-15T15:19:33Z",
+   "points": 10,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=14342229",
+   "query": "what tool do you use",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "14409441",
+   "title": "Ask HN: How do you make Windows 10 tolerable?",
+   "created_at": "2017-05-24T12:21:18Z",
+   "points": 5,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=14409441",
+   "query": "is there anything",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "14721266",
+   "title": "Ask HN: How do you backup your linux system?",
+   "created_at": "2017-07-07T19:21:15Z",
+   "points": 92,
+   "num_comments": 82,
+   "hn_url": "https://news.ycombinator.com/item?id=14721266",
+   "query": "how do you",
+   "comments_downloaded": 82
+  },
+  {
+   "id": "14733562",
+   "title": "Ask HN: Any tools to easily cluster ideas/notes by similarity?",
+   "created_at": "2017-07-10T05:20:59Z",
+   "points": 70,
+   "num_comments": 17,
+   "hn_url": "https://news.ycombinator.com/item?id=14733562",
+   "query": "does something exist",
+   "comments_downloaded": 17
+  },
+  {
+   "id": "14799300",
+   "title": "Ask HN: What tools do you use to manage your life?",
+   "created_at": "2017-07-18T19:24:46Z",
+   "points": 72,
+   "num_comments": 79,
+   "hn_url": "https://news.ycombinator.com/item?id=14799300",
+   "query": "what tool do you use",
+   "comments_downloaded": 79
+  },
+  {
+   "id": "14917561",
+   "title": "Ask HN: How do you handle security for your website(s)?",
+   "created_at": "2017-08-03T07:10:21Z",
+   "points": 46,
+   "num_comments": 30,
+   "hn_url": "https://news.ycombinator.com/item?id=14917561",
+   "query": "how do you",
+   "comments_downloaded": 30
+  },
+  {
+   "id": "14936617",
+   "title": "Ask HN: Can anyone recommend a lightweight project management tool?",
+   "created_at": "2017-08-05T16:57:24Z",
+   "points": 5,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=14936617",
+   "query": "looking for a tool",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "15085742",
+   "title": "Ask HN: Is there a service that consolidates various SaaS bills/invoicing?",
+   "created_at": "2017-08-23T22:27:18Z",
+   "points": 9,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=15085742",
+   "query": "is there a service",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "15090421",
+   "title": "Ask HN: Is there a good tool for container resource monitoring?",
+   "created_at": "2017-08-24T14:37:54Z",
+   "points": 5,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=15090421",
+   "query": "is there a tool",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "15351116",
+   "title": "Ask HN: What tools do you use to search for Meetups?",
+   "created_at": "2017-09-27T18:56:17Z",
+   "points": 12,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=15351116",
+   "query": "what tool do you use",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "15433955",
+   "title": "Ask HN: Are there any good intermediate level programming courses?",
+   "created_at": "2017-10-09T14:17:16Z",
+   "points": 23,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=15433955",
+   "query": "is there anything",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "15497837",
+   "title": "Ask HN: How do you measure performance of your client-side application?",
+   "created_at": "2017-10-18T09:17:04Z",
+   "points": 94,
+   "num_comments": 33,
+   "hn_url": "https://news.ycombinator.com/item?id=15497837",
+   "query": "what tool do you use",
+   "comments_downloaded": 33
+  },
+  {
+   "id": "15560766",
+   "title": "Ask HN: Is there a service to get your engineering resume reviewed?",
+   "created_at": "2017-10-26T16:59:59Z",
+   "points": 22,
+   "num_comments": 16,
+   "hn_url": "https://news.ycombinator.com/item?id=15560766",
+   "query": "is there a service",
+   "comments_downloaded": 16
+  },
+  {
+   "id": "15565877",
+   "title": "Ask HN: Are there any programmable 'feature' phones?",
+   "created_at": "2017-10-27T05:14:26Z",
+   "points": 13,
+   "num_comments": 22,
+   "hn_url": "https://news.ycombinator.com/item?id=15565877",
+   "query": "is there software",
+   "comments_downloaded": 22
+  },
+  {
+   "id": "15737215",
+   "title": "Ask HN: How do you deal with operational work as a software engineer?",
+   "created_at": "2017-11-20T01:54:13Z",
+   "points": 31,
+   "num_comments": 36,
+   "hn_url": "https://news.ycombinator.com/item?id=15737215",
+   "query": "how do you",
+   "comments_downloaded": 36
+  },
+  {
+   "id": "15810672",
+   "title": "Ask HN: How do you find critical thinkers/beta testers for your SAAS/Product?",
+   "created_at": "2017-11-29T20:46:38Z",
+   "points": 11,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=15810672",
+   "query": "is there a service",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "15823597",
+   "title": "Ask HN: Is there a fitness wristband that is hackable?",
+   "created_at": "2017-12-01T13:19:44Z",
+   "points": 197,
+   "num_comments": 118,
+   "hn_url": "https://news.ycombinator.com/item?id=15823597",
+   "query": "is there software",
+   "comments_downloaded": 118
+  },
+  {
+   "id": "15838371",
+   "title": "Ask HN: Recommend a platform to learn web dev?",
+   "created_at": "2017-12-03T16:59:21Z",
+   "points": 5,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=15838371",
+   "query": "recommend a tool",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "15848641",
+   "title": "Ask HN: Is there a hackable Network Switch?",
+   "created_at": "2017-12-04T23:49:14Z",
+   "points": 9,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=15848641",
+   "query": "is there software",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "15992447",
+   "title": "Ask HN: What tools do you use to monitor your “data stack”?",
+   "created_at": "2017-12-23T01:50:47Z",
+   "points": 10,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=15992447",
+   "query": "what tool do you use",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "16060497",
+   "title": "Ask HN: Is there any US bank with a consumer facing API?",
+   "created_at": "2018-01-03T12:43:02Z",
+   "points": 5,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=16060497",
+   "query": "is there a service",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "16179289",
+   "title": "Ask HN: Is there a captcha service that is intentionally hard?",
+   "created_at": "2018-01-18T17:44:31Z",
+   "points": 5,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=16179289",
+   "query": "is there a service",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "16188284",
+   "title": "Ask HN: Is there an app that reviews/rates individual menu items in restaurants?",
+   "created_at": "2018-01-19T18:03:52Z",
+   "points": 7,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=16188284",
+   "query": "is there an app",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "16297262",
+   "title": "Ask HN: How do you quickly test out new product/app ideas?",
+   "created_at": "2018-02-03T11:52:06Z",
+   "points": 52,
+   "num_comments": 15,
+   "hn_url": "https://news.ycombinator.com/item?id=16297262",
+   "query": "what tool do you use",
+   "comments_downloaded": 15
+  },
+  {
+   "id": "16334369",
+   "title": "Ask HN: Is there an API key generator?",
+   "created_at": "2018-02-08T18:33:07Z",
+   "points": 5,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=16334369",
+   "query": "is there a service",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "16399332",
+   "title": "Ask HN: Is there any WINE like software for running OS X software on Linux?",
+   "created_at": "2018-02-17T06:11:35Z",
+   "points": 13,
+   "num_comments": 12,
+   "hn_url": "https://news.ycombinator.com/item?id=16399332",
+   "query": "is there software",
+   "comments_downloaded": 12
+  },
+  {
+   "id": "16485352",
+   "title": "Ask HN: Are there any IDEs or editors that support editable views of code/text?",
+   "created_at": "2018-02-28T18:28:23Z",
+   "points": 8,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=16485352",
+   "query": "does something exist",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "16594763",
+   "title": "Ask HN: What tools do you use to take learning notes and organise them?",
+   "created_at": "2018-03-15T17:23:07Z",
+   "points": 28,
+   "num_comments": 26,
+   "hn_url": "https://news.ycombinator.com/item?id=16594763",
+   "query": "is there a tool",
+   "comments_downloaded": 26
+  },
+  {
+   "id": "16780425",
+   "title": "Ask HN: How do you talk to your GitHub community?",
+   "created_at": "2018-04-07T12:23:26Z",
+   "points": 57,
+   "num_comments": 66,
+   "hn_url": "https://news.ycombinator.com/item?id=16780425",
+   "query": "looking for an app",
+   "comments_downloaded": 66
+  },
+  {
+   "id": "16875106",
+   "title": "Ask HN: What tools do you use to automate your business?",
+   "created_at": "2018-04-19T12:03:30Z",
+   "points": 249,
+   "num_comments": 113,
+   "hn_url": "https://news.ycombinator.com/item?id=16875106",
+   "query": "what tool do you use",
+   "comments_downloaded": 113
+  },
+  {
+   "id": "16887986",
+   "title": "Ask HN: How do you test your CMS-based website deployments?",
+   "created_at": "2018-04-20T19:52:20Z",
+   "points": 9,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=16887986",
+   "query": "looking for a tool",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "16987828",
+   "title": "Ask HN: How do you solve internal software documentation at your company?",
+   "created_at": "2018-05-03T17:19:42Z",
+   "points": 8,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=16987828",
+   "query": "looking for software",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "17075801",
+   "title": "Ask HN: Is there a service that summarizes news for the last week or month?",
+   "created_at": "2018-05-15T17:33:59Z",
+   "points": 16,
+   "num_comments": 17,
+   "hn_url": "https://news.ycombinator.com/item?id=17075801",
+   "query": "is there a service",
+   "comments_downloaded": 17
+  },
+  {
+   "id": "17171563",
+   "title": "Ask HN: Are there any tools which can summarize an article?",
+   "created_at": "2018-05-28T09:52:58Z",
+   "points": 19,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=17171563",
+   "query": "looking for a tool",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "17194743",
+   "title": "Ask HN: What tool do you use for creating technical documentation?",
+   "created_at": "2018-05-31T08:04:37Z",
+   "points": 13,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=17194743",
+   "query": "what tool do you use",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "17284837",
+   "title": "Ask HN: Are there any other CPU designers here?",
+   "created_at": "2018-06-11T15:04:51Z",
+   "points": 21,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=17284837",
+   "query": "any tool for",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "17336984",
+   "title": "Ask HN: Solo app devs, how do you do user testing?",
+   "created_at": "2018-06-18T10:06:15Z",
+   "points": 262,
+   "num_comments": 81,
+   "hn_url": "https://news.ycombinator.com/item?id=17336984",
+   "query": "how do you",
+   "comments_downloaded": 81
+  },
+  {
+   "id": "17370959",
+   "title": "How do you implement subscription payment in SaaS?",
+   "created_at": "2018-06-22T03:01:37Z",
+   "points": 24,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=17370959",
+   "query": "how do you",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "17543176",
+   "title": "Ask HN: Can you recommend me a lightweight journaling tool",
+   "created_at": "2018-07-16T17:38:56Z",
+   "points": 5,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=17543176",
+   "query": "recommend a tool",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "17603348",
+   "title": "Ask HN: How do you backup your files without depending on a third party service?",
+   "created_at": "2018-07-24T17:45:39Z",
+   "points": 160,
+   "num_comments": 107,
+   "hn_url": "https://news.ycombinator.com/item?id=17603348",
+   "query": "how do you",
+   "comments_downloaded": 107
+  },
+  {
+   "id": "17729286",
+   "title": "Ask HN: Is there an API for editing DNS records – for *any* domain registrar?",
+   "created_at": "2018-08-09T23:00:28Z",
+   "points": 9,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=17729286",
+   "query": "is there a service",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "17778531",
+   "title": "Ask HN: Is there a comprehensive solar panel comparison tool?",
+   "created_at": "2018-08-16T21:24:03Z",
+   "points": 12,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=17778531",
+   "query": "is there a tool",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "17800321",
+   "title": "Ask HN: Software development after 40, how do you keep the fire?",
+   "created_at": "2018-08-20T14:46:01Z",
+   "points": 111,
+   "num_comments": 100,
+   "hn_url": "https://news.ycombinator.com/item?id=17800321",
+   "query": "how do you",
+   "comments_downloaded": 100
+  },
+  {
+   "id": "17820655",
+   "title": "Ask HN: Is there an extension to block sellers on Amazon?",
+   "created_at": "2018-08-22T18:14:56Z",
+   "points": 12,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=17820655",
+   "query": "is there an app",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "17919351",
+   "title": "Ask HN: How do you keep track of all of your productivity tools?",
+   "created_at": "2018-09-05T16:18:38Z",
+   "points": 35,
+   "num_comments": 18,
+   "hn_url": "https://news.ycombinator.com/item?id=17919351",
+   "query": "how do you",
+   "comments_downloaded": 18
+  },
+  {
+   "id": "18025254",
+   "title": "Ask HN: Any way to program Siri Shortcuts in iOS 12 besides drag-and-drop?",
+   "created_at": "2018-09-19T16:12:26Z",
+   "points": 14,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=18025254",
+   "query": "is there a tool",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "18071861",
+   "title": "Ask HN: Is there any way an app can listen conversations secretly and show ads?",
+   "created_at": "2018-09-26T01:07:38Z",
+   "points": 9,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=18071861",
+   "query": "is there an app",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "18170553",
+   "title": "Ask HN: For remote company, what tools do you use to manage teams and projects?",
+   "created_at": "2018-10-08T19:30:31Z",
+   "points": 16,
+   "num_comments": 12,
+   "hn_url": "https://news.ycombinator.com/item?id=18170553",
+   "query": "what tool do you use",
+   "comments_downloaded": 12
+  },
+  {
+   "id": "18198546",
+   "title": "Ask HN: Is there a good alternative to software registration keys?",
+   "created_at": "2018-10-12T02:01:15Z",
+   "points": 7,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=18198546",
+   "query": "is there a service",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "18219219",
+   "title": "Ask HN: Is there a OneNote file parser? Or an equivalent opensource note format?",
+   "created_at": "2018-10-15T12:46:09Z",
+   "points": 11,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=18219219",
+   "query": "is there software",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "18243763",
+   "title": "Ask HN: What tools do you use for working with a DAG (Directed Acyclic Graph)?",
+   "created_at": "2018-10-17T20:59:20Z",
+   "points": 7,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=18243763",
+   "query": "what tool do you use",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "18374316",
+   "title": "Ask HN: Sorting 8k emails, any tools to make this easier?",
+   "created_at": "2018-11-04T04:54:49Z",
+   "points": 5,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=18374316",
+   "query": "is there a tool",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "18432459",
+   "title": "Ask HN: Is there a service that escalates emails to SMS or Phone call reminders?",
+   "created_at": "2018-11-12T13:32:01Z",
+   "points": 5,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=18432459",
+   "query": "is there a service",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "18503154",
+   "title": "Ask HN: What tools do you use to familiarize yourself with a new codebase?",
+   "created_at": "2018-11-21T15:02:43Z",
+   "points": 5,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=18503154",
+   "query": "looking for a tool",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "18508284",
+   "title": "Ask HN: Is there a better way to document complex software architectures?",
+   "created_at": "2018-11-22T06:32:59Z",
+   "points": 406,
+   "num_comments": 235,
+   "hn_url": "https://news.ycombinator.com/item?id=18508284",
+   "query": "is there software",
+   "comments_downloaded": 235
+  },
+  {
+   "id": "18511911",
+   "title": "Ask HN: Can you recommend a modern, accessible P2P framework/library?",
+   "created_at": "2018-11-22T19:16:28Z",
+   "points": 78,
+   "num_comments": 36,
+   "hn_url": "https://news.ycombinator.com/item?id=18511911",
+   "query": "recommend a tool",
+   "comments_downloaded": 36
+  },
+  {
+   "id": "18639991",
+   "title": "Ask HN: How do you teach kids to program?",
+   "created_at": "2018-12-09T08:44:29Z",
+   "points": 29,
+   "num_comments": 27,
+   "hn_url": "https://news.ycombinator.com/item?id=18639991",
+   "query": "how do you",
+   "comments_downloaded": 27
+  },
+  {
+   "id": "18945658",
+   "title": "Ask HN: Is there any money in website design for small businesses anymore?",
+   "created_at": "2019-01-19T06:32:11Z",
+   "points": 411,
+   "num_comments": 205,
+   "hn_url": "https://news.ycombinator.com/item?id=18945658",
+   "query": "is there a service",
+   "comments_downloaded": 205
+  },
+  {
+   "id": "19017357",
+   "title": "Ask HN: How do you organize your small parts, hardware, and tools?",
+   "created_at": "2019-01-28T13:47:42Z",
+   "points": 10,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=19017357",
+   "query": "is there a tool",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "19121893",
+   "title": "Ask HN: How do you manage state in your React application?",
+   "created_at": "2019-02-09T12:06:00Z",
+   "points": 71,
+   "num_comments": 42,
+   "hn_url": "https://news.ycombinator.com/item?id=19121893",
+   "query": "how do you",
+   "comments_downloaded": 42
+  },
+  {
+   "id": "19248518",
+   "title": "Ask HN: Is There Any Interest in an Open Source Solution for Climate Change",
+   "created_at": "2019-02-25T19:21:26Z",
+   "points": 26,
+   "num_comments": 14,
+   "hn_url": "https://news.ycombinator.com/item?id=19248518",
+   "query": "is there software",
+   "comments_downloaded": 14
+  },
+  {
+   "id": "19327264",
+   "title": "Ask HN: How do you keep your files organized on macOS?",
+   "created_at": "2019-03-07T11:39:51Z",
+   "points": 174,
+   "num_comments": 140,
+   "hn_url": "https://news.ycombinator.com/item?id=19327264",
+   "query": "how do you",
+   "comments_downloaded": 140
+  },
+  {
+   "id": "19437009",
+   "title": "Ask HN: What tools do you use to understand big code-base?",
+   "created_at": "2019-03-19T22:58:38Z",
+   "points": 9,
+   "num_comments": 11,
+   "hn_url": "https://news.ycombinator.com/item?id=19437009",
+   "query": "what tool do you use",
+   "comments_downloaded": 11
+  },
+  {
+   "id": "19495662",
+   "title": "Ask HN: How do you handle Excel import/exports in your apps",
+   "created_at": "2019-03-26T20:23:08Z",
+   "points": 6,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=19495662",
+   "query": "is there a tool",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "19560418",
+   "title": "Ask HN: Looking for a series on implementing classic Unix tools from scratch",
+   "created_at": "2019-04-03T03:02:08Z",
+   "points": 42,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=19560418",
+   "query": "looking for a tool",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "19698620",
+   "title": "Ask HN: How do you secure your Windows PC?",
+   "created_at": "2019-04-19T11:28:58Z",
+   "points": 76,
+   "num_comments": 71,
+   "hn_url": "https://news.ycombinator.com/item?id=19698620",
+   "query": "how do you",
+   "comments_downloaded": 71
+  },
+  {
+   "id": "19904358",
+   "title": "Ask HN: Good, experienced engineer but suck at interviews. Looking for a coach",
+   "created_at": "2019-05-13T21:51:28Z",
+   "points": 7,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=19904358",
+   "query": "looking for software",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "20009562",
+   "title": "Ask HN: How do you do market research for a software business?",
+   "created_at": "2019-05-25T15:31:24Z",
+   "points": 9,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=20009562",
+   "query": "looking for a tool",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "20096865",
+   "title": "Ask HN: What tools do you use for system design?",
+   "created_at": "2019-06-04T16:55:21Z",
+   "points": 34,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=20096865",
+   "query": "looking for a tool",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "20101911",
+   "title": "Ask HN: What tools do you use for note-taking, progress tracking and TODO lists?",
+   "created_at": "2019-06-05T06:14:02Z",
+   "points": 45,
+   "num_comments": 61,
+   "hn_url": "https://news.ycombinator.com/item?id=20101911",
+   "query": "is there a tool",
+   "comments_downloaded": 61
+  },
+  {
+   "id": "20354868",
+   "title": "Ask HN: How do you market a developer tool?",
+   "created_at": "2019-07-04T14:23:06Z",
+   "points": 7,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=20354868",
+   "query": "is there a tool",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "20372393",
+   "title": "Ask HN: How do you read and understand an open-source project?",
+   "created_at": "2019-07-06T22:24:30Z",
+   "points": 105,
+   "num_comments": 24,
+   "hn_url": "https://news.ycombinator.com/item?id=20372393",
+   "query": "looking for an app",
+   "comments_downloaded": 24
+  },
+  {
+   "id": "20747546",
+   "title": "Ask HN: What tools do you use for good habits/performance?",
+   "created_at": "2019-08-20T14:46:02Z",
+   "points": 30,
+   "num_comments": 36,
+   "hn_url": "https://news.ycombinator.com/item?id=20747546",
+   "query": "what tool do you use",
+   "comments_downloaded": 36
+  },
+  {
+   "id": "20980552",
+   "title": "Ask HN: Is there any point in trying to clear your online footprint",
+   "created_at": "2019-09-16T01:57:37Z",
+   "points": 61,
+   "num_comments": 34,
+   "hn_url": "https://news.ycombinator.com/item?id=20980552",
+   "query": "is there anything",
+   "comments_downloaded": 34
+  },
+  {
+   "id": "20993082",
+   "title": "Ask HN: Is there a way I can learn programming within 4 months?",
+   "created_at": "2019-09-17T09:01:29Z",
+   "points": 36,
+   "num_comments": 42,
+   "hn_url": "https://news.ycombinator.com/item?id=20993082",
+   "query": "is there software",
+   "comments_downloaded": 42
+  },
+  {
+   "id": "21032945",
+   "title": "Ask HN: Is there any free open source Cannabis seed to sale software?",
+   "created_at": "2019-09-21T01:41:21Z",
+   "points": 5,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=21032945",
+   "query": "is there software",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "21085785",
+   "title": "Ask HN: Is there a simple email-based spaced repetition tool?",
+   "created_at": "2019-09-26T21:33:07Z",
+   "points": 8,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=21085785",
+   "query": "is there a tool",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "21475881",
+   "title": "Ask HN: Is there a service like Heroku for hosting .NET core applications / dbs?",
+   "created_at": "2019-11-07T18:31:31Z",
+   "points": 17,
+   "num_comments": 19,
+   "hn_url": "https://news.ycombinator.com/item?id=21475881",
+   "query": "is there a service",
+   "comments_downloaded": 19
+  },
+  {
+   "id": "21641864",
+   "title": "Ask HN: Is there a better employment route to high earnings than FAANG?",
+   "created_at": "2019-11-26T19:42:04Z",
+   "points": 84,
+   "num_comments": 82,
+   "hn_url": "https://news.ycombinator.com/item?id=21641864",
+   "query": "is there software",
+   "comments_downloaded": 82
+  },
+  {
+   "id": "21745082",
+   "title": "Ask HN: Is there a site for consultants / mentors “as a service”?",
+   "created_at": "2019-12-09T18:36:15Z",
+   "points": 9,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=21745082",
+   "query": "is there a service",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "21784715",
+   "title": "Ask HN: Is there a bubble in software work? What's the 5/10 year forecast?",
+   "created_at": "2019-12-13T19:46:15Z",
+   "points": 18,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=21784715",
+   "query": "is there software",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "21797092",
+   "title": "Ask HN: Is there a no-nonsense device that lets me measure my heart rate?",
+   "created_at": "2019-12-15T16:44:55Z",
+   "points": 5,
+   "num_comments": 15,
+   "hn_url": "https://news.ycombinator.com/item?id=21797092",
+   "query": "is there a service",
+   "comments_downloaded": 15
+  },
+  {
+   "id": "21920142",
+   "title": "Ask HN: How do you responsibly report security bugs to open-source projects?",
+   "created_at": "2019-12-31T10:43:18Z",
+   "points": 84,
+   "num_comments": 37,
+   "hn_url": "https://news.ycombinator.com/item?id=21920142",
+   "query": "how do you",
+   "comments_downloaded": 37
+  },
+  {
+   "id": "21956469",
+   "title": "Ask HN: What tool do you use to track investments?",
+   "created_at": "2020-01-04T18:28:40Z",
+   "points": 10,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=21956469",
+   "query": "what tool do you use",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "21963056",
+   "title": "Ask HN: Is there a markup language for forms?",
+   "created_at": "2020-01-05T18:47:22Z",
+   "points": 33,
+   "num_comments": 11,
+   "hn_url": "https://news.ycombinator.com/item?id=21963056",
+   "query": "is there a library",
+   "comments_downloaded": 11
+  },
+  {
+   "id": "21991260",
+   "title": "Ask HN: Is there a platform for sharing ideas that people want to “give away”?",
+   "created_at": "2020-01-08T13:36:26Z",
+   "points": 287,
+   "num_comments": 165,
+   "hn_url": "https://news.ycombinator.com/item?id=21991260",
+   "query": "is there a tool",
+   "comments_downloaded": 165
+  },
+  {
+   "id": "22011743",
+   "title": "Ask HN: Are there any openly available software architecture documents?",
+   "created_at": "2020-01-10T15:45:58Z",
+   "points": 407,
+   "num_comments": 49,
+   "hn_url": "https://news.ycombinator.com/item?id=22011743",
+   "query": "looking for software",
+   "comments_downloaded": 49
+  },
+  {
+   "id": "22034101",
+   "title": "Ask HN: What tools do you use for data munging and merging?",
+   "created_at": "2020-01-13T13:10:23Z",
+   "points": 114,
+   "num_comments": 72,
+   "hn_url": "https://news.ycombinator.com/item?id=22034101",
+   "query": "what tool do you use",
+   "comments_downloaded": 72
+  },
+  {
+   "id": "22207062",
+   "title": "Ask HN: How do you do software testing?",
+   "created_at": "2020-01-31T23:28:16Z",
+   "points": 6,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=22207062",
+   "query": "what tool do you use",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "22330146",
+   "title": "Ask HN: Is there a way for indie developers to avoid the App Store Tax?",
+   "created_at": "2020-02-14T20:36:52Z",
+   "points": 7,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=22330146",
+   "query": "is there an app",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "22591543",
+   "title": "Ask HN: Are there good self-hosted video conference tools?",
+   "created_at": "2020-03-16T10:42:49Z",
+   "points": 198,
+   "num_comments": 87,
+   "hn_url": "https://news.ycombinator.com/item?id=22591543",
+   "query": "any tool for",
+   "comments_downloaded": 87
+  },
+  {
+   "id": "22656282",
+   "title": "Ask HN: Looking for a software to code a game with my 8yo kid",
+   "created_at": "2020-03-22T16:41:27Z",
+   "points": 5,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=22656282",
+   "query": "is there software",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "22940781",
+   "title": "Ask HN: How do you tell SaaS sales people you want a self-serve option?",
+   "created_at": "2020-04-22T00:27:55Z",
+   "points": 53,
+   "num_comments": 37,
+   "hn_url": "https://news.ycombinator.com/item?id=22940781",
+   "query": "how do you",
+   "comments_downloaded": 37
+  },
+  {
+   "id": "23218943",
+   "title": "Ask HN: Dear open source devs how do you sustain yourself",
+   "created_at": "2020-05-18T06:13:19Z",
+   "points": 409,
+   "num_comments": 309,
+   "hn_url": "https://news.ycombinator.com/item?id=23218943",
+   "query": "how do you",
+   "comments_downloaded": 309
+  },
+  {
+   "id": "23250611",
+   "title": "Ask HN: HN Any way for individual to gain access to Dark Pool trading data",
+   "created_at": "2020-05-20T19:15:32Z",
+   "points": 10,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=23250611",
+   "query": "any tool for",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "23264850",
+   "title": "Ask HN: Is there any open source tool for creating simple CRUD Apps?",
+   "created_at": "2020-05-21T20:38:02Z",
+   "points": 114,
+   "num_comments": 51,
+   "hn_url": "https://news.ycombinator.com/item?id=23264850",
+   "query": "any tool for",
+   "comments_downloaded": 51
+  },
+  {
+   "id": "23472692",
+   "title": "Ask HN: Is there a whole universe of Chinese software that we don't see?",
+   "created_at": "2020-06-10T00:51:32Z",
+   "points": 127,
+   "num_comments": 71,
+   "hn_url": "https://news.ycombinator.com/item?id=23472692",
+   "query": "is there software",
+   "comments_downloaded": 71
+  },
+  {
+   "id": "23487875",
+   "title": "Ask HN: How do you learn to build substantial, real world apps?",
+   "created_at": "2020-06-11T11:59:59Z",
+   "points": 87,
+   "num_comments": 44,
+   "hn_url": "https://news.ycombinator.com/item?id=23487875",
+   "query": "how do you",
+   "comments_downloaded": 44
+  },
+  {
+   "id": "23497756",
+   "title": "Ask HN: Is there any work being done in speech-to-code with deep learning?",
+   "created_at": "2020-06-12T10:16:20Z",
+   "points": 172,
+   "num_comments": 61,
+   "hn_url": "https://news.ycombinator.com/item?id=23497756",
+   "query": "is there software",
+   "comments_downloaded": 61
+  },
+  {
+   "id": "23719790",
+   "title": "Ask HN: Is there any way to avoid setting a Signal pin?",
+   "created_at": "2020-07-03T00:42:43Z",
+   "points": 6,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=23719790",
+   "query": "is there an app",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "23800590",
+   "title": "Ask HN: How do you learn new libraries without much documentation?",
+   "created_at": "2020-07-11T08:49:11Z",
+   "points": 50,
+   "num_comments": 51,
+   "hn_url": "https://news.ycombinator.com/item?id=23800590",
+   "query": "is there a library",
+   "comments_downloaded": 51
+  },
+  {
+   "id": "23859456",
+   "title": "Ask HN: Is there an instant messaging app which has a tree like view?",
+   "created_at": "2020-07-16T14:43:50Z",
+   "points": 23,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=23859456",
+   "query": "is there an app",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "24051365",
+   "title": "Ask HN: Are there any regulatory bodies for software developers?",
+   "created_at": "2020-08-04T16:11:07Z",
+   "points": 7,
+   "num_comments": 11,
+   "hn_url": "https://news.ycombinator.com/item?id=24051365",
+   "query": "is there software",
+   "comments_downloaded": 11
+  },
+  {
+   "id": "24124770",
+   "title": "Ask HN: Are there any tools for viewing activity across multiple GitHub repos",
+   "created_at": "2020-08-11T19:24:01Z",
+   "points": 10,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=24124770",
+   "query": "any tool for",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "24150087",
+   "title": "Ask HN: Is there a vendor-agnostic self-hosted cloud provider?",
+   "created_at": "2020-08-13T22:07:09Z",
+   "points": 5,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=24150087",
+   "query": "is there an app",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "24176774",
+   "title": "Ask HN: How do you overcome decision fatigue in software development?",
+   "created_at": "2020-08-16T10:52:40Z",
+   "points": 158,
+   "num_comments": 120,
+   "hn_url": "https://news.ycombinator.com/item?id=24176774",
+   "query": "how do you",
+   "comments_downloaded": 120
+  },
+  {
+   "id": "24395628",
+   "title": "Ask HN: Is there a DNA/genealogy site you trust?",
+   "created_at": "2020-09-06T23:52:43Z",
+   "points": 21,
+   "num_comments": 15,
+   "hn_url": "https://news.ycombinator.com/item?id=24395628",
+   "query": "is there a service",
+   "comments_downloaded": 15
+  },
+  {
+   "id": "24694282",
+   "title": "Ask HN: Is there a new and interesting open source forum library?",
+   "created_at": "2020-10-06T02:42:32Z",
+   "points": 14,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=24694282",
+   "query": "is there a library",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "24745954",
+   "title": "Ask HN: Is there a demand for self hosted cloud services?",
+   "created_at": "2020-10-11T14:17:58Z",
+   "points": 7,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=24745954",
+   "query": "is there a service",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "24813789",
+   "title": "Ask HN: I am writing a book what tools do you recommend?",
+   "created_at": "2020-10-17T22:08:43Z",
+   "points": 26,
+   "num_comments": 24,
+   "hn_url": "https://news.ycombinator.com/item?id=24813789",
+   "query": "recommend a tool",
+   "comments_downloaded": 24
+  },
+  {
+   "id": "24889422",
+   "title": "Looking for a Mentor",
+   "created_at": "2020-10-25T20:01:50Z",
+   "points": 11,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=24889422",
+   "query": "is there a service",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "25129228",
+   "title": "Ask HN: Is there a better PCAP analyzer than Wireshark?",
+   "created_at": "2020-11-17T20:20:21Z",
+   "points": 6,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=25129228",
+   "query": "is there a tool",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "25561398",
+   "title": "Ask HN: Is there a note taking app you're 100% happy with?",
+   "created_at": "2020-12-28T18:01:38Z",
+   "points": 14,
+   "num_comments": 40,
+   "hn_url": "https://news.ycombinator.com/item?id=25561398",
+   "query": "is there anything",
+   "comments_downloaded": 40
+  },
+  {
+   "id": "25717767",
+   "title": "Ask HN: How do you think software development will look in 20 years?",
+   "created_at": "2021-01-10T18:28:26Z",
+   "points": 62,
+   "num_comments": 39,
+   "hn_url": "https://news.ycombinator.com/item?id=25717767",
+   "query": "how do you",
+   "comments_downloaded": 39
+  },
+  {
+   "id": "25814083",
+   "title": "Ask HN: Is there a website with a searchable index for engineering blogs?",
+   "created_at": "2021-01-17T19:36:02Z",
+   "points": 11,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=25814083",
+   "query": "is there a tool",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "25891231",
+   "title": "Ask HN: What tools do you use to analyse server performance?",
+   "created_at": "2021-01-24T11:36:03Z",
+   "points": 5,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=25891231",
+   "query": "what tool do you use",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "25911870",
+   "title": "Ask HN: Is there a resource to help choose the right DB for you needs?",
+   "created_at": "2021-01-26T02:54:18Z",
+   "points": 15,
+   "num_comments": 12,
+   "hn_url": "https://news.ycombinator.com/item?id=25911870",
+   "query": "is there an app",
+   "comments_downloaded": 12
+  },
+  {
+   "id": "25913805",
+   "title": "Ask HN: Is there any app or extension for remote office coffee breaks?",
+   "created_at": "2021-01-26T09:00:22Z",
+   "points": 8,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=25913805",
+   "query": "is there a tool",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "26093536",
+   "title": "Ask HN: Is there a tool that tracks cryptocurrency energy metrics over time?",
+   "created_at": "2021-02-10T19:26:40Z",
+   "points": 9,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=26093536",
+   "query": "is there a tool",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "26190880",
+   "title": "Ask HN: What tools do you use to facilitate meetings?",
+   "created_at": "2021-02-19T08:31:41Z",
+   "points": 6,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=26190880",
+   "query": "what tool do you use",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "26227999",
+   "title": "Ask HN: Is there a service that allows you to pay to talk to a domain expert?",
+   "created_at": "2021-02-22T18:12:51Z",
+   "points": 10,
+   "num_comments": 11,
+   "hn_url": "https://news.ycombinator.com/item?id=26227999",
+   "query": "is there an app",
+   "comments_downloaded": 11
+  },
+  {
+   "id": "26302253",
+   "title": "Ask HN: What tools do you use to write techinal documents",
+   "created_at": "2021-03-01T12:47:57Z",
+   "points": 9,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=26302253",
+   "query": "is there a tool",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "26374894",
+   "title": "Ask HN: How do you vet open source libraries?",
+   "created_at": "2021-03-07T11:01:19Z",
+   "points": 8,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=26374894",
+   "query": "is there a library",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "26752565",
+   "title": "Ask HN: How do you solicit user feedback for your mobile app?",
+   "created_at": "2021-04-09T16:26:37Z",
+   "points": 37,
+   "num_comments": 14,
+   "hn_url": "https://news.ycombinator.com/item?id=26752565",
+   "query": "how do you",
+   "comments_downloaded": 14
+  },
+  {
+   "id": "26805374",
+   "title": "Ask HN: Is there a cloud-based email service where one cannot be deplaotformed?",
+   "created_at": "2021-04-14T10:59:38Z",
+   "points": 5,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=26805374",
+   "query": "is there a service",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "26837390",
+   "title": "Ask HN: Is there a future for Jetbrains IDEs?",
+   "created_at": "2021-04-16T18:25:47Z",
+   "points": 12,
+   "num_comments": 17,
+   "hn_url": "https://news.ycombinator.com/item?id=26837390",
+   "query": "is there a tool",
+   "comments_downloaded": 17
+  },
+  {
+   "id": "26901352",
+   "title": "Ask HN: Is there a way to efficiently subscribe to an SQL query for changes?",
+   "created_at": "2021-04-22T11:04:59Z",
+   "points": 200,
+   "num_comments": 104,
+   "hn_url": "https://news.ycombinator.com/item?id=26901352",
+   "query": "is there an app",
+   "comments_downloaded": 104
+  },
+  {
+   "id": "26934352",
+   "title": "Ask HN: Are there any standard monochrome low resolution resolutions?",
+   "created_at": "2021-04-25T17:07:58Z",
+   "points": 25,
+   "num_comments": 36,
+   "hn_url": "https://news.ycombinator.com/item?id=26934352",
+   "query": "is there a library",
+   "comments_downloaded": 36
+  },
+  {
+   "id": "26935278",
+   "title": "Ask HN: Is there a text-based tool to create a timeline diagram?",
+   "created_at": "2021-04-25T18:35:47Z",
+   "points": 39,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=26935278",
+   "query": "is there a tool",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "27073394",
+   "title": "Ask HN: What software do I use to create a commercial desktop GUI?",
+   "created_at": "2021-05-07T07:44:44Z",
+   "points": 5,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=27073394",
+   "query": "is there software",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "27258919",
+   "title": "Ask HN: Any tool to create diagram for data lineage and ETL rules?",
+   "created_at": "2021-05-23T21:49:58Z",
+   "points": 12,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=27258919",
+   "query": "is there a tool",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "27386650",
+   "title": "Ask HN: How do you make your websites/apps beautiful? What tools do you use?",
+   "created_at": "2021-06-03T20:09:25Z",
+   "points": 9,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=27386650",
+   "query": "what tool do you use",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "27560347",
+   "title": "Ask HN: Is There an F-Droid for iOS?",
+   "created_at": "2021-06-19T13:35:45Z",
+   "points": 6,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=27560347",
+   "query": "is there an app",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "27615562",
+   "title": "Ask HN: What software do you use to gather requirements?",
+   "created_at": "2021-06-24T09:42:19Z",
+   "points": 88,
+   "num_comments": 67,
+   "hn_url": "https://news.ycombinator.com/item?id=27615562",
+   "query": "looking for software",
+   "comments_downloaded": 67
+  },
+  {
+   "id": "27820141",
+   "title": "Ask HN: Is there an automatic GUI builder from structured data?",
+   "created_at": "2021-07-13T12:34:46Z",
+   "points": 5,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=27820141",
+   "query": "is there a tool",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "27870887",
+   "title": "Ask HN: Are there any good whitelabel reporting solutions for startups?",
+   "created_at": "2021-07-18T05:09:18Z",
+   "points": 5,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=27870887",
+   "query": "looking for an app",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "28009218",
+   "title": "Ask HN: Is there a dedicated programming language for business logic?",
+   "created_at": "2021-07-30T15:45:31Z",
+   "points": 8,
+   "num_comments": 11,
+   "hn_url": "https://news.ycombinator.com/item?id=28009218",
+   "query": "is there a library",
+   "comments_downloaded": 11
+  },
+  {
+   "id": "28071383",
+   "title": "Ask HN: Is there any software that can be considered finished?",
+   "created_at": "2021-08-05T09:01:44Z",
+   "points": 6,
+   "num_comments": 22,
+   "hn_url": "https://news.ycombinator.com/item?id=28071383",
+   "query": "is there software",
+   "comments_downloaded": 22
+  },
+  {
+   "id": "28106113",
+   "title": "Ask HN: Is domain squatting still profitable? Is there a solution?",
+   "created_at": "2021-08-08T12:06:12Z",
+   "points": 98,
+   "num_comments": 105,
+   "hn_url": "https://news.ycombinator.com/item?id=28106113",
+   "query": "is there a service",
+   "comments_downloaded": 101
+  },
+  {
+   "id": "28274241",
+   "title": "Ask HN: How do you handle user-generated content in your apps?",
+   "created_at": "2021-08-23T11:12:59Z",
+   "points": 59,
+   "num_comments": 87,
+   "hn_url": "https://news.ycombinator.com/item?id=28274241",
+   "query": "how do you",
+   "comments_downloaded": 87
+  },
+  {
+   "id": "28304105",
+   "title": "Ask HN: Is there a “law/legal” bootcamp for developers?",
+   "created_at": "2021-08-25T17:11:18Z",
+   "points": 6,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=28304105",
+   "query": "is there a service",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "28484658",
+   "title": "Ask HN: How do you create a cross-platform GUI without using Electron?",
+   "created_at": "2021-09-10T17:27:12Z",
+   "points": 92,
+   "num_comments": 110,
+   "hn_url": "https://news.ycombinator.com/item?id=28484658",
+   "query": "how do you",
+   "comments_downloaded": 110
+  },
+  {
+   "id": "28651142",
+   "title": "Ask HN: Is there an app/site that curates news weekly",
+   "created_at": "2021-09-25T07:11:19Z",
+   "points": 17,
+   "num_comments": 15,
+   "hn_url": "https://news.ycombinator.com/item?id=28651142",
+   "query": "is there an app",
+   "comments_downloaded": 15
+  },
+  {
+   "id": "28955982",
+   "title": "Ask HN: I'm afraid my wife is dying. Is there a “quora.com” for rare cancers?",
+   "created_at": "2021-10-22T11:35:17Z",
+   "points": 56,
+   "num_comments": 25,
+   "hn_url": "https://news.ycombinator.com/item?id=28955982",
+   "query": "is there an app",
+   "comments_downloaded": 25
+  },
+  {
+   "id": "29040992",
+   "title": "Ask HN: As a new SaaS business, how do you find your first 10 paying clients?",
+   "created_at": "2021-10-29T17:12:05Z",
+   "points": 39,
+   "num_comments": 16,
+   "hn_url": "https://news.ycombinator.com/item?id=29040992",
+   "query": "how do you",
+   "comments_downloaded": 16
+  },
+  {
+   "id": "29060808",
+   "title": "Ask HN: How do you develop internal tools for your organization?",
+   "created_at": "2021-10-31T21:52:56Z",
+   "points": 8,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=29060808",
+   "query": "what tool do you use",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "29078836",
+   "title": "Ask HN: How do you security-audit external software using NPM packages?",
+   "created_at": "2021-11-02T09:19:29Z",
+   "points": 106,
+   "num_comments": 82,
+   "hn_url": "https://news.ycombinator.com/item?id=29078836",
+   "query": "how do you",
+   "comments_downloaded": 82
+  },
+  {
+   "id": "29200924",
+   "title": "Ask HN: Is there any way that using pinch-to-zoom could change/add pixels?",
+   "created_at": "2021-11-12T16:19:57Z",
+   "points": 16,
+   "num_comments": 19,
+   "hn_url": "https://news.ycombinator.com/item?id=29200924",
+   "query": "is there software",
+   "comments_downloaded": 19
+  },
+  {
+   "id": "29213246",
+   "title": "Ask HN: How do you back up your Android phone?",
+   "created_at": "2021-11-13T21:18:18Z",
+   "points": 56,
+   "num_comments": 56,
+   "hn_url": "https://news.ycombinator.com/item?id=29213246",
+   "query": "how do you",
+   "comments_downloaded": 56
+  },
+  {
+   "id": "29252741",
+   "title": "Ask HN: Is there a god-mode in Windows for users like Bill Gates?",
+   "created_at": "2021-11-17T13:35:31Z",
+   "points": 9,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=29252741",
+   "query": "is there software",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "29253231",
+   "title": "Ask HN: What tool do you use for writing notes?",
+   "created_at": "2021-11-17T14:16:20Z",
+   "points": 6,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=29253231",
+   "query": "what tool do you use",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "29307245",
+   "title": "Ask HN: How do you quickly add calendar events in Linux?",
+   "created_at": "2021-11-22T15:21:12Z",
+   "points": 20,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=29307245",
+   "query": "what tool do you use",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "29498220",
+   "title": "Ask HN: I'm looking for a good book on the fundamentals of CS",
+   "created_at": "2021-12-09T15:14:26Z",
+   "points": 253,
+   "num_comments": 188,
+   "hn_url": "https://news.ycombinator.com/item?id=29498220",
+   "query": "looking for software",
+   "comments_downloaded": 188
+  },
+  {
+   "id": "29840119",
+   "title": "Ask HN: Are there any tools to diagram long email chains?",
+   "created_at": "2022-01-07T15:21:25Z",
+   "points": 14,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=29840119",
+   "query": "any tool for",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "29971945",
+   "title": "Ask HN: Is there a functional programming language with the benefits of Go?",
+   "created_at": "2022-01-17T21:36:54Z",
+   "points": 5,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=29971945",
+   "query": "is there a library",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "29997729",
+   "title": "Ask HN: How do you record and edit (programming) videos on Linux?",
+   "created_at": "2022-01-19T18:20:44Z",
+   "points": 26,
+   "num_comments": 15,
+   "hn_url": "https://news.ycombinator.com/item?id=29997729",
+   "query": "what tool do you use",
+   "comments_downloaded": 15
+  },
+  {
+   "id": "30117559",
+   "title": "Ask HN: What tools do you use to create project's public roadmap?",
+   "created_at": "2022-01-28T17:19:23Z",
+   "points": 9,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=30117559",
+   "query": "what tool do you use",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "30132432",
+   "title": "Ask HN: Is there a name for this behavioral phenomenon?",
+   "created_at": "2022-01-30T00:54:20Z",
+   "points": 5,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=30132432",
+   "query": "is there a library",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "30160282",
+   "title": "Ask HN: How do you explain the sloppiness of modern software?",
+   "created_at": "2022-02-01T09:20:07Z",
+   "points": 157,
+   "num_comments": 242,
+   "hn_url": "https://news.ycombinator.com/item?id=30160282",
+   "query": "how do you",
+   "comments_downloaded": 241
+  },
+  {
+   "id": "30175830",
+   "title": "Ask HN: Is there any software capable of testing your spoken English?",
+   "created_at": "2022-02-02T10:26:42Z",
+   "points": 14,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=30175830",
+   "query": "is there software",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "30209366",
+   "title": "Ask HN: Is there any tool for benchmarking responsiveness for Linux?",
+   "created_at": "2022-02-04T16:59:53Z",
+   "points": 100,
+   "num_comments": 44,
+   "hn_url": "https://news.ycombinator.com/item?id=30209366",
+   "query": "is there a tool",
+   "comments_downloaded": 44
+  },
+  {
+   "id": "30229643",
+   "title": "Ask HN: How do you make a NoCode/LowCode application?",
+   "created_at": "2022-02-06T05:06:25Z",
+   "points": 11,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=30229643",
+   "query": "any tool for",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "30314053",
+   "title": "Ask HN: Browser-extension creators, how do you write for multiple browsers?",
+   "created_at": "2022-02-12T16:40:16Z",
+   "points": 90,
+   "num_comments": 51,
+   "hn_url": "https://news.ycombinator.com/item?id=30314053",
+   "query": "how do you",
+   "comments_downloaded": 51
+  },
+  {
+   "id": "30349970",
+   "title": "Ask HN: Is There a Non-Violent Communication Language Converter?",
+   "created_at": "2022-02-15T17:47:35Z",
+   "points": 6,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=30349970",
+   "query": "is there an app",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "30359627",
+   "title": "Ask HN: Stuck as a CS Major. Is there a way out?",
+   "created_at": "2022-02-16T13:24:49Z",
+   "points": 19,
+   "num_comments": 51,
+   "hn_url": "https://news.ycombinator.com/item?id=30359627",
+   "query": "is there an app",
+   "comments_downloaded": 49
+  },
+  {
+   "id": "30447933",
+   "title": "Ask HN: Looking for a web app for collecting small bits of information",
+   "created_at": "2022-02-23T23:09:52Z",
+   "points": 7,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=30447933",
+   "query": "looking for an app",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "30492354",
+   "title": "Ask HN: Is there a free Zapier that works with Facebook Leads and TikTok Leads?",
+   "created_at": "2022-02-27T20:48:35Z",
+   "points": 8,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=30492354",
+   "query": "is there a tool",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "30604215",
+   "title": "Ask HN: Looking for a Backup Email Relay",
+   "created_at": "2022-03-08T18:51:18Z",
+   "points": 9,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=30604215",
+   "query": "looking for an app",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "30726687",
+   "title": "Ask HN: Is there a program that can randomly text me reminders?",
+   "created_at": "2022-03-18T19:50:42Z",
+   "points": 6,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=30726687",
+   "query": "is there anything",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "30764573",
+   "title": "Ask HN: How do you organize your private work with apps?",
+   "created_at": "2022-03-22T10:43:21Z",
+   "points": 26,
+   "num_comments": 13,
+   "hn_url": "https://news.ycombinator.com/item?id=30764573",
+   "query": "how do you",
+   "comments_downloaded": 13
+  },
+  {
+   "id": "30790016",
+   "title": "Ask HN: Is there a portable encryption file format?",
+   "created_at": "2022-03-24T14:11:57Z",
+   "points": 5,
+   "num_comments": 13,
+   "hn_url": "https://news.ycombinator.com/item?id=30790016",
+   "query": "is there a tool",
+   "comments_downloaded": 13
+  },
+  {
+   "id": "30895905",
+   "title": "Ask HN: Is there a tool to generate binary protocol figures out of a spec?",
+   "created_at": "2022-04-03T10:33:57Z",
+   "points": 51,
+   "num_comments": 17,
+   "hn_url": "https://news.ycombinator.com/item?id=30895905",
+   "query": "is there a tool",
+   "comments_downloaded": 17
+  },
+  {
+   "id": "30899303",
+   "title": "Ask HN: In 2022 how do you develop a simple CRUD app if you have few time?",
+   "created_at": "2022-04-03T18:21:11Z",
+   "points": 40,
+   "num_comments": 35,
+   "hn_url": "https://news.ycombinator.com/item?id=30899303",
+   "query": "how do you",
+   "comments_downloaded": 35
+  },
+  {
+   "id": "30961400",
+   "title": "Ask HN: Is there a way to get Agile right?",
+   "created_at": "2022-04-08T19:22:23Z",
+   "points": 27,
+   "num_comments": 12,
+   "hn_url": "https://news.ycombinator.com/item?id=30961400",
+   "query": "is there an app",
+   "comments_downloaded": 12
+  },
+  {
+   "id": "31083131",
+   "title": "Ask HN: How do you keep track of software requirements and test them?",
+   "created_at": "2022-04-19T13:55:16Z",
+   "points": 195,
+   "num_comments": 125,
+   "hn_url": "https://news.ycombinator.com/item?id=31083131",
+   "query": "how do you",
+   "comments_downloaded": 125
+  },
+  {
+   "id": "31138993",
+   "title": "Ask HN: How do you feel about Chrome becoming a browser monopoly?",
+   "created_at": "2022-04-23T21:54:32Z",
+   "points": 40,
+   "num_comments": 42,
+   "hn_url": "https://news.ycombinator.com/item?id=31138993",
+   "query": "how do you",
+   "comments_downloaded": 42
+  },
+  {
+   "id": "31192706",
+   "title": "Ask HN: Is there a good framework for an interactive user manual?",
+   "created_at": "2022-04-28T14:14:38Z",
+   "points": 24,
+   "num_comments": 12,
+   "hn_url": "https://news.ycombinator.com/item?id=31192706",
+   "query": "is there an app",
+   "comments_downloaded": 12
+  },
+  {
+   "id": "31303358",
+   "title": "Ask HN: What tool would you buy to make your life easier?",
+   "created_at": "2022-05-08T12:14:26Z",
+   "points": 31,
+   "num_comments": 36,
+   "hn_url": "https://news.ycombinator.com/item?id=31303358",
+   "query": "what tool do you use",
+   "comments_downloaded": 36
+  },
+  {
+   "id": "31414459",
+   "title": "Ask HN: Is there a descentralized DB with a simple social conflict resolution?",
+   "created_at": "2022-05-17T18:15:55Z",
+   "points": 8,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=31414459",
+   "query": "is there a tool",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "31421862",
+   "title": "Ask HN: Is there an easy way non-tech users can self-host apps on a server?",
+   "created_at": "2022-05-18T12:22:48Z",
+   "points": 7,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=31421862",
+   "query": "is there an app",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "31468189",
+   "title": "Ask HN: Are there any good Diff tools for Jupyter Notebooks?",
+   "created_at": "2022-05-22T13:51:10Z",
+   "points": 51,
+   "num_comments": 27,
+   "hn_url": "https://news.ycombinator.com/item?id=31468189",
+   "query": "any tool for",
+   "comments_downloaded": 27
+  },
+  {
+   "id": "31503987",
+   "title": "Ask HN: Do you use any tools to improve your HN experience?",
+   "created_at": "2022-05-25T13:08:22Z",
+   "points": 13,
+   "num_comments": 24,
+   "hn_url": "https://news.ycombinator.com/item?id=31503987",
+   "query": "what tool do you use",
+   "comments_downloaded": 24
+  },
+  {
+   "id": "31547285",
+   "title": "Ask HN: How do you manage “static” pages on your micro SaaS website?",
+   "created_at": "2022-05-29T07:48:55Z",
+   "points": 13,
+   "num_comments": 16,
+   "hn_url": "https://news.ycombinator.com/item?id=31547285",
+   "query": "what tool do you use",
+   "comments_downloaded": 16
+  },
+  {
+   "id": "31549303",
+   "title": "Ask HN: Is there any Linux distro dedicated to music performance?",
+   "created_at": "2022-05-29T14:15:32Z",
+   "points": 107,
+   "num_comments": 46,
+   "hn_url": "https://news.ycombinator.com/item?id=31549303",
+   "query": "is there software",
+   "comments_downloaded": 46
+  },
+  {
+   "id": "31596561",
+   "title": "Ask HN: Are there any high-level TUI tools?",
+   "created_at": "2022-06-02T16:04:14Z",
+   "points": 7,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=31596561",
+   "query": "I wish there was",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "31710238",
+   "title": "Ask HN: Any tools to search video based on audio?",
+   "created_at": "2022-06-12T01:09:22Z",
+   "points": 27,
+   "num_comments": 12,
+   "hn_url": "https://news.ycombinator.com/item?id=31710238",
+   "query": "is there a tool",
+   "comments_downloaded": 12
+  },
+  {
+   "id": "31954611",
+   "title": "Is there a language/framework can describe a model and generate checking rules?",
+   "created_at": "2022-07-02T00:01:12Z",
+   "points": 9,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=31954611",
+   "query": "is there a tool",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "32042767",
+   "title": "Ask HN: How do you search for products / apps given a list of requirements?",
+   "created_at": "2022-07-10T08:14:11Z",
+   "points": 88,
+   "num_comments": 44,
+   "hn_url": "https://news.ycombinator.com/item?id=32042767",
+   "query": "how do you",
+   "comments_downloaded": 44
+  },
+  {
+   "id": "32118727",
+   "title": "Is there any eReader with a terminal?",
+   "created_at": "2022-07-16T14:53:11Z",
+   "points": 8,
+   "num_comments": 12,
+   "hn_url": "https://news.ycombinator.com/item?id=32118727",
+   "query": "is there software",
+   "comments_downloaded": 12
+  },
+  {
+   "id": "32289915",
+   "title": "Ask HN: Is there a tool you use just for reading code?",
+   "created_at": "2022-07-30T20:19:10Z",
+   "points": 21,
+   "num_comments": 15,
+   "hn_url": "https://news.ycombinator.com/item?id=32289915",
+   "query": "is there a tool",
+   "comments_downloaded": 15
+  },
+  {
+   "id": "32315035",
+   "title": "Ask HN: Is there a tool / product that enables commenting on HTML elements?",
+   "created_at": "2022-08-02T04:18:26Z",
+   "points": 91,
+   "num_comments": 59,
+   "hn_url": "https://news.ycombinator.com/item?id=32315035",
+   "query": "is there a tool",
+   "comments_downloaded": 59
+  },
+  {
+   "id": "32426700",
+   "title": "Ask HN: Is there any multi-cloud storage aggregator company?",
+   "created_at": "2022-08-11T14:56:14Z",
+   "points": 9,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=32426700",
+   "query": "is there a service",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "32506168",
+   "title": "Ask HN: Is there a spiritual successor to del.icio.us?",
+   "created_at": "2022-08-18T06:51:30Z",
+   "points": 223,
+   "num_comments": 171,
+   "hn_url": "https://news.ycombinator.com/item?id=32506168",
+   "query": "is there anything",
+   "comments_downloaded": 171
+  },
+  {
+   "id": "32533968",
+   "title": "Ask HN: Looking for a fantastic old talk on kernel network abstractions",
+   "created_at": "2022-08-20T18:03:53Z",
+   "points": 7,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=32533968",
+   "query": "looking for an app",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "32536886",
+   "title": "Ask HN: Are there any languages for programming-in-the-large?",
+   "created_at": "2022-08-21T02:28:25Z",
+   "points": 9,
+   "num_comments": 12,
+   "hn_url": "https://news.ycombinator.com/item?id=32536886",
+   "query": "is there a library",
+   "comments_downloaded": 12
+  },
+  {
+   "id": "32538743",
+   "title": "Ask HN: Is there a modern equivalent of Byte Magazine?",
+   "created_at": "2022-08-21T10:01:02Z",
+   "points": 6,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=32538743",
+   "query": "is there software",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "32632720",
+   "title": "Ask HN: Is there a developer laptop that does not suck and is not a Mac in 2022?",
+   "created_at": "2022-08-28T22:32:12Z",
+   "points": 336,
+   "num_comments": 518,
+   "hn_url": "https://news.ycombinator.com/item?id=32632720",
+   "query": "is there a service",
+   "comments_downloaded": 514
+  },
+  {
+   "id": "32648471",
+   "title": "Ask HN: Is there a simple web UI toolbox for back-end devs?",
+   "created_at": "2022-08-30T09:47:28Z",
+   "points": 6,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=32648471",
+   "query": "is there a tool",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "32649143",
+   "title": "Ask HN: Looking for a Tool to Search for Comments",
+   "created_at": "2022-08-30T11:44:54Z",
+   "points": 12,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=32649143",
+   "query": "looking for a tool",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "32705848",
+   "title": "Ask HN: Is there any way to develop software except sitting upright at a desk?",
+   "created_at": "2022-09-03T20:38:19Z",
+   "points": 5,
+   "num_comments": 12,
+   "hn_url": "https://news.ycombinator.com/item?id=32705848",
+   "query": "is there software",
+   "comments_downloaded": 12
+  },
+  {
+   "id": "32722630",
+   "title": "Ask HN: What software do you use to examine binary files?",
+   "created_at": "2022-09-05T10:21:22Z",
+   "points": 18,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=32722630",
+   "query": "is there software",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "32762863",
+   "title": "Ask HN: Is there a reference of CLI tools with analytics?",
+   "created_at": "2022-09-08T08:27:49Z",
+   "points": 5,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=32762863",
+   "query": "is there a tool",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "32792825",
+   "title": "Ask HN: Is there a precedent for legislation that mandates code changes to OSS?",
+   "created_at": "2022-09-10T17:44:59Z",
+   "points": 18,
+   "num_comments": 11,
+   "hn_url": "https://news.ycombinator.com/item?id=32792825",
+   "query": "is there software",
+   "comments_downloaded": 11
+  },
+  {
+   "id": "32855963",
+   "title": "Ask HN: Is there a Stack Overflow clone that pays money for answers?",
+   "created_at": "2022-09-15T18:00:07Z",
+   "points": 22,
+   "num_comments": 22,
+   "hn_url": "https://news.ycombinator.com/item?id=32855963",
+   "query": "is there an app",
+   "comments_downloaded": 22
+  },
+  {
+   "id": "32969667",
+   "title": "Ask HN: Any tool to look C++ interpretation template form syntax to substitution",
+   "created_at": "2022-09-25T07:48:55Z",
+   "points": 8,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=32969667",
+   "query": "is there a tool",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "33057518",
+   "title": "Ask HN: What tool do you use for journaling? Privacy vs. availability tradeoff?",
+   "created_at": "2022-10-02T16:35:46Z",
+   "points": 5,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=33057518",
+   "query": "what tool do you use",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "33113283",
+   "title": "Ask HN: Is there a GDPR compliance privacy statement template for small blogs?",
+   "created_at": "2022-10-06T20:00:57Z",
+   "points": 6,
+   "num_comments": 14,
+   "hn_url": "https://news.ycombinator.com/item?id=33113283",
+   "query": "is there software",
+   "comments_downloaded": 14
+  },
+  {
+   "id": "33239818",
+   "title": "Advice for an older software developer looking for a change",
+   "created_at": "2022-10-17T21:35:35Z",
+   "points": 17,
+   "num_comments": 20,
+   "hn_url": "https://news.ycombinator.com/item?id=33239818",
+   "query": "looking for software",
+   "comments_downloaded": 20
+  },
+  {
+   "id": "33286260",
+   "title": "Ask HN: Is there an alternative CloudWatch UI?",
+   "created_at": "2022-10-21T09:43:00Z",
+   "points": 14,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=33286260",
+   "query": "is there anything",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "33352743",
+   "title": "Is there any note-taking software/app for video?",
+   "created_at": "2022-10-27T03:31:35Z",
+   "points": 14,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=33352743",
+   "query": "is there a tool",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "33432517",
+   "title": "Any tools can generate datatype from string?",
+   "created_at": "2022-11-02T07:57:48Z",
+   "points": 11,
+   "num_comments": 14,
+   "hn_url": "https://news.ycombinator.com/item?id=33432517",
+   "query": "is there a tool",
+   "comments_downloaded": 14
+  },
+  {
+   "id": "33595879",
+   "title": "Ask HN: Is there a cloud music library that doesn't keep deleting my music?",
+   "created_at": "2022-11-14T15:57:11Z",
+   "points": 92,
+   "num_comments": 123,
+   "hn_url": "https://news.ycombinator.com/item?id=33595879",
+   "query": "is there an app",
+   "comments_downloaded": 123
+  },
+  {
+   "id": "33663134",
+   "title": "Ask HN: Is there a tool to follow all the people I follow in Twitter in Mastodon",
+   "created_at": "2022-11-18T22:13:16Z",
+   "points": 5,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=33663134",
+   "query": "is there a tool",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "33747231",
+   "title": "Ask HN: Is there a site that is just a text scratchpad?",
+   "created_at": "2022-11-25T21:53:23Z",
+   "points": 39,
+   "num_comments": 63,
+   "hn_url": "https://news.ycombinator.com/item?id=33747231",
+   "query": "does something exist",
+   "comments_downloaded": 63
+  },
+  {
+   "id": "33855709",
+   "title": "Ask HN: I'm looking for some new spreadsheet software what are people using?",
+   "created_at": "2022-12-04T17:34:24Z",
+   "points": 26,
+   "num_comments": 23,
+   "hn_url": "https://news.ycombinator.com/item?id=33855709",
+   "query": "looking for software",
+   "comments_downloaded": 23
+  },
+  {
+   "id": "33869332",
+   "title": "Ask HN: Is there an AI service to interpret a collection of articles?",
+   "created_at": "2022-12-05T18:12:45Z",
+   "points": 14,
+   "num_comments": 13,
+   "hn_url": "https://news.ycombinator.com/item?id=33869332",
+   "query": "is there a service",
+   "comments_downloaded": 13
+  },
+  {
+   "id": "33919747",
+   "title": "Ask HN: Recommend me a good set of 2.1 desktop speakers?",
+   "created_at": "2022-12-09T10:23:26Z",
+   "points": 34,
+   "num_comments": 33,
+   "hn_url": "https://news.ycombinator.com/item?id=33919747",
+   "query": "looking for software",
+   "comments_downloaded": 33
+  },
+  {
+   "id": "33959139",
+   "title": "Ask HN: What tools do you use for your personal knowledge management system?",
+   "created_at": "2022-12-12T19:38:06Z",
+   "points": 10,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=33959139",
+   "query": "what tool do you use",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "34069496",
+   "title": "Ask HN: Is there a site for quality short-term contract programming work?",
+   "created_at": "2022-12-20T17:52:13Z",
+   "points": 47,
+   "num_comments": 28,
+   "hn_url": "https://news.ycombinator.com/item?id=34069496",
+   "query": "is there software",
+   "comments_downloaded": 26
+  },
+  {
+   "id": "34140098",
+   "title": "Ask HN: Is there a OS tool which queries MIDI datasets by chord progression/key?",
+   "created_at": "2022-12-26T18:05:47Z",
+   "points": 9,
+   "num_comments": 19,
+   "hn_url": "https://news.ycombinator.com/item?id=34140098",
+   "query": "is there a tool",
+   "comments_downloaded": 19
+  },
+  {
+   "id": "34294251",
+   "title": "Ask HN: Is there any way to stop ChatGPT from lying?",
+   "created_at": "2023-01-07T23:36:10Z",
+   "points": 6,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=34294251",
+   "query": "is there an app",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "34303543",
+   "title": "Ask HN: How do you install not the latest iOS version?",
+   "created_at": "2023-01-08T21:51:22Z",
+   "points": 32,
+   "num_comments": 45,
+   "hn_url": "https://news.ycombinator.com/item?id=34303543",
+   "query": "how do you",
+   "comments_downloaded": 45
+  },
+  {
+   "id": "34423855",
+   "title": "Ask HN: Is there a Jupyter Notebook for terminal/shell",
+   "created_at": "2023-01-18T05:58:05Z",
+   "points": 25,
+   "num_comments": 19,
+   "hn_url": "https://news.ycombinator.com/item?id=34423855",
+   "query": "is there a tool",
+   "comments_downloaded": 19
+  },
+  {
+   "id": "34562784",
+   "title": "Is there an alternative to ChatGPT that is less restrictive?",
+   "created_at": "2023-01-28T22:41:04Z",
+   "points": 13,
+   "num_comments": 17,
+   "hn_url": "https://news.ycombinator.com/item?id=34562784",
+   "query": "is there a tool",
+   "comments_downloaded": 17
+  },
+  {
+   "id": "34620594",
+   "title": "Ask HN: As a SaaS company, how do you manage your single-tenant deployments?",
+   "created_at": "2023-02-02T01:03:11Z",
+   "points": 20,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=34620594",
+   "query": "is there a tool",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "34622355",
+   "title": "Ask HN: How do you plan on making money with Open AI API?",
+   "created_at": "2023-02-02T05:12:42Z",
+   "points": 112,
+   "num_comments": 134,
+   "hn_url": "https://news.ycombinator.com/item?id=34622355",
+   "query": "how do you",
+   "comments_downloaded": 134
+  },
+  {
+   "id": "34688401",
+   "title": "Ask HN: Is there any kind of USB-C tester?",
+   "created_at": "2023-02-07T03:33:07Z",
+   "points": 14,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=34688401",
+   "query": "is there software",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "34775587",
+   "title": "Ask HN: Is there an app for reading newsletters?",
+   "created_at": "2023-02-13T16:24:27Z",
+   "points": 11,
+   "num_comments": 13,
+   "hn_url": "https://news.ycombinator.com/item?id=34775587",
+   "query": "is there a tool",
+   "comments_downloaded": 13
+  },
+  {
+   "id": "34810203",
+   "title": "Ask HN: Is there a market for machine learning rigs?",
+   "created_at": "2023-02-15T20:36:04Z",
+   "points": 6,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=34810203",
+   "query": "is there software",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "34893898",
+   "title": "Is there a music recommendation (service –| server –| program) that works?",
+   "created_at": "2023-02-22T10:39:27Z",
+   "points": 6,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=34893898",
+   "query": "is there a service",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "34920400",
+   "title": "Ask Dang: What tools do you use for moderating HN?",
+   "created_at": "2023-02-24T03:28:31Z",
+   "points": 278,
+   "num_comments": 162,
+   "hn_url": "https://news.ycombinator.com/item?id=34920400",
+   "query": "what tool do you use",
+   "comments_downloaded": 147
+  },
+  {
+   "id": "35179186",
+   "title": "Ask HN: Is there a register which company uses which bank?",
+   "created_at": "2023-03-16T07:29:05Z",
+   "points": 5,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=35179186",
+   "query": "is there a service",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "35679724",
+   "title": "Is there a concept for not wanting to know the time/clock while doing something?",
+   "created_at": "2023-04-23T19:36:41Z",
+   "points": 17,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=35679724",
+   "query": "is there anything",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "36025977",
+   "title": "Ask HN: Is there a webapp to input/store your blood test results?",
+   "created_at": "2023-05-22T00:23:44Z",
+   "points": 45,
+   "num_comments": 57,
+   "hn_url": "https://news.ycombinator.com/item?id=36025977",
+   "query": "is there a service",
+   "comments_downloaded": 57
+  },
+  {
+   "id": "36088452",
+   "title": "Ask HN: Is there a web browser, that's just a browser?",
+   "created_at": "2023-05-26T19:17:38Z",
+   "points": 5,
+   "num_comments": 13,
+   "hn_url": "https://news.ycombinator.com/item?id=36088452",
+   "query": "is there a service",
+   "comments_downloaded": 13
+  },
+  {
+   "id": "36229990",
+   "title": "Ask HN: Is there an ML model that can go from an audio song to sheet music?",
+   "created_at": "2023-06-07T17:23:20Z",
+   "points": 25,
+   "num_comments": 19,
+   "hn_url": "https://news.ycombinator.com/item?id=36229990",
+   "query": "is there an app",
+   "comments_downloaded": 19
+  },
+  {
+   "id": "36257669",
+   "title": "Ask HN: Is there a name for the phenomenon we have seen at Reddit/Twitter etc.",
+   "created_at": "2023-06-09T13:40:48Z",
+   "points": 5,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=36257669",
+   "query": "is there an app",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "36588600",
+   "title": "Ask HN: Is there an e-commerce platform that doesn't suck?",
+   "created_at": "2023-07-04T16:11:42Z",
+   "points": 26,
+   "num_comments": 16,
+   "hn_url": "https://news.ycombinator.com/item?id=36588600",
+   "query": "is there an app",
+   "comments_downloaded": 16
+  },
+  {
+   "id": "36595503",
+   "title": "Ask HN: Are there any good open source screen sharing tools with remote control?",
+   "created_at": "2023-07-05T04:25:51Z",
+   "points": 9,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=36595503",
+   "query": "any tool for",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "36685919",
+   "title": "Ask HN: How do you “clean” Windows from all bloatware?",
+   "created_at": "2023-07-11T19:15:33Z",
+   "points": 30,
+   "num_comments": 46,
+   "hn_url": "https://news.ycombinator.com/item?id=36685919",
+   "query": "how do you",
+   "comments_downloaded": 46
+  },
+  {
+   "id": "36721743",
+   "title": "Ask HN: Are there any lean operating systems left?",
+   "created_at": "2023-07-14T09:53:48Z",
+   "points": 15,
+   "num_comments": 31,
+   "hn_url": "https://news.ycombinator.com/item?id=36721743",
+   "query": "is there anything",
+   "comments_downloaded": 31
+  },
+  {
+   "id": "36747872",
+   "title": "Ask HN: Is there an app you use that have no clear successor?",
+   "created_at": "2023-07-16T15:10:38Z",
+   "points": 11,
+   "num_comments": 13,
+   "hn_url": "https://news.ycombinator.com/item?id=36747872",
+   "query": "is there an app",
+   "comments_downloaded": 13
+  },
+  {
+   "id": "36830583",
+   "title": "Ask HN: Is there a browser plugin that will fade AI generated text to gray?",
+   "created_at": "2023-07-22T22:29:23Z",
+   "points": 7,
+   "num_comments": 12,
+   "hn_url": "https://news.ycombinator.com/item?id=36830583",
+   "query": "is there a service",
+   "comments_downloaded": 12
+  },
+  {
+   "id": "36844415",
+   "title": "Ask HN: Looking for a Firefox compatible extension for voice controlled actions",
+   "created_at": "2023-07-24T08:00:33Z",
+   "points": 60,
+   "num_comments": 22,
+   "hn_url": "https://news.ycombinator.com/item?id=36844415",
+   "query": "is there anything",
+   "comments_downloaded": 22
+  },
+  {
+   "id": "36998936",
+   "title": "Ask HN: For advice: I'm a mathematician looking for a plan B outside of academia",
+   "created_at": "2023-08-04T12:19:07Z",
+   "points": 34,
+   "num_comments": 77,
+   "hn_url": "https://news.ycombinator.com/item?id=36998936",
+   "query": "looking for an app",
+   "comments_downloaded": 77
+  },
+  {
+   "id": "37057747",
+   "title": "Ask HN: Do you use any apps or tools to limit your kids' screen time?",
+   "created_at": "2023-08-09T01:36:54Z",
+   "points": 9,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=37057747",
+   "query": "is there a tool",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "37408794",
+   "title": "Ask HN: Is there a data loss bug lurking in MS365 backup solutions?",
+   "created_at": "2023-09-06T18:08:43Z",
+   "points": 75,
+   "num_comments": 47,
+   "hn_url": "https://news.ycombinator.com/item?id=37408794",
+   "query": "is there an app",
+   "comments_downloaded": 47
+  },
+  {
+   "id": "37468080",
+   "title": "Ask HN: Are there any AI-enhanced solutions for converting PDFs to ePub?",
+   "created_at": "2023-09-11T14:47:28Z",
+   "points": 7,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=37468080",
+   "query": "any tool for",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "37531580",
+   "title": "Ask HN: What app do you use for book recommendations?",
+   "created_at": "2023-09-16T02:50:05Z",
+   "points": 7,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=37531580",
+   "query": "is there an app",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "37542025",
+   "title": "Ask HN: Looking for a 24-7 Real-Time Voice Transcription Tool",
+   "created_at": "2023-09-17T06:12:13Z",
+   "points": 11,
+   "num_comments": 14,
+   "hn_url": "https://news.ycombinator.com/item?id=37542025",
+   "query": "does something exist",
+   "comments_downloaded": 14
+  },
+  {
+   "id": "37629678",
+   "title": "Ask HN: Is there a technology you loved but had to abandon?",
+   "created_at": "2023-09-24T02:41:57Z",
+   "points": 11,
+   "num_comments": 18,
+   "hn_url": "https://news.ycombinator.com/item?id=37629678",
+   "query": "is there software",
+   "comments_downloaded": 18
+  },
+  {
+   "id": "37664705",
+   "title": "Ask HN: How do you set up a SaaS as a solopreneur?",
+   "created_at": "2023-09-26T19:32:55Z",
+   "points": 35,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=37664705",
+   "query": "how do you",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "37720804",
+   "title": "Ask HN: Is there a way to get back to the web we lost?",
+   "created_at": "2023-09-30T23:04:11Z",
+   "points": 28,
+   "num_comments": 21,
+   "hn_url": "https://news.ycombinator.com/item?id=37720804",
+   "query": "is there anything",
+   "comments_downloaded": 21
+  },
+  {
+   "id": "37959678",
+   "title": "Ask HN: Is there an archive of videos like archive.today?",
+   "created_at": "2023-10-20T18:23:10Z",
+   "points": 7,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=37959678",
+   "query": "is there a service",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "38090623",
+   "title": "Ask HN: Is there a way to get previous iOS timer behaviour back?",
+   "created_at": "2023-10-31T19:59:49Z",
+   "points": 11,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=38090623",
+   "query": "is there an app",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "38142722",
+   "title": "Ask HN: Is there a MIT-like FOSS license that prevents LLMs from scanning?",
+   "created_at": "2023-11-04T16:47:58Z",
+   "points": 6,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=38142722",
+   "query": "is there a tool",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "38305837",
+   "title": "Ask HN: How do you personally measure the success of your open source projects?",
+   "created_at": "2023-11-17T16:33:04Z",
+   "points": 7,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=38305837",
+   "query": "is there anything",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "38545961",
+   "title": "Ask HN: How do you bootstrap your software projects?",
+   "created_at": "2023-12-06T16:23:07Z",
+   "points": 5,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=38545961",
+   "query": "what tool do you use",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "38788581",
+   "title": "Is there a place in this century for small data center providers?",
+   "created_at": "2023-12-28T00:32:41Z",
+   "points": 9,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=38788581",
+   "query": "is there a service",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "38879188",
+   "title": "Ask HN: Is there a great book for understanding LLMs?",
+   "created_at": "2024-01-05T14:09:00Z",
+   "points": 16,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=38879188",
+   "query": "is there software",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "39079543",
+   "title": "Ask HN: Any way to write a simple desktop app anymore?",
+   "created_at": "2024-01-21T15:56:07Z",
+   "points": 8,
+   "num_comments": 17,
+   "hn_url": "https://news.ycombinator.com/item?id=39079543",
+   "query": "any tool for",
+   "comments_downloaded": 17
+  },
+  {
+   "id": "39185871",
+   "title": "Ask HN: Is there a service that clusters HN articles by theme?",
+   "created_at": "2024-01-30T02:54:10Z",
+   "points": 6,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=39185871",
+   "query": "is there a service",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "39259420",
+   "title": "Ask HN: It's 1997, how do you build a website?",
+   "created_at": "2024-02-05T10:16:21Z",
+   "points": 12,
+   "num_comments": 20,
+   "hn_url": "https://news.ycombinator.com/item?id=39259420",
+   "query": "what tool do you use",
+   "comments_downloaded": 20
+  },
+  {
+   "id": "39370226",
+   "title": "Ask HN: How do you organize software documentation at work?",
+   "created_at": "2024-02-14T14:37:51Z",
+   "points": 59,
+   "num_comments": 89,
+   "hn_url": "https://news.ycombinator.com/item?id=39370226",
+   "query": "is there a tool",
+   "comments_downloaded": 89
+  },
+  {
+   "id": "39428713",
+   "title": "Ask HN: Is There a Zapier for APIs?",
+   "created_at": "2024-02-19T11:41:29Z",
+   "points": 8,
+   "num_comments": 12,
+   "hn_url": "https://news.ycombinator.com/item?id=39428713",
+   "query": "is there a tool",
+   "comments_downloaded": 12
+  },
+  {
+   "id": "39719547",
+   "title": "Looking for an app where I can chat with a book",
+   "created_at": "2024-03-15T19:09:49Z",
+   "points": 9,
+   "num_comments": 14,
+   "hn_url": "https://news.ycombinator.com/item?id=39719547",
+   "query": "is there an app",
+   "comments_downloaded": 14
+  },
+  {
+   "id": "39726632",
+   "title": "Ask HN: How do you use AI for software engineering?",
+   "created_at": "2024-03-16T15:14:55Z",
+   "points": 65,
+   "num_comments": 49,
+   "hn_url": "https://news.ycombinator.com/item?id=39726632",
+   "query": "is there a tool",
+   "comments_downloaded": 49
+  },
+  {
+   "id": "40096424",
+   "title": "Ask HN: Is there a tool to extract ALL emails, learn \"me\", draft responses",
+   "created_at": "2024-04-20T11:08:19Z",
+   "points": 5,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=40096424",
+   "query": "is there a tool",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "40142791",
+   "title": "Ask HN: Any tool for managing large and variable command lines?",
+   "created_at": "2024-04-24T10:48:11Z",
+   "points": 49,
+   "num_comments": 54,
+   "hn_url": "https://news.ycombinator.com/item?id=40142791",
+   "query": "looking for a tool",
+   "comments_downloaded": 54
+  },
+  {
+   "id": "40341037",
+   "title": "Ask HN: Founders who offer free/OS and paid SaaS, how do you manage your code?",
+   "created_at": "2024-05-13T08:39:30Z",
+   "points": 181,
+   "num_comments": 113,
+   "hn_url": "https://news.ycombinator.com/item?id=40341037",
+   "query": "how do you",
+   "comments_downloaded": 113
+  },
+  {
+   "id": "40466920",
+   "title": "Ask HN: What tools do you use for researching new fields?",
+   "created_at": "2024-05-24T14:59:34Z",
+   "points": 5,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=40466920",
+   "query": "what tool do you use",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "40467887",
+   "title": "Ask HN: Is there a React test framework that actually works?",
+   "created_at": "2024-05-24T16:40:32Z",
+   "points": 9,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=40467887",
+   "query": "is there an app",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "40493176",
+   "title": "Ask HN: Looking for a simple note taking tool",
+   "created_at": "2024-05-27T18:17:18Z",
+   "points": 12,
+   "num_comments": 33,
+   "hn_url": "https://news.ycombinator.com/item?id=40493176",
+   "query": "is there a tool",
+   "comments_downloaded": 33
+  },
+  {
+   "id": "40516685",
+   "title": "Ask HN: Are there any movements to create the equivalent of a sitemap for LLM's?",
+   "created_at": "2024-05-29T20:32:49Z",
+   "points": 10,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=40516685",
+   "query": "is there a tool",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "40525222",
+   "title": "Ask HN: Is there a tech term for disparate apps overlapping use cases over time?",
+   "created_at": "2024-05-30T15:59:28Z",
+   "points": 6,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=40525222",
+   "query": "is there an app",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "40682632",
+   "title": "Ask HN: How do you find developers for open source bug bounties?",
+   "created_at": "2024-06-14T17:11:46Z",
+   "points": 64,
+   "num_comments": 67,
+   "hn_url": "https://news.ycombinator.com/item?id=40682632",
+   "query": "how do you",
+   "comments_downloaded": 67
+  },
+  {
+   "id": "40714215",
+   "title": "Ask HN: How do you find a mentor in software engineering and in life?",
+   "created_at": "2024-06-18T05:03:55Z",
+   "points": 55,
+   "num_comments": 22,
+   "hn_url": "https://news.ycombinator.com/item?id=40714215",
+   "query": "how do you",
+   "comments_downloaded": 22
+  },
+  {
+   "id": "40800423",
+   "title": "Ask HN: Is there a better VoIP provider than Skype?",
+   "created_at": "2024-06-26T14:20:58Z",
+   "points": 9,
+   "num_comments": 11,
+   "hn_url": "https://news.ycombinator.com/item?id=40800423",
+   "query": "is there an app",
+   "comments_downloaded": 11
+  },
+  {
+   "id": "40836773",
+   "title": "Ask HN: Any tool to generate AI images with exact same uploaded product images?",
+   "created_at": "2024-06-30T12:23:27Z",
+   "points": 20,
+   "num_comments": 23,
+   "hn_url": "https://news.ycombinator.com/item?id=40836773",
+   "query": "is there a tool",
+   "comments_downloaded": 23
+  },
+  {
+   "id": "40878765",
+   "title": "Ask HN: Is there any software you only made for your own use but nobody else?",
+   "created_at": "2024-07-04T23:10:10Z",
+   "points": 246,
+   "num_comments": 468,
+   "hn_url": "https://news.ycombinator.com/item?id=40878765",
+   "query": "is there software",
+   "comments_downloaded": 463
+  },
+  {
+   "id": "40939333",
+   "title": "Ask HN: Is there a way to get notified when my cat has seizures?",
+   "created_at": "2024-07-11T18:34:57Z",
+   "points": 71,
+   "num_comments": 73,
+   "hn_url": "https://news.ycombinator.com/item?id=40939333",
+   "query": "is there an app",
+   "comments_downloaded": 73
+  },
+  {
+   "id": "40940158",
+   "title": "Ask HN: Trouble learning things I view as solutions looking for a problem",
+   "created_at": "2024-07-11T20:07:40Z",
+   "points": 52,
+   "num_comments": 51,
+   "hn_url": "https://news.ycombinator.com/item?id=40940158",
+   "query": "is there a tool",
+   "comments_downloaded": 51
+  },
+  {
+   "id": "40946613",
+   "title": "Ask HN: Any tools to do generic WiFi imaging?",
+   "created_at": "2024-07-12T15:43:44Z",
+   "points": 97,
+   "num_comments": 68,
+   "hn_url": "https://news.ycombinator.com/item?id=40946613",
+   "query": "is there a tool",
+   "comments_downloaded": 68
+  },
+  {
+   "id": "40952294",
+   "title": "Ask HN: Any way to borrow compute from Apple M1",
+   "created_at": "2024-07-13T06:44:23Z",
+   "points": 49,
+   "num_comments": 45,
+   "hn_url": "https://news.ycombinator.com/item?id=40952294",
+   "query": "is there an app",
+   "comments_downloaded": 45
+  },
+  {
+   "id": "41040729",
+   "title": "Ask HN: Looking for a cheap hosted BI tool like Metabase for my startup",
+   "created_at": "2024-07-22T23:01:58Z",
+   "points": 11,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=41040729",
+   "query": "looking for a tool",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "41052110",
+   "title": "Ask HN: What tools do you recommend for working on Windows?",
+   "created_at": "2024-07-23T23:29:04Z",
+   "points": 16,
+   "num_comments": 29,
+   "hn_url": "https://news.ycombinator.com/item?id=41052110",
+   "query": "what tool do you use",
+   "comments_downloaded": 29
+  },
+  {
+   "id": "41152824",
+   "title": "Ask HN: Does anyone know of an open source Farming robot, project, or effort?",
+   "created_at": "2024-08-04T11:30:21Z",
+   "points": 16,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=41152824",
+   "query": "is there software",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "41189082",
+   "title": "Ask HN: What tools do you use to monitor mobile app UX bugs, issues or crashes?",
+   "created_at": "2024-08-08T07:45:03Z",
+   "points": 6,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=41189082",
+   "query": "what tool do you use",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "41487350",
+   "title": "Ask HN: How do you sync ongoing browser work between desktop and laptop?",
+   "created_at": "2024-09-09T11:10:43Z",
+   "points": 42,
+   "num_comments": 62,
+   "hn_url": "https://news.ycombinator.com/item?id=41487350",
+   "query": "how do you",
+   "comments_downloaded": 62
+  },
+  {
+   "id": "41601321",
+   "title": "Ask HN: One-man SaaS, how do you attract customers?",
+   "created_at": "2024-09-20T12:27:27Z",
+   "points": 47,
+   "num_comments": 45,
+   "hn_url": "https://news.ycombinator.com/item?id=41601321",
+   "query": "how do you",
+   "comments_downloaded": 45
+  },
+  {
+   "id": "41638263",
+   "title": "Is there a \"distrowatch\" like site for programming languages?",
+   "created_at": "2024-09-24T16:31:14Z",
+   "points": 10,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=41638263",
+   "query": "is there anything",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "41825473",
+   "title": "Hammer Looking for a Nail, AI Drone Looking for Business Case",
+   "created_at": "2024-10-13T05:41:34Z",
+   "points": 47,
+   "num_comments": 51,
+   "hn_url": "https://news.ycombinator.com/item?id=41825473",
+   "query": "looking for an app",
+   "comments_downloaded": 51
+  },
+  {
+   "id": "42001650",
+   "title": "Ask HN: Is there a good hackable smart watch?",
+   "created_at": "2024-10-30T23:19:56Z",
+   "points": 7,
+   "num_comments": 13,
+   "hn_url": "https://news.ycombinator.com/item?id=42001650",
+   "query": "is there an app",
+   "comments_downloaded": 13
+  },
+  {
+   "id": "42169773",
+   "title": "Ask HN: Is there an HN-like forum for woodworking?",
+   "created_at": "2024-11-18T04:45:19Z",
+   "points": 5,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=42169773",
+   "query": "is there software",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "42426726",
+   "title": "Can anyone help me make an e-ink laptop? Is there a rake on my lawn?",
+   "created_at": "2024-12-15T23:31:38Z",
+   "points": 11,
+   "num_comments": 21,
+   "hn_url": "https://news.ycombinator.com/item?id=42426726",
+   "query": "is there an app",
+   "comments_downloaded": 21
+  },
+  {
+   "id": "42548539",
+   "title": "Ask HN: Is there an anti-EU sentiment from big tech?",
+   "created_at": "2024-12-30T11:59:24Z",
+   "points": 24,
+   "num_comments": 41,
+   "hn_url": "https://news.ycombinator.com/item?id=42548539",
+   "query": "is there an app",
+   "comments_downloaded": 41
+  },
+  {
+   "id": "42648597",
+   "title": "Ask HN: How do you backup your Android?",
+   "created_at": "2025-01-09T18:43:07Z",
+   "points": 139,
+   "num_comments": 220,
+   "hn_url": "https://news.ycombinator.com/item?id=42648597",
+   "query": "how do you",
+   "comments_downloaded": 220
+  },
+  {
+   "id": "42811802",
+   "title": "Is there a way to get a .com domain, or this is it?",
+   "created_at": "2025-01-24T09:55:56Z",
+   "points": 6,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=42811802",
+   "query": "is there a tool",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "43102510",
+   "title": "Ask HN: Is there any encrypted portfolio tracker available?",
+   "created_at": "2025-02-19T14:30:56Z",
+   "points": 9,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=43102510",
+   "query": "is there a service",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "43209768",
+   "title": "Ask HN: Firefox may be selling our data. Can you recommend an alternative?",
+   "created_at": "2025-02-28T20:08:38Z",
+   "points": 19,
+   "num_comments": 13,
+   "hn_url": "https://news.ycombinator.com/item?id=43209768",
+   "query": "recommend a tool",
+   "comments_downloaded": 13
+  },
+  {
+   "id": "43298663",
+   "title": "Ask HN: How do you handle VAT / Sales Tax accounting as B2C SaaS?",
+   "created_at": "2025-03-08T08:57:10Z",
+   "points": 97,
+   "num_comments": 86,
+   "hn_url": "https://news.ycombinator.com/item?id=43298663",
+   "query": "how do you",
+   "comments_downloaded": 86
+  },
+  {
+   "id": "43520743",
+   "title": "Any tools for a customizable trading dashboard (charts, order flow, news, etc.)?",
+   "created_at": "2025-03-30T02:37:03Z",
+   "points": 5,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=43520743",
+   "query": "is there a tool",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "43667887",
+   "title": "Ask HN: How do you monetize personal code if it's not an \"app\"?",
+   "created_at": "2025-04-12T20:56:48Z",
+   "points": 176,
+   "num_comments": 70,
+   "hn_url": "https://news.ycombinator.com/item?id=43667887",
+   "query": "how do you",
+   "comments_downloaded": 67
+  },
+  {
+   "id": "43684517",
+   "title": "Ask HN: Are there any truly private chat apps?",
+   "created_at": "2025-04-14T18:26:28Z",
+   "points": 6,
+   "num_comments": 14,
+   "hn_url": "https://news.ycombinator.com/item?id=43684517",
+   "query": "is there a service",
+   "comments_downloaded": 13
+  },
+  {
+   "id": "43807742",
+   "title": "Ask HN: How do you manage multiple Git profiles (GitHub, Gitlab, Bitbucket)?",
+   "created_at": "2025-04-26T22:22:39Z",
+   "points": 6,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=43807742",
+   "query": "recommend a tool",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "43914915",
+   "title": "Ask HN: How do you obtain software development contracts?",
+   "created_at": "2025-05-07T12:44:34Z",
+   "points": 31,
+   "num_comments": 17,
+   "hn_url": "https://news.ycombinator.com/item?id=43914915",
+   "query": "how do you",
+   "comments_downloaded": 17
+  },
+  {
+   "id": "43942956",
+   "title": "Ask HN: Is there a service that offers Common Crawl as an API?",
+   "created_at": "2025-05-10T03:15:42Z",
+   "points": 7,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=43942956",
+   "query": "is there a service",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "44050863",
+   "title": "Ask HN: How do you keep on top of all of the AI tools and new changes?",
+   "created_at": "2025-05-21T12:41:46Z",
+   "points": 9,
+   "num_comments": 13,
+   "hn_url": "https://news.ycombinator.com/item?id=44050863",
+   "query": "is there a tool",
+   "comments_downloaded": 13
+  },
+  {
+   "id": "44111751",
+   "title": "Google is quietly burying the internet – is there a solution?",
+   "created_at": "2025-05-28T00:17:35Z",
+   "points": 11,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=44111751",
+   "query": "is there a tool",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "44202110",
+   "title": "Ask HN: Any good tools for viewing congressional bills?",
+   "created_at": "2025-06-06T15:54:52Z",
+   "points": 114,
+   "num_comments": 42,
+   "hn_url": "https://news.ycombinator.com/item?id=44202110",
+   "query": "any tool for",
+   "comments_downloaded": 42
+  },
+  {
+   "id": "44219898",
+   "title": "Ask HN: Is there any demand for Personal CV/Resume website?",
+   "created_at": "2025-06-08T22:35:16Z",
+   "points": 8,
+   "num_comments": 19,
+   "hn_url": "https://news.ycombinator.com/item?id=44219898",
+   "query": "is there an app",
+   "comments_downloaded": 19
+  },
+  {
+   "id": "44271182",
+   "title": "Is there a Linux laptop that has >=15\" and >800 nits screen?",
+   "created_at": "2025-06-13T18:55:04Z",
+   "points": 5,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=44271182",
+   "query": "does something exist",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "44281873",
+   "title": "Ask HN: Is there an AI bot that works like a literate programming build step",
+   "created_at": "2025-06-15T12:05:44Z",
+   "points": 18,
+   "num_comments": 13,
+   "hn_url": "https://news.ycombinator.com/item?id=44281873",
+   "query": "is there an app",
+   "comments_downloaded": 13
+  },
+  {
+   "id": "44307466",
+   "title": "Is there a way to run an LLM as a better local search engine?",
+   "created_at": "2025-06-18T07:29:49Z",
+   "points": 9,
+   "num_comments": 19,
+   "hn_url": "https://news.ycombinator.com/item?id=44307466",
+   "query": "is there software",
+   "comments_downloaded": 19
+  },
+  {
+   "id": "44319903",
+   "title": "Ask HN: Is There a MacBook Equivalent?",
+   "created_at": "2025-06-19T16:02:09Z",
+   "points": 13,
+   "num_comments": 37,
+   "hn_url": "https://news.ycombinator.com/item?id=44319903",
+   "query": "is there an app",
+   "comments_downloaded": 37
+  },
+  {
+   "id": "44407429",
+   "title": "How do you handle production webhook delivery reliability in your apps?",
+   "created_at": "2025-06-28T19:26:25Z",
+   "points": 7,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=44407429",
+   "query": "looking for a tool",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "44510127",
+   "title": "Ask HN: How do you \"replay\" a costly user mistake in your internal software?",
+   "created_at": "2025-07-09T13:58:58Z",
+   "points": 5,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=44510127",
+   "query": "what tool do you use",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "44695259",
+   "title": "Ask HN: How do you name your product? Are there any standardized ways?",
+   "created_at": "2025-07-26T16:30:55Z",
+   "points": 6,
+   "num_comments": 12,
+   "hn_url": "https://news.ycombinator.com/item?id=44695259",
+   "query": "any tool for",
+   "comments_downloaded": 12
+  },
+  {
+   "id": "44719317",
+   "title": "Is there a place on the internet that is appropriate for talking about politics?",
+   "created_at": "2025-07-29T05:18:48Z",
+   "points": 7,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=44719317",
+   "query": "is there software",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "44893785",
+   "title": "Ask HN: Is there an AI that can read code aloud and explain it?",
+   "created_at": "2025-08-13T21:00:49Z",
+   "points": 7,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=44893785",
+   "query": "is there a tool",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "45031111",
+   "title": "Ask HN: Is there a temp phone number like temp email?",
+   "created_at": "2025-08-26T19:29:09Z",
+   "points": 10,
+   "num_comments": 14,
+   "hn_url": "https://news.ycombinator.com/item?id=45031111",
+   "query": "is there a service",
+   "comments_downloaded": 14
+  },
+  {
+   "id": "46734194",
+   "title": "Ask HN: Where is society heading, is there a plan for a jobless future?",
+   "created_at": "2026-01-23T16:11:36Z",
+   "points": 17,
+   "num_comments": 35,
+   "hn_url": "https://news.ycombinator.com/item?id=46734194",
+   "query": "is there software",
+   "comments_downloaded": 35
+  },
+  {
+   "id": "46846055",
+   "title": "Ask HN: How do you handle auth when AI dev agents spin up short-lived apps?",
+   "created_at": "2026-02-01T13:25:08Z",
+   "points": 5,
+   "num_comments": 9,
+   "hn_url": "https://news.ycombinator.com/item?id=46846055",
+   "query": "looking for an app",
+   "comments_downloaded": 9
+  },
+  {
+   "id": "46885728",
+   "title": "How do you manage context/memory across multiple AI tools?",
+   "created_at": "2026-02-04T13:45:12Z",
+   "points": 7,
+   "num_comments": 5,
+   "hn_url": "https://news.ycombinator.com/item?id=46885728",
+   "query": "what tool do you use",
+   "comments_downloaded": 5
+  },
+  {
+   "id": "46995608",
+   "title": "Ask HN: What would you recommend a vibe coder learn about how all this works?",
+   "created_at": "2026-02-12T21:38:59Z",
+   "points": 34,
+   "num_comments": 41,
+   "hn_url": "https://news.ycombinator.com/item?id=46995608",
+   "query": "recommend a tool",
+   "comments_downloaded": 41
+  },
+  {
+   "id": "47127532",
+   "title": "Ask HN: How do you know if AI agents will choose your tool?",
+   "created_at": "2026-02-23T19:32:01Z",
+   "points": 38,
+   "num_comments": 19,
+   "hn_url": "https://news.ycombinator.com/item?id=47127532",
+   "query": "how do you",
+   "comments_downloaded": 11
+  },
+  {
+   "id": "47436526",
+   "title": "Ask HN: Have you cancelled any software subscriptions because AI replaced them?",
+   "created_at": "2026-03-19T08:43:50Z",
+   "points": 10,
+   "num_comments": 14,
+   "hn_url": "https://news.ycombinator.com/item?id=47436526",
+   "query": "any tool for",
+   "comments_downloaded": 14
+  },
+  {
+   "id": "47609117",
+   "title": "Ask HN: Is there any interest in a native Qt/C++ Discord client?",
+   "created_at": "2026-04-02T01:53:11Z",
+   "points": 36,
+   "num_comments": 37,
+   "hn_url": "https://news.ycombinator.com/item?id=47609117",
+   "query": "is there an app",
+   "comments_downloaded": 37
+  },
+  {
+   "id": "48026211",
+   "title": "Ask HN: Is there a term for feeling sad about forced AI adoption?",
+   "created_at": "2026-05-05T18:04:36Z",
+   "points": 25,
+   "num_comments": 41,
+   "hn_url": "https://news.ycombinator.com/item?id=48026211",
+   "query": "is there a tool",
+   "comments_downloaded": 41
+  },
+  {
+   "id": "48583441",
+   "title": "Ask HN: Looking for a CI/CD project for my local lab",
+   "created_at": "2026-06-18T10:41:44Z",
+   "points": 5,
+   "num_comments": 10,
+   "hn_url": "https://news.ycombinator.com/item?id=48583441",
+   "query": "looking for software",
+   "comments_downloaded": 10
+  },
+  {
+   "id": "48587539",
+   "title": "Ask HN: Is there a way to stop the animated Google Doodles?",
+   "created_at": "2026-06-18T16:06:49Z",
+   "points": 12,
+   "num_comments": 14,
+   "hn_url": "https://news.ycombinator.com/item?id=48587539",
+   "query": "is there an app",
+   "comments_downloaded": 14
+  },
+  {
+   "id": "49022990",
+   "title": "Ask HN: Is there a website that tracks excessive writes to SSDs in OS/app betas?",
+   "created_at": "2026-07-23T15:16:31Z",
+   "points": 31,
+   "num_comments": 30,
+   "hn_url": "https://news.ycombinator.com/item?id=49022990",
+   "query": "is there software",
+   "comments_downloaded": 28
+  },
+  {
+   "id": "49039128",
+   "title": "Ask HN: How do I find startups that are looking for a dev? How to approach them?",
+   "created_at": "2026-07-24T17:39:09Z",
+   "points": 6,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=49039128",
+   "query": "looking for an app",
+   "comments_downloaded": 8
+  },
+  {
+   "id": "8893728",
+   "title": "Ask HN: Are any of you blind programmers and what tools do you use?",
+   "created_at": "2015-01-15T17:12:24Z",
+   "points": 11,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=8893728",
+   "query": "what tool do you use",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "8949852",
+   "title": "Ask HN: Is there any simple, clean and well-designed forum solution out there?",
+   "created_at": "2015-01-26T21:58:53Z",
+   "points": 7,
+   "num_comments": 14,
+   "hn_url": "https://news.ycombinator.com/item?id=8949852",
+   "query": "is there software",
+   "comments_downloaded": 14
+  },
+  {
+   "id": "9198514",
+   "title": "Ask HN: What tools do you use for development?",
+   "created_at": "2015-03-13T17:46:51Z",
+   "points": 9,
+   "num_comments": 19,
+   "hn_url": "https://news.ycombinator.com/item?id=9198514",
+   "query": "what tool do you use",
+   "comments_downloaded": 19
+  },
+  {
+   "id": "9244736",
+   "title": "Ask HN: Is there a future in .NET? Should I invest in learning it?",
+   "created_at": "2015-03-21T23:37:12Z",
+   "points": 11,
+   "num_comments": 23,
+   "hn_url": "https://news.ycombinator.com/item?id=9244736",
+   "query": "is there software",
+   "comments_downloaded": 23
+  },
+  {
+   "id": "9248959",
+   "title": "Ask HN: I'm looking for a Spotify software engineer to speak to",
+   "created_at": "2015-03-23T01:12:01Z",
+   "points": 84,
+   "num_comments": 57,
+   "hn_url": "https://news.ycombinator.com/item?id=9248959",
+   "query": "looking for an app",
+   "comments_downloaded": 57
+  },
+  {
+   "id": "9278791",
+   "title": "Ask HN: Are there any tools you don't use/support for ethical reasons?",
+   "created_at": "2015-03-27T20:30:31Z",
+   "points": 10,
+   "num_comments": 14,
+   "hn_url": "https://news.ycombinator.com/item?id=9278791",
+   "query": "any tool for",
+   "comments_downloaded": 14
+  },
+  {
+   "id": "9374306",
+   "title": "Ask HN: I can barely read, is there a way I could still learn to program?",
+   "created_at": "2015-04-14T14:06:54Z",
+   "points": 17,
+   "num_comments": 18,
+   "hn_url": "https://news.ycombinator.com/item?id=9374306",
+   "query": "is there software",
+   "comments_downloaded": 18
+  },
+  {
+   "id": "9390972",
+   "title": "Ask HN: Are there any SaaS services that access your database directly?",
+   "created_at": "2015-04-16T21:58:13Z",
+   "points": 5,
+   "num_comments": 7,
+   "hn_url": "https://news.ycombinator.com/item?id=9390972",
+   "query": "is there a service",
+   "comments_downloaded": 7
+  },
+  {
+   "id": "9401973",
+   "title": "Ask HN: Are there any NLP projects that use context?",
+   "created_at": "2015-04-19T03:43:24Z",
+   "points": 5,
+   "num_comments": 4,
+   "hn_url": "https://news.ycombinator.com/item?id=9401973",
+   "query": "is there a library",
+   "comments_downloaded": 4
+  },
+  {
+   "id": "9444470",
+   "title": "Ask HN: How do you log application events?",
+   "created_at": "2015-04-27T05:11:21Z",
+   "points": 221,
+   "num_comments": 109,
+   "hn_url": "https://news.ycombinator.com/item?id=9444470",
+   "query": "how do you",
+   "comments_downloaded": 109
+  },
+  {
+   "id": "9573429",
+   "title": "Ask HN: I'm looking for a mentor",
+   "created_at": "2015-05-19T21:56:12Z",
+   "points": 5,
+   "num_comments": 3,
+   "hn_url": "https://news.ycombinator.com/item?id=9573429",
+   "query": "looking for software",
+   "comments_downloaded": 3
+  },
+  {
+   "id": "9664715",
+   "title": "Ask HN: Looking for an overview of web application development",
+   "created_at": "2015-06-05T10:16:50Z",
+   "points": 5,
+   "num_comments": 6,
+   "hn_url": "https://news.ycombinator.com/item?id=9664715",
+   "query": "looking for an app",
+   "comments_downloaded": 6
+  },
+  {
+   "id": "9667247",
+   "title": "Ask HN: What tools do you use to build HTML emails?",
+   "created_at": "2015-06-05T18:46:34Z",
+   "points": 26,
+   "num_comments": 22,
+   "hn_url": "https://news.ycombinator.com/item?id=9667247",
+   "query": "is there a tool",
+   "comments_downloaded": 22
+  },
+  {
+   "id": "9873125",
+   "title": "Ask HN: How do you deal with social media pressure on your GitHub project?",
+   "created_at": "2015-07-12T11:10:24Z",
+   "points": 155,
+   "num_comments": 75,
+   "hn_url": "https://news.ycombinator.com/item?id=9873125",
+   "query": "what tool do you use",
+   "comments_downloaded": 75
+  },
+  {
+   "id": "9875639",
+   "title": "Ask HN: What tools do sales reps use?",
+   "created_at": "2015-07-13T00:21:25Z",
+   "points": 9,
+   "num_comments": 8,
+   "hn_url": "https://news.ycombinator.com/item?id=9875639",
+   "query": "what tool do you use",
+   "comments_downloaded": 8
+  }
+ ]
+}

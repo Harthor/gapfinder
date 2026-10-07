@@ -1,0 +1,882 @@
+{
+ "ask-31414459": {
+  "reformulations": [
+   "I want a database where every change is signed by a user's keypair and synced peer-to-peer, so there's no server and disagreements get sorted out by people instead of a consensus protocol.",
+   "A decentralized append-only datastore: operations are cryptographically signed by public-key identities, linked into a Merkle DAG, and replicated between peers with social rather than algorithmic conflict resolution.",
+   "Implementation of a content-addressed hash-linked operation log with per-agent signatures, causal ordering via DAG parents, and merge/forking semantics left to application and user policy instead of Byzantine consensus.",
+   "Local-first peer-to-peer database or event-sourced replication layer built on signed immutable logs and CRDT-style merging without a blockchain."
+  ],
+  "keyword_queries": [
+   "append-only Merkle DAG database",
+   "peer-to-peer signed event log",
+   "local-first replicated database without consensus"
+  ],
+  "query_core": "A decentralized, append‑only database where operations are signed by public‑key agents, form a Merkle‑DAG, and conflict resolution is handled socially rather than by complex consensus algorithms.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01699,
+  "usage": {
+   "input_tokens": 983,
+   "output_tokens": 483
+  }
+ },
+ "ask-18508284": {
+  "reformulations": [
+   "I'm tired of redrawing architecture diagrams in slide decks every time the code changes — is there something that generates and updates them from the actual codebase?",
+   "A platform for architects to define system architecture once as a model and publish always-current, layered diagrams and documentation alongside the code.",
+   "Diagrams-as-code tooling with a textual architecture description language, version-controlled in the repo, that renders views and can validate the model against real code dependencies in CI.",
+   "Architecture modeling and living documentation tools that replace static drawing editors with code-driven, automatically synchronized diagrams."
+  ],
+  "keyword_queries": [
+   "diagrams as code architecture",
+   "architecture documentation generator",
+   "software architecture modeling DSL"
+  ],
+  "query_core": "A tool or platform that lets software architects model, document, and keep architecture diagrams in sync with code, rather than manually drawing static Visio/PowerPoint artifacts.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01498,
+  "usage": {
+   "input_tokens": 976,
+   "output_tokens": 404
+  }
+ },
+ "ask-33113283": {
+  "reformulations": [
+   "I run a small self-hosted blog and need a short, ready-made privacy notice I can adapt to explain what I do with commenters' names, emails and IP addresses.",
+   "A free, plain-language privacy policy template for personal websites and blogs that covers GDPR disclosure requirements like data collected, legal basis, retention and user rights.",
+   "Markdown boilerplate privacy statement for a static or self-hosted blog documenting processing of comment form fields, server access logs and IP addresses under data protection law.",
+   "Open-source legal document templates and generators for website data protection compliance notices."
+  ],
+  "keyword_queries": [
+   "privacy policy template",
+   "GDPR privacy notice boilerplate",
+   "blog privacy statement markdown"
+  ],
+  "query_core": "A concise GDPR privacy statement template that small self‑hosted blog owners can use to disclose how they handle personal data such as comment names and IP addresses.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01285,
+  "usage": {
+   "input_tokens": 970,
+   "output_tokens": 320
+  }
+ },
+ "ask-32506168": {
+  "reformulations": [
+   "I want a place to save links I find, tag them, and have them available on every browser and phone I use, ideally with the option to share collections with friends.",
+   "A modern social bookmarking service with tagging, cross-browser sync, native mobile and desktop apps, and public or shared link collections.",
+   "Self-hostable bookmark manager with a REST API, browser extension for saving URLs, tag-based organization, full-text search, and sync clients for iOS, Android, and desktop.",
+   "Link saving and read-later tools: cross-device bookmark sync and tagging platforms, including social bookmarking alternatives."
+  ],
+  "keyword_queries": [
+   "social bookmarking service",
+   "self-hosted bookmark manager",
+   "bookmark sync tags"
+  ],
+  "query_core": "Looking for a modern bookmarking service that lets me save, tag, and sync URLs across browsers, with dedicated mobile/desktop apps and optional social sharing, as a spiritual successor to del.icio.us.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01513,
+  "usage": {
+   "input_tokens": 991,
+   "output_tokens": 407
+  }
+ },
+ "ask-18432459": {
+  "reformulations": [
+   "I want something that watches my sent emails and automatically nudges the person with a text message, email, or phone call if they haven't written back in a few days.",
+   "An automated follow-up service that tracks outgoing messages and sends escalating reminders by SMS, email, or voice call until the recipient responds.",
+   "How to detect that an email thread has no reply after a configurable deadline and trigger a reminder through an SMS or telephony API to the recipient.",
+   "Tools for automated reply tracking and multi-channel reminder escalation for unanswered correspondence."
+  ],
+  "keyword_queries": [
+   "email follow-up reminder",
+   "no reply nudge",
+   "automatic SMS reminder unanswered"
+  ],
+  "query_core": "A service that automatically sends a reminder via SMS, email, or phone call to the original email recipient if they have not replied within a specified time window.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.012415,
+  "usage": {
+   "input_tokens": 963,
+   "output_tokens": 304
+  }
+ },
+ "ask-9444470": {
+  "reformulations": [
+   "My app produces tons of log lines and I need a way to search through them when debugging without the disk filling up forever.",
+   "A log management backend that ingests structured application events, makes them instantly searchable, and automatically compresses, rolls over, or expires old data.",
+   "Self-hosted log aggregation service with indexed queries over structured event records plus configurable retention policies, compression and cold-storage archiving to object storage.",
+   "Observability tooling for storing, querying and lifecycle-managing application logs at scale."
+  ],
+  "keyword_queries": [
+   "log management retention",
+   "searchable structured logs",
+   "compressed log storage"
+  ],
+  "query_core": "Looking for a logging system that stores application events in a way that they can be queried and debugged easily, while keeping the overall size of the logs manageable through retention, compression, or archiving.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.012805,
+  "usage": {
+   "input_tokens": 976,
+   "output_tokens": 317
+  }
+ },
+ "ask-40096424": {
+  "reformulations": [
+   "I want something that reads all my email and chat history, learns how I write, and then drafts replies for me and handles follow-up tasks across my messaging apps automatically.",
+   "An AI personal assistant that connects to your inbox and messaging accounts, builds a private knowledge base about you, writes replies in your voice, and takes actions in connected apps like chat, SMS and task managers.",
+   "Pipeline that syncs messages from email, chat and SMS APIs into a vector store, uses retrieval-augmented LLM prompts to generate reply drafts, and triggers function-calling actions via webhooks, with incremental re-indexing of new messages.",
+   "LLM-powered unified communications agent with memory that automates correspondence and cross-app workflows."
+  ],
+  "keyword_queries": [
+   "AI email autoresponder agent",
+   "personal assistant LLM memory",
+   "unified inbox GPT integrations"
+  ],
+  "query_core": "A tool that can ingest all of a user's emails and other communication channels, build a personal model with GPT‑4, and automatically draft replies and perform actions across integrations like Slack, Messenger, Twilio, Todoist, etc., continuously updating the knowledge base with new messages.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01373,
+  "usage": {
+   "input_tokens": 1011,
+   "output_tokens": 347
+  }
+ },
+ "ask-26901352": {
+  "reformulations": [
+   "I want my app to get pushed only the rows that changed in the result of a complex SQL query with joins, instead of polling and re-running the query every time a table is updated.",
+   "A live query engine that keeps the output of any SQL query continuously up to date and streams incremental diffs to subscribers in real time.",
+   "Implement incremental view maintenance over change data capture streams so that joins, aggregates and recursive/hierarchical queries produce row-level deltas rather than full recomputation.",
+   "Streaming or reactive database query layer providing continuously maintained materialized views and real-time subscriptions."
+  ],
+  "keyword_queries": [
+   "incremental view maintenance",
+   "reactive SQL subscriptions",
+   "streaming materialized views"
+  ],
+  "query_core": "A system that can deliver real‑time incremental updates for the result of an arbitrary SQL query (including joins and hierarchical queries) without re‑executing the whole query each time the underlying tables change.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01524,
+  "usage": {
+   "input_tokens": 983,
+   "output_tokens": 413
+  }
+ },
+ "ask-22591543": {
+  "reformulations": [
+   "We want to host our own video meeting server in-house so staff can join calls from a browser, share screens, and not melt their laptops' CPUs.",
+   "An open-source, self-hosted video conferencing platform with browser-based clients, screen sharing, and efficient performance for small and medium group meetings.",
+   "A WebRTC SFU-based conferencing server deployable on our own infrastructure, serving rooms over plain browsers with screen capture and low CPU overhead per participant.",
+   "On-premise real-time communication and group video calling software for private deployment."
+  ],
+  "keyword_queries": [
+   "self-hosted video conferencing",
+   "WebRTC SFU server",
+   "browser video meetings screen sharing"
+  ],
+  "query_core": "Looking for a self‑hosted video‑conferencing solution that can run on our own servers for small to medium sized meetings, ideally with browser‑based clients, screen sharing and low CPU usage.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01262,
+  "usage": {
+   "input_tokens": 984,
+   "output_tokens": 308
+  }
+ },
+ "ask-15823597": {
+  "reformulations": [
+   "I want a fitness wristband with GPS, heart rate and step counting that lets me pull my raw workout data straight off the device instead of through a vendor's cloud account.",
+   "An open smartwatch with built-in GPS, optical heart rate sensor and pedometer, offering direct local data export in standard formats with no account or cloud sync required.",
+   "Open-source wearable firmware and companion tooling that reads accelerometer, heart rate and GPS logs off a watch over Bluetooth or USB and writes them to local files.",
+   "Privacy-respecting, self-hosted activity tracking hardware and software where the user owns and exports the sensor data."
+  ],
+  "keyword_queries": [
+   "open source smartwatch firmware",
+   "fitness tracker data export",
+   "open hardware wearable GPS heart rate"
+  ],
+  "query_core": "A fitness wristband or watch that includes GPS, heart‑rate monitoring and a pedometer, and that lets the user export the raw sensor data without using proprietary cloud services or software.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01398,
+  "usage": {
+   "input_tokens": 981,
+   "output_tokens": 363
+  }
+ },
+ "ask-31083131": {
+  "reformulations": [
+   "Our small team needs a simple way to write down requirements and show which tests cover each one, without paying for a heavy enterprise suite.",
+   "A lightweight requirements management tool that captures specifications and automatically links them to test cases, generating a traceability matrix report.",
+   "Plain-text or YAML/Markdown requirements stored in git with unique IDs, parsed and cross-linked to test results from the test runner to produce coverage traceability.",
+   "Open-source or low-cost requirements-as-code and verification traceability tooling for regulated or quality-focused software projects."
+  ],
+  "keyword_queries": [
+   "requirements traceability matrix",
+   "requirements management open source",
+   "requirements as code tests"
+  ],
+  "query_core": "A lightweight way to capture and trace software requirements to tests for a small team, preferably using an open‑source or low‑cost tool.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01251,
+  "usage": {
+   "input_tokens": 962,
+   "output_tokens": 308
+  }
+ },
+ "ask-13488795": {
+  "reformulations": [
+   "I'm an investigative journalist with piles of leaked documents, spreadsheets and emails and I need a tool to pull out people and companies, connect them, and see who is linked to whom over time.",
+   "An investigation platform for newsrooms and human-rights researchers that ingests messy documents and datasets, resolves entities, and renders interactive network graphs and timelines for link analysis.",
+   "Self-hostable system that runs document ingestion and OCR, extracts and cross-references entities into a graph database, performs entity resolution across datasets, and exposes a link-analysis UI with timeline and map views.",
+   "Open-source intelligence-analysis and link-analysis software for investigative case management and relationship mapping across heterogeneous data sources."
+  ],
+  "keyword_queries": [
+   "investigative link analysis platform",
+   "entity resolution graph investigation",
+   "OSINT document network visualization"
+  ],
+  "query_core": "A platform that lets journalists or activists ingest unstructured data, link entities, visualise networks and timelines, and perform the kind of link‑analysis and intelligence‑analyst style investigations that Palantir provides.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.016325,
+  "usage": {
+   "input_tokens": 990,
+   "output_tokens": 455
+  }
+ },
+ "ask-22034101": {
+  "reformulations": [
+   "I want an app I can install on my laptop to tidy up messy spreadsheets, join them together, and reshape columns without uploading my files to any website.",
+   "A native desktop data preparation tool for cleaning, joining, and transforming CSV, JSON, Excel, and SQL database tables entirely offline.",
+   "Cross-platform GUI client that connects to local files and database connections and builds repeatable transformation pipelines (deduplicate, type-cast, pivot, merge) with exportable output.",
+   "Offline ETL and data wrangling software with a graphical interface rather than a browser-based or cloud service."
+  ],
+  "keyword_queries": [
+   "desktop data wrangling",
+   "offline ETL GUI",
+   "CSV cleaning merge app"
+  ],
+  "query_core": "Looking for a desktop application that can clean, merge, and transform various data sources (CSV, JSON, databases, etc.) without relying on a web interface.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.012845,
+  "usage": {
+   "input_tokens": 969,
+   "output_tokens": 320
+  }
+ },
+ "ask-23264850": {
+  "reformulations": [
+   "I need to spin up a simple data-entry app fast, with forms to add and edit records, ideally open source and able to plug into the database and API I already have.",
+   "An open-source low-code builder that auto-generates admin panels and CRUD forms on top of your existing backend, with validation, tables, and record editing out of the box.",
+   "Scaffolding tool that introspects a database schema or REST/GraphQL endpoints and generates typed CRUD forms, list views, and update handlers.",
+   "Category: code generators and internal tool frameworks for rapid CRUD and admin interface development."
+  ],
+  "keyword_queries": [
+   "CRUD admin panel generator",
+   "database schema form scaffolding",
+   "low-code internal tools builder"
+  ],
+  "query_core": "A tool that lets you quickly generate CRUD applications with forms for data entry and updates, preferably open‑source and easy to integrate with existing back‑ends.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.013335,
+  "usage": {
+   "input_tokens": 972,
+   "output_tokens": 339
+  }
+ },
+ "ask-31549303": {
+  "reformulations": [
+   "I want a Linux setup for my stage computer that powers on in a few seconds straight into my plugin host, with nothing else running to steal CPU or pop up windows mid-gig.",
+   "A stripped-down, fast-booting audio operating system image that launches a digital audio workstation or plugin host as its only interface for live performance rigs.",
+   "Minimal Linux build with a real-time kernel and just ALSA/JACK/PipeWire, no desktop environment, where init starts a single audio application as the session leader.",
+   "Single-purpose appliance-style Linux distribution or embedded image dedicated to low-latency audio and kiosk-like launching of one application."
+  ],
+  "keyword_queries": [
+   "minimal linux audio distro",
+   "realtime kernel jack image",
+   "plugin host kiosk boot"
+  ],
+  "query_core": "A minimal, boot‑fast Linux distribution that boots directly into a DAW or plugin host for live music performance, with only the necessary audio stack (ALSA/Jack/PipeWire) and no desktop or extra applications.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.013975,
+  "usage": {
+   "input_tokens": 995,
+   "output_tokens": 360
+  }
+ },
+ "ask-15497837": {
+  "reformulations": [
+   "I want to see exactly when my web app triggers reflows, repaints and layout thrashing in real users' browsers, not just page load times.",
+   "A browser-side performance monitoring library that captures rendering metrics like layout recalculations, paint timings, long tasks and frame drops from your web app.",
+   "Instrument the DOM and use PerformanceObserver to record forced synchronous layout, style recalculation, paint timing and other runtime metrics, then report them to a backend.",
+   "Real user monitoring and profiling tooling for front-end runtime rendering performance."
+  ],
+  "keyword_queries": [
+   "layout thrashing detector",
+   "browser rendering performance metrics",
+   "real user monitoring paint timing"
+  ],
+  "query_core": "Collect detailed client‑side performance data such as reflows, repaints, layout thrashing, paint timings, and other runtime metrics for web applications.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.012915,
+  "usage": {
+   "input_tokens": 968,
+   "output_tokens": 323
+  }
+ },
+ "ask-28484658": {
+  "reformulations": [
+   "I want to write a small desktop app that calls a REST API and runs on Windows, macOS and Linux, but I don't want to ship a whole browser engine just for the UI.",
+   "A lightweight cross-platform GUI toolkit for building native-feeling desktop applications with tiny binaries and real OS integration.",
+   "Cross-platform GUI bindings (GTK on Linux, native widgets on Windows and macOS) suitable for a compiled single-binary client that consumes a web API over HTTP.",
+   "Native desktop UI frameworks and stacks as lightweight alternatives to bundling a web browser runtime in the app."
+  ],
+  "keyword_queries": [
+   "cross-platform native GUI toolkit",
+   "lightweight desktop GUI framework",
+   "native widgets GTK bindings"
+  ],
+  "query_core": "Find a cross‑platform GUI framework or stack that lets me build a desktop app (Windows, Linux/GTK, macOS) that talks to a web API, with a small binary size and native OS integration, as an alternative to Electron.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.0174,
+  "usage": {
+   "input_tokens": 995,
+   "output_tokens": 497
+  }
+ },
+ "ask-32315035": {
+  "reformulations": [
+   "I want my team to leave sticky-note comments pinned to specific buttons or paragraphs on our live website and reply to each other, like document comments but on the page itself.",
+   "A collaborative visual feedback tool that lets clients and teammates click any element on a web page to leave threaded annotations shared across the whole organization.",
+   "A JavaScript widget that anchors comment threads to DOM elements using CSS selectors or XPath and syncs them to a backend so multiple users see the same annotations overlaid on the page.",
+   "Web page annotation and review software for element-level commenting and team collaboration on live sites."
+  ],
+  "keyword_queries": [
+   "web page annotation comments",
+   "DOM element comment widget",
+   "visual feedback website collaboration"
+  ],
+  "query_core": "A commercial product that lets users add comments/annotations directly on specific HTML elements in a web page and share those comments with an organization, similar to Google Docs comments but for the DOM.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.013085,
+  "usage": {
+   "input_tokens": 977,
+   "output_tokens": 328
+  }
+ },
+ "ask-27615562": {
+  "reformulations": [
+   "Our team keeps requirements in spreadsheets and documents and we need a better way to list them item by item, see who changed what over time, and connect each requirement to the work items that implement it.",
+   "A collaborative requirements management application that stores itemised requirements and work breakdown structures with full revision history, diffs between versions, and traceability links between requirements and tasks.",
+   "Git-backed, text-based requirements engineering tooling where each requirement is a versioned record with unique identifiers, change history and cross-references to work breakdown items.",
+   "Software for requirements traceability and project scope decomposition with change tracking, as an alternative to document-based specification management."
+  ],
+  "keyword_queries": [
+   "requirements management traceability",
+   "version controlled requirements",
+   "work breakdown structure tool"
+  ],
+  "query_core": "Looking for a tool that lets a team collect and organize requirements and work‑breakdown structures in an itemised way, with built‑in version control and easy change tracking, and ideally the ability to link requirements to WBS items.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.013175,
+  "usage": {
+   "input_tokens": 990,
+   "output_tokens": 329
+  }
+ },
+ "ask-21991260": {
+  "reformulations": [
+   "I want a place to share a small weekend project idea, get honest feedback, and maybe find someone who wants to build it with me, without it turning into a startup pitch.",
+   "A community site where makers post hobby project ideas, collect comments and votes, and recruit collaborators for fun builds rather than commercial ventures.",
+   "Build a web app with idea submissions, threaded feedback, upvoting, tags and a collaborator matching or 'looking for teammates' flag for non-commercial hobby projects.",
+   "Idea-sharing and collaborator-matchmaking platform for hobbyist developers and makers."
+  ],
+  "keyword_queries": [
+   "side project ideas community",
+   "find collaborators projects",
+   "share idea feedback board"
+  ],
+  "query_core": "A platform where people can post small side‑project ideas, receive feedback, and find collaborators without focusing on business‑oriented pitches.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01294,
+  "usage": {
+   "input_tokens": 963,
+   "output_tokens": 325
+  }
+ },
+ "ask-47127532": {
+  "reformulations": [
+   "I want to test how an AI assistant decides between my API and competing ones, so I can rewrite my docs and schema descriptions to get picked more often",
+   "A platform that simulates autonomous agents browsing a catalog of similar services and reports which one they choose and why, with suggestions to improve your listing",
+   "Harness for benchmarking LLM tool selection: given many similar tool schemas and descriptions, measure selection rates and A/B test description wording to maximize the chance the model calls your endpoint",
+   "Discoverability optimization and evaluation tooling for machine consumers, analogous to search ranking optimization but for agent-driven API and service selection"
+  ],
+  "keyword_queries": [
+   "agent tool selection benchmark",
+   "LLM tool choice eval",
+   "API discoverability for agents"
+  ],
+  "query_core": "The OP wants a way to evaluate or simulate how autonomous AI agents discover and choose a given API or service among many similar options, to optimize documentation, schema, and description for better agent selection.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.014305,
+  "usage": {
+   "input_tokens": 981,
+   "output_tokens": 376
+  }
+ },
+ "ask-23497756": {
+  "reformulations": [
+   "I have hand strain and want to write code by just talking normally, instead of barking out rigid short commands that hurt my throat all day.",
+   "A hands-free coding assistant that turns natural spoken sentences into working source code in your editor, with no memorized command grammar required.",
+   "Speech recognition pipeline that transcribes continuous dictation and converts it into syntactically correct code and editor actions, resolving identifiers, punctuation and navigation from conversational phrasing.",
+   "Voice-driven programming and accessibility tooling for developers with repetitive strain injuries who need to dictate software rather than type it."
+  ],
+  "keyword_queries": [
+   "voice coding dictation",
+   "speech to code editor",
+   "hands-free programming RSI"
+  ],
+  "query_core": "A conversational speech‑to‑code system that lets a programmer dictate code naturally without the abrupt, command‑driven style that strains the throat.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.012985,
+  "usage": {
+   "input_tokens": 967,
+   "output_tokens": 326
+  }
+ },
+ "ask-34920400": {
+  "reformulations": [
+   "I moderate a large discussion forum and need a dashboard that shows new comments and link submissions as they arrive so I can quickly flag, hide, or delete the bad ones.",
+   "A moderation console for a social link-sharing and comment site that streams incoming posts in real time and gives one-click actions for flagging, removing, and banning.",
+   "Scripts and a web UI that poll the Hacker News firehose API for new items, render them in a live feed, and issue authenticated flag/hide/delete requests on behalf of a moderator.",
+   "Content moderation tooling and utilities for user-generated comment threads, including live review queues and bulk actions."
+  ],
+  "keyword_queries": [
+   "hacker news moderation",
+   "comment moderation dashboard",
+   "realtime moderation queue"
+  ],
+  "query_core": "A tool or set of utilities that assist the moderator in reviewing, flagging, deleting, and otherwise managing Hacker News comments and submissions in real time.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.014685,
+  "usage": {
+   "input_tokens": 972,
+   "output_tokens": 393
+  }
+ },
+ "ask-31303358": {
+  "reformulations": [
+   "I want one dashboard that finds every online account I've ever made, shows whether I signed up with a password or a social login, and lets me merge duplicates, rename, or delete them in one click without emailing support.",
+   "A personal identity dashboard that discovers all your accounts across web services, reveals each account's sign-in methods, and gives you self-service controls to consolidate, rename, or close them instantly.",
+   "Tooling that enumerates a user's registered accounts across providers via email scanning or OAuth grant inspection, surfaces linked authentication factors and federated identities per account, and exposes APIs for merging duplicate identities and revoking sign-in methods.",
+   "Self-service account lifecycle and identity consolidation software for end users: account discovery, linked credential inventory, and deletion or merging of duplicate identities."
+  ],
+  "keyword_queries": [
+   "account discovery dashboard",
+   "merge duplicate identities",
+   "self-service account deletion"
+  ],
+  "query_core": "A unified account management tool that can discover all of a user's accounts across various services, display the authentication methods used (password, social login, etc.), and allow merging, renaming, or deleting accounts and sign‑in methods without cumbersome confirmation steps or support tickets.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.014995,
+  "usage": {
+   "input_tokens": 1004,
+   "output_tokens": 399
+  }
+ },
+ "ask-44202110": {
+  "reformulations": [
+   "I want to read a congressional bill without squinting at raw XML or a wall of plain text — something that formats it nicely, lets me jump between sections, and shows what changed between versions.",
+   "A web viewer for legislative documents that turns bill XML or text into clean, typeset pages with a section outline, deep links, and side-by-side version comparison.",
+   "A parser and renderer that transforms legislative markup (bill XML schemas, or plain-text statute dumps) into semantic HTML with a table of contents, anchors for sections and subsections, and a redline diff between two versions of the same bill.",
+   "Tooling for legislative document publishing and visualization: readable rendering, navigation, and amendment or version diffing for laws and bills."
+  ],
+  "keyword_queries": [
+   "bill XML renderer",
+   "legislation viewer diff",
+   "legislative text parser"
+  ],
+  "query_core": "A readable viewer or renderer for congressional bill documents (XML or plain text) that formats the content nicely, supports navigation, and optionally provides diff/comparison features.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.0138,
+  "usage": {
+   "input_tokens": 975,
+   "output_tokens": 357
+  }
+ },
+ "ask-14008085": {
+  "reformulations": [
+   "I want to run my own calendar on my server instead of a big tech calendar, but still get recurring events, invites, reminders and a nice web UI.",
+   "An open-source, self-hostable calendar platform with a modern web interface, modular architecture and APIs so developers can extend and embed scheduling features.",
+   "A self-hosted calendar backend and frontend with CalDAV/iCalendar support, recurrence rules, timezone handling, invitations and a REST API for building custom calendar apps.",
+   "Open-source alternatives to hosted calendar services: calendar servers, scheduling infrastructure and event management toolkits."
+  ],
+  "keyword_queries": [
+   "self-hosted open source calendar",
+   "CalDAV calendar server",
+   "modular calendar API"
+  ],
+  "query_core": "A powerful, developer‑friendly, open‑source calendar system that is modular, extensible and can be self‑hosted, providing the full feature set and usability of Google Calendar.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01326,
+  "usage": {
+   "input_tokens": 977,
+   "output_tokens": 335
+  }
+ },
+ "ask-23859456": {
+  "reformulations": [
+   "I want a chat app where replies branch off into a visual tree so I can follow side discussions without losing the main conversation.",
+   "A messaging client that renders conversations as an expandable, hierarchical thread tree instead of a flat scrolling timeline.",
+   "Implementation of a chat system where each message stores a parent reference, letting the UI draw nested reply branches as a navigable tree.",
+   "Tools and protocols for branching, non-linear threaded discussion interfaces."
+  ],
+  "keyword_queries": [
+   "tree chat threads",
+   "branching conversation UI",
+   "nested threaded messenger"
+  ],
+  "query_core": "A messaging application that can display conversation threads in a hierarchical, tree‑like visual interface.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.011305,
+  "usage": {
+   "input_tokens": 951,
+   "output_tokens": 262
+  }
+ },
+ "ask-29078836": {
+  "reformulations": [
+   "I'm auditing a WordPress plugin that ships only a minified JavaScript bundle with no package.json or source code, and I need to figure out which npm libraries and versions are inside and whether any are vulnerable.",
+   "A tool that scans compiled or minified JavaScript bundles and produces a dependency inventory with known vulnerability matches, no build files or source repository required.",
+   "Detect third-party JavaScript library names and versions from bundled webpack output via signature or fingerprint matching, then cross-reference them against a vulnerability advisory database to generate an SBOM.",
+   "Software composition analysis for shipped front-end artifacts, letting security reviewers audit plugin or extension code without access to the original project manifest."
+  ],
+  "keyword_queries": [
+   "minified bundle dependency detection",
+   "javascript bundle SBOM scanner",
+   "wordpress plugin security audit"
+  ],
+  "query_core": "The OP needs a way to perform security audits of WordPress plugins that include bundled and minified JavaScript built from npm packages, even when no package.json or source repository is available.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.014895,
+  "usage": {
+   "input_tokens": 974,
+   "output_tokens": 401
+  }
+ },
+ "ask-28106113": {
+  "reformulations": [
+   "I keep worrying I'll forget to renew a domain and someone will grab it — I want something that watches my domains' expiration dates and renews or re-registers them automatically.",
+   "A monitoring service that tracks domain expiry and WHOIS status, sends alerts before lapse, and automatically renews or backorders names so they can't be snapped up by squatters.",
+   "A script or daemon that polls WHOIS/RDAP for expiration and redemption-period status and calls registrar APIs to auto-renew or place drop-catch registration requests.",
+   "Tooling for domain portfolio lifecycle management: expiration tracking, renewal automation, and drop catching to protect ownership."
+  ],
+  "keyword_queries": [
+   "domain expiration monitor",
+   "domain auto renew registrar",
+   "expiring domain drop catcher"
+  ],
+  "query_core": "A service or tool that monitors expiring domains and automatically registers or renews them (or otherwise prevents domain squatting) so that owners don’t lose their domains to squatters.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01368,
+  "usage": {
+   "input_tokens": 976,
+   "output_tokens": 352
+  }
+ },
+ "ask-24395628": {
+  "reformulations": [
+   "I want to get my DNA tested and build my family tree without the company keeping or selling my genetic information",
+   "A consumer genetic testing and ancestry service with a strict no-retention, no-resale policy where you control and can delete your raw genome data",
+   "Software for locally analyzing raw genotype files and computing relative matches with encrypted or client-side processing so genomic data never leaves the user's control",
+   "Privacy-preserving genomics and genealogy tooling, including self-hosted family tree software and consent-based genetic data management"
+  ],
+  "keyword_queries": [
+   "self-hosted family tree",
+   "genome privacy analysis",
+   "raw DNA genealogy"
+  ],
+  "query_core": "A privacy‑focused DNA testing and genealogy service that lets users build family trees without risking their genetic data being resold or retained.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01566,
+  "usage": {
+   "input_tokens": 962,
+   "output_tokens": 434
+  }
+ },
+ "ask-30209366": {
+  "reformulations": [
+   "How can I actually measure, in milliseconds, how long my Linux desktop takes to respond to a click or keypress and how long processes wait before the scheduler runs them?",
+   "A benchmarking utility that reports numeric scores for desktop interactivity on Linux, including wake-up-to-run delays, frame latency and input-to-display response time.",
+   "Instrument the kernel scheduler with tracepoints or eBPF to log the time between a task becoming runnable and being scheduled on a CPU, and correlate it with end-to-end input event handling latency.",
+   "Latency and responsiveness benchmarking tools for operating systems and interactive user interfaces."
+  ],
+  "keyword_queries": [
+   "scheduler latency benchmark",
+   "runqueue latency ebpf",
+   "input to display latency"
+  ],
+  "query_core": "A tool that can measure and report numeric metrics of Linux scheduling latency and overall desktop responsiveness (e.g., time from a process being marked runnable to actual execution, input‑to‑display latency, etc.).",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01378,
+  "usage": {
+   "input_tokens": 991,
+   "output_tokens": 353
+  }
+ },
+ "ask-33595879": {
+  "reformulations": [
+   "I want to upload my own purchased MP3s somewhere online and stream them from any device without ever having songs disappear because of licensing or region blocks.",
+   "A personal cloud music locker where you own the library: upload your audio files once and stream them anywhere, with nothing ever removed by rights holders.",
+   "Self-hosted music streaming server that indexes an uploaded audio collection, transcodes on the fly, and exposes a web and mobile client for the owner's own files.",
+   "Personal media library hosting and streaming for user-owned audio collections, as an alternative to license-dependent subscription catalogs."
+  ],
+  "keyword_queries": [
+   "self-hosted music streaming server",
+   "personal music locker upload",
+   "cloud music library streaming"
+  ],
+  "query_core": "A cloud music storage service that lets the user upload their legally purchased audio files and guarantees the tracks will not be removed due to licensing or geographic restrictions.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01401,
+  "usage": {
+   "input_tokens": 972,
+   "output_tokens": 366
+  }
+ },
+ "ask-40946613": {
+  "reformulations": [
+   "I want to see what's inside my walls — pipes, studs, wiring — as a 3D map, without drilling holes to check",
+   "Software that turns ordinary radio signals into a volumetric density image of hidden structures behind drywall for non-destructive inspection",
+   "RF tomography pipeline using Wi-Fi channel state information or UWB radar sweeps to reconstruct a 3D voxel permittivity map of a wall's interior",
+   "Through-wall radio imaging and radio-frequency sensing toolkit for 3D reconstruction of occluded objects"
+  ],
+  "keyword_queries": [
+   "wifi through-wall imaging",
+   "RF tomography reconstruction",
+   "radar wall 3d imaging"
+  ],
+  "query_core": "A tool that can generate a 3‑D density map of the interior of walls using Wi‑Fi (or similar radio) signals, without having to make holes.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.013165,
+  "usage": {
+   "input_tokens": 968,
+   "output_tokens": 333
+  }
+ },
+ "ask-18511911": {
+  "reformulations": [
+   "I want to build a desktop app with a GUI where users connect directly to each other, and I need a simple, well-documented networking library (ideally Rust or Python) to handle the peer discovery and connections.",
+   "A modern peer-to-peer networking toolkit with clear docs and language bindings that developers can embed as the communication layer of their desktop applications.",
+   "Library providing NAT traversal, hole punching, peer discovery, encrypted direct connections and a pub/sub or stream API, exposed via Rust crate and Python bindings.",
+   "Decentralized networking frameworks and SDKs for building serverless, direct device-to-device applications."
+  ],
+  "keyword_queries": [
+   "peer-to-peer networking library",
+   "rust p2p framework",
+   "python p2p bindings"
+  ],
+  "query_core": "Looking for a modern, well‑documented, easy‑to‑use peer‑to‑peer framework or library (preferably with Rust or Python bindings) that can serve as a foundation for building GUI applications.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01341,
+  "usage": {
+   "input_tokens": 987,
+   "output_tokens": 339
+  }
+ },
+ "ask-21920142": {
+  "reformulations": [
+   "I found a security bug in an open-source library but the maintainer never replies — where can I report it so someone helps coordinate the fix and disclosure?",
+   "A coordinated vulnerability disclosure service for open-source software that guides researchers through reporting, mediates with maintainers, sets disclosure timelines, and can handle rewards.",
+   "Tooling and workflow for intake of security reports on upstream dependencies, including encrypted reporting channels, CVE request and assignment, embargo tracking, and escalation when upstream is silent.",
+   "Bug bounty and responsible disclosure infrastructure focused on open-source maintainers and security researchers."
+  ],
+  "keyword_queries": [
+   "coordinated vulnerability disclosure",
+   "open source bug bounty",
+   "responsible disclosure platform"
+  ],
+  "query_core": "A platform or service that lets security researchers responsibly disclose vulnerabilities in open‑source projects, especially when the maintainer is unresponsive, and provides guidance, coordination, and possibly bounty handling.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.014275,
+  "usage": {
+   "input_tokens": 990,
+   "output_tokens": 373
+  }
+ },
+ "ask-40939333": {
+  "reformulations": [
+   "My cat has epilepsy and I want a small collar-mounted device that notices when she has a seizure while I'm away and immediately alerts my phone.",
+   "A pet wearable with motion and heart-rate sensing that automatically detects seizure episodes in cats and pushes real-time alerts to the owner's smartphone.",
+   "Firmware and mobile app for a collar-attached IMU plus PPG/EEG sensor node that classifies convulsive motion patterns on-device via BLE and triggers push notifications.",
+   "Animal health monitoring wearable for continuous activity and vital-sign tracking with anomaly detection and mobile alerting."
+  ],
+  "keyword_queries": [
+   "seizure detection wearable",
+   "pet collar accelerometer monitor",
+   "cat activity tracker BLE"
+  ],
+  "query_core": "A wearable sensor (accelerometer/gyroscope, vibration, heart‑rate or EEG) that can be attached to a cat’s collar or harness, detect the characteristic movements or physiological changes during a seizure, and send a push notification to the owner’s phone.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.012615,
+  "usage": {
+   "input_tokens": 1008,
+   "output_tokens": 303
+  }
+ },
+ "ask-13963698": {
+  "reformulations": [
+   "I built my product but I'm terrible at marketing — is there someone I can hire to run the whole launch for me, from press and social posts to getting the first paying users?",
+   "Done-for-you product launch service that handles go-to-market strategy, press outreach, social media content, and early user acquisition for new startups.",
+   "Platform or agency offering outsourced growth execution for a new release: launch checklist, directory and press submissions, scheduled social campaigns, cold outreach and signup funnel tracking.",
+   "Startup go-to-market and growth marketing as a service, covering PR, distribution channels, and first-customer traction."
+  ],
+  "keyword_queries": [
+   "product launch service",
+   "startup go-to-market agency",
+   "launch marketing PR"
+  ],
+  "query_core": "Looking for a service/company that can handle the end‑to‑end launch of a startup product, including marketing, PR, social media, and early customer acquisition.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01469,
+  "usage": {
+   "input_tokens": 968,
+   "output_tokens": 394
+  }
+ },
+ "ask-14733562": {
+  "reformulations": [
+   "I have thousands of notes exported from Evernote and I want something that reads them all and automatically sorts them into groups of related ideas so I can see my recurring themes.",
+   "A tool that imports your note archive and automatically organizes it into topic clusters, suggesting tags and surfacing related notes you forgot you wrote.",
+   "Parse an Evernote ENEX export, embed each note with a sentence embedding model, and run unsupervised clustering plus topic labeling to group semantically similar notes.",
+   "Unsupervised topic modeling and semantic clustering for personal knowledge bases and note collections."
+  ],
+  "keyword_queries": [
+   "note clustering topics",
+   "evernote enex topic modeling",
+   "notes semantic clustering embeddings"
+  ],
+  "query_core": "A tool that can ingest Evernote notes and automatically group them into clusters of similar ideas or topics.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.014095,
+  "usage": {
+   "input_tokens": 954,
+   "output_tokens": 373
+  }
+ },
+ "ask-40682632": {
+  "reformulations": [
+   "I want to pay someone to fix a specific bug in an open source project I depend on, but I don't know where to post the job and find a developer who knows that codebase.",
+   "A marketplace where companies and users fund cash bounties on issues and feature requests, and qualified contributors claim them and get paid when the patch is merged.",
+   "Platform that attaches escrowed payments to issue tracker tickets, matches them to contributors by their commit history, and releases funds on merged pull requests.",
+   "Freelance contracting and crowdfunded bounty marketplace for software maintenance tasks and feature development on existing codebases."
+  ],
+  "keyword_queries": [
+   "issue bounty platform",
+   "pay bug fix marketplace",
+   "open source bounties funding"
+  ],
+  "query_core": "A service or platform where I can post a paid bounty or contract to locate qualified open‑source developers who can fix specific bugs or implement features in existing projects.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.012695,
+  "usage": {
+   "input_tokens": 969,
+   "output_tokens": 314
+  }
+ },
+ "ask-11595129": {
+  "reformulations": [
+   "I need a single place where I can sketch out my web app's screens, draw out its database structure and keep a running list of features before I start coding.",
+   "A visual planning workspace for web projects that combines wireframe sketching, diagramming and structured notes for requirements and data models.",
+   "Browser-based canvas with drag-and-drop UI components, entity-relationship diagram editing and linked documents for specs, exportable as images or code scaffolding.",
+   "Low-fidelity prototyping and diagramming software for software design and product planning."
+  ],
+  "keyword_queries": [
+   "wireframe mockup tool",
+   "diagram sketch canvas",
+   "web app planning"
+  ],
+  "query_core": "The OP wants a way to create, organize and sketch mockups, diagrams and structured concepts for a web project, including UI wireframes, data models and feature lists.",
+  "prompt_version": 2,
+  "model": "anthropic/claude-opus-5",
+  "via": "openrouter",
+  "cost_usd": 0.01228,
+  "usage": {
+   "input_tokens": 971,
+   "output_tokens": 297
+  }
+ }
+}

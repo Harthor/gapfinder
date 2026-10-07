@@ -331,7 +331,7 @@ def review_loop(conn: sqlite3.Connection, cases: list[dict], queue: list[Pair], 
         out("\033[2J\033[H" if getkey is _getkey else "", end="")
         case = by_id.get(p.case_id, {})
         out(f"[{len(human) + 1}/{total}]  {p.case_id}")
-        if case.get("kind") in ("real", "partial"):   # el título original da contexto a query_core
+        if case.get("kind") in ("real", "partial", "askhn"):   # el título original da contexto a query_core
             out("CONTEXTO:  " + "\n           ".join(wrap(case.get("title", ""))))
         out("IDEA:      " + "\n           ".join(wrap(p.idea)))   # completa: query_core / necesidad
         if notes and k in notes:
@@ -497,78 +497,4 @@ def interactive_labels(conn: sqlite3.Connection, cases: list[dict], getkey=_getk
 
 # --- revisión del holdout temporal ---------------------------------------------------------------------
 
-HOLDOUT_REVIEW_PATH = Path("data/eval/holdout_review_human.jsonl")
-
-
-def holdout_review_queue(conn: sqlite3.Connection) -> tuple[list[Pair], dict, dict, list[dict]]:
-    """Para ideas "ya construido"/"revisar": su mejor candidato; para "no": sus 3 mejores. Orden: primero
-    los "no" (candidatas a hueco), después revisar, después ya construido."""
-    from gapfinder import holdout
-
-    chosen, hcases, queries = holdout.selected_cases(conn)
-    cand = json.loads((holdout.DIR / "candidates.json").read_text())
-    ver = load_done("jev_holdout")
-    created = dict(conn.execute("SELECT id, created_at FROM items"))
-    picked, notes = [], {}
-    order = {"no": 0, "revisar": 1, "ya construido": 2}
-    rows = []
-    for case, idea in zip(hcases, chosen):
-        scored = sorted((i for i in cand.get(case["id"], []) if (case["id"], i) in ver),
-                        key=lambda i: -ver[(case["id"], i)].core)
-        if not scored:
-            continue
-        best = ver[(case["id"], scored[0])].core
-        decision = holdout.decide(best)
-        rows.append((order[decision], case, idea, scored[:3] if decision == "no" else scored[:1], decision))
-    rows.sort(key=lambda r: r[0])
-    pairs_by = {}
-    for _, case, idea, items, decision in rows:
-        for i in items:
-            picked.append({"case_id": case["id"], "item_id": i})
-            notes[(case["id"], i)] = (f"(idea posterior a T: \"{idea['title']}\" {idea['created_at'][:10]} {idea['url']} | "
-                                      f"decisión: {decision} | candidato creado: {created.get(i, '?')[:10]})")
-    for x in pairs(conn, {c: [p["item_id"] for p in picked if p["case_id"] == c] for c in {p["case_id"] for p in picked}}, queries):
-        pairs_by[(x.case_id, x.item_id)] = x
-    return [pairs_by[(p["case_id"], p["item_id"])] for p in picked], notes, ver, hcases
-
-
-def pairs(conn, candidates, queries):
-    from gapfinder import holdout
-    return holdout.pairs(conn, candidates, queries)
-
-
-def interactive_holdout(conn: sqlite3.Connection, cases: list[dict], getkey=_getkey, out=print) -> dict:
-    queue, notes, ver, hcases = holdout_review_queue(conn)
-    done = review_loop(conn, hcases, queue, len(queue), {"Jev": ver}, HOLDOUT_REVIEW_PATH, notes, getkey=getkey, out=out,
-                       legend="[s] equivalente real anterior a T  [p] parcial  [n] no es lo mismo  [?] no sé")
-    got = load_human(HOLDOUT_REVIEW_PATH)
-    text = write_holdout_result(queue, notes, got)
-    out("\n" + text)
-    out(f"Guardado en {HOLDOUT_REVIEW_PATH}: {sum(k in got for k in ((p.case_id, p.item_id) for p in queue))}/{len(queue)}")
-    return {"respondidos_ahora": done, "total": len(got), "pares": len(queue)}
-
-
-HOLDOUT_RESULT_PATH = Path("data/eval/holdout_review_result.md")
-
-
-def write_holdout_result(queue: list[Pair], notes: dict, human: dict) -> str:
-    """Por decisión del sistema: ideas con algún candidato que el humano juzgó equivalente real anterior a T."""
-    by_idea: dict[str, dict] = {}
-    for p in queue:
-        k = (p.case_id, p.item_id)
-        decision = re.search(r"decisión: ([a-z ]+?) \|", notes[k]).group(1)
-        d = by_idea.setdefault(p.case_id, {"decision": decision, "labels": []})
-        d["labels"].append(human.get(k))
-    L = ["# Holdout temporal: adjudicación humana\n",
-         "Por idea: \"equivalente anterior a T\" si algún candidato revisado se juzgó núcleo (s); \"parcial\" si el mejor fue p; "
-         "\"sin equivalente\" si todos fueron no (n). Ideas con candidatos sin responder o \"no sé\" quedan aparte.\n",
-         "| decisión del sistema | ideas | equivalente anterior a T | parcial | sin equivalente | pendiente / no sé |", "|---|---|---|---|---|---|"]
-    for dec in ("no", "revisar", "ya construido"):
-        ideas = [v for v in by_idea.values() if v["decision"] == dec]
-        eq = sum("s" in v["labels"] for v in ideas)
-        par = sum("s" not in v["labels"] and "p" in v["labels"] for v in ideas)
-        none = sum(all(x == "n" for x in v["labels"]) for v in ideas)
-        L.append(f"| {dec} | {len(ideas)} | {eq} | {par} | {none} | {len(ideas) - eq - par - none} |")
-    text = "\n".join(L) + "\n"
-    HOLDOUT_RESULT_PATH.write_text(text)
-    return text
+HOLDOUT_REVIEW_PATH = Path("data/eval/holdout_review_human.jsonl")   # formato por par (anterior); ver review.py

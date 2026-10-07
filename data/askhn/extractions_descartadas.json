@@ -1,0 +1,1353 @@
+[
+ {
+  "ask_id": "14053666",
+  "cost_usd": 0.00082727,
+  "entry": {
+   "es_pedido_de_herramienta": true,
+   "idea": "A real‑time crowdsourced labeling service that returns Yes/No answers for image classification (e.g., “contains a cat?”) instantly.",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "Alegro​??",
+     "url": "",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "         ....... .....................  ...",
+     "url": "...",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "",
+     "url": "...",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "",
+     "url": ". lake",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "parcial",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00082727,
+   "tokens": [
+    999,
+    4690
+   ]
+  }
+ },
+ {
+  "ask_id": "15497837",
+  "cost_usd": 0.00093381,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "... The ... ......",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "....",
+     "url": "The",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "no_existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00093381,
+   "tokens": [
+    1802,
+    5175
+   ]
+  }
+ },
+ {
+  "ask_id": "15560766",
+  "cost_usd": 0.00067498,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "",
+   "herramientas_sugeridas": [],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "no_existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00067498,
+   "tokens": [
+    1255,
+    3749
+   ]
+  }
+ },
+ {
+  "ask_id": "15838371",
+  "cost_usd": 0.00041052,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "Seeking   …  ...... ....... …… ... ....… ",
+   "herramientas_sugeridas": [],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "parcial",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00041052,
+   "tokens": [
+    934,
+    2250
+   ]
+  }
+ },
+ {
+  "ask_id": "16188284",
+  "cost_usd": 0.00015986,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "The goal ​    ​  ??  ...  … ??   ... .... ... … … ??? etc……  ",
+   "herramientas_sugeridas": [],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "incierto",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00015986,
+   "tokens": [
+    733,
+    811
+   ]
+  }
+ },
+ {
+  "ask_id": "16875106",
+  "cost_usd": 0.00041072,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "The OP wants ​​  ​  ​   ​       —  ​  ​    …​  ‑     ‑  “   \"  $ ​​ ",
+   "herramientas_sugeridas": [],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "no_existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00041072,
+   "tokens": [
+    3604,
+    1780
+   ]
+  }
+ },
+ {
+  "ask_id": "17778531",
+  "cost_usd": 0.00057734,
+  "entry": {
+   "es_pedido_de_herramienta": true,
+   "idea": "The  ……......",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "  …  ...  … ??  ...",
+     "url": ".......",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "incierto",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00057734,
+   "tokens": [
+    675,
+    3277
+   ]
+  }
+ },
+ {
+  "ask_id": "18025254",
+  "cost_usd": 5.55e-05,
+  "entry": {
+   "es_pedido_de_herramienta": true,
+   "idea": "Create a way to programmatically define iOS Shortcuts instead of manually building them with drag‑and‑drop, e.g., via a scripting language or code‑to‑shortcut conversion.",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "Scriptable",
+     "url": "https://itunes.apple.com/us/app/scriptable/id140...",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "URL de tienda de apps",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "...",
+     "url": "...",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 5.55e-05,
+   "tokens": [
+    949,
+    159
+   ]
+  }
+ },
+ {
+  "ask_id": "18511911",
+  "cost_usd": 0.0004211,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "The OP seeks a modern, well‑documented peer‑to‑peer framework or library that works with Rust or Python and simplifies building GUI‑based P2P applications.",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "libtorrent",
+     "url": "https://www.libtorrent.org/",
+     "relacion": "parcial",
+     "corpus_ids": [
+      "github:arvidn/libtorrent"
+     ],
+     "mapeo": "heurístico, revisar: repo con homepage libtorrent.org",
+     "corpus_created": {
+      "github:arvidn/libtorrent": "2015-06-03T05:22:03Z"
+     }
+    },
+    {
+     "nombre": "libp2p (rust-libp2p)",
+     "url": "https://github.com/libp2p/rust-libp2p",
+     "relacion": "parcial",
+     "corpus_ids": [
+      "github:libp2p/rust-libp2p"
+     ],
+     "mapeo": "repo",
+     "corpus_created": {
+      "github:libp2p/rust-libp2p": "2017-03-24T20:05:11Z"
+     }
+    },
+    {
+     "nombre": "Holochain",
+     "url": "https://holochain.org",
+     "relacion": "parcial",
+     "corpus_ids": [
+      "github:holochain/holochain"
+     ],
+     "mapeo": "heurístico, revisar: repo con homepage holochain.org",
+     "corpus_created": {
+      "github:holochain/holochain": "2020-01-13T15:50:39Z"
+     }
+    },
+    {
+     "nombre": "WebRTC (aiortc)",
+     "url": "httpsations...",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "... ...",
+     "url": "... ...",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "parcial",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.0004211,
+   "tokens": [
+    2454,
+    2044
+   ]
+  }
+ },
+ {
+  "ask_id": "21032945",
+  "cost_usd": 0.00134095,
+  "entry": {
+   "es_pedido_de_herramienta": true,
+   "idea": "An open‑source, free‑to‑manage ‑ seed‑to‑sale tracking system for the cannabis industry.",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "OpenTHC",
+     "url": "https://github.com/opsoft????",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "...??",
+     "url": "The output...",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "",
+     "url": "",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "OpenOpenHub???",
+     "url": "?",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "...",
+     "url": "",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "......,…...   ...",
+     "url": "-",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00134095,
+   "tokens": [
+    708,
+    7763
+   ]
+  }
+ },
+ {
+  "ask_id": "29971945",
+  "cost_usd": 0.00011502,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "Looking for a functional programming language that compiles quickly to a single binary, runs fast, provides built‑in support for persistent data structures, and includes a simple zero‑dependency HTTP server in its standard library.",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "F#",
+     "url": "",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "TypeScript",
+     "url": "",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "Scala",
+     "url": "",
+     "relacion": "parcial",
+     "corpus_ids": [
+      "github:scala/scala"
+     ],
+     "mapeo": "nombre de repo (heurístico)",
+     "corpus_created": {
+      "github:scala/scala": "2011-12-01T05:02:34Z"
+     }
+    },
+    {
+     "nombre": "Clojure",
+     "url": "",
+     "relacion": "parcial",
+     "corpus_ids": [
+      "github:clojure/clojure"
+     ],
+     "mapeo": "nombre de repo (heurístico)",
+     "corpus_created": {
+      "github:clojure/clojure": "2010-06-29T20:03:33Z"
+     }
+    },
+    {
+     "nombre": "Python",
+     "url": "",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "Node.js",
+     "url": "",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00011502,
+   "tokens": [
+    1008,
+    471
+   ]
+  }
+ },
+ {
+  "ask_id": "26805374",
+  "cost_usd": 0.00033904,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "The       … ... ... ... ... ... etc...",
+   "herramientas_sugeridas": [],
+   "senales_no_existe": [
+    "}............"
+   ],
+   "etiqueta_comentarios": "incierto",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00033904,
+   "tokens": [
+    1056,
+    1808
+   ]
+  }
+ },
+ {
+  "ask_id": "32538743",
+  "cost_usd": 0.00014555,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "A regularly updated, high‑quality, editorially reviewed source of articles about new and interesting technologies presented in a magazine‑like format for software engineers.",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "c't",
+     "url": "",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "Dr Dobbs",
+     "url": "",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "2600.com",
+     "url": "https://www.2600.com/",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "Wired",
+     "url": "",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "parcial",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00014555,
+   "tokens": [
+    1086,
+    365
+   ]
+  }
+ },
+ {
+  "ask_id": "29253231",
+  "cost_usd": 0.00053827,
+  "entry": {
+   "es_pedido_de_herramienta": true,
+   "idea": "...",
+   "herramientas_sugeridas": [],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "no_existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00053827,
+   "tokens": [
+    744,
+    3035
+   ]
+  }
+ },
+ {
+  "ask_id": "26837390",
+  "cost_usd": 0.00093188,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "... etc... ",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "......",
+     "url": "????...",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "......",
+     "url": "I’m actually...",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "",
+     "url": "",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "parcial",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00093188,
+   "tokens": [
+    2310,
+    5074
+   ]
+  }
+ },
+ {
+  "ask_id": "32536886",
+  "cost_usd": 0.00064084,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "The OP seeks  …",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "}]. Hmm...'}':''Need?... ...... ... ...... This...... ... the…......… etc…... ............ ... …... ... ......... ......... ... … ... ...… ... ...… … ? ......................",
+     "url": "The solution",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "parcial",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00064084,
+   "tokens": [
+    1307,
+    3539
+   ]
+  }
+ },
+ {
+  "ask_id": "29060808",
+  "cost_usd": 0.00092803,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": ". ... ... ... ... ... ... ...",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "The output must...",
+     "url": "...",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [
+    ""
+   ],
+   "etiqueta_comentarios": "no_existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00092803,
+   "tokens": [
+    1020,
+    5279
+   ]
+  }
+ },
+ {
+  "ask_id": "25814083",
+  "cost_usd": 0.0011249,
+  "entry": {
+   "es_pedido_de_herramienta": true,
+   "idea": "....",
+   "herramientas_sugeridas": [
+    {
+     "nombre": " ...  ..............",
+     "url": "I'm",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "HN (the Hacker News) Algolia Search",
+     "url": "https://hn.algolia.com/",
+     "relacion": "equivalente",
+     "corpus_ids": [
+      "show_hn:33778145",
+      "show_hn:8912684"
+     ],
+     "mapeo": "url exacta",
+     "corpus_created": {
+      "show_hn:33778145": "2022-11-28T19:14:39Z",
+      "show_hn:8912684": "2015-01-19T16:51:26Z"
+     }
+    }
+   ],
+   "senales_no_existe": [
+    "*",
+    "",
+    "relacion"
+   ],
+   "etiqueta_comentarios": "no_existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.0011249,
+   "tokens": [
+    737,
+    6487
+   ]
+  }
+ },
+ {
+  "ask_id": "30895905",
+  "cost_usd": 0.00337035,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "etiqueta_comentarios": "parcial",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "...",
+     "relacion": "parcial",
+     "url": "",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "Thrift",
+     "relacion": "equivalente",
+     "url": "https://thrift.apache.org/",
+     "corpus_ids": [
+      "github:apache/thrift"
+     ],
+     "mapeo": "heurístico, revisar: repo con homepage thrift.apache.org",
+     "corpus_created": {
+      "github:apache/thrift": "2009-09-18T08:00:17Z"
+     }
+    },
+    {
+     "nombre": "Wavedrom",
+     "relacion": "equivalente",
+     "url": "https://github.com/wavedrom/wavedrom",
+     "corpus_ids": [
+      "github:wavedrom/wavedrom"
+     ],
+     "mapeo": "repo",
+     "corpus_created": {
+      "github:wavedrom/wavedrom": "2014-05-05T02:34:06Z"
+     }
+    },
+    {
+     "nombre": "ob-bitfield",
+     "relacion": "parcial",
+     "url": "https://github.com/gsg…",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "binwalk",
+     "relacion": "parcial",
+     "url": "https://...",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "idea": "The...",
+   "senales_no_existe": [
+    "I",
+    ""
+   ],
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00337035,
+   "tokens": [
+    1565,
+    5226
+   ]
+  }
+ },
+ {
+  "ask_id": "33113283",
+  "cost_usd": 0.00071558,
+  "entry": {
+   "es_pedido_de_herramienta": true,
+   "idea": "...",
+   "herramientas_sugeridas": [],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00071558,
+   "tokens": [
+    897,
+    4051
+   ]
+  }
+ },
+ {
+  "ask_id": "34920400",
+  "cost_usd": 0.00061443,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "}...???",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "…",
+     "url": "",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [
+    "The......",
+    "This...",
+    "The...",
+    ".",
+    "}... ......",
+    "The...",
+    ".",
+    "The...",
+    "",
+    "",
+    "..."
+   ],
+   "etiqueta_comentarios": "parcial",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00061443,
+   "tokens": [
+    3651,
+    2970
+   ]
+  }
+ },
+ {
+  "ask_id": "27073394",
+  "cost_usd": 0.00116915,
+  "entry": {
+   "es_pedido_de_herramienta": true,
+   "idea": "Looking  ​​  ​  ​  $[​  $ ​​  ...………… … etc…",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "???",
+     "url": "}...",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "parcial",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00116915,
+   "tokens": [
+    1090,
+    6685
+   ]
+  }
+ },
+ {
+  "ask_id": "33595879",
+  "cost_usd": 0.00079773,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "`````````````````````````````````````````````````````````...````",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "url ...",
+     "url": "...  ......",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "parcial",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00079773,
+   "tokens": [
+    3964,
+    3993
+   ]
+  }
+ },
+ {
+  "ask_id": "33286260",
+  "cost_usd": 0.00101316,
+  "entry": {
+   "es_pedido_de_herramienta": true,
+   "idea": "A tool or interface that lets ​​​  ​  ​  ​  ​  ​  ​ …",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "... ... ... ... ...…... ...",
+     "url": "}......",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [
+    "The"
+   ],
+   "etiqueta_comentarios": "parcial",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00101316,
+   "tokens": [
+    1030,
+    5778
+   ]
+  }
+ },
+ {
+  "ask_id": "38305837",
+  "cost_usd": 0.00043876,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "Assess  ​   …  ???",
+   "herramientas_sugeridas": [],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00043876,
+   "tokens": [
+    1303,
+    2351
+   ]
+  }
+ },
+ {
+  "ask_id": "35179186",
+  "cost_usd": 0.00074035,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "The output...",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "... ...... ...... etc…... ..........??......",
+     "url": "...",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "...",
+     "url": "",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "???",
+     "url": "I",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "no_existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00074035,
+   "tokens": [
+    918,
+    4193
+   ]
+  }
+ },
+ {
+  "ask_id": "39079543",
+  "cost_usd": 0.00054046,
+  "entry": {
+   "es_pedido_de_herramienta": true,
+   "idea": "The OP wants a simple way to create a desktop application without dealing with complex modern web stacks, preferably with a lightweight UI framework that lets them quickly build native executables.",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "tauri",
+     "url": "",
+     "relacion": "equivalente",
+     "corpus_ids": [
+      "github:tauri-apps/tauri"
+     ],
+     "mapeo": "nombre de repo (heurístico)",
+     "corpus_created": {
+      "github:tauri-apps/tauri": "2019-07-13T09:09:37Z"
+     }
+    },
+    {
+     "nombre": "Lazarus",
+     "url": "",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "Tk",
+     "url": "",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "",
+     "url": "",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00054046,
+   "tokens": [
+    1327,
+    2945
+   ]
+  }
+ },
+ {
+  "ask_id": "47127532",
+  "cost_usd": 0.00012228,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "The OP wants ​    …   ....",
+   "herramientas_sugeridas": [],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "no_existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00012228,
+   "tokens": [
+    1373,
+    477
+   ]
+  }
+ },
+ {
+  "ask_id": "46995608",
+  "cost_usd": 0.00023683,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "The OP wants ​       ​  —  ​  —  ​ —  …   —  ‘………  … ‑  … … … ",
+   "herramientas_sugeridas": [],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "parcial",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00023683,
+   "tokens": [
+    3293,
+    812
+   ]
+  }
+ },
+ {
+  "ask_id": "9390972",
+  "cost_usd": 3.731e-05,
+  "entry": {
+   "es_pedido_de_herramienta": true,
+   "idea": "",
+   "herramientas_sugeridas": [],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "parcial",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 3.731e-05,
+   "tokens": [
+    915,
+    58
+   ]
+  }
+ },
+ {
+  "ask_id": "40682632",
+  "cost_usd": 0.00056186,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "Find ​  …   … … …  … ... … …  … …  ... ???",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "",
+     "url": "}.......... .......... ...…?",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "no_existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00056186,
+   "tokens": [
+    2913,
+    2791
+   ]
+  }
+ },
+ {
+  "ask_id": "44319903",
+  "cost_usd": 0.00036142,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "The OP wants a high‑end laptop (around $4‑5k) that can match the performance, build quality, battery life and Linux compatibility of an Apple M4 Max, but prefers a non‑Apple device.",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "Framework",
+     "url": "https://frame.work",
+     "relacion": "parcial",
+     "corpus_ids": [
+      "github:FrameworkComputer/Framework-Laptop-13"
+     ],
+     "mapeo": "heurístico, revisar: repo con homepage frame.work",
+     "corpus_created": {
+      "github:FrameworkComputer/Framework-Laptop-13": "2022-02-21T22:55:50Z"
+     }
+    },
+    {
+     "nombre": "System76",
+     "url": "",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "Huawei M series",
+     "url": "",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "",
+     "url": "",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [
+    "               …  …… ?? … "
+   ],
+   "etiqueta_comentarios": "no_existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00036142,
+   "tokens": [
+    2431,
+    1697
+   ]
+  }
+ },
+ {
+  "ask_id": "32649143",
+  "cost_usd": 0.00163351,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "} eras......???...... ... ............ …… ............",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "  …  ... ??... ...………... etc... ... ...… etc... ...……... … .........",
+     "url": "}........................",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "   ............",
+     "url": "...",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "​ (??), </</…  </…... ?</",
+     "url": ", ............",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "......",
+     "url": "B",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "parcial",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00163351,
+   "tokens": [
+    651,
+    9494
+   ]
+  }
+ },
+ {
+  "ask_id": "44219898",
+  "cost_usd": 0.00056062,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "}...",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "... ... ... ...... ..... ...",
+     "url": "The...",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "incierto",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00056062,
+   "tokens": [
+    1812,
+    2978
+   ]
+  }
+ },
+ {
+  "ask_id": "44111751",
+  "cost_usd": 0.00070644,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "... not...",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "The...",
+     "url": "I'm",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [
+    "...  ?  ",
+    "]"
+   ],
+   "etiqueta_comentarios": "no_existe",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00070644,
+   "tokens": [
+    1108,
+    3960
+   ]
+  }
+ },
+ {
+  "ask_id": "25717767",
+  "cost_usd": 0.00239282,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "}......</...",
+   "herramientas_sugeridas": [
+    {
+     "nombre": ",",
+     "url": "I",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [
+    "???",
+    ","
+   ],
+   "etiqueta_comentarios": "incierto",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00239282,
+   "tokens": [
+    2439,
+    13645
+   ]
+  }
+ },
+ {
+  "ask_id": "48583441",
+  "cost_usd": 0.00082406,
+  "entry": {
+   "es_pedido_de_herramienta": true,
+   "idea": "....",
+   "herramientas_sugeridas": [],
+   "senales_no_existe": [
+    "The",
+    "...",
+    "",
+    "...",
+    "The."
+   ],
+   "etiqueta_comentarios": "parcial",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00082406,
+   "tokens": [
+    1164,
+    4642
+   ]
+  }
+ },
+ {
+  "ask_id": "36830583",
+  "cost_usd": 0.00149353,
+  "entry": {
+   "es_pedido_de_herramienta": false,
+   "idea": "I   ",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "...",
+     "url": "The...",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "Zero  ...",
+     "url": "…",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "Zero ...",
+     "url": "",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin URL",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "The...",
+     "url": "The",
+     "relacion": "parcial",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    },
+    {
+     "nombre": "",
+     "url": "Relevant...",
+     "relacion": "equivalente",
+     "corpus_ids": [],
+     "mapeo": "sin repo ni Show HN en el corpus",
+     "corpus_created": {}
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "incierto",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00149353,
+   "tokens": [
+    932,
+    8621
+   ]
+  }
+ },
+ {
+  "ask_id": "44510127",
+  "cost_usd": 0.00126193,
+  "entry": {
+   "es_pedido_de_herramienta": true,
+   "idea": "",
+   "herramientas_sugeridas": [
+    {
+     "nombre": "paper_trail",
+     "url": "https://github.com/paper-trail-gem/paper_trail",
+     "relacion": "parcial",
+     "corpus_ids": [
+      "github:paper-trail-gem/paper_trail"
+     ],
+     "mapeo": "repo",
+     "corpus_created": {
+      "github:paper-trail-gem/paper_trail": "2009-05-27T15:20:55Z"
+     }
+    }
+   ],
+   "senales_no_existe": [],
+   "etiqueta_comentarios": "parcial",
+   "model": "openai/gpt-oss-120b",
+   "cost_usd": 0.00126193,
+   "tokens": [
+    1015,
+    7244
+   ]
+  }
+ },
+ {
+  "ask_id": "32538743",
+  "cost_usd": 0.000197426
+ },
+ {
+  "ask_id": "29971945",
+  "cost_usd": 0.00098382
+ },
+ {
+  "ask_id": "29971945",
+  "cost_usd": 0.000443795
+ },
+ {
+  "ask_id": "32538743",
+  "cost_usd": 0.00033075525
+ }
+]

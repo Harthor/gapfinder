@@ -1,0 +1,682 @@
+{
+ "cmp-31414459": {
+  "reformulations": [
+   "I want a distributed, append‑only datastore where every write is signed with a public key, the data forms a Merkle‑DAG, and disputes are settled through social trust rather than traditional consensus.",
+   "A decentralized, append‑only database with cryptographic signatures, Merkle‑DAG structure, and community‑driven conflict resolution.",
+   "Implement an append‑only, Merkle‑DAG‑based storage system where operations are authenticated by public‑key agents and forks are reconciled via social governance instead of consensus protocols.",
+   "Socially governed, key‑signed, append‑only ledger built on a Merkle DAG for decentralized data storage."
+  ],
+  "keyword_queries": [
+   "append only merkle",
+   "public key ledger",
+   "social conflict resolution"
+  ],
+  "query_core": "A decentralized, append‑only database where operations are signed by public‑key agents, form a Merkle‑DAG, and conflict resolution is handled socially rather than by complex consensus algorithms.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 9.75e-05
+ },
+ "cmp-18508284": {
+  "reformulations": [
+   "How can I automatically generate and maintain architecture diagrams that stay in sync with my codebase instead of updating static Visio files manually?",
+   "A solution for modeling, documenting, and keeping software architecture visualizations up‑to‑date directly from source code.",
+   "Tool that extracts component relationships from code repositories and produces live, version‑controlled architecture diagrams (e.g., UML, C4) with CI integration.",
+   "Live-code‑driven architecture documentation platform / diagram-as-code system for keeping design artifacts consistent with implementation."
+  ],
+  "keyword_queries": [
+   "architecture diagram sync",
+   "code‑driven architecture docs",
+   "live architecture model"
+  ],
+  "query_core": "A tool or platform that lets software architects model, document, and keep architecture diagrams in sync with code, rather than manually drawing static Visio/PowerPoint artifacts.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 6.5e-05
+ },
+ "cmp-33113283": {
+  "reformulations": [
+   "I need a short, ready‑to‑copy GDPR privacy notice for my personal blog that explains how I store comment usernames and IP addresses.",
+   "A lightweight GDPR compliance template that blog owners can embed to disclose data collection of commenters and their IPs.",
+   "Open‑source GDPR privacy statement snippet for self‑hosted blogging platforms, covering personal data like user‑provided names and IP logs.",
+   "Privacy policy generator for small websites, focusing on GDPR‑required disclosures of comment‑related personal information."
+  ],
+  "keyword_queries": [
+   "GDPR privacy template",
+   "blog privacy statement",
+   "comment data disclosure"
+  ],
+  "query_core": "A concise GDPR privacy statement template that small self‑hosted blog owners can use to disclose how they handle personal data such as comment names and IP addresses.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 4.7228e-05
+ },
+ "cmp-32506168": {
+  "reformulations": [
+   "I want a cloud‑based bookmark manager that lets me store, tag, and sync web links across all my browsers and devices, with native mobile/desktop apps and optional sharing features.",
+   "A modern social bookmarking platform with cross‑browser synchronization, tag organization, dedicated client apps, and the ability to share collections publicly or privately.",
+   "Looking for an open‑source bookmark synchronization service supporting REST API, multi‑device sync, tag metadata, and optional federation for social link sharing.",
+   "A cross‑platform bookmark syncing and tagging solution, including desktop and mobile clients and optional social publishing capabilities."
+  ],
+  "keyword_queries": [
+   "bookmark sync service",
+   "social bookmarking app",
+   "cross‑device bookmark manager"
+  ],
+  "query_core": "Looking for a modern bookmarking service that lets me save, tag, and sync URLs across browsers, with dedicated mobile/desktop apps and optional social sharing, as a spiritual successor to del.icio.us.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 5.1131e-05
+ },
+ "cmp-18432459": {
+  "reformulations": [
+   "I need a tool that automatically follows up with a reminder by text, email, or a voice call if the person I emailed hasn’t responded after a set time.",
+   "Automated follow‑up service that detects unanswered inbound messages and dispatches SMS, email or phone‑call reminders on a configurable schedule.",
+   "System that monitors outbound email threads, triggers a timeout, and initiates a multichannel reminder (SMS, SMTP, telephony) to the original recipient.",
+   "Multichannel outbound communication reminder platform with configurable response‑timeout escalation."
+  ],
+  "keyword_queries": [
+   "email reminder automation",
+   "follow up sms",
+   "timeout followup call"
+  ],
+  "query_core": "A service that automatically sends a reminder via SMS, email, or phone call to the original email recipient if they have not replied within a specified time window.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 5.0191e-05
+ },
+ "cmp-9444470": {
+  "reformulations": [
+   "I need a log collector that lets me search and troubleshoot app events, but also automatically trims, compresses, or archives old logs so storage stays low.",
+   "A searchable, query‑able logging platform with built‑in retention policies, compression, and archiving to keep log volume manageable.",
+   "Looking for a centralized logging solution with indexed storage, query API, and configurable log rotation, gzip compression, and archival back‑ends.",
+   "A log management system that provides efficient query capabilities and data lifecycle controls (retention, compression, archiving)."
+  ],
+  "keyword_queries": [
+   "queryable log retention",
+   "compressed log archive",
+   "log search compression"
+  ],
+  "query_core": "Looking for a logging system that stores application events in a way that they can be queried and debugged easily, while keeping the overall size of the logs manageable through retention, compression, or archiving.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 0.00018045
+ },
+ "cmp-40096424": {
+  "reformulations": [
+   "I want a system that reads all my email and chat messages, creates a personal GPT‑4 assistant, and drafts replies or triggers actions in services like Slack, Messenger, Twilio, Todoist, updating itself as new messages arrive.",
+   "Personal AI assistant that ingests communications, builds a dynamic knowledge base, and auto‑generates responses and cross‑platform tasks using GPT‑4.",
+   "Multi‑channel communication ingestion pipeline with a continuously fine‑tuned LLM (GPT‑4) for automated response generation and orchestration across APIs (email, Slack, SMS, task managers).",
+   "AI-powered omnichannel personal assistant with unified message store and automated action routing."
+  ],
+  "keyword_queries": [
+   "personal AI email assistant",
+   "multichannel GPT response automation",
+   "LLM inbox integration"
+  ],
+  "query_core": "A tool that can ingest all of a user's emails and other communication channels, build a personal model with GPT‑4, and automatically draft replies and perform actions across integrations like Slack, Messenger, Twilio, Todoist, etc., continuously updating the knowledge base with new messages.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 8.605e-05
+ },
+ "cmp-26901352": {
+  "reformulations": [
+   "How can I get live, row‑by‑row updates for any SQL SELECT—including joins and recursive CTEs—without re‑running the whole query each time the data changes?",
+   "A service that streams incremental result‑set changes for arbitrary relational queries in real time, avoiding full recomputation on table modifications.",
+   "Implement a change‑data‑capture + materialized view layer that pushes delta updates to subscribed clients for complex SQL queries.",
+   "Real‑time incremental query result propagation for relational databases (continuous query, delta sync, CDC)."
+  ],
+  "keyword_queries": [
+   "incremental query updates",
+   "real time CDC",
+   "continuous SQL result"
+  ],
+  "query_core": "A system that can deliver real‑time incremental updates for the result of an arbitrary SQL query (including joins and hierarchical queries) without re‑executing the whole query each time the underlying tables change.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 7.25e-05
+ },
+ "cmp-22591543": {
+  "reformulations": [
+   "I need a self‑hosted video call platform that we can install on our own servers, works in a web browser, supports screen sharing and can handle small‑to‑medium meetings without hogging CPU.",
+   "Self‑hosted web‑based video conferencing tool with screen sharing, optimized for low resource consumption and suitable for groups of up to a few dozen participants.",
+   "On‑premise WebRTC conference server with browser clients, screen‑share support, and lightweight CPU profile for 10‑50 concurrent users.",
+   "Self‑hosted video conferencing solution (WebRTC, low‑CPU) for modest‑size meetings with browser access and screen sharing."
+  ],
+  "keyword_queries": [
+   "self hosted video conferencing",
+   "browser screen sharing",
+   "low cpu conference"
+  ],
+  "query_core": "Looking for a self‑hosted video‑conferencing solution that can run on our own servers for small to medium sized meetings, ideally with browser‑based clients, screen sharing and low CPU usage.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 0.000173
+ },
+ "cmp-15823597": {
+  "reformulations": [
+   "I want a fitness wrist‑device with GPS, heart‑rate sensor and step counter that can export its raw data directly.",
+   "A wearable fitness tracker that records location, pulse and steps and provides open‑format data dumps without cloud lock‑in.",
+   "GPS‑enabled wristband with HRM and pedometer supporting raw sensor data export via standard file or API, avoiding proprietary services.",
+   "Open‑data wearable activity monitor with positioning, heart‑rate and step tracking capabilities."
+  ],
+  "keyword_queries": [
+   "open data wearable",
+   "GPS heart rate export",
+   "fitness tracker raw"
+  ],
+  "query_core": "A fitness wristband or watch that includes GPS, heart‑rate monitoring and a pedometer, and that lets the user export the raw sensor data without using proprietary cloud services or software.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 0.0001647
+ },
+ "cmp-31083131": {
+  "reformulations": [
+   "I need a simple, low‑cost solution to link my requirements directly to test cases for our small development team.",
+   "A lightweight requirements‑to‑test traceability tool that is open‑source or inexpensive, suitable for a small group of engineers.",
+   "Looking for an open‑source requirements management system with test case mapping and traceability features, optimized for minimal overhead.",
+   "Search for a minimal requirements‑traceability framework or test‑coverage mapping utility for small teams."
+  ],
+  "keyword_queries": [
+   "requirements traceability",
+   "test case mapping",
+   "open source RM"
+  ],
+  "query_core": "A lightweight way to capture and trace software requirements to tests for a small team, preferably using an open‑source or low‑cost tool.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 0.00018945
+ },
+ "cmp-13488795": {
+  "reformulations": [
+   "I need a tool where journalists or activists can upload raw documents, extract entities, connect them, and see relationship graphs and chronological timelines for investigative reporting.",
+   "A web‑based platform for investigative analysis that ingests unstructured data, performs entity extraction, builds network visualizations, and supports timeline construction.",
+   "Open‑source system for ingesting heterogeneous text sources, running named‑entity recognition and graph construction, with interactive network and temporal visualizations for link analysis.",
+   "Investigative intelligence platform with entity linking, network analysis, and timeline visualization for unstructured data."
+  ],
+  "keyword_queries": [
+   "entity graph visualization",
+   "investigative data linking",
+   "timeline network analysis"
+  ],
+  "query_core": "A platform that lets journalists or activists ingest unstructured data, link entities, visualise networks and timelines, and perform the kind of link‑analysis and intelligence‑analyst style investigations that Palantir provides.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 5.322e-05
+ },
+ "cmp-22034101": {
+  "reformulations": [
+   "I need a desktop program that can scrub, combine, and reshape CSV, JSON, and database files without using a browser.",
+   "A local data‑preparation tool that provides cleaning, merging, and transformation capabilities for multiple source formats, running fully offline on Windows/macOS/Linux.",
+   "Desktop ETL application with built‑in data cleansing, schema merging, and format conversion (CSV, JSON, SQL) that operates without a web UI.",
+   "Standalone data integration and preparation software for heterogeneous sources, featuring offline ETL functionality."
+  ],
+  "keyword_queries": [
+   "desktop ETL",
+   "offline data cleaning",
+   "local data merge"
+  ],
+  "query_core": "Looking for a desktop application that can clean, merge, and transform various data sources (CSV, JSON, databases, etc.) without relying on a web interface.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 4.986e-05
+ },
+ "cmp-23264850": {
+  "reformulations": [
+   "I need a simple open‑source generator that can spin up CRUD pages with forms for creating, reading, updating and deleting records, and that I can plug into my current API.",
+   "Looking for a low‑code scaffolding tool that automatically builds data‑entry forms and full CRUD interfaces for existing back‑ends, with an easy integration path.",
+   "Search for a code‑generation framework that produces CRUD UI components (forms, tables, validation) from a schema or API definition, and can be embedded in a custom stack.",
+   "Seeking an open‑source CRUD scaffolding solution or rapid‑application‑development platform that creates form‑based data management screens for any backend service."
+  ],
+  "keyword_queries": [
+   "crud scaffolding generator",
+   "open source form builder",
+   "rapid crud UI"
+  ],
+  "query_core": "A tool that lets you quickly generate CRUD applications with forms for data entry and updates, preferably open‑source and easy to integrate with existing back‑ends.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 5.4368e-05
+ },
+ "cmp-31549303": {
+  "reformulations": [
+   "I want a tiny Linux distro that starts up instantly and launches a digital audio workstation or plugin host for live gigs, only loading the essential audio drivers and nothing else.",
+   "A lightweight, boot‑fast Linux distribution that boots straight into a DAW/plugin host environment with a minimal ALSA/Jack/PipeWire stack and no desktop UI.",
+   "Minimal Linux OS image optimized for rapid boot, auto‑starting a JACK‑based audio host (DAW or VST host) with only the required sound subsystem packages.",
+   "Fast‑boot, stripped‑down Linux distribution for live audio performance, providing a bare‑bones audio stack and immediate DAW/plugin host launch."
+  ],
+  "keyword_queries": [
+   "minimal live audio distro",
+   "boot fast DAW Linux",
+   "jack only linux"
+  ],
+  "query_core": "A minimal, boot‑fast Linux distribution that boots directly into a DAW or plugin host for live music performance, with only the necessary audio stack (ALSA/Jack/PipeWire) and no desktop or extra applications.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 5.3186e-05
+ },
+ "cmp-15497837": {
+  "reformulations": [
+   "I want a tool that records low‑level browser performance events like reflows, repaints, layout thrashing, and paint timing while my web app runs.",
+   "A client‑side performance monitoring library that captures detailed rendering metrics (DOM layout changes, paint cycles, style recalculations) for web applications.",
+   "Instrumentation for the browser rendering pipeline that logs granular metrics such as layout invalidations, paint phases, and compositor activity in real time.",
+   "Fine‑grained front‑end performance analytics / rendering telemetry solution."
+  ],
+  "keyword_queries": [
+   "browser rendering metrics",
+   "client performance monitor",
+   "reflow repaint tracking"
+  ],
+  "query_core": "Collect detailed client‑side performance data such as reflows, repaints, layout thrashing, paint timings, and other runtime metrics for web applications.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 5.0931e-05
+ },
+ "cmp-28484658": {
+  "reformulations": [
+   "I want a lightweight, cross‑platform GUI toolkit that lets me create native desktop applications for Windows, macOS and Linux that can call a RESTful web service without the bloat of Electron.",
+   "A compact, multi‑OS UI framework for building desktop clients with native look‑and‑feel and built‑in HTTP client support, suitable as an Electron alternative.",
+   "Search for a minimal binary, cross‑platform GUI library (GTK/Qt‑like) with native OS integration and built‑in networking (HTTP/JSON) for desktop app development.",
+   "Looking for a lightweight native desktop application framework that supports Windows, macOS, and Linux and includes web API communication capabilities."
+  ],
+  "keyword_queries": [
+   "cross platform gui",
+   "native desktop framework",
+   "lightweight electron alternative"
+  ],
+  "query_core": "Find a cross‑platform GUI framework or stack that lets me build a desktop app (Windows, Linux/GTK, macOS) that talks to a web API, with a small binary size and native OS integration, as an alternative to Electron.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 5.8094e-05
+ },
+ "cmp-32315035": {
+  "reformulations": [
+   "I want a tool that lets my team highlight parts of a web page and leave comments attached to the exact HTML elements, then share those notes with everyone in the company.",
+   "A collaborative annotation layer for live web pages that stores comments on DOM nodes and provides organization‑wide visibility and discussion.",
+   "Web‑page DOM comment system with per‑element annotation storage, role‑based sharing, and real‑time sync across users.",
+   "Enterprise‑grade in‑page comment/annotation service for HTML elements, similar to document comments but operating on the DOM."
+  ],
+  "keyword_queries": [
+   "DOM annotation",
+   "web page comments",
+   "element level notes"
+  ],
+  "query_core": "A commercial product that lets users add comments/annotations directly on specific HTML elements in a web page and share those comments with an organization, similar to Google Docs comments but for the DOM.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 5.8828e-05
+ },
+ "cmp-27615562": {
+  "reformulations": [
+   "I need a collaborative app where my team can capture, version‑control, and track changes to product requirements and break them down into a hierarchical work‑breakdown structure, with links between the two.",
+   "A requirements‑management and WBS tool that provides itemised tracking, built‑in revision history, change‑log visibility, and the ability to associate each requirement with its corresponding WBS element.",
+   "Looking for a web‑based system that supports requirement specification, hierarchical task decomposition (WBS), integrated source‑control‑style versioning, and traceability between requirements and work items.",
+   "Collaborative requirements and work‑breakdown‑structure management platform with built‑in change tracking and traceability features."
+  ],
+  "keyword_queries": [
+   "requirements wbs versioning",
+   "traceable work breakdown",
+   "collaborative requirement tracking"
+  ],
+  "query_core": "Looking for a tool that lets a team collect and organize requirements and work‑breakdown structures in an itemised way, with built‑in version control and easy change tracking, and ideally the ability to link requirements to WBS items.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 0.0002037
+ },
+ "cmp-21991260": {
+  "reformulations": [
+   "I want a site where I can share quick hobby‑project sketches, get comments, and meet others who want to help build them.",
+   "A community platform for posting informal side‑project concepts, gathering peer feedback, and connecting with potential co‑creators.",
+   "A lightweight web service that hosts brief project proposals, supports comment‑based critique, and enables matchmaking for collaborative development.",
+   "An online hub for informal project idea exchange, feedback loops, and collaborator discovery, distinct from startup‑focused pitch venues."
+  ],
+  "keyword_queries": [
+   "project ideas collaboration",
+   "side project feedback",
+   "idea sharing community"
+  ],
+  "query_core": "A platform where people can post small side‑project ideas, receive feedback, and find collaborators without focusing on business‑oriented pitches.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 4.935e-05
+ },
+ "cmp-47127532": {
+  "reformulations": [
+   "How can I test which of several similar APIs an autonomous AI agent will pick, so I can improve my API docs and schema for better selection?",
+   "A simulation platform that lets AI agents browse, evaluate, and choose among competing service specifications to guide documentation optimization.",
+   "Framework for running agent‑centric API discovery experiments, measuring selection likelihood based on OpenAPI/GraphQL definitions and description quality.",
+   "Tool for benchmarking LLM‑driven service discovery and preference ranking across multiple comparable endpoints."
+  ],
+  "keyword_queries": [
+   "agent API selection",
+   "LLM service discovery",
+   "API choice simulation"
+  ],
+  "query_core": "The OP wants a way to evaluate or simulate how autonomous AI agents discover and choose a given API or service among many similar options, to optimize documentation, schema, and description for better agent selection.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 5.4975e-05
+ },
+ "cmp-23497756": {
+  "reformulations": [
+   "I want a voice‑driven coding assistant that lets me speak code naturally, like having a conversation, instead of issuing stiff commands that hurt my throat.",
+   "A conversational speech‑to‑code tool that transforms natural spoken programming language into source code without forcing a rigid command syntax.",
+   "Real‑time voice‑to‑code engine with dialog‑style interaction, using speech recognition to generate code from free‑form spoken instructions.",
+   "Natural language programming interface powered by speech, enabling developers to dictate code through conversational utterances."
+  ],
+  "keyword_queries": [
+   "speech to code",
+   "conversational coding",
+   "voice programming assistant"
+  ],
+  "query_core": "A conversational speech‑to‑code system that lets a programmer dictate code naturally without the abrupt, command‑driven style that strains the throat.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 6.75e-05
+ },
+ "cmp-34920400": {
+  "reformulations": [
+   "I need a dashboard that lets me monitor Hacker News posts and comments live, flag inappropriate content, and delete or edit items as a moderator.",
+   "A moderation console for Hacker News that provides real‑time comment and submission review, flagging, and removal capabilities.",
+   "Real‑time Hacker News moderation tool with APIs for fetching streams of submissions/comments, applying moderation rules, and performing delete/flag actions.",
+   "Live content moderation platform for a news aggregator, supporting comment review, flagging, and removal in real time."
+  ],
+  "keyword_queries": [
+   "hacker news moderation",
+   "real time comment review",
+   "submission flagging tool"
+  ],
+  "query_core": "A tool or set of utilities that assist the moderator in reviewing, flagging, deleting, and otherwise managing Hacker News comments and submissions in real time.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 4.9401e-05
+ },
+ "cmp-31303358": {
+  "reformulations": [
+   "I want a single dashboard that finds all of my accounts on different sites, shows how I log in to each (password, Google, Facebook, etc.), and lets me combine, rename, or remove them without extra verification hoops.",
+   "A unified account management platform that automatically scans for user identities across services, presents the associated authentication mechanisms, and supports seamless merging, renaming, or deletion of accounts and login methods.",
+   "Tool for cross‑service identity aggregation, credential type enumeration, and in‑place account consolidation/renaming/deprovisioning with minimal user interaction.",
+   "Identity aggregation and lifecycle management system for multi‑provider authentication ecosystems."
+  ],
+  "keyword_queries": [
+   "account aggregation manager",
+   "identity merge tool",
+   "credential consolidation service"
+  ],
+  "query_core": "A unified account management tool that can discover all of a user's accounts across various services, display the authentication methods used (password, social login, etc.), and allow merging, renaming, or deleting accounts and sign‑in methods without cumbersome confirmation steps or support tickets.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 7.75e-05
+ },
+ "cmp-44202110": {
+  "reformulations": [
+   "I want a web app that can load congressional bill XML or plain‑text files and display them in a clean, readable format with easy navigation and optional diff/compare tools.",
+   "A bill‑document viewer that parses legislative XML or text, renders a styled, searchable layout, and includes side‑by‑side version comparison capabilities.",
+   "Implement a UI component that consumes US legislative bill markup (XML/text), applies CSS/JS for pretty‑printing, provides a table‑of‑contents navigator, and can compute and show diffs between revisions.",
+   "Legislative document rendering and diff service for structured bill files."
+  ],
+  "keyword_queries": [
+   "bill viewer",
+   "legislative diff",
+   "XML bill renderer"
+  ],
+  "query_core": "A readable viewer or renderer for congressional bill documents (XML or plain text) that formats the content nicely, supports navigation, and optionally provides diff/comparison features.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 5.5085e-05
+ },
+ "cmp-14008085": {
+  "reformulations": [
+   "I’m looking for an open‑source, self‑hosted calendar app that feels as full‑featured and easy to use as Google Calendar, with plugins or modules I can add later.",
+   "A developer‑centric, modular calendar platform that can be self‑hosted and extended with custom components, offering the same UI/UX and capabilities as mainstream cloud calendars.",
+   "Self‑hosted calendar system built with a pluggable architecture, exposing a comprehensive API and UI comparable to Google Calendar, and written for easy extension by developers.",
+   "Open‑source, extensible calendar service (self‑hosted) – a full‑stack alternative to proprietary calendar SaaS."
+  ],
+  "keyword_queries": [
+   "self‑hosted calendar",
+   "open source calendar",
+   "modular calendar system"
+  ],
+  "query_core": "A powerful, developer‑friendly, open‑source calendar system that is modular, extensible and can be self‑hosted, providing the full feature set and usability of Google Calendar.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 5.306e-05
+ },
+ "cmp-23859456": {
+  "reformulations": [
+   "I want a chat app that shows replies as nested branches so I can see the whole discussion hierarchy.",
+   "A messaging platform with a tree‑view UI that visualizes conversation threads as expandable nodes.",
+   "Hierarchical thread visualization for instant messaging using a collapsible tree structure.",
+   "Threaded chat interface with tree‑based conversation mapping."
+  ],
+  "keyword_queries": [
+   "threaded chat tree",
+   "hierarchical conversation UI",
+   "nested message view"
+  ],
+  "query_core": "A messaging application that can display conversation threads in a hierarchical, tree‑like visual interface.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 4.44e-05
+ },
+ "cmp-29078836": {
+  "reformulations": [
+   "How can I scan a WordPress plugin's minified JavaScript for security issues when the original npm packages and package.json are missing?",
+   "A tool that performs static security analysis on bundled, obfuscated JavaScript inside WordPress plugins without requiring source repository metadata.",
+   "Static analysis of compressed JavaScript assets extracted from WP plugin archives, with dependency inference for missing npm manifest files.",
+   "JavaScript security audit solution for packaged WordPress extensions lacking build‑time provenance data."
+  ],
+  "keyword_queries": [
+   "wordpress plugin audit",
+   "minified js scanner",
+   "npm dependency inference"
+  ],
+  "query_core": "The OP needs a way to perform security audits of WordPress plugins that include bundled and minified JavaScript built from npm packages, even when no package.json or source repository is available.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 0.0001884
+ },
+ "cmp-28106113": {
+  "reformulations": [
+   "I’m looking for a way to keep track of my domain names that are about to expire and have them auto‑renew or be re‑registered before someone else can grab them.",
+   "A service that continuously watches domain expiration dates and automatically renews or re‑acquires the domains to prevent loss to squatters.",
+   "Automated domain expiry monitoring with built‑in renewal or back‑order functionality, integrating with registrar APIs to block squatting.",
+   "Domain lifecycle management platform offering expiry alerts, auto‑renewal and back‑order capabilities to safeguard owned namespaces."
+  ],
+  "keyword_queries": [
+   "domain auto renew",
+   "expiry monitoring",
+   "domain backorder"
+  ],
+  "query_core": "A service or tool that monitors expiring domains and automatically registers or renews them (or otherwise prevents domain squatting) so that owners don’t lose their domains to squatters.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 7e-05
+ },
+ "cmp-24395628": {
+  "reformulations": [
+   "I want a DNA testing service that keeps my genetic information private and lets me create a family tree without the data being sold or stored long‑term.",
+   "A privacy‑first genetic genealogy platform that enables users to upload DNA data, generate ancestry reports, and build family trees while guaranteeing no data resale or retention.",
+   "Secure, consent‑driven DNA analysis and pedigree construction tool with end‑to‑end encryption and a policy of zero data retention for downstream commercial use.",
+   "Privacy‑oriented genetic testing and lineage‑mapping service with strict data‑ownership guarantees."
+  ],
+  "keyword_queries": [
+   "private DNA genealogy",
+   "secure genetic testing",
+   "encrypted family tree"
+  ],
+  "query_core": "A privacy‑focused DNA testing and genealogy service that lets users build family trees without risking their genetic data being resold or retained.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 5.2993e-05
+ },
+ "cmp-30209366": {
+  "reformulations": [
+   "I want a Linux utility that records how long it takes for a scheduled task to start running and shows the desktop’s input‑to‑display lag.",
+   "A performance monitoring tool that captures scheduling latency and overall UI responsiveness metrics on a Linux desktop environment.",
+   "Collect and report kernel scheduling latency (runnable‑to‑execution time) and input‑to‑output latency using a userspace measurement daemon on Linux.",
+   "Linux scheduling latency and desktop responsiveness measurement framework."
+  ],
+  "keyword_queries": [
+   "scheduling latency monitor",
+   "desktop responsiveness metrics",
+   "input to display latency"
+  ],
+  "query_core": "A tool that can measure and report numeric metrics of Linux scheduling latency and overall desktop responsiveness (e.g., time from a process being marked runnable to actual execution, input‑to‑display latency, etc.).",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 5.0488e-05
+ },
+ "cmp-33595879": {
+  "reformulations": [
+   "I want a cloud‑based library where I can upload my legally bought music files and be sure they’ll stay available forever, no matter where I travel.",
+   "A persistent online music archive service that stores user‑uploaded audio tracks without any licensing‑driven deletions or regional blocks.",
+   "Self‑hosted or SaaS object storage for personal audio collections with immutable retention and no DRM‑based geo‑filtering.",
+   "Long‑term, unrestricted cloud storage for personal music libraries, guaranteeing permanent access regardless of licensing or location constraints."
+  ],
+  "keyword_queries": [
+   "persistent music storage",
+   "cloud audio archive",
+   "immutable music library"
+  ],
+  "query_core": "A cloud music storage service that lets the user upload their legally purchased audio files and guarantees the tracks will not be removed due to licensing or geographic restrictions.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 4.8211e-05
+ },
+ "cmp-40946613": {
+  "reformulations": [
+   "I want a device that can scan a wall with Wi‑Fi signals and create a 3‑D map of what's inside without drilling any holes.",
+   "A non‑invasive radio‑frequency imaging system that produces volumetric density visualizations of wall interiors.",
+   "Wi‑Fi‑based through‑wall tomography generating three‑dimensional density reconstructions of building structures.",
+   "Radio‑frequency through‑wall imaging platform for volumetric interior mapping."
+  ],
+  "keyword_queries": [
+   "wifi wall tomography",
+   "rf density mapping",
+   "through wall imaging"
+  ],
+  "query_core": "A tool that can generate a 3‑D density map of the interior of walls using Wi‑Fi (or similar radio) signals, without having to make holes.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 4.8529e-05
+ },
+ "cmp-18511911": {
+  "reformulations": [
+   "I need a modern, well‑documented peer‑to‑peer framework with Rust or Python bindings that makes it easy to build GUI applications.",
+   "A lightweight P2P library, offering clear documentation and Rust/Python APIs, suitable as a base for desktop GUI development.",
+   "Search for a cross‑platform P2P networking SDK with Rust and Python bindings, focused on simplicity and comprehensive docs for GUI app integration.",
+   "Looking for a peer‑to‑peer communication layer (Rust/Python) that can be used as a foundation for graphical user interface software."
+  ],
+  "keyword_queries": [
+   "p2p rust gui",
+   "peer to peer python library",
+   "networking framework gui"
+  ],
+  "query_core": "Looking for a modern, well‑documented, easy‑to‑use peer‑to‑peer framework or library (preferably with Rust or Python bindings) that can serve as a foundation for building GUI applications.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 5.0902e-05
+ },
+ "cmp-21920142": {
+  "reformulations": [
+   "I need a service where I can report security bugs in open‑source libraries and get help coordinating with the maintainers, even if they don't reply, possibly with bounty support.",
+   "A responsible disclosure platform that assists researchers in notifying and collaborating with open‑source project owners on vulnerabilities, offering mediation and reward handling.",
+   "An open‑source vulnerability coordination system with bug‑bounty workflow, escrowed rewards, and escalation procedures for inactive maintainers.",
+   "Responsible disclosure and bounty management framework for open‑source security incidents."
+  ],
+  "keyword_queries": [
+   "open source vulnerability disclosure",
+   "responsible disclosure platform",
+   "bug bounty coordination"
+  ],
+  "query_core": "A platform or service that lets security researchers responsibly disclose vulnerabilities in open‑source projects, especially when the maintainer is unresponsive, and provides guidance, coordination, and possibly bounty handling.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 5.091e-05
+ },
+ "cmp-40939333": {
+  "reformulations": [
+   "How can I attach a small sensor to my cat’s collar that watches for seizures and texts me when it happens?",
+   "Wearable seizure‑detection device for cats with real‑time push alerts to a mobile phone.",
+   "Cat‑mounted accelerometer/gyroscope and biometric sensor with onboard seizure detection algorithm and push‑notification integration.",
+   "Animal‑focused health monitoring platform with motion and physiological event detection and mobile alerting."
+  ],
+  "keyword_queries": [
+   "cat seizure sensor",
+   "pet wearable alert",
+   "animal motion detection"
+  ],
+  "query_core": "A wearable sensor (accelerometer/gyroscope, vibration, heart‑rate or EEG) that can be attached to a cat’s collar or harness, detect the characteristic movements or physiological changes during a seizure, and send a push notification to the owner’s phone.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 0.00018767
+ },
+ "cmp-13963698": {
+  "reformulations": [
+   "I need a partner that will take care of everything needed to launch my new product, from press releases and social media to attracting the first users.",
+   "Looking for an end‑to‑end go‑to‑market service that handles launch strategy, PR, marketing campaigns, and early‑stage customer acquisition for startups.",
+   "Seeking a full‑stack launch agency offering integrated marketing, public relations, social outreach, and initial growth hacking for a seed‑stage product.",
+   "A comprehensive go‑to‑market and early‑adopter acquisition solution for startup product launches."
+  ],
+  "keyword_queries": [
+   "launch services startup",
+   "go to market agency",
+   "early customer acquisition"
+  ],
+  "query_core": "Looking for a service/company that can handle the end‑to‑end launch of a startup product, including marketing, PR, social media, and early customer acquisition.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 6.75e-05
+ },
+ "cmp-14733562": {
+  "reformulations": [
+   "I want a utility that can pull my Evernote notebooks and automatically sort the notes into topic‑based clusters.",
+   "A solution that ingests Evernote data and applies unsupervised grouping to organize notes by similar concepts.",
+   "Evernote note importer with built‑in clustering using NLP or vector similarity to create thematic groups.",
+   "Topic clustering service for personal knowledge bases, supporting Evernote as a source."
+  ],
+  "keyword_queries": [
+   "evernote clustering",
+   "note topic grouping",
+   "evernote import clustering"
+  ],
+  "query_core": "A tool that can ingest Evernote notes and automatically group them into clusters of similar ideas or topics.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 4.644e-05
+ },
+ "cmp-40682632": {
+  "reformulations": [
+   "I want a marketplace where I can post a paid bounty and hire open‑source contributors to fix bugs or add features to my project.",
+   "A platform that lets you create paid contracts or bounties to attract qualified developers for targeted open‑source issue resolution.",
+   "Service offering bounty posting and contractor matching for specific bug fixes or feature development on existing open‑source repositories.",
+   "Bounty‑based developer sourcing platform for open‑source maintenance and feature implementation."
+  ],
+  "keyword_queries": [
+   "open source bounty",
+   "paid issue contract",
+   "bug fix marketplace"
+  ],
+  "query_core": "A service or platform where I can post a paid bounty or contract to locate qualified open‑source developers who can fix specific bugs or implement features in existing projects.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 6e-05
+ },
+ "cmp-11595129": {
+  "reformulations": [
+   "I need a tool to quickly draw and arrange wireframes, flow diagrams, and data models for my web app design.",
+   "A web‑project planning application that lets you sketch UI mockups, map out database schemas, and list feature requirements in one workspace.",
+   "Collaborative visual editor for creating UI wireframes, entity‑relationship diagrams, and structured feature specifications using vector graphics and markdown.",
+   "Integrated visual design and documentation suite for UI prototyping, data modeling, and feature backlog organization."
+  ],
+  "keyword_queries": [
+   "wireframe diagram tool",
+   "UI mockup editor",
+   "feature model visualizer"
+  ],
+  "query_core": "The OP wants a way to create, organize and sketch mockups, diagrams and structured concepts for a web project, including UI wireframes, data models and feature lists.",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": 2,
+  "cost_usd": 7.55e-05
+ }
+}

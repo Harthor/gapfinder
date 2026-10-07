@@ -274,14 +274,63 @@ Decisiones de la sesión (sin supervisión; documentadas también en el reporte)
   Saldo de OpenRouter antes de empezar: $2.17.
 - Resultado: 8 ya construido (23%), 7 revisar (20%), 20 no (57%). Requiere adjudicación humana.
 
-Revisiones preparadas para la adjudicación humana:
-- `uv run gapfinder phase3 review-labels`: las 4 etiquetas de positivos reales juzgadas "no" en el piloto
-  (mantener / parcial / descartar / no sé) -> `data/eval/label_review_human.jsonl`; no toca known_cases.json.
-- `uv run gapfinder holdout review`: 75 pares (3 mejores candidatos de cada "no", el mejor de cada
-  "revisar"/"ya construido") -> `data/eval/holdout_review_human.jsonl` y `data/eval/holdout_review_result.md`.
+Adjudicación humana: ver `gapfinder review` (abajo). La cola del holdout es por idea: las 20 "no" en orden
+al azar (semilla fija), una tecla por idea viendo sus 3 mejores candidatos -> `data/eval/holdout_review_ideas.jsonl`
+y `data/eval/holdout_review_result.md` (% hueco y % equivalente con IC 95% de Wilson). Las respuestas del formato
+anterior por par (`holdout_review_human.jsonl`) se convierten al cargar: un "s" decide la idea; si no, solo
+ideas con sus 3 pares respondidos.
 
-Lado de demanda: `data/ideas.json` nunca existió y las ideas de Constellate también son de oferta.
-Notas y opciones (Ask HN, Reddit, Twitter) en `data/eval/demand_side_notes.md`.
+## Revisión humana: `gapfinder review`
+
+Un solo menú con todas las colas y su progreso (hechos/total); cada respuesta se guarda al instante en un jsonl
+y se retoma donde quedaste; `q` guarda y vuelve al menú. Una cola cuyo paso no terminó aparece "pendiente".
+
+```bash
+uv run gapfinder review
+```
+
+- a) etiquetas de reales: los 4 positivos del piloto juzgados "no" (k mantener / p parcial / d descartar /
+  ? no sé) -> `data/eval/label_review_human.jsonl`; no toca known_cases.json.
+- b) holdout temporal por idea (1/2/3 equivalente, p parcial, n hueco, ? no sé, o+número abre la URL).
+- c) Ask HN, extracción: ¿es un pedido real? (s/n) y etiqueta según los comentarios (e existe / p parcial /
+  n no existe / ? incierto). Los 40 elegidos para la Fase 4 van primero -> `data/eval/askhn_extract_review_human.jsonl`.
+- d) Fase 4, pares: por idea la decisión del sistema y su mejor candidato (top-3 si dijo "no"); s/p/n/? y
+  o abre la URL -> `data/eval/phase4_review_human.jsonl`.
+
+## Fase 4 (oct-2026): lado de demanda con Ask HN
+
+Pedidos reales ("Ask HN: is there a tool for…?") como ideas con demanda; los comentarios dan una etiqueta
+aproximada ("sí, existe X" / "busqué y no hay"). Reporte: `data/eval/phase4_askhn.md`. Código: `askhn.py`.
+
+```bash
+uv run gapfinder askhn collect    # Algolia (tags=ask_hn), 16 consultas, filtros sin LLM, comentarios; cache en data/cache/askhn/
+uv run gapfinder askhn extract    # LLM barato vía OpenRouter: pedido, idea, herramientas sugeridas, etiqueta (reanudable)
+uv run gapfinder askhn select     # hasta 40 pedidos balanceados por etiqueta (data/askhn/selected.json)
+uv run gapfinder askhn run        # por idea: consultas llm5 -> top-1000 anterior al Ask -> Jev; con tope de gasto, reanudable
+uv run gapfinder askhn report     # data/eval/phase4_askhn.md
+```
+
+Decisiones (documentadas también en el reporte):
+- **Recolección**: >= 5 puntos y >= 3 comentarios (filtro de Algolia), Asks desde 2015-01-01 (antes, el corpus
+  enmascarado a la fecha del Ask queda chico), título con forma de pedido, sin empleo/carrera, palabra de
+  software en título o texto; los "How do you…" además necesitan la palabra de software en el título (si no, son
+  consejos: "How do you deal with…"). 8.568 Asks únicos -> 397 filtrados.
+- **Extracción**: `openai/gpt-oss-120b` vía OpenRouter ($0.037/$0.17 por Mtok, ~$0.0003 por Ask), validado en 10
+  casos (`data/askhn/extract_validation.log`). Con el schema estricto degeneró en 39/397 salidas ("....", nombres
+  vacíos): validación + reintento, tercer intento con `qwen/qwen3-30b-a3b-instruct-2507`; las salidas inválidas
+  quedan archivadas con su costo (`extractions_descartadas.json`).
+- **Mapeo al corpus** con `CorpusIndex` (repo, URL exacta, dominio validado por nombre); sin URL, por nombre exacto
+  de un repo cuyo dueño es el proyecto (`sphinx-doc/sphinx` sí, `zdavatz/spreadsheet` no); URLs de tiendas de apps
+  no se mapean por dominio.
+- **Selección**: cupos no_existe 12, existe-con-item-en-corpus 12, parcial 8, existe-sin-item 4, incierto 4 (el
+  sobrante se completa por puntos); orden de proceso: no_existe y existe-con-item intercalados primero.
+- **Corpus por Ask**: items creados antes de la fecha de cada Ask, con los embeddings MiniLM existentes (sin
+  re-embeber). idea extraída = query_core; reformulaciones con claude-opus-5 y prompt v2 (rama "need").
+- **Anthropic se quedó sin crédito** a mitad de la corrida (se frenó como un 402): las consultas siguen con el
+  mismo modelo y prompt vía OpenRouter (`anthropic/claude-opus-5`). La única idea procesada antes tenía una
+  extracción degenerada: sus veredictos quedaron archivados en `verdicts_jev_askhn_descartado.jsonl`.
+- **Tope de gasto**: $0.90 al principio; con la recarga de OpenRouter, $2.40 para las 40 ideas (~$0.051 por idea:
+  Claude $0.017 + Jev $0.034).
 
 ## Tests
 
