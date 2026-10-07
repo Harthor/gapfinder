@@ -1,0 +1,23 @@
+{
+ "ask-25814083": {
+  "reformulations": [
+   "I keep doing the same repetitive task by hand and want a small program that just does it for me automatically.",
+   "A lightweight open source utility that automates routine everyday workflows with minimal configuration.",
+   "A command line tool or background script that detects a recurring task and runs the steps automatically, with simple config and logging.",
+   "General purpose task automation and productivity tooling for developers."
+  ],
+  "keyword_queries": [
+   "task automation tool",
+   "cli automation utility",
+   "workflow automation script"
+  ],
+  "usage": {
+   "input_tokens": 921,
+   "output_tokens": 473
+  },
+  "model": "claude-opus-5",
+  "key": "845eb49d63c333dc",
+  "prompt_version": 2,
+  "query_core": "...."
+ }
+}
