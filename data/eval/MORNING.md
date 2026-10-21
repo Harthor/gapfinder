@@ -16,4 +16,5 @@ Anthropic $0.016 (quedó sin crédito, se siguió con Opus vía OpenRouter). Sal
 **Qué te queda por revisar**
 1. Leer `data/eval/gap_candidates.md` (empieza por los de menor score).
 2. `uv run gapfinder review` → d) Fase 4, 84 pares. (a y b terminadas; c está oculta: `--evaluar`.)
-3. Rotar las keys de Anthropic y OpenRouter.
+3. ~~Rotar las keys de Anthropic y OpenRouter.~~ Hecho (2026-10-21): las keys viejas están revocadas; nunca
+   estuvieron en el repo.
