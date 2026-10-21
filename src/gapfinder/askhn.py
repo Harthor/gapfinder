@@ -22,7 +22,8 @@ from pathlib import Path
 
 DIR = Path("data/askhn")
 CACHE = Path("data/cache/askhn")
-ASKS = DIR / "asks.json"
+ASKS = DIR / "asks.json"                 # en el repo: metadatos de cada Ask, sin el texto del OP
+ASKS_TEXT = CACHE / "asks_text.json"     # local (no va al repo: es contenido de HN): {id: texto del OP}
 EXTRACTIONS = DIR / "extractions.json"
 SELECTED = DIR / "selected.json"
 QUERIES = DIR / "llm_queries.json"
@@ -39,7 +40,21 @@ def _load(path: Path, default):
 
 
 def load_asks() -> dict[str, dict]:
-    return {a["id"]: a for a in _load(ASKS, {}).get("asks", [])}
+    """Metadatos de asks.json más el texto del OP de la copia local (ASKS_TEXT), si existe."""
+    text = _load(ASKS_TEXT, {})
+    return {a["id"]: {**a, "text": text[a["id"]]} if a["id"] in text else a for a in _load(ASKS, {}).get("asks", [])}
+
+
+def _op_text(ask: dict) -> str:
+    if "text" not in ask:
+        raise RuntimeError(f"falta el texto del OP del Ask {ask['id']}: está en {ASKS_TEXT} (local); "
+                           "regeneralo con `gapfinder askhn collect`")
+    return ask["text"]
+
+
+def split_asks(rows: list[dict]) -> tuple[list[dict], dict[str, str]]:
+    """(filas para el repo, sin "text"; {id: texto del OP} para la copia local)."""
+    return [{k: v for k, v in r.items() if k != "text"} for r in rows], {r["id"]: r.get("text", "") for r in rows}
 
 
 def load_extractions() -> dict[str, dict]:
@@ -187,8 +202,10 @@ def collect() -> dict:
     out = {"filters": {"min_points": MIN_POINTS, "min_comments": MIN_COMMENTS, "min_date": MIN_DATE,
                        "request_title_regex": REQUEST_RE.pattern, "software_regex": SOFTWARE_RE.pattern,
                        "off_topic_regex": OFF_TOPIC_RE.pattern},
-           "queries": per_query, "funnel": funnel, "asks": rows}
+           "queries": per_query, "funnel": funnel, "asks": split_asks(rows)[0]}
     ASKS.write_text(json.dumps(out, indent=1, ensure_ascii=False))
+    CACHE.mkdir(parents=True, exist_ok=True)
+    ASKS_TEXT.write_text(json.dumps(split_asks(rows)[1], ensure_ascii=False))
     return {"queries": per_query, "funnel": funnel}
 
 
@@ -262,7 +279,7 @@ def thread_text(ask: dict) -> str:
             break
         lines.append(line)
         total += len(line)
-    return (f"Title: {ask['title']}\nPosted: {ask['created_at'][:10]}\n\nOP text:\n{ask['text'][:OP_CHARS] or '(none)'}\n\n"
+    return (f"Title: {ask['title']}\nPosted: {ask['created_at'][:10]}\n\nOP text:\n{_op_text(ask)[:OP_CHARS] or '(none)'}\n\n"
             f"Comments ({len(lines)} of {len(cs)} shown):\n" + "\n".join(lines))
 
 

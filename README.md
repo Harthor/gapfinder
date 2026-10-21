@@ -76,7 +76,11 @@ uv run gapfinder review               # colas de revisión humana (ídem)
 
 El corpus (`data/corpus.db`, 1,8 GB), los embeddings, el índice BM25 y los veredictos del verificador
 (`data/phase3/*.jsonl`) no están en el repo; el corpus se reconstruye con `ingest`, `embed` y `bm25` (ver Fase 1 y
-2). Los reportes, los casos conocidos y las revisiones humanas sí están en `data/eval/` y `data/`.
+2). Los reportes, los casos conocidos y las revisiones humanas sí están en `data/eval/` y `data/`. De los Ask HN el
+repo guarda solo metadatos (título, id, URL, fecha, puntos); el texto del OP queda en una copia local
+(`data/cache/askhn/asks_text.json`) que `gapfinder askhn collect` regenera.
+
+Licencia: [MIT](LICENSE).
 
 ---
 

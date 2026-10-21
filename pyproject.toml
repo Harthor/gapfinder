@@ -3,6 +3,7 @@ name = "gapfinder"
 version = "0.1.0"
 description = "Detecta huecos reales: ideas con demanda cruzadas contra un corpus historico de cosas ya construidas"
 readme = "README.md"
+license = "MIT"
 requires-python = ">=3.12"
 dependencies = [
     "anthropic>=1.8.0",

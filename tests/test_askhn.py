@@ -5,6 +5,7 @@ from gapfinder import askhn, review
 
 def _setup(tmp_path, monkeypatch, asks, ext):
     monkeypatch.setattr(askhn, "ASKS", tmp_path / "asks.json")
+    monkeypatch.setattr(askhn, "ASKS_TEXT", tmp_path / "asks_text.json")
     monkeypatch.setattr(askhn, "EXTRACTIONS", tmp_path / "ext.json")
     monkeypatch.setattr(askhn, "SELECTED", tmp_path / "sel.json")
     (tmp_path / "asks.json").write_text(json.dumps({"asks": asks}))
@@ -82,3 +83,18 @@ def test_holdout_pairs_conversion_and_wilson(tmp_path, monkeypatch):
     assert review._from_pairs(rows) == {"h1": "2", "h2": "p", "h3": "n"}   # h4 incompleta: no se convierte
     lo, hi = review.wilson(5, 10)
     assert round(lo, 3) == 0.237 and round(hi, 3) == 0.763
+
+
+def test_asks_text_lives_in_local_copy_and_is_merged_back(tmp_path, monkeypatch):
+    import pytest
+
+    rows = [{**_ask(1, 10), "text": "I need a tool for X"}, {**_ask(2, 20), "text": ""}]
+    public, text = askhn.split_asks(rows)
+    assert all("text" not in r for r in public) and text == {"1": "I need a tool for X", "2": ""}
+    _setup(tmp_path, monkeypatch, public, {})
+    assert "text" not in askhn.load_asks()["1"]   # sin copia local: solo metadatos
+    with pytest.raises(RuntimeError, match="texto del OP"):
+        askhn._op_text(askhn.load_asks()["1"])
+    (tmp_path / "asks_text.json").write_text(json.dumps(text))
+    got = askhn.load_asks()
+    assert got["1"]["text"] == "I need a tool for X" and got["2"]["title"] == "Ask HN: is there a tool 2"
