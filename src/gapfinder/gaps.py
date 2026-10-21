@@ -36,7 +36,23 @@ COMPARE_REPORT = Path("data/eval/gap_compare_k200.md")
 MIN_BALANCE = 0.50
 K_FIRST, K_FULL = 200, 1000
 HUECO = 0.85     # regla de la Fase 3: < 0.85 = no hay match fuerte
+FUERTE = 0.60    # hueco fuerte: mejor P(núcleo) < 0.60 y los comentarios no dicen que existe
 LABELS = {"e": "existe", "p": "parcial", "n": "no existe", "?": "incierto"}
+TIERS = {"fuerte": "hueco fuerte", "gris": "zona gris", "descartado": "descartado (etiqueta e)",
+         "match": f"match >= {HUECO}", "no_software": "no es software"}
+
+# Filtro "no es software": el sintagma nominal del pedido (lo que va antes del primer "that/to/for/with/of…")
+# o la forma del título del Ask.
+_HEAD_STOP = r"\s(?:that|which|to|for|with|of|in|on|from|by|via|using|where|like|similar)\s"
+_NO_SOFTWARE_HEAD = {
+    "hardware": r"\b(device|phone(?!\s+(numbers?|calls?))|smart ?watch|watch|wristband|e-?reader|ebook reader|sensor|collar"
+                r"|robot|robotics|hardware|wearable)s?\b",
+    "contenido": r"\b(book|course|bootcamp|curriculum|tutorial|guide|template|license|list)s?\b",
+}
+_NO_SOFTWARE_TITLE = {
+    "encuesta": r"\b(what|which)\s+(\w+\s+){0,2}(do|would|are)\s+you\b|\bhow do you\b|\bdo you use\b",
+    "se puede": r"\bis there (a|any) way\b|\bany way (to|for)\b|\bis it possible\b",
+}
 
 # --- 1. extracción v2 -----------------------------------------------------------------------------------
 
@@ -416,6 +432,41 @@ def run(conn, rerun_first: int = 40) -> dict:
 # --- 4. lista final -------------------------------------------------------------------------------------
 
 
+def no_software(title: str, pedido: str) -> str | None:
+    """Motivo por el que el pedido no es una herramienta de software (hardware, contenido, encuesta, "¿se puede…?"),
+    o None. Hardware y contenido miran solo el sintagma nominal del pedido, para que "an app that recommends books"
+    o "a service that sends SMS or phone calls" sigan siendo software; la encuesta y el "¿se puede…?" salen del
+    título del Ask (y de un pedido que empieza con "a method/way")."""
+    pedido = re.sub(r"[‐-―]", "-", pedido.lower())   # guiones unicode del LLM ("e‑ink") -> "-"
+    sin_parentesis = re.sub(r"\([^)]*\)", "", pedido)
+    head = re.split(_HEAD_STOP, f" {sin_parentesis} ", maxsplit=1)[0]
+    if re.search(r"^(a|an)\s+(method|way)\b", pedido):
+        return "se puede"
+    for motivo, pat in _NO_SOFTWARE_HEAD.items():
+        if re.search(pat, head):
+            return motivo
+    title = re.sub(r"^ask hn:\s*", "", title.lower())
+    for motivo, pat in _NO_SOFTWARE_TITLE.items():
+        if re.search(pat, title):
+            return motivo
+    return None
+
+
+def tier(best: float, etiqueta: str, motivo: str | None = None) -> str:
+    """Nivel del pedido. En orden: match (>= HUECO, ya construido: no es hueco); no es software; descartado (los
+    comentarios dicen que existe); hueco fuerte (< FUERTE y etiqueta n o p); el resto (incluido "?" < FUERTE) es
+    zona gris."""
+    if best >= HUECO:
+        return "match"
+    if motivo:
+        return "no_software"
+    if etiqueta == "e":
+        return "descartado"
+    if best < FUERTE and etiqueta in ("n", "p"):
+        return "fuerte"
+    return "gris"
+
+
 def report(conn, top: int = 5) -> str:
     from gapfinder.verify import load_done
 
@@ -433,48 +484,75 @@ def report(conn, top: int = 5) -> str:
         if not k_done:
             continue
         best, scored = _best(cid, cand[cid][:k_done], ver)
-        rows.append({**c, "k": k_done, "best": best, "scored": scored, "v2": v2[c["ask_id"]], "ask": asks[c["ask_id"]]})
-    gaps_full = sorted([r for r in rows if r["best"] < HUECO and r["k"] == K_FULL], key=lambda r: r["best"])
-    gaps_200 = sorted([r for r in rows if r["best"] < HUECO and r["k"] == K_FIRST], key=lambda r: r["best"])
-    k200_gaps_total = sum(1 for r in rows if _best(r["id"], cand[r["id"]][:K_FIRST], ver)[0] < HUECO)
-    rescued = [r for r in rows if r["k"] == K_FULL and r["best"] >= HUECO]
-    lab_all = Counter(r["v2"]["etiqueta"] for r in rows)
-    lab_gap = Counter(r["v2"]["etiqueta"] for r in gaps_full)
+        a, d = asks[c["ask_id"]], v2[c["ask_id"]]
+        motivo = no_software(a["title"], d["pedido_resumido"])
+        rows.append({**c, "k": k_done, "best": best, "scored": scored, "v2": d, "ask": a, "motivo": motivo,
+                     "tier": tier(best, d["etiqueta"], motivo)})
+    by = {t: sorted((r for r in rows if r["tier"] == t), key=lambda r: r["best"]) for t in TIERS}
+    pending = sum(r["k"] == K_FIRST and r["best"] < HUECO for r in rows)
+    lab = {t: Counter(r["v2"]["etiqueta"] for r in by[t]) for t in TIERS}
+    motivos = Counter(r["motivo"] for r in by["no_software"])
     cost_v2 = sum(d.get("cost_usd", 0) for d in v2.values())
     cost_q = sum(q.get("cost_usd", 0) for q in askhn._load(QUERIES, {}).values())
     cost_j = sum(v.cost_usd or 0 for v in ver.values())
     L = ["# Candidatos a hueco: pedidos de Ask HN sin match fuerte en el corpus\n",
-         f"Pedidos reales (extracción automática v2) corridos contra el corpus anterior a la fecha de cada Ask. Hueco = ningún "
-         f"candidato con P(núcleo) de Jev >= {HUECO}. Primero top-{K_FIRST}; los huecos se re-corren con top-{K_FULL} antes de "
-         f"entrar a la lista. Orden: menor P(núcleo) máxima primero.\n",
-         f"- Pedidos reales: {len(cases)}; verificados: {len(rows)}.",
-         f"- Huecos con top-{K_FIRST}: {k200_gaps_total}; re-corridos con top-{K_FULL}: {len(rescued) + len(gaps_full)} "
-         f"(con match >= {HUECO} al ampliar: {len(rescued)}).",
-         f"- **Huecos confirmados con top-{K_FULL}: {len(gaps_full)}**; huecos solo con top-{K_FIRST} (sin re-correr): {len(gaps_200)}.",
-         f"- Etiqueta de los comentarios en los huecos confirmados: " + ", ".join(f"{LABELS[k]} {lab_gap.get(k, 0)}" for k in LABELS)
-         + f" (en todos los verificados: " + ", ".join(f"{LABELS[k]} {lab_all.get(k, 0)}" for k in LABELS) + ").",
-         f"- **Etiqueta \"e\" (los comentarios dicen que existe) que quedaron como hueco: {lab_gap.get('e', 0)}**: o la herramienta "
-         "sugerida no está en el corpus (cobertura), o el retrieval/Jev no la encontró.",
+         f"Pedidos reales (extracción automática v2) corridos contra el corpus anterior a la fecha de cada Ask, con Jev sobre "
+         f"el top-{K_FIRST} y, si no hubo match, el top-{K_FULL}. Cada pedido cae en un nivel, en este orden:\n",
+         f"1. **match**: algún candidato con P(núcleo) >= {HUECO} (ya construido; no se lista).",
+         "2. **no es software**: el pedido es hardware, contenido (libro, curso, guía, plantilla, licencia, lista), una "
+         "encuesta (\"what tools do you use\", \"how do you…\") o un \"¿se puede…?\". Heurístico sobre el título del Ask y "
+         "el sintagma nominal del pedido (`gaps.no_software`).",
+         "3. **descartado**: los comentarios dicen que existe (etiqueta e).",
+         f"4. **hueco fuerte**: mejor P(núcleo) < {FUERTE} y etiqueta n o p.",
+         f"5. **zona gris**: el resto (mejor P(núcleo) {FUERTE}–{HUECO}).\n",
+         f"- Pedidos reales: {len(cases)}; verificados: {len(rows)}"
+         + (f"; sin re-correr con top-{K_FULL}: {pending}" if pending else "") + ".",
+         "- Por nivel: " + ", ".join(f"{TIERS[t]} {len(by[t])}" for t in TIERS) + ".",
+         "- No es software, por motivo: " + ", ".join(f"{m} {n}" for m, n in motivos.most_common()) + ".",
+         f"- **Huecos fuertes: {len(by['fuerte'])}** (no existe {lab['fuerte'].get('n', 0)}, parcial {lab['fuerte'].get('p', 0)}); "
+         f"zona gris: {len(by['gris'])} (" + ", ".join(f"{LABELS[k]} {n}" for k, n in sorted(lab["gris"].items())) + ").",
          f"- Costo: extracción v2 ${cost_v2:.3f}, reformulaciones ${cost_q:.3f}, Jev ${cost_j:.3f} (OpenRouter, usage.cost).\n",
-         "Caveats: las reformulaciones son de gpt-oss (no Opus 5) y la primera pasada usa top-200; ver "
-         f"`{COMPARE_REPORT}` para cuánto cambia eso en los 40 Asks de la Fase 4. Un hueco es \"sin equivalente en este corpus "
-         "(Show HN + GitHub >= 100★) antes del Ask\", no prueba que no exista; el pedido_resumido lo escribe un LLM.\n"]
+         "Caveats: los veredictos son los cacheados (no se re-verificó nada); las reformulaciones son de gpt-oss y la primera "
+         f"pasada usa top-{K_FIRST} (ver `{COMPARE_REPORT}`). Un hueco es \"sin equivalente en este corpus (Show HN + GitHub "
+         ">= 100★) antes del Ask\", no prueba que no exista; el pedido_resumido lo escribe un LLM. El umbral "
+         f"{FUERTE} no está calibrado con revisión humana.\n"]
 
-    def block(rs: list[dict], title: str) -> None:
-        L.append(f"## {title} ({len(rs)})\n")
-        for n, r in enumerate(rs, 1):
-            a, d = r["ask"], r["v2"]
-            L.append(f"{n}. **{d['pedido_resumido']}**  \n"
-                     f"   [{a['title'][:110]}]({a['hn_url']}) · {a['created_at'][:10]} · {a['points']} pts · {a['num_comments']} comentarios · "
-                     f"etiqueta **{d['etiqueta']}** ({LABELS[d['etiqueta']]}) · mejor P(núcleo) {r['best']:.2f} (top-{r['k']})  \n"
-                     f"   _{d['justificacion']}_")
-            for i in r["scored"][:top]:
-                t, u, c = meta.get(i, ("?", "", "?"))
-                L.append(f"   - {ver[(r['id'], i)].core:.2f} · {t[:80]} · {c[:10]} · {u}")
+    def head(r: dict) -> str:
+        a, d = r["ask"], r["v2"]
+        return (f"**{d['pedido_resumido']}**  \n"
+                f"   [{a['title'][:110]}]({a['hn_url']}) · {a['created_at'][:10]} · {a['points']} pts · {a['num_comments']} comentarios · "
+                f"etiqueta **{d['etiqueta']}** ({LABELS[d['etiqueta']]}) · mejor P(núcleo) {r['best']:.2f} (top-{r['k']})")
+
+    def cand_line(r: dict, i: str) -> str:
+        t, u, c = meta.get(i, ("?", "", "?"))
+        return f"{ver[(r['id'], i)].core:.2f} · {t[:80]} · {c[:10]} · {u}"
+
+    def block(t: str, n_cands: int) -> None:
+        L.append(f"## {TIERS[t].capitalize()} ({len(by[t])})\n")
+        for n, r in enumerate(by[t], 1):
+            L.append(f"{n}. {head(r)}  \n   _{r['v2']['justificacion']}_")
+            L.extend(f"   - {cand_line(r, i)}" for i in r["scored"][:n_cands])
             L.append("")
-    block(gaps_full, f"Huecos confirmados (top-{K_FULL})")
-    if gaps_200:
-        block(gaps_200, f"Huecos solo con top-{K_FIRST} (pendientes de re-correr con top-{K_FULL})")
+
+    def cell(s: str, n: int) -> str:
+        return s[:n].replace("|", "\\|")
+
+    def compact(t: str, col: str, value) -> None:
+        L.extend([f"## {TIERS[t].capitalize()} ({len(by[t])})\n",
+                  f"| pedido | Ask | etiqueta | mejor | {col} |", "|---|---|---|---|---|"])
+        for r in by[t]:
+            a = r["ask"]
+            L.append(f"| {cell(r['v2']['pedido_resumido'], 90)} | [{cell(a['title'], 60)}]({a['hn_url']}) | "
+                     f"{r['v2']['etiqueta']} | {r['best']:.2f} | {cell(value(r), 50)} |")
+        L.append("")
+
+    def best_cand(r: dict) -> str:
+        return meta.get(r["scored"][0], ("?",))[0] if r["scored"] else "–"
+
+    block("fuerte", top)
+    block("gris", 3)
+    compact("descartado", "mejor candidato", best_cand)
+    compact("no_software", "motivo", lambda r: r["motivo"])
     text = "\n".join(L) + "\n"
     REPORT.write_text(text)
     return text

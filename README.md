@@ -352,6 +352,10 @@ uv run gapfinder gaps report               # data/eval/gap_candidates.md
   entrar a la lista. En los 40 de la Fase 4, la opción barata pasó 2 de 18 matches a hueco
   (`data/eval/gap_compare_k200.md`).
 - Frena ante 401/402/403 y si el saldo de OpenRouter baja de $0.50.
+- Niveles del reporte (oct-2026, offline sobre los veredictos cacheados; antes era hueco = sin match >= 0.85, 119
+  huecos con 69 "existe"): match >= 0.85 (123) -> no es software (44: encuesta 20, hardware 8, "¿se puede…?" 8,
+  contenido 8; heurístico `gaps.no_software` sobre el título del Ask y el sintagma nominal del pedido) -> descartado
+  por etiqueta e (44) -> **hueco fuerte** < 0.60 con etiqueta n/p (12) -> zona gris (19). El 0.60 no está calibrado.
 
 ## Tests
 
