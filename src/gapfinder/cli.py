@@ -517,7 +517,7 @@ def main() -> None:
     p.add_argument("--rerun-first", type=int, default=40, help="run: huecos a re-correr primero con K=1000")
     p.set_defaults(func=cmd_gaps)
 
-    p = sub.add_parser("review", help="menú único de revisión humana: etiquetas, holdout, Ask HN, Fase 4")
+    p = sub.add_parser("review", help="menú único de revisión humana: etiquetas, holdout, Ask HN, Fase 4, huecos")
     p.add_argument("--cases", type=Path, default=Path("data/known_cases.json"))
     p.add_argument("--evaluar", action="store_true", help="mostrar también la cola c) de confirmación manual de la extracción")
     p.set_defaults(func=cmd_review)

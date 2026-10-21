@@ -6,6 +6,8 @@ Colas:
      quedan como opcionales al final
   c) Ask HN, extracción: confirmar si es un pedido real (s/n) y la etiqueta de los comentarios (e/p/n/?)
   d) Fase 4, pares: por idea, la decisión del sistema y el mejor candidato (top-3 si dijo "no")
+  e) candidatos a hueco: los huecos fuertes (y la zona gris al final), por pedido viendo sus 3 mejores candidatos;
+     precisión = hueco real / juzgadas, con IC de Wilson (data/eval/gap_review_result.md)
 
 Todas guardan cada respuesta al instante en un jsonl (la última respuesta por clave gana) y se retoman
 donde quedaste; q guarda y vuelve al menú. Una cola cuyo paso todavía no terminó aparece como pendiente.
@@ -395,6 +397,179 @@ def interactive_phase4(conn: sqlite3.Connection, getkey=pilot._getkey, out=print
     return {"respondidos_ahora": done, "pares": len(keys)}
 
 
+# --- e) candidatos a hueco: huecos fuertes y zona gris --------------------------------------------------
+
+GAPS_REVIEW_PATH = Path("data/eval/gap_review_human.jsonl")
+GAPS_RESULT_PATH = Path("data/eval/gap_review_result.md")
+GAPS_SEED = 7
+GAPS_KEYS = {"n": "hueco real", "1": "equivalente (candidato 1)", "2": "equivalente (candidato 2)",
+             "3": "equivalente (candidato 3)", "x": "existe fuera de los candidatos", "p": "algo parcial",
+             "s": "no es un pedido de software", "?": "no sé"}
+
+
+def gap_queue() -> tuple[list[dict], list[dict]]:
+    """(huecos fuertes, zona gris) de `gaps.tiered_rows`, cada uno barajado con semilla fija (un corte temprano
+    sigue siendo una muestra aleatoria). Cada fila con sus 3 mejores candidatos por P(núcleo)."""
+    import random
+
+    from gapfinder import gaps
+
+    rows = gaps.tiered_rows()
+    out = []
+    for t in ("fuerte", "gris"):
+        rs = sorted((r for r in rows if r["tier"] == t), key=lambda r: r["id"])
+        random.Random(GAPS_SEED).shuffle(rs)
+        out.append(rs)
+    return out[0], out[1]
+
+
+def load_gap_answers(path: Path | None = None) -> dict[str, dict]:
+    path = path or GAPS_REVIEW_PATH
+    out = {}
+    if path.exists():
+        for line in path.read_text().splitlines():
+            if line.strip():
+                d = json.loads(line)
+                out[d["case_id"]] = d
+    return out
+
+
+def gap_metrics(labels: list[str]) -> dict:
+    """Precisión de la lista de huecos sobre las respuestas juzgadas (sin "no sé"): hueco real / juzgadas, con IC de
+    Wilson al 95%, y el desglose de los que no son hueco."""
+    judged = [x for x in labels if x != "?"]
+    n = len(judged)
+    count = {"hueco": sum(x == "n" for x in judged), "equivalente": sum(x in ("1", "2", "3") for x in judged),
+             "fuera": sum(x == "x" for x in judged), "parcial": sum(x == "p" for x in judged),
+             "no_software": sum(x == "s" for x in judged)}
+    return {"respondidas": len(labels), "juzgadas": n, "no_se": len(labels) - n, **count,
+            "precision": count["hueco"] / n if n else None, "ic": wilson(count["hueco"], n)}
+
+
+def write_gap_result(strong: list[dict], grey: list[dict], answers: dict[str, dict]) -> str:
+    def block(rows: list[dict], title: str) -> list[str]:
+        m = gap_metrics([answers[r["id"]]["label"] for r in rows if r["id"] in answers])
+        n = m["juzgadas"]
+
+        def fmt(k: int) -> str:
+            lo, hi = wilson(k, n)
+            return f"{k}/{n} = {k / n:.0%} (IC 95%: {lo:.0%}–{hi:.0%})" if n else "–"
+        return [f"## {title}\n", f"Respondidas {m['respondidas']}/{len(rows)}; juzgadas (sin \"no sé\") **n = {n}**; "
+                f"no sé: {m['no_se']}.\n",
+                f"- **Precisión (hueco real)**: {fmt(m['hueco'])}",
+                f"- Equivalente entre los 3 candidatos (error del verificador): {fmt(m['equivalente'])}",
+                f"- Existe fuera de los candidatos (cobertura del corpus o del retrieval): {fmt(m['fuera'])}",
+                f"- Algo parcial: {fmt(m['parcial'])}",
+                f"- No es un pedido de software (se le escapó al filtro): {fmt(m['no_software'])}", ""]
+    L = ["# Candidatos a hueco: adjudicación humana\n",
+         "Una respuesta por pedido viendo sus 3 mejores candidatos (P(núcleo) de Jev) y el hilo de Ask HN: n = hueco real "
+         "(nada de lo que ves ni de lo que conocés lo resuelve antes del Ask); 1/2/3 = ese candidato es equivalente; x = existe "
+         "algo equivalente fuera de los candidatos; p = algo parcial; s = no es un pedido de software; ? = no sé. Precisión = "
+         "hueco real / juzgadas; intervalos de Wilson al 95%. Orden al azar con semilla fija dentro de cada nivel. Niveles de "
+         "`data/eval/gap_candidates.md`.\n"]
+    L += block(strong, f"Huecos fuertes ({len(strong)})")
+    L += block(grey, f"Zona gris ({len(grey)})")
+    L += ["## Respuestas\n", "| pedido | nivel | mejor | respuesta | nota |", "|---|---|---|---|---|"]
+    for r in strong + grey:
+        if r["id"] in answers:
+            a = answers[r["id"]]
+            L.append(f"| [{r['v2']['pedido_resumido'][:80]}]({r['ask']['hn_url']}) | {r['tier']} | {r['best']:.2f} | "
+                     f"{GAPS_KEYS[a['label']]} | {a.get('note', '').replace('|', '/')} |")
+    text = "\n".join(L) + "\n"
+    GAPS_RESULT_PATH.write_text(text)
+    return text
+
+
+def interactive_gaps(conn: sqlite3.Connection, getkey=pilot._getkey, out=print, ask_text=input) -> dict:
+    import webbrowser
+
+    from gapfinder import gaps
+    from gapfinder.text import get_texts
+
+    strong, grey = gap_queue()
+    answers = load_gap_answers()
+    ver = load_done(gaps.VERDICTS)
+    ids = sorted({i for r in strong + grey for i in r["scored"][:3]})
+    texts = get_texts(conn, ids)
+    meta = {i: (u, c) for i, u, c in conn.execute(
+        f"SELECT id, url, created_at FROM items WHERE id IN ({','.join('?' * len(ids))})", ids)}
+    width = min(shutil.get_terminal_size((100, 30)).columns, 110)
+
+    def one_line(text: str, n: int) -> str:
+        text = re.sub(r"\s+", " ", text or "").strip()
+        return text if len(text) <= n else text[:n].rsplit(" ", 1)[0] + " …"
+
+    GAPS_REVIEW_PATH.parent.mkdir(parents=True, exist_ok=True)
+    done_now = 0
+    quit_ = False
+    for section, rows in (("fuerte", strong), ("gris", grey)):
+        for r in rows:
+            if r["id"] in answers:
+                continue
+            if section == "gris" and not any(g["id"] in answers for g in grey):
+                out(f"\nTerminaste los {len(strong)} huecos fuertes. Sigue la zona gris ({len(grey)}). "
+                    "[c] continuar  [q] volver al menú")
+                k = getkey()
+                while k not in ("c", "q"):
+                    k = getkey()
+                if k == "q":
+                    quit_ = True
+                    break
+            a, d, top = r["ask"], r["v2"], r["scored"][:3]
+            n_done = sum(x["id"] in answers for x in rows)
+            out("\033[2J\033[H" if getkey is pilot._getkey else "", end="")
+            out(f"[{n_done + 1}/{len(rows)} {'hueco fuerte' if section == 'fuerte' else 'zona gris'}]  {r['id']}  ·  "
+                f"etiqueta comentarios: {d['etiqueta']} ({gaps.LABELS[d['etiqueta']]})  ·  mejor Jev {r['best']:.2f}")
+            out(f"ASK ({a['created_at'][:10]}, {a['points']} pts, {a['num_comments']} comentarios): {a['title']}")
+            out(f"     {a['hn_url']}")
+            for line in textwrap.wrap(f"PEDIDO: {d['pedido_resumido']}", width - 2):
+                out("  " + line)
+            for line in textwrap.wrap(f"LLM: {d['justificacion']}", width - 2):
+                out("  " + line)
+            out("")
+            for n, i in enumerate(top, 1):
+                url, created = meta.get(i, ("", "?"))
+                out(f"{n}) {texts[i].title[:width - 30]}  ·  {created[:10]}  ·  Jev {ver[(r['id'], i)].core:.2f}")
+                out(f"   {one_line(texts[i].body, width - 4)}")
+                out(f"   {url}")
+            out("\n[n] hueco real  [1/2/3] ese candidato es equivalente  [x] existe fuera de estos  [p] algo parcial  "
+                "[s] no es software  [?] no sé\n[h] abrir el hilo de HN  [o]+número abrir candidato  [q] guardar y volver")
+            while True:
+                k = getkey()
+                if k == "h":
+                    webbrowser.open(a["hn_url"])
+                    continue
+                if k == "o":
+                    m = getkey()
+                    if m in ("1", "2", "3") and len(top) >= int(m):
+                        webbrowser.open(meta.get(top[int(m) - 1], ("",))[0])
+                    continue
+                if k in GAPS_KEYS and (k not in "123" or len(top) >= int(k)) or k == "q":
+                    break
+            if k == "q":
+                quit_ = True
+                break
+            rec = {"case_id": r["id"], "ask_id": r["ask_id"], "tier": r["tier"], "best": round(r["best"], 4),
+                   "label": k, "at": _now()}
+            if k in "123":
+                rec["item_id"] = top[int(k) - 1]
+            if k in ("x", "p", "s"):
+                note = ask_text("  nota (nombre/URL de lo que existe, o por qué; Enter para omitir): ").strip()
+                if note:
+                    rec["note"] = note
+            with GAPS_REVIEW_PATH.open("a") as f:
+                f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+            answers[r["id"]] = rec
+            done_now += 1
+        if quit_:
+            break
+    text = write_gap_result(strong, grey, answers)
+    out("\n" + text.split("## Respuestas")[0])
+    out(f"Guardado en {GAPS_REVIEW_PATH}; resultado en {GAPS_RESULT_PATH}")
+    return {"respondidas_ahora": done_now, "fuertes": f"{sum(r['id'] in answers for r in strong)}/{len(strong)}",
+            "gris": f"{sum(r['id'] in answers for r in grey)}/{len(grey)}"}
+
+
 # --- menú -----------------------------------------------------------------------------------------------
 
 
@@ -439,11 +614,23 @@ QUEUES = {
     "b": ("Holdout temporal, por idea (las 20 \"no\"; opcionales al final)", "falta el holdout"),
     "c": ("Ask HN: extracción (pedido real s/n, etiqueta e/p/n/?)", "falta el paso 2 (extracción)"),
     "d": ("Fase 4: pares (decisión del sistema y mejor candidato)", "falta el paso 3 (verificación)"),
+    "e": ("Candidatos a hueco (huecos fuertes; zona gris al final)", "falta gaps run"),
 }
 
 
+def _gaps_progress() -> tuple[int, int] | None:
+    from gapfinder import gaps
+
+    if not gaps.CANDIDATES.exists():
+        return None
+    strong, _ = gap_queue()
+    got = load_gap_answers()
+    return sum(r["id"] in got for r in strong), len(strong)
+
+
 def progress(conn: sqlite3.Connection) -> dict[str, tuple[int, int] | None]:
-    return {"a": _labels_progress(), "b": _holdout_progress(), "c": _extract_progress(), "d": _phase4_progress(conn)}
+    return {"a": _labels_progress(), "b": _holdout_progress(), "c": _extract_progress(), "d": _phase4_progress(conn),
+            "e": _gaps_progress()}
 
 
 def menu(conn: sqlite3.Connection, cases: list[dict], getkey=pilot._getkey, out=print, evaluar: bool = False) -> None:
@@ -482,5 +669,7 @@ def menu(conn: sqlite3.Connection, cases: list[dict], getkey=pilot._getkey, out=
             interactive_extract(getkey=getkey, out=out)
         elif key == "d":
             interactive_phase4(conn, getkey=getkey, out=out)
+        elif key == "e":
+            interactive_gaps(conn, getkey=getkey, out=out)
         out("\n[cualquier tecla] volver al menú")
         getkey()

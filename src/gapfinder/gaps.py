@@ -467,15 +467,16 @@ def tier(best: float, etiqueta: str, motivo: str | None = None) -> str:
     return "gris"
 
 
-def report(conn, top: int = 5) -> str:
+def tiered_rows(ver: dict | None = None) -> list[dict]:
+    """Un dict por pedido real verificado: caso, K verificado, mejor P(núcleo), candidatos ordenados (`scored`),
+    extracción v2, Ask, motivo de no-software y nivel. Lo usan el reporte y la cola de revisión de huecos."""
     from gapfinder.verify import load_done
 
     asks, v2 = askhn.load_asks(), load_v2()
-    ver, cand = load_done(VERDICTS), askhn._load(CANDIDATES, {})
-    meta = {i: (t, u, c) for i, t, u, c in conn.execute("SELECT id, title, url, created_at FROM items")}
-    cases = gap_cases()
+    ver = load_done(VERDICTS) if ver is None else ver
+    cand = askhn._load(CANDIDATES, {})
     rows = []
-    for c in cases:
+    for c in gap_cases():
         cid = c["id"]
         if cid not in cand:
             continue
@@ -488,7 +489,17 @@ def report(conn, top: int = 5) -> str:
         motivo = no_software(a["title"], d["pedido_resumido"])
         rows.append({**c, "k": k_done, "best": best, "scored": scored, "v2": d, "ask": a, "motivo": motivo,
                      "tier": tier(best, d["etiqueta"], motivo)})
-    by = {t: sorted((r for r in rows if r["tier"] == t), key=lambda r: r["best"]) for t in TIERS}
+    return rows
+
+
+def report(conn, top: int = 5) -> str:
+    from gapfinder.verify import load_done
+
+    v2, ver = load_v2(), load_done(VERDICTS)
+    meta = {i: (t, u, c) for i, t, u, c in conn.execute("SELECT id, title, url, created_at FROM items")}
+    cases = gap_cases()
+    rows = tiered_rows(ver)
+    by ={t: sorted((r for r in rows if r["tier"] == t), key=lambda r: r["best"]) for t in TIERS}
     pending = sum(r["k"] == K_FIRST and r["best"] < HUECO for r in rows)
     lab = {t: Counter(r["v2"]["etiqueta"] for r in by[t]) for t in TIERS}
     motivos = Counter(r["motivo"] for r in by["no_software"])

@@ -296,6 +296,11 @@ uv run gapfinder review
   n no existe / ? incierto). Los 40 elegidos para la Fase 4 van primero -> `data/eval/askhn_extract_review_human.jsonl`.
 - d) Fase 4, pares: por idea la decisión del sistema y su mejor candidato (top-3 si dijo "no"); s/p/n/? y
   o abre la URL -> `data/eval/phase4_review_human.jsonl`.
+- e) candidatos a hueco: los 12 huecos fuertes en orden al azar (semilla fija) y después, opcional, los 19 de zona
+  gris; por pedido sus 3 mejores candidatos. n hueco real / 1-2-3 ese candidato es equivalente / x existe fuera de
+  los candidatos / p parcial / s no es software / ? no sé (x, p y s piden una nota); h abre el hilo, o+número el
+  candidato -> `data/eval/gap_review_human.jsonl` y `data/eval/gap_review_result.md` (precisión = hueco real /
+  juzgadas, IC 95% de Wilson, por nivel).
 
 ## Fase 4 (oct-2026): lado de demanda con Ask HN
 

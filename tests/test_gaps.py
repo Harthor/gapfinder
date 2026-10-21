@@ -73,3 +73,60 @@ def test_tier_precedence_and_boundaries():
     assert t(0.59, "n") == "fuerte" and t(0.59, "p") == "fuerte"
     assert t(0.60, "n") == "gris" and t(0.84, "p") == "gris"
     assert t(0.30, "?") == "gris"   # sin etiqueta clara no es hueco fuerte
+
+
+def test_gap_metrics_precision_excludes_unsure():
+    from gapfinder import review
+    m = review.gap_metrics(["n", "n", "1", "x", "p", "s", "?"])
+    assert m["respondidas"] == 7 and m["juzgadas"] == 6 and m["no_se"] == 1
+    assert (m["hueco"], m["equivalente"], m["fuera"], m["parcial"], m["no_software"]) == (2, 1, 1, 1, 1)
+    assert m["precision"] == 2 / 6 and m["ic"] == review.wilson(2, 6)
+    assert review.gap_metrics([])["precision"] is None and review.gap_metrics(["?"])["juzgadas"] == 0
+
+
+def _gap_row(cid, tier, best, items):
+    return {"id": cid, "ask_id": cid.split("-")[1], "tier": tier, "best": best, "scored": items,
+            "v2": {"pedido_resumido": f"A tool for {cid}.", "etiqueta": "n", "justificacion": "nadie conoce una"},
+            "ask": {"title": f"Ask HN: {cid}?", "hn_url": f"https://news.ycombinator.com/item?id={cid}",
+                    "created_at": "2020-01-01", "points": 9, "num_comments": 3}}
+
+
+def test_interactive_gaps_saves_each_answer_and_writes_precision(tmp_path, monkeypatch):
+    import sqlite3
+
+    from gapfinder import review, text
+    from gapfinder.text import ItemText
+    from gapfinder.verify import Verdict
+
+    strong = [_gap_row("gap-1", "fuerte", 0.3, ["a", "b", "c"]), _gap_row("gap-2", "fuerte", 0.5, ["a", "b"])]
+    grey = [_gap_row("gap-3", "gris", 0.7, ["b", "c"])]
+    monkeypatch.setattr(review, "gap_queue", lambda: (strong, grey))
+    monkeypatch.setattr(review, "GAPS_REVIEW_PATH", tmp_path / "gap_human.jsonl")
+    monkeypatch.setattr(review, "GAPS_RESULT_PATH", tmp_path / "gap_result.md")
+    ver = {(r["id"], i): Verdict(r["id"], i, 0.5, 0.5, 0.5) for r in strong + grey for i in r["scored"]}
+    monkeypatch.setattr(review, "load_done", lambda name: ver)
+    monkeypatch.setattr(text, "get_texts", lambda conn, ids: {i: ItemText(i, "github", f"item {i}", "body", "native") for i in ids})
+    conn = sqlite3.connect(":memory:")
+    conn.execute("CREATE TABLE items (id TEXT, url TEXT, created_at TEXT)")
+    conn.executemany("INSERT INTO items VALUES (?, ?, ?)", [(i, f"https://x/{i}", "2019-01-01") for i in "abc"])
+
+    # gap-1: tecla inválida (se ignora) y n; gap-2: "3" se ignora (tiene 2 candidatos) y x con nota;
+    # después "c" para entrar a la zona gris y "2" en gap-3.
+    keys = iter(["z", "n", "3", "x", "c", "2"])
+    notes = iter(["ExistingTool https://example.com"])
+    out = []
+    res = review.interactive_gaps(conn, getkey=lambda: next(keys), out=lambda *a, **k: out.append(a),
+                                  ask_text=lambda prompt: next(notes))
+    assert res == {"respondidas_ahora": 3, "fuertes": "2/2", "gris": "1/1"}
+    got = review.load_gap_answers()
+    assert got["gap-1"]["label"] == "n" and got["gap-1"]["tier"] == "fuerte"
+    assert got["gap-2"]["label"] == "x" and got["gap-2"]["note"] == "ExistingTool https://example.com"
+    assert got["gap-3"]["label"] == "2" and got["gap-3"]["item_id"] == "c"
+    result = (tmp_path / "gap_result.md").read_text()
+    assert "**Precisión (hueco real)**: 1/2 = 50%" in result   # fuertes: 1 hueco de 2 juzgados
+    assert "**Precisión (hueco real)**: 0/1 = 0%" in result    # zona gris
+
+    # se retoma donde quedó: nada pendiente, no pide teclas
+    res = review.interactive_gaps(conn, getkey=lambda: (_ for _ in ()).throw(AssertionError("pidió tecla")),
+                                  out=lambda *a, **k: None, ask_text=lambda p: "")
+    assert res["respondidas_ahora"] == 0
