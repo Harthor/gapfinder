@@ -1,7 +1,86 @@
 # gapfinder
 
-Detecta huecos reales: ideas con demanda actual (`data/ideas.json`) cruzadas contra un corpus
-histórico de cosas ya construidas (Show HN + GitHub).
+**¿Alguien ya construyó esto?** gapfinder cruza pedidos reales de herramientas ("Ask HN: is there a tool
+for…?") con un corpus de ~697 mil cosas ya construidas (Show HN + repos de GitHub con >= 100★), mirando solo
+lo que existía *antes* de cada pedido, y separa lo que ya estaba resuelto de los huecos candidatos.
+
+Lo interesante no es la lista de huecos, sino **cuánto se puede confiar en ella**: cada etapa se midió contra
+casos conocidos y revisión humana, y varias hipótesis se descartaron con datos.
+
+## Pipeline
+
+```
+Ask HN (pedido + comentarios)
+  └─ extracción con LLM: ¿es un pedido real?, resumen del pedido, ¿los comentarios dicen que existe? (e/p/n)
+       └─ retrieval: MiniLM + 5 consultas por pedido (Claude), fusionadas con RRF -> top-1000
+            sobre el corpus anterior a la fecha del Ask (sin mirar el futuro)
+            └─ verificador: Jev (vía OpenRouter) puntúa cada par (pedido, candidato): P(implementa el núcleo)
+                 └─ niveles: ya construido (>= 0.85) · no es software · descartado · hueco fuerte · zona gris
+```
+
+## Resultados medidos
+
+| Etapa | Cómo se midió | Resultado |
+|---|---|---|
+| Retrieval | ¿el item correcto aparece en el top-1000? (known cases) | reales **11/12 (0.92)**, sintéticos **0.92** (n=64), parciales 0.75 (n=16) |
+| Verificador | acuerdo con revisión humana, 34 pares juzgados | **88%** en "implementa el núcleo"; todo núcleo humano tiene Jev >= 0.87 |
+| Alarmas del verificador | 15 alarmas con Jev >= 0.90 adjudicadas a mano | **15/15** eran implementaciones reales no listadas, no errores |
+| Huecos en el tiempo | holdout: ideas lanzadas después de 2024-01-01 contra el corpus anterior; 20 que el sistema llamó "hueco", adjudicadas a mano | **6/20 = 30%** eran hueco real (IC 95%: 15–52%); 50% tenían algo parcial; 20% un equivalente |
+| Pedidos de Ask HN | 242 pedidos reales, veredictos cacheados | 123 ya construidos, 44 no son software, 44 los comentarios dicen que existen, 19 zona gris, **12 huecos fuertes** (sin adjudicar todavía) |
+
+Costo de APIs en las corridas registradas: ~$12 (Fase 3 $2.83, holdout $1.90, Ask HN y huecos $7.04; OpenRouter
+`usage.cost` + Anthropic).
+
+## Qué aprendí
+
+- **"Sin match" no es lo mismo que "hueco".** Con un corte binario (ningún candidato >= 0.85) salían 119 huecos,
+  69 de ellos con comentarios que decían que la herramienta existía; el holdout confirma que solo ~30% de esos
+  "no" son huecos reales. De ahí los niveles: el hueco fuerte exige puntaje bajo (< 0.60) *y* que los comentarios
+  no digan que existe.
+- **Los negativos por remoción no sirven.** Sacar el item esperado y ver si el verificador "alucina" otro parecía
+  una buena medida de falsas alarmas; al adjudicarlas, todas las alarmas altas eran alternativas legítimas. Para
+  necesidades comunes casi nunca hay una sola solución.
+- **El retrieval no es el cuello de botella.** Encuentra el item correcto en 11 de 12 casos reales; lo que
+  limita es el umbral del verificador y la cobertura del corpus (SaaS comerciales o recursos institucionales no
+  están en Show HN ni en GitHub).
+- **Las consultas reescritas por un LLM ayudan, con cuidado.** Pasar de la descripción cruda a 5 reformulaciones
+  sube R@50 en reales de 0.08 a 0.50; el prompt prohíbe nombrar productos para no filtrar la respuesta.
+
+## Huecos fuertes de ejemplo (sin adjudicar)
+
+Pedidos de Ask HN sin nada parecido en el corpus anterior a la fecha del pedido, y donde los comentarios
+tampoco señalan una herramienta existente. Lista completa: [`data/eval/gap_candidates.md`](data/eval/gap_candidates.md).
+
+| Pedido | Año | Mejor candidato (P núcleo) |
+|---|---|---|
+| Conversor de texto a Comunicación No Violenta | 2022 | FoxType (0.29) |
+| Parser de archivos `.one` de OneNote o formato abierto equivalente | 2018 | dtformats (0.32) |
+| Buscar en datasets MIDI por progresión de acordes y tonalidad | 2022 | match.audio (0.36) |
+| Servicio para registrar un sitio en datasets de entrenamiento de LLMs | 2024 | gi.st (0.47) |
+| Analizador de PCAP que correlaciona varios streams a la vez | 2020 | CSI-SIEM (0.55) |
+
+## Limitaciones
+
+- Muestras chicas: 12 casos reales, 34 pares en el piloto, 20 ideas en el holdout; los intervalos son anchos.
+- El umbral 0.60 del hueco fuerte no está calibrado; la cola `gapfinder review` → e) existe para adjudicar los 12 y
+  medir su precisión.
+- "Hueco" significa "sin equivalente en este corpus antes del pedido", no "no existe en ningún lado".
+
+## Correrlo
+
+```bash
+uv sync && uv run pytest              # tests: corren en un clon limpio, sin red ni datos locales
+uv run gapfinder gaps report          # regenera data/eval/gap_candidates.md (necesita los datos locales)
+uv run gapfinder review               # colas de revisión humana (ídem)
+```
+
+El corpus (`data/corpus.db`, 1,8 GB), los embeddings, el índice BM25 y los veredictos del verificador
+(`data/phase3/*.jsonl`) no están en el repo; el corpus se reconstruye con `ingest`, `embed` y `bm25` (ver Fase 1 y
+2). Los reportes, los casos conocidos y las revisiones humanas sí están en `data/eval/` y `data/`.
+
+---
+
+# Detalle técnico por fase
 
 ## Fase 1 — corpus de oferta
 
