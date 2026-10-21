@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>gapfinder · Unbuilt</title>
+<meta name="description" content="Software people asked for on Hacker News that nobody had built yet: 242 real requests checked against 697,231 Show HN launches and GitHub repositories.">
+<meta property="og:title" content="gapfinder · Unbuilt">
+<meta property="og:description" content="Software people asked for on Hacker News that nobody had built yet, and how much to trust that claim.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: one left-aligned reading column (~68rem) — headline, a board of gap cards, then method and evidence. */
+  :root {
+    --paper: #f3f4f1;
+    --card: #fbfbf9;
+    --ink: #17191c;
+    --muted: #5b626b;
+    --rule: #dcdfd9;
+    --track: #e4e7e1;
+    --ask: #ff6600;           /* Hacker News orange: marks the request */
+    --ask-ink: #c24d00;       /* readable orange for text on paper */
+    --built: #17191c;         /* the 0.85 "already built" line */
+    --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    --body: "IBM Plex Sans", "Helvetica Neue", Arial, system-ui, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #111315; --card: #181b1e; --ink: #ebece8; --muted: #9ba2ab; --rule: #2a2e33; --track: #262a2f;
+      --ask: #ff7a26; --ask-ink: #ff9a57; --built: #ebece8; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #111315; --card: #181b1e; --ink: #ebece8; --muted: #9ba2ab; --rule: #2a2e33; --track: #262a2f;
+    --ask: #ff7a26; --ask-ink: #ff9a57; --built: #ebece8; color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--body); font-size: 1rem; line-height: 1.55;
+    padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .wrap {
+    max-width: 68rem; margin-inline: auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); }
+  a:hover { text-decoration-color: currentColor; }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--ask); outline-offset: 3px; border-radius: 2px; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 700; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+  p { margin: 0; }
+  .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  .kicker { font-family: var(--mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .muted { color: var(--muted); }
+  .num { font-variant-numeric: tabular-nums; }
+
+  /* header */
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 1.25rem; border-bottom: 1px solid var(--rule); }
+  .brand { font-family: var(--mono); font-weight: 500; font-size: .9rem; text-decoration: none; display: inline-flex; align-items: center; gap: .5rem; }
+  .brand i { width: .7rem; height: .7rem; background: var(--ask); display: inline-block; }
+  .top nav { display: flex; gap: 1.25rem; font-size: .85rem; flex-wrap: wrap; justify-content: flex-end; }
+  .top nav a { text-decoration: none; color: var(--muted); }
+  .top nav a:hover { color: var(--ink); }
+  @media (max-width: 34rem) { .top nav { gap: .9rem; } .top nav .wide { display: none; } }
+
+  .hero { padding-block: clamp(2.5rem, 7vw, 5rem) 2.5rem; display: grid; gap: 1.5rem; }
+  .hero h1 { font-size: clamp(2.3rem, 6.4vw, 4.6rem); line-height: 1.02; max-width: 15ch; }
+  .hero h1 em { font-style: normal; color: var(--ask-ink); }
+  .hero .lede { font-size: clamp(1.05rem, 1.6vw, 1.2rem); max-width: 60ch; color: var(--muted); }
+  .hero .lede b { color: var(--ink); font-weight: 600; }
+  .tally { display: flex; flex-wrap: wrap; gap: .5rem 2rem; padding-top: .5rem; }
+  .tally div { display: flex; flex-direction: column; }
+  .tally b { font-family: var(--display); font-size: 1.9rem; font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .tally span { font-size: .8rem; color: var(--muted); }
+
+  section { padding-block: 2.5rem; border-top: 1px solid var(--rule); }
+  .sec-head { display: grid; gap: .5rem; margin-bottom: 1.5rem; max-width: 62ch; }
+  .sec-head h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); line-height: 1.1; }
+  .sec-head p { color: var(--muted); }
+
+  /* the gauge legend shared by all cards */
+  .legend { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; font-size: .8rem; color: var(--muted); margin-bottom: 1.25rem; align-items: center; }
+  .legend span { display: inline-flex; align-items: center; gap: .45rem; }
+  .legend .sw-bar { width: 1.6rem; height: .4rem; background: var(--ink); border-radius: 2px; }
+  .legend .sw-line { width: 2px; height: .9rem; background: var(--built); }
+
+  /* strong gap cards */
+  .board { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 30rem), 1fr)); gap: 1rem; }
+  .gap {
+    background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+    padding: 1.25rem 1.25rem 1rem; display: flex; flex-direction: column; gap: .9rem; min-width: 0;
+    border-top: 3px solid var(--ask);
+  }
+  .gap-meta { display: flex; flex-wrap: wrap; gap: .25rem .75rem; font-family: var(--mono); font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .gap-meta .tag { color: var(--ask-ink); font-weight: 500; }
+  .gap h3 { font-size: 1.25rem; line-height: 1.25; font-weight: 700; }
+  .gap .thread { font-size: .85rem; color: var(--muted); }
+  .gap .thread a { color: var(--muted); }
+  .closest-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; border-top: 1px dashed var(--rule); padding-top: .8rem; }
+  .closest-head .kicker { letter-spacing: .06em; }
+  .closest-head .best { font-family: var(--mono); font-size: .8rem; color: var(--muted); }
+  .closest-head .best b { color: var(--ink); font-size: 1rem; font-weight: 500; }
+  .cands { display: grid; gap: .55rem; }
+  .cand { display: grid; grid-template-columns: 1fr auto; gap: .2rem .75rem; align-items: baseline; font-size: .85rem; min-width: 0; }
+  .cand a, .cand .t { overflow-wrap: anywhere; min-width: 0; }
+  .cand .yr { font-family: var(--mono); font-size: .72rem; color: var(--muted); margin-left: .35rem; }
+  .cand .s { font-family: var(--mono); font-size: .8rem; }
+  .meter { grid-column: 1 / -1; position: relative; height: .4rem; background: var(--track); border-radius: 2px; }
+  .meter i { position: absolute; inset: 0 auto 0 0; background: var(--ink); border-radius: 2px; }
+  .cand:not(:first-child) .meter i { background: var(--muted); opacity: .55; }
+  .meter u { position: absolute; top: -.25rem; bottom: -.25rem; left: 85%; width: 2px; background: var(--built); }
+  .gap-foot { font-size: .8rem; color: var(--muted); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .says { display: inline-flex; align-items: center; gap: .4rem; }
+  .says::before { content: ""; width: .5rem; height: .5rem; border-radius: 50%; background: var(--muted); }
+  .says.does_not_exist::before { background: var(--ask); }
+
+  /* grey zone list */
+  .grey { display: grid; border-top: 1px solid var(--rule); }
+  .grey details { border-bottom: 1px solid var(--rule); }
+  .grey summary {
+    list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr minmax(7rem, 12rem) 3.2rem;
+    gap: 1rem; align-items: center; padding: .85rem .25rem;
+  }
+  .grey summary::-webkit-details-marker { display: none; }
+  .grey summary:hover { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+  .grey .req { font-size: .95rem; min-width: 0; }
+  .grey .req small { display: block; font-family: var(--mono); font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-top: .15rem; }
+  .grey .score { font-family: var(--mono); font-size: .85rem; text-align: right; }
+  .grey .body { padding: .25rem .25rem 1.1rem; display: grid; gap: .75rem; max-width: 46rem; }
+  @media (max-width: 34rem) {
+    .grey summary { grid-template-columns: 1fr 3rem; }
+    .grey summary .meter-wrap { display: none; }
+  }
+
+  /* pipeline */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr)); gap: 1.5rem 1.25rem; counter-reset: s; list-style: none; padding: 0; margin: 0; }
+  .steps li { display: grid; gap: .45rem; align-content: start; }
+  .steps .n { font-family: var(--mono); font-size: .75rem; color: var(--ask-ink); }
+  .steps h3 { font-size: 1.05rem; line-height: 1.2; }
+  .steps p { font-size: .88rem; color: var(--muted); }
+  .steps .fig { font-family: var(--display); font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .steps .fig small { display: block; font-family: var(--body); font-size: .75rem; font-weight: 400; color: var(--muted); }
+  .tiers { margin-top: 2rem; display: grid; gap: .5rem; max-width: 46rem; }
+  .tier { display: grid; grid-template-columns: minmax(9rem, 14rem) 1fr; gap: .75rem; align-items: center; font-size: .85rem; }
+  .tier .bar { display: flex; align-items: center; gap: .5rem; min-width: 0; }
+  .tier .bar i { height: .9rem; background: var(--track); border-radius: 2px; min-width: 2px; display: block; }
+  .tier.is-strong .bar i { background: var(--ask); }
+  .tier.is-strong { font-weight: 600; }
+  .tier .bar b { font-family: var(--mono); font-weight: 500; font-size: .8rem; }
+  @media (max-width: 30rem) { .tier { grid-template-columns: 1fr; gap: .15rem; } }
+
+  /* evidence */
+  .evidence { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 11.5rem), 1fr)); gap: 1rem 1.25rem; }
+  .ev { border-top: 2px solid var(--ink); padding-top: .8rem; display: grid; gap: .45rem; align-content: start; }
+  .ev .big { font-family: var(--display); font-size: 2.4rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+  .ev .what { font-size: .9rem; }
+  .ev .ci { position: relative; height: .45rem; background: var(--track); border-radius: 2px; margin-block: .25rem; }
+  .ev .ci i { position: absolute; top: 0; bottom: 0; background: color-mix(in srgb, var(--ask) 40%, transparent); border-radius: 2px; }
+  .ev .ci u { position: absolute; top: -.2rem; width: .85rem; height: .85rem; margin-left: -.425rem; border-radius: 50%; background: var(--ask); border: 2px solid var(--paper); }
+  .ev .count { font-family: var(--mono); font-size: .75rem; color: var(--muted); }
+  .note { margin-top: 1.5rem; font-size: .88rem; color: var(--muted); max-width: 64ch; border-left: 2px solid var(--ask); padding-left: .9rem; }
+
+  footer { border-top: 1px solid var(--rule); padding-block: 2rem 3rem; font-size: .85rem; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+
+  .status { padding-block: 2rem; color: var(--muted); font-family: var(--mono); font-size: .85rem; }
+  .skel { display: block; height: 14rem; border-radius: 6px; background: linear-gradient(90deg, var(--track), var(--card), var(--track)); background-size: 200% 100%; }
+  @media (prefers-reduced-motion: no-preference) {
+    .skel { animation: shimmer 1.4s linear infinite; }
+    @keyframes shimmer { to { background-position: -200% 0; } }
+    .gap { animation: rise .45s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--i, 0) * 40ms); }
+    @keyframes rise { from { opacity: .001; transform: translateY(6px); } }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="#"><i aria-hidden="true"></i>gapfinder</a>
+      <nav aria-label="Sections">
+        <a href="#gaps">Gaps</a>
+        <a class="wide" href="#almost">Almost built</a>
+        <a href="#method">Method</a>
+        <a class="wide" href="#trust">Evidence</a>
+        <a href="https://github.com/Harthor/gapfinder">Code</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <p class="kicker">Ask HN × Show HN × GitHub</p>
+      <h1>Software people asked for, <em>that nobody had built.</em></h1>
+      <p class="lede" id="lede">Every “Ask HN: is there a tool that…?” is a small, public signal of demand. gapfinder checks
+        each request against everything launched on Show HN or published on GitHub <b>before the day it was asked</b>,
+        and keeps the ones where nothing came close.</p>
+      <div class="tally" id="tally" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section id="gaps">
+      <div class="sec-head">
+        <p class="kicker">Strong gaps</p>
+        <h2 id="gaps-title">Nothing close existed when they asked</h2>
+        <p>The closest item scored below <span data-k="threshold_strong">0.60</span> on a 0–1 scale, and the replies in the
+          thread did not point to an existing tool either. These are leads, not proof: they have not been reviewed by hand yet.</p>
+      </div>
+      <div class="legend" aria-hidden="true">
+        <span><i class="sw-bar"></i>how well the closest items match the request (0 to 1)</span>
+        <span><i class="sw-line"></i><span data-k="threshold_built">0.85</span> and above counts as already built</span>
+      </div>
+      <div class="board" id="board"><span class="skel"></span><span class="skel"></span></div>
+    </section>
+
+    <section id="almost">
+      <div class="sec-head">
+        <p class="kicker">Grey zone</p>
+        <h2 id="almost-title">Almost built</h2>
+        <p>Something related existed, scoring between <span data-k="threshold_strong">0.60</span> and
+          <span data-k="threshold_built">0.85</span>, but the judge was not convinced it does the same job. Open a row to see what came close.</p>
+      </div>
+      <div class="grey" id="grey"></div>
+    </section>
+
+    <section id="method">
+      <div class="sec-head">
+        <p class="kicker">Method</p>
+        <h2>How a request becomes a gap</h2>
+        <p>Five steps over saved data. The search only looks at items created before each request, so the system cannot see the future.</p>
+      </div>
+      <ol class="steps" id="steps"></ol>
+      <div class="tiers" id="tiers" aria-label="Where the requests ended up"></div>
+    </section>
+
+    <section id="trust">
+      <div class="sec-head">
+        <p class="kicker">Evidence</p>
+        <h2>How much to trust it</h2>
+        <p>Each step was measured against cases with a known answer or checked by a person. The bar under each number is the
+          95% confidence interval: with samples this small, the true rate could be anywhere in the shaded range.</p>
+      </div>
+      <div class="evidence" id="evidence"></div>
+      <p class="note" id="trust-note">The holdout is the honest number: when the method was run on ideas launched after a cut-off date,
+        searching only what existed before it, a person confirmed only some of its “gaps” as real. Most had something partly
+        similar. That is why a strong gap also requires that the people who replied did not name an existing tool.</p>
+    </section>
+  </main>
+
+  <div class="wrap">
+    <footer>
+      <span>gapfinder · by Carla Herrera · <a href="https://github.com/Harthor/gapfinder">source on GitHub</a> (MIT)</span>
+      <span>“Gap” means no equivalent in this corpus before the request, not that nothing exists anywhere.</span>
+    </footer>
+  </div>
+
+<script>
+(() => {
+  const $ = (s) => document.querySelector(s);
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const fmt = new Intl.NumberFormat('en');
+  const pct = (v) => `${Math.round(v * 100)}%`;
+  const year = (d) => (d || '').slice(0, 4);
+  const link = (href, text, cls) => { const a = el('a', cls, text); a.href = href; a.rel = 'noopener'; a.target = '_blank'; return a; };
+
+  // Wilson score interval, 95%
+  function wilson(k, n, z = 1.96) {
+    if (!n) return [0, 0];
+    const p = k / n, d = 1 + z * z / n, mid = (p + z * z / (2 * n)) / d;
+    const half = z * Math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / d;
+    return [Math.max(0, mid - half), Math.min(1, mid + half)];
+  }
+
+  function candidates(g, built) {
+    const box = el('div', 'cands');
+    g.candidates.forEach((c) => {
+      const row = el('div', 'cand');
+      const name = el('span', 't');
+      name.append(c.url ? link(c.url, c.title) : c.title);
+      if (c.date) name.append(el('span', 'yr', year(c.date)));
+      const meter = el('div', 'meter');
+      meter.setAttribute('role', 'img');
+      meter.setAttribute('aria-label', `match ${c.score.toFixed(2)} of 1; already built from ${built}`);
+      const fill = el('i'); fill.style.width = `${Math.min(1, c.score) * 100}%`;
+      const line = el('u'); line.style.left = `${built * 100}%`;
+      meter.append(fill, line);
+      row.append(name, el('span', 's', c.score.toFixed(2)), meter);
+      box.append(row);
+    });
+    return box;
+  }
+
+  function card(g, i, built) {
+    const c = el('article', 'gap'); c.style.setProperty('--i', i); c.id = g.id;
+    const meta = el('div', 'gap-meta');
+    meta.append(el('span', 'tag', 'Ask HN'), el('span', null, g.date), el('span', null, `${g.points} points`), el('span', null, `${g.comments} comments`));
+    const thread = el('p', 'thread'); thread.append('Asked as ', link(g.hn_url, `“${g.ask_title.replace(/^Ask HN:\s*/i, '')}”`));
+    const head = el('div', 'closest-head');
+    const best = el('span', 'best'); best.append('best ', el('b', null, g.best_score.toFixed(2)));
+    head.append(el('span', 'kicker', `Closest that existed before ${year(g.date)}`), best);
+    const foot = el('div', 'gap-foot');
+    foot.append(el('span', `says ${g.commenters_say.replace(/ /g, '_')}`, `Replies said: ${g.commenters_say}`), link(g.hn_url, 'Read the thread →'));
+    c.append(meta, el('h3', null, g.request), thread, head, candidates(g, built), foot);
+    return c;
+  }
+
+  function greyRow(g, built) {
+    const d = el('details'); d.id = g.id;
+    const s = el('summary');
+    const req = el('span', 'req', g.request);
+    req.append(el('small', null, `Ask HN · ${g.date} · replies said: ${g.commenters_say}`));
+    const mw = el('span', 'meter-wrap');
+    const meter = el('div', 'meter'); const fill = el('i'); fill.style.width = `${g.best_score * 100}%`;
+    const line = el('u'); line.style.left = `${built * 100}%`; meter.append(fill, line); mw.append(meter);
+    s.append(req, mw, el('span', 'score', g.best_score.toFixed(2)));
+    const body = el('div', 'body');
+    const t = el('p', 'muted'); t.style.fontSize = '.85rem';
+    t.append('Asked as ', link(g.hn_url, `“${g.ask_title.replace(/^Ask HN:\s*/i, '')}”`), ` · ${g.points} points · ${g.comments} comments`);
+    body.append(t, candidates(g, built));
+    d.append(s, body);
+    return d;
+  }
+
+  function render(data) {
+    const P = data.pipeline, T = data.tiers, built = P.threshold_built;
+    document.querySelectorAll('[data-k]').forEach((n) => { const v = P[n.dataset.k]; if (v != null) n.textContent = v.toFixed(2); });
+    const strong = data.gaps.filter((g) => g.tier === 'strong_gap');
+    const grey = data.gaps.filter((g) => g.tier === 'grey_zone');
+
+    const tally = $('#tally');
+    [[fmt.format(P.requests), 'real requests checked'], [fmt.format(P.show_hn + P.github), 'things already built, searched'],
+     [fmt.format(P.pairs), 'request–candidate pairs judged'], [fmt.format(strong.length), 'strong gaps']]
+      .forEach(([b, s]) => { const d = el('div'); d.append(el('b', null, b), el('span', null, s)); tally.append(d); });
+
+    $('#gaps-title').textContent = `${strong.length} requests where nothing close existed`;
+    $('#board').replaceChildren(...strong.map((g, i) => card(g, i, built)));
+    $('#almost-title').textContent = `Almost built: ${grey.length} requests`;
+    $('#grey').replaceChildren(...grey.map((g) => greyRow(g, built)));
+
+    const steps = [
+      ['Collect what exists', 'Show HN launch posts and GitHub repositories, with their descriptions and READMEs.', fmt.format(P.show_hn + P.github), `${fmt.format(P.show_hn)} Show HN · ${fmt.format(P.github)} GitHub`],
+      ['Collect what people ask for', 'Ask HN threads asking for a tool. Simple rules drop old posts, non-requests and job questions.', fmt.format(P.asks_kept), `kept of ${fmt.format(P.asks_found)} threads found`],
+      ['Read each thread', 'A language model decides if it is a real request for software, summarises it, and notes what the replies say.', fmt.format(P.requests), 'real tool requests'],
+      ['Search the past', 'The request is rewritten five ways; an embedding model finds the closest items created before the request date.', '1,000', 'candidates per request, at most'],
+      ['Judge each match', 'A judge model scores every request–candidate pair from 0 to 1: does it implement the core of what was asked?', fmt.format(P.pairs), `pairs judged · US$${P.judge_cost_usd.toFixed(2)} total`],
+    ];
+    $('#steps').replaceChildren(...steps.map(([h, p, fig, small], i) => {
+      const li = el('li');
+      const f = el('div', 'fig', fig); f.append(el('small', null, small));
+      li.append(el('span', 'n', String(i + 1).padStart(2, '0')), el('h3', null, h), el('p', null, p), f);
+      return li;
+    }));
+
+    const tierRows = [['already_built', 'Already built (≥ 0.85)'], ['not_software', 'Not a software request'], ['said_to_exist', 'Replies name an existing tool'],
+      ['grey_zone', 'Almost built'], ['strong_gap', 'Strong gap']];
+    const max = Math.max(...tierRows.map(([k]) => T[k] || 0)) || 1;
+    const tiers = $('#tiers');
+    tiers.replaceChildren(el('p', 'kicker', `Where the ${fmt.format(P.requests)} requests ended up`), ...tierRows.map(([k, label]) => {
+      const r = el('div', `tier${k === 'strong_gap' ? ' is-strong' : ''}`);
+      const bar = el('div', 'bar'); const i = el('i'); i.style.width = `calc(${(T[k] / max) * 100}% - 2.5rem)`;
+      bar.append(i, el('b', null, fmt.format(T[k])));
+      r.append(el('span', null, label), bar);
+      return r;
+    }));
+
+    $('#evidence').replaceChildren(...data.metrics.map((m) => {
+      const [lo, hi] = wilson(m.k, m.n);
+      const d = el('div', 'ev');
+      const ci = el('div', 'ci'); ci.setAttribute('aria-hidden', 'true');
+      const band = el('i'); band.style.left = `${lo * 100}%`; band.style.width = `${(hi - lo) * 100}%`;
+      const dot = el('u'); dot.style.left = `${(m.k / m.n) * 100}%`; ci.append(band, dot);
+      d.append(el('span', 'kicker', m.stage), el('span', 'big', pct(m.k / m.n)), ci,
+        el('span', 'count', `${m.k} of ${m.n} · 95% CI ${pct(lo)}–${pct(hi)}`), el('p', 'what', m.metric));
+      return d;
+    }));
+  }
+
+  fetch('data.json')
+    .then((r) => { if (!r.ok) throw new Error(`data.json: HTTP ${r.status}`); return r.json(); })
+    .then(render)
+    .catch((err) => {
+      const msg = el('p', 'status', `Could not load the data (${err.message}). Serve this folder over HTTP, e.g. python3 -m http.server -d site.`);
+      $('#board').replaceChildren(msg);
+    });
+})();
+</script>
+</body>
+</html>

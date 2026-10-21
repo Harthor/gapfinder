@@ -349,6 +349,11 @@ def cmd_gaps(args: argparse.Namespace) -> None:
     elif args.step == "report":
         gaps.report(conn)
         print(f"lista en {gaps.REPORT}")
+    elif args.step == "site":
+        from gapfinder import site
+
+        data = site.export(conn)
+        print(f"{len(data['gaps'])} huecos (fuertes + zona gris) en {site.OUT}")
 
 
 def cmd_review(args: argparse.Namespace) -> None:
@@ -512,7 +517,7 @@ def main() -> None:
     p.set_defaults(func=cmd_askhn)
 
     p = sub.add_parser("gaps", help="candidatos a hueco: extracción automática de Ask HN y lista final para revisar")
-    p.add_argument("step", choices=["extract", "compare", "run", "report"])
+    p.add_argument("step", choices=["extract", "compare", "run", "report", "site"])
     p.add_argument("--limit", type=int, help="extract: solo los primeros N que faltan (prueba)")
     p.add_argument("--rerun-first", type=int, default=40, help="run: huecos a re-correr primero con K=1000")
     p.set_defaults(func=cmd_gaps)

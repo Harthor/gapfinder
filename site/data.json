@@ -1,0 +1,1075 @@
+{
+ "pipeline": {
+  "show_hn": 209000,
+  "github": 488231,
+  "asks_found": 8568,
+  "asks_kept": 397,
+  "requests": 242,
+  "pairs": 154000,
+  "judge_cost_usd": 4.89,
+  "threshold_built": 0.85,
+  "threshold_strong": 0.6
+ },
+ "tiers": {
+  "already_built": 123,
+  "not_software": 44,
+  "said_to_exist": 44,
+  "grey_zone": 19,
+  "strong_gap": 12
+ },
+ "metrics": [
+  {
+   "stage": "Search",
+   "metric": "Known answer among the top 1,000 candidates (real cases)",
+   "k": 11,
+   "n": 12,
+   "source": "data/eval/iter2_recall.md"
+  },
+  {
+   "stage": "Judge",
+   "metric": "Agrees with a human on “does it implement the core need?”",
+   "k": 30,
+   "n": 34,
+   "source": "data/eval/pilot_review_result.md"
+  },
+  {
+   "stage": "Alarms",
+   "metric": "Matches scored ≥ 0.90 that a human confirmed as real implementations",
+   "k": 15,
+   "n": 15,
+   "source": "data/eval/phase3_report.md"
+  },
+  {
+   "stage": "Holdout",
+   "metric": "Ideas called a gap that a human confirmed as a real gap",
+   "k": 6,
+   "n": 20,
+   "source": "data/eval/holdout_review_result.md"
+  }
+ ],
+ "recall": [
+  {
+   "query": "raw",
+   "label": "Raw description",
+   "n": 12,
+   "top_50": 0.08,
+   "top_200": 0.33,
+   "top_1000": 0.67
+  },
+  {
+   "query": "core",
+   "label": "Core need, rewritten",
+   "n": 12,
+   "top_50": 0.25,
+   "top_200": 0.67,
+   "top_1000": 0.75
+  },
+  {
+   "query": "llm5",
+   "label": "Core need + 4 rewrites",
+   "n": 12,
+   "top_50": 0.5,
+   "top_200": 0.58,
+   "top_1000": 0.92
+  }
+ ],
+ "holdout": {
+  "real_gap": 6,
+  "partial": 10,
+  "equivalent": 4
+ },
+ "gaps": [
+  {
+   "id": "gap-11074625",
+   "tier": "strong_gap",
+   "request": "A service that evaluates Windows 7 updates and provides a curated list of updates to avoid.",
+   "ask_title": "Ask HN: Looking for a Windows 7 Update curator",
+   "hn_url": "https://news.ycombinator.com/item?id=11074625",
+   "date": "2016-02-10",
+   "points": 5,
+   "comments": 4,
+   "commenters_say": "does not exist",
+   "best_score": 0.22,
+   "candidates": [
+    {
+     "title": "DarunGrim",
+     "url": "https://github.com/ohjeongwook/DarunGrim",
+     "date": "2010-08-14",
+     "score": 0.22
+    },
+    {
+     "title": "BlockWindows",
+     "url": "https://github.com/WindowsLies/BlockWindows",
+     "date": "2015-08-26",
+     "score": 0.18
+    },
+    {
+     "title": "The reverse package manager",
+     "url": "https://github.com/spiceapps/cupboard",
+     "date": "2011-11-07",
+     "score": 0.15
+    }
+   ]
+  },
+  {
+   "id": "gap-49022990",
+   "tier": "strong_gap",
+   "request": "A public website that aggregates SSD wear statistics for operating system and application beta releases.",
+   "ask_title": "Ask HN: Is there a website that tracks excessive writes to SSDs in OS/app betas?",
+   "hn_url": "https://news.ycombinator.com/item?id=49022990",
+   "date": "2026-07-23",
+   "points": 31,
+   "comments": 30,
+   "commenters_say": "does not exist",
+   "best_score": 0.25,
+   "candidates": [
+    {
+     "title": "One Metric – Collect and calculate metrics onto shared dashboards",
+     "url": "https://www.onemetric.io",
+     "date": "2019-06-12",
+     "score": 0.25
+    },
+    {
+     "title": "tsviewdb",
+     "url": "https://github.com/google/tsviewdb",
+     "date": "2013-09-16",
+     "score": 0.23
+    },
+    {
+     "title": "Wizard, Mac Statistics App by Evan Miller",
+     "url": "http://www.wizardmac.com/",
+     "date": "2013-08-31",
+     "score": 0.2
+    }
+   ]
+  },
+  {
+   "id": "gap-30349970",
+   "tier": "strong_gap",
+   "request": "An app that converts normal language into Non‑Violent Communication phrasing.",
+   "ask_title": "Ask HN: Is There a Non-Violent Communication Language Converter?",
+   "hn_url": "https://news.ycombinator.com/item?id=30349970",
+   "date": "2022-02-15",
+   "points": 6,
+   "comments": 4,
+   "commenters_say": "does not exist",
+   "best_score": 0.29,
+   "candidates": [
+    {
+     "title": "FoxType – Using NLP to help you write more politely",
+     "url": "https://labs.foxtype.com",
+     "date": "2015-10-12",
+     "score": 0.29
+    },
+    {
+     "title": "Slack chatbot for quick text analysis",
+     "url": "https://slack.com/apps/A8ME24FNG-summarizebot",
+     "date": "2019-02-04",
+     "score": 0.28
+    },
+    {
+     "title": "We are the same, app for practicing compassion",
+     "url": "http://wearethesameapp.com",
+     "date": "2012-05-25",
+     "score": 0.26
+    }
+   ]
+  },
+  {
+   "id": "gap-18219219",
+   "tier": "strong_gap",
+   "request": "A parser library for Microsoft OneNote .one files or an open‑source note‑taking file format.",
+   "ask_title": "Ask HN: Is there a OneNote file parser? Or an equivalent opensource note format?",
+   "hn_url": "https://news.ycombinator.com/item?id=18219219",
+   "date": "2018-10-15",
+   "points": 11,
+   "comments": 7,
+   "commenters_say": "partly exists",
+   "best_score": 0.32,
+   "candidates": [
+    {
+     "title": "dtformats",
+     "url": "https://github.com/libyal/dtformats",
+     "date": "2017-04-23",
+     "score": 0.32
+    },
+    {
+     "title": "Productivity-Tools",
+     "url": "https://github.com/ArthurHub/Productivity-Tools",
+     "date": "2014-04-14",
+     "score": 0.28
+    },
+    {
+     "title": "deark",
+     "url": "https://github.com/jsummers/deark",
+     "date": "2014-04-20",
+     "score": 0.27
+    }
+   ]
+  },
+  {
+   "id": "gap-35179186",
+   "tier": "strong_gap",
+   "request": "A public registry linking companies to their bank account numbers for verification.",
+   "ask_title": "Ask HN: Is there a register which company uses which bank?",
+   "hn_url": "https://news.ycombinator.com/item?id=35179186",
+   "date": "2023-03-16",
+   "points": 5,
+   "comments": 5,
+   "commenters_say": "does not exist",
+   "best_score": 0.35,
+   "candidates": [
+    {
+     "title": "Launched our first product - Accthub.com",
+     "url": "https://accthub.com",
+     "date": "2012-05-14",
+     "score": 0.35
+    },
+    {
+     "title": "Open source list of ICOs financial information",
+     "url": "https://wentransparency.com",
+     "date": "2018-10-23",
+     "score": 0.23
+    },
+    {
+     "title": "QwickUp, open-source lookup tool.",
+     "url": "http://qwickup.com/",
+     "date": "2014-05-24",
+     "score": 0.23
+    }
+   ]
+  },
+  {
+   "id": "gap-34140098",
+   "tier": "strong_gap",
+   "request": "A tool to search public MIDI datasets for clips matching specific chord progressions and keys.",
+   "ask_title": "Ask HN: Is there a OS tool which queries MIDI datasets by chord progression/key?",
+   "hn_url": "https://news.ycombinator.com/item?id=34140098",
+   "date": "2022-12-26",
+   "points": 9,
+   "comments": 19,
+   "commenters_say": "partly exists",
+   "best_score": 0.36,
+   "candidates": [
+    {
+     "title": "I built this to make sharing from music services better",
+     "url": "https://match.audio/google/album/B4t6yqqvhnb2hy4st4uisjrcsrm",
+     "date": "2014-12-05",
+     "score": 0.36
+    },
+    {
+     "title": "choco",
+     "url": "https://github.com/smashub/choco",
+     "date": "2022-02-23",
+     "score": 0.3
+    },
+    {
+     "title": "Filter music based on mood, key, tempo, energy and other properties",
+     "url": "https://beta.skrrt.fun",
+     "date": "2019-07-15",
+     "score": 0.26
+    }
+   ]
+  },
+  {
+   "id": "gap-24395628",
+   "tier": "strong_gap",
+   "request": "A privacy‑focused DNA testing and genealogy service for building family trees without data resale.",
+   "ask_title": "Ask HN: Is there a DNA/genealogy site you trust?",
+   "hn_url": "https://news.ycombinator.com/item?id=24395628",
+   "date": "2020-09-06",
+   "points": 21,
+   "comments": 15,
+   "commenters_say": "does not exist",
+   "best_score": 0.43,
+   "candidates": [
+    {
+     "title": "genealogy-old",
+     "url": "https://github.com/liberu-genealogy/genealogy-old",
+     "date": "2018-05-30",
+     "score": 0.43
+    },
+    {
+     "title": "geneweb",
+     "url": "https://github.com/geneweb/geneweb",
+     "date": "2013-11-12",
+     "score": 0.3
+    },
+    {
+     "title": "silsilah",
+     "url": "https://github.com/nafiesl/silsilah",
+     "date": "2017-08-16",
+     "score": 0.3
+    }
+   ]
+  },
+  {
+   "id": "gap-40516685",
+   "tier": "strong_gap",
+   "request": "A service to submit and monitor website content for inclusion in large language model training datasets.",
+   "ask_title": "Ask HN: Are there any movements to create the equivalent of a sitemap for LLM's?",
+   "hn_url": "https://news.ycombinator.com/item?id=40516685",
+   "date": "2024-05-29",
+   "points": 10,
+   "comments": 4,
+   "commenters_say": "does not exist",
+   "best_score": 0.47,
+   "candidates": [
+    {
+     "title": "gi.st – the gist of the web",
+     "url": "http://thegi.st",
+     "date": "2015-07-07",
+     "score": 0.47
+    },
+    {
+     "title": "In-application web training platform",
+     "url": "https://www.synergyse.com/platform/",
+     "date": "2016-01-07",
+     "score": 0.31
+    },
+    {
+     "title": "Author Scan, a service that lets you monitor the web",
+     "url": "http://www.authorscan.com/",
+     "date": "2013-11-13",
+     "score": 0.29
+    }
+   ]
+  },
+  {
+   "id": "gap-28955982",
+   "tier": "strong_gap",
+   "request": "A platform that connects patients with rare cancers to a worldwide pool of oncologists for case review and advice.",
+   "ask_title": "Ask HN: I'm afraid my wife is dying. Is there a “quora.com” for rare cancers?",
+   "hn_url": "https://news.ycombinator.com/item?id=28955982",
+   "date": "2021-10-22",
+   "points": 56,
+   "comments": 25,
+   "commenters_say": "partly exists",
+   "best_score": 0.49,
+   "candidates": [
+    {
+     "title": "Tesse, a new interactive search engine",
+     "url": "https://news.ycombinator.com/item?id=13939339",
+     "date": "2017-03-23",
+     "score": 0.49
+    },
+    {
+     "title": "Looking for a mentor/expert for advice? Wiser is here to help you",
+     "url": "https://getwiser.net/",
+     "date": "2020-11-17",
+     "score": 0.46
+    },
+    {
+     "title": "Instawell, an anonymous community for our health + New API",
+     "url": "https://news.ycombinator.com/item?id=5917425",
+     "date": "2013-06-21",
+     "score": 0.36
+    }
+   ]
+  },
+  {
+   "id": "gap-25129228",
+   "tier": "strong_gap",
+   "request": "A PCAP analysis tool that lets you view and correlate multiple streams at once, e.g., with tabbed or linked stream views.",
+   "ask_title": "Ask HN: Is there a better PCAP analyzer than Wireshark?",
+   "hn_url": "https://news.ycombinator.com/item?id=25129228",
+   "date": "2020-11-17",
+   "points": 6,
+   "comments": 4,
+   "commenters_say": "partly exists",
+   "best_score": 0.55,
+   "candidates": [
+    {
+     "title": "CSI-SIEM",
+     "url": "https://github.com/Information-Warfare-Center/CSI-SIEM",
+     "date": "2020-06-28",
+     "score": 0.55
+    },
+    {
+     "title": "netcap",
+     "url": "https://github.com/dreadl0ck/netcap",
+     "date": "2018-11-28",
+     "score": 0.54
+    },
+    {
+     "title": "pi-list",
+     "url": "https://github.com/ebu/pi-list",
+     "date": "2017-10-18",
+     "score": 0.54
+    }
+   ]
+  },
+  {
+   "id": "gap-40946613",
+   "tier": "strong_gap",
+   "request": "A tool to generate 3D density maps of interior walls using Wi‑Fi signals.",
+   "ask_title": "Ask HN: Any tools to do generic WiFi imaging?",
+   "hn_url": "https://news.ycombinator.com/item?id=40946613",
+   "date": "2024-07-12",
+   "points": 97,
+   "comments": 68,
+   "commenters_say": "partly exists",
+   "best_score": 0.56,
+   "candidates": [
+    {
+     "title": "WiFi-Vision",
+     "url": "https://github.com/AideTechBot/WiFi-Vision",
+     "date": "2017-09-16",
+     "score": 0.56
+    },
+    {
+     "title": "RadioDiff",
+     "url": "https://github.com/UNIC-Lab/RadioDiff",
+     "date": "2024-06-20",
+     "score": 0.5
+    },
+    {
+     "title": "voxeltastic",
+     "url": "https://github.com/cnlohr/voxeltastic",
+     "date": "2015-02-13",
+     "score": 0.34
+    }
+   ]
+  },
+  {
+   "id": "gap-17820655",
+   "tier": "strong_gap",
+   "request": "A browser extension that blocks or warns about Amazon sellers with many fake or poor reviews.",
+   "ask_title": "Ask HN: Is there an extension to block sellers on Amazon?",
+   "hn_url": "https://news.ycombinator.com/item?id=17820655",
+   "date": "2018-08-22",
+   "points": 12,
+   "comments": 5,
+   "commenters_say": "does not exist",
+   "best_score": 0.56,
+   "candidates": [
+    {
+     "title": "Fakespot – identify fake reviews  Amazon",
+     "url": "http://www.fakespot.com",
+     "date": "2015-01-21",
+     "score": 0.56
+    },
+    {
+     "title": "Freshdill.com – Search Amazon and identify products with fake reviews",
+     "url": "http://freshdill.com",
+     "date": "2018-04-30",
+     "score": 0.48
+    },
+    {
+     "title": "Amazon is littered with fake reviews, see through them – Freshdill.com",
+     "url": "http://freshdill.com",
+     "date": "2018-05-14",
+     "score": 0.44
+    }
+   ]
+  },
+  {
+   "id": "gap-16334369",
+   "tier": "grey_zone",
+   "request": "A tool or standard that automatically generates API client IDs and secrets for various services.",
+   "ask_title": "Ask HN: Is there an API key generator?",
+   "hn_url": "https://news.ycombinator.com/item?id=16334369",
+   "date": "2018-02-08",
+   "points": 5,
+   "comments": 4,
+   "commenters_say": "partly exists",
+   "best_score": 0.65,
+   "candidates": [
+    {
+     "title": "credhub",
+     "url": "https://github.com/cloudfoundry/credhub",
+     "date": "2016-04-25",
+     "score": 0.65
+    },
+    {
+     "title": "My side project, a RESTful API to create authentications for your apps",
+     "url": "http://www.authdog.com/",
+     "date": "2011-05-16",
+     "score": 0.61
+    },
+    {
+     "title": "osiam",
+     "url": "https://github.com/osiam/osiam",
+     "date": "2015-04-28",
+     "score": 0.57
+    }
+   ]
+  },
+  {
+   "id": "gap-37468080",
+   "tier": "grey_zone",
+   "request": "An AI-powered tool that converts PDFs, including complex layouts and scanned documents, into ePub format.",
+   "ask_title": "Ask HN: Are there any AI-enhanced solutions for converting PDFs to ePub?",
+   "hn_url": "https://news.ycombinator.com/item?id=37468080",
+   "date": "2023-09-11",
+   "points": 7,
+   "comments": 5,
+   "commenters_say": "does not exist",
+   "best_score": 0.7,
+   "candidates": [
+    {
+     "title": "pdf2epubEX",
+     "url": "https://github.com/dodeeric/pdf2epubEX",
+     "date": "2020-07-05",
+     "score": 0.7
+    },
+    {
+     "title": "pdf-converter",
+     "url": "https://github.com/jmrozanec/pdf-converter",
+     "date": "2017-02-10",
+     "score": 0.7
+    },
+    {
+     "title": "ebook-converter-bot",
+     "url": "https://github.com/yshalsager/ebook-converter-bot",
+     "date": "2021-08-25",
+     "score": 0.66
+    }
+   ]
+  },
+  {
+   "id": "gap-32426700",
+   "tier": "grey_zone",
+   "request": "A multi‑cloud storage aggregation service that can provision and delete storage across major cloud providers on demand.",
+   "ask_title": "Ask HN: Is there any multi-cloud storage aggregator company?",
+   "hn_url": "https://news.ycombinator.com/item?id=32426700",
+   "date": "2022-08-11",
+   "points": 9,
+   "comments": 5,
+   "commenters_say": "partly exists",
+   "best_score": 0.71,
+   "candidates": [
+    {
+     "title": "Object Store Manipulator – curl for cloud storage",
+     "url": "https://github.com/appscode/osm",
+     "date": "2017-03-11",
+     "score": 0.71
+    },
+    {
+     "title": "cloud-pipeline",
+     "url": "https://github.com/epam/cloud-pipeline",
+     "date": "2019-03-06",
+     "score": 0.65
+    },
+    {
+     "title": "osm",
+     "url": "https://github.com/appscode/osm",
+     "date": "2016-10-26",
+     "score": 0.64
+    }
+   ]
+  },
+  {
+   "id": "gap-33352743",
+   "tier": "grey_zone",
+   "request": "A note‑taking app that syncs video, audio, transcripts and user notes in a single interface.",
+   "ask_title": "Is there any note-taking software/app for video?",
+   "hn_url": "https://news.ycombinator.com/item?id=33352743",
+   "date": "2022-10-27",
+   "points": 14,
+   "comments": 5,
+   "commenters_say": "partly exists",
+   "best_score": 0.72,
+   "candidates": [
+    {
+     "title": "Transnote – Video Notes by Timestamps",
+     "url": "https://get.transnote.co/M3e",
+     "date": "2020-04-08",
+     "score": 0.72
+    },
+    {
+     "title": "PodNotes",
+     "url": "https://github.com/chhoumann/PodNotes",
+     "date": "2022-07-02",
+     "score": 0.71
+    },
+    {
+     "title": "We Opened Up Our Transcription Tool",
+     "url": "https://news.ycombinator.com/item?id=7905996",
+     "date": "2014-06-17",
+     "score": 0.65
+    }
+   ]
+  },
+  {
+   "id": "gap-10873151",
+   "tier": "grey_zone",
+   "request": "An app to log where personal items are stored and retrieve their location later.",
+   "ask_title": "Ask HN: Is there an app that reminds me where I stashed stuff?",
+   "hn_url": "https://news.ycombinator.com/item?id=10873151",
+   "date": "2016-01-09",
+   "points": 5,
+   "comments": 8,
+   "commenters_say": "partly exists",
+   "best_score": 0.72,
+   "candidates": [
+    {
+     "title": "Online Inventory System for Individuals & Businesses - Want Feedback",
+     "url": "https://news.ycombinator.com/item?id=4330459",
+     "date": "2012-08-02",
+     "score": 0.72
+    },
+    {
+     "title": "iPhone app for keeping track of your stuff",
+     "url": "http://www.RayMckaig.com/Lender",
+     "date": "2012-05-20",
+     "score": 0.67
+    },
+    {
+     "title": "Simplifying searching on Android - Bean Search",
+     "url": "https://play.google.com/store/apps/details?id=in.beanify.beansearch",
+     "date": "2015-04-21",
+     "score": 0.67
+    }
+   ]
+  },
+  {
+   "id": "gap-26805374",
+   "tier": "grey_zone",
+   "request": "A cloud email service that minimizes the risk of being deplatformed, ideally with domain ownership and strong encryption.",
+   "ask_title": "Ask HN: Is there a cloud-based email service where one cannot be deplaotformed?",
+   "hn_url": "https://news.ycombinator.com/item?id=26805374",
+   "date": "2021-04-14",
+   "points": 5,
+   "comments": 6,
+   "commenters_say": "partly exists",
+   "best_score": 0.75,
+   "candidates": [
+    {
+     "title": "sovereign",
+     "url": "https://github.com/sovereign/sovereign",
+     "date": "2013-08-19",
+     "score": 0.75
+    },
+    {
+     "title": "docker-mailserver",
+     "url": "https://github.com/jeboehm/docker-mailserver",
+     "date": "2016-05-31",
+     "score": 0.69
+    },
+    {
+     "title": "lemon.email-dApp",
+     "url": "https://github.com/DevanaLabs/lemon.email-dApp",
+     "date": "2017-03-24",
+     "score": 0.67
+    }
+   ]
+  },
+  {
+   "id": "gap-11532852",
+   "tier": "grey_zone",
+   "request": "A budgeting and cost‑tracking tool for freelance digital projects that shows remaining dollars per project.",
+   "ask_title": "Ask HN: Leaking hours and money. I need a tool to keep digital projects in check",
+   "hn_url": "https://news.ycombinator.com/item?id=11532852",
+   "date": "2016-04-20",
+   "points": 15,
+   "comments": 13,
+   "commenters_say": "partly exists",
+   "best_score": 0.76,
+   "candidates": [
+    {
+     "title": "erpnext",
+     "url": "https://github.com/frappe/erpnext",
+     "date": "2011-06-08",
+     "score": 0.76
+    },
+    {
+     "title": "hledger",
+     "url": "https://github.com/hledgerorg/hledger",
+     "date": "2013-04-08",
+     "score": 0.7
+    },
+    {
+     "title": "Online timesheets and project cost managing and rich 3rd party integrations",
+     "url": "http://cronforce.com/",
+     "date": "2015-11-12",
+     "score": 0.64
+    }
+   ]
+  },
+  {
+   "id": "gap-41638263",
+   "tier": "grey_zone",
+   "request": "A website that aggregates and tracks newly created programming languages and trends.",
+   "ask_title": "Is there a \"distrowatch\" like site for programming languages?",
+   "hn_url": "https://news.ycombinator.com/item?id=41638263",
+   "date": "2024-09-24",
+   "points": 10,
+   "comments": 8,
+   "commenters_say": "partly exists",
+   "best_score": 0.76,
+   "candidates": [
+    {
+     "title": "languish",
+     "url": "https://github.com/tjpalmer/languish",
+     "date": "2020-01-22",
+     "score": 0.76
+    },
+    {
+     "title": "Language Health – Compare programming language health over time",
+     "url": "https://www.languagehealth.com",
+     "date": "2017-12-12",
+     "score": 0.53
+    },
+    {
+     "title": "Programming Languages Database",
+     "url": "https://programminglanguages.co",
+     "date": "2023-09-06",
+     "score": 0.48
+    }
+   ]
+  },
+  {
+   "id": "gap-13488795",
+   "tier": "grey_zone",
+   "request": "Open‑source platform for network, timeline and unstructured‑data analysis similar to intelligence‑analyst software.",
+   "ask_title": "Ask HN: Is there an open source equivalent to Palantir?",
+   "hn_url": "https://news.ycombinator.com/item?id=13488795",
+   "date": "2017-01-26",
+   "points": 159,
+   "comments": 45,
+   "commenters_say": "partly exists",
+   "best_score": 0.77,
+   "candidates": [
+    {
+     "title": "marija",
+     "url": "https://github.com/dutchcoders/marija",
+     "date": "2016-10-13",
+     "score": 0.77
+    },
+    {
+     "title": "Facster.com technology demonstration",
+     "url": "https://news.ycombinator.com/item?id=1715461",
+     "date": "2010-09-22",
+     "score": 0.74
+    },
+    {
+     "title": "aleph",
+     "url": "https://github.com/alephdata/aleph",
+     "date": "2014-08-27",
+     "score": 0.67
+    }
+   ]
+  },
+  {
+   "id": "gap-18432459",
+   "tier": "grey_zone",
+   "request": "A service that automatically sends SMS or phone call reminders when an email receives no reply within a set time.",
+   "ask_title": "Ask HN: Is there a service that escalates emails to SMS or Phone call reminders?",
+   "hn_url": "https://news.ycombinator.com/item?id=18432459",
+   "date": "2018-11-12",
+   "points": 5,
+   "comments": 6,
+   "commenters_say": "does not exist",
+   "best_score": 0.77,
+   "candidates": [
+    {
+     "title": "Simple Email Reminders",
+     "url": "http://remindmebro.com/",
+     "date": "2017-04-07",
+     "score": 0.77
+    },
+    {
+     "title": "MsgMe.at - an ultra simple reminder service",
+     "url": "http://msgme.at",
+     "date": "2011-03-30",
+     "score": 0.72
+    },
+    {
+     "title": "Reminder Hero - Automatic e-mail and text message reminders",
+     "url": "http://reminderhero.com",
+     "date": "2013-10-05",
+     "score": 0.63
+    }
+   ]
+  },
+  {
+   "id": "gap-43520743",
+   "tier": "grey_zone",
+   "request": "A customizable trading dashboard that aggregates charts, order flow, news, and social feeds in a single interface.",
+   "ask_title": "Any tools for a customizable trading dashboard (charts, order flow, news, etc.)?",
+   "hn_url": "https://news.ycombinator.com/item?id=43520743",
+   "date": "2025-03-30",
+   "points": 5,
+   "comments": 9,
+   "commenters_say": "partly exists",
+   "best_score": 0.77,
+   "candidates": [
+    {
+     "title": "online_trading_platform",
+     "url": "https://github.com/reshinto/online_trading_platform",
+     "date": "2019-07-17",
+     "score": 0.77
+    },
+    {
+     "title": "profitmaker",
+     "url": "https://github.com/suenot/profitmaker",
+     "date": "2018-09-24",
+     "score": 0.77
+    },
+    {
+     "title": "ConvexValue – Financial Analytics Browser",
+     "url": "https://convexvalue.com/",
+     "date": "2024-09-29",
+     "score": 0.76
+    }
+   ]
+  },
+  {
+   "id": "gap-33595879",
+   "tier": "grey_zone",
+   "request": "A paid cloud music storage service that keeps my uploaded personal tracks intact, without removing them due to licensing or location restrictions.",
+   "ask_title": "Ask HN: Is there a cloud music library that doesn't keep deleting my music?",
+   "hn_url": "https://news.ycombinator.com/item?id=33595879",
+   "date": "2022-11-14",
+   "points": 92,
+   "comments": 123,
+   "commenters_say": "does not exist",
+   "best_score": 0.81,
+   "candidates": [
+    {
+     "title": "Streem.io - Media Center on the Cloud",
+     "url": "http://www.streem.io",
+     "date": "2013-02-22",
+     "score": 0.81
+    },
+    {
+     "title": "Viberr",
+     "url": "https://github.com/buckyroberts/Viberr",
+     "date": "2016-03-28",
+     "score": 0.76
+    },
+    {
+     "title": "Cubbit, accessible like Dropbox, secure like your hard drive",
+     "url": "https://business.cubbit.io",
+     "date": "2020-09-09",
+     "score": 0.7
+    }
+   ]
+  },
+  {
+   "id": "gap-31414459",
+   "tier": "grey_zone",
+   "request": "A decentralized database with append‑only history, signed operations, and conflict resolution handled via social mechanisms rather than complex consensus.",
+   "ask_title": "Ask HN: Is there a descentralized DB with a simple social conflict resolution?",
+   "hn_url": "https://news.ycombinator.com/item?id=31414459",
+   "date": "2022-05-17",
+   "points": 8,
+   "comments": 10,
+   "commenters_say": "does not exist",
+   "best_score": 0.81,
+   "candidates": [
+    {
+     "title": "scuttlebutt",
+     "url": "https://github.com/dominictarr/scuttlebutt",
+     "date": "2012-07-25",
+     "score": 0.81
+    },
+    {
+     "title": "ssb-server",
+     "url": "https://github.com/ssbc/ssb-server",
+     "date": "2014-10-28",
+     "score": 0.73
+    },
+    {
+     "title": "Noms – A new decentralized database based on ideas from Git",
+     "url": "https://medium.com/@aboodman/noms-init-98b7f0c3566#.ojb6eaz94",
+     "date": "2016-08-02",
+     "score": 0.68
+    }
+   ]
+  },
+  {
+   "id": "gap-40096424",
+   "tier": "grey_zone",
+   "request": "An AI assistant that extracts emails and messages, learns personal style, and drafts replies across multiple platforms.",
+   "ask_title": "Ask HN: Is there a tool to extract ALL emails, learn \"me\", draft responses",
+   "hn_url": "https://news.ycombinator.com/item?id=40096424",
+   "date": "2024-04-20",
+   "points": 5,
+   "comments": 3,
+   "commenters_say": "partly exists",
+   "best_score": 0.81,
+   "candidates": [
+    {
+     "title": "inbox-zero",
+     "url": "https://github.com/elie222/inbox-zero",
+     "date": "2023-07-12",
+     "score": 0.81
+    },
+    {
+     "title": "I’m an introvert, made an app to maintain relationships, added more AI",
+     "url": "https://play.google.com/store/apps/details?id=dev.mtc.ga&hl=en_US",
+     "date": "2023-06-24",
+     "score": 0.81
+    },
+    {
+     "title": "Ellie – Your GPT-3 email assistant",
+     "url": "https://ellieai.com",
+     "date": "2022-12-15",
+     "score": 0.7
+    }
+   ]
+  },
+  {
+   "id": "gap-27258919",
+   "tier": "grey_zone",
+   "request": "A diagramming tool for visualizing data lineage and ETL transformation rules with drill‑down navigation.",
+   "ask_title": "Ask HN: Any tool to create diagram for data lineage and ETL rules?",
+   "hn_url": "https://news.ycombinator.com/item?id=27258919",
+   "date": "2021-05-23",
+   "points": 12,
+   "comments": 6,
+   "commenters_say": "partly exists",
+   "best_score": 0.82,
+   "candidates": [
+    {
+     "title": "sqlflow_public",
+     "url": "https://github.com/sqlparser/sqlflow_public",
+     "date": "2019-10-22",
+     "score": 0.82
+    },
+    {
+     "title": "data-lineage",
+     "url": "https://github.com/tokern/data-lineage",
+     "date": "2020-03-17",
+     "score": 0.73
+    },
+    {
+     "title": "marquez",
+     "url": "https://github.com/MarquezProject/marquez",
+     "date": "2018-07-05",
+     "score": 0.73
+    }
+   ]
+  },
+  {
+   "id": "gap-23497756",
+   "tier": "grey_zone",
+   "request": "A voice‑controlled programming system that lets me code conversationally without strain, using deep‑learning speech recognition.",
+   "ask_title": "Ask HN: Is there any work being done in speech-to-code with deep learning?",
+   "hn_url": "https://news.ycombinator.com/item?id=23497756",
+   "date": "2020-06-12",
+   "points": 172,
+   "comments": 61,
+   "commenters_say": "partly exists",
+   "best_score": 0.83,
+   "candidates": [
+    {
+     "title": "CodeSpeak, the beginnings of a web-based speech-to-code tool",
+     "url": "https://github.com/sethwilsonUS/codespeak",
+     "date": "2019-05-27",
+     "score": 0.83
+    },
+    {
+     "title": "codespeak",
+     "url": "https://github.com/sethwilsonUS/codespeak",
+     "date": "2019-04-12",
+     "score": 0.83
+    },
+    {
+     "title": "VimSpeak",
+     "url": "https://github.com/AshleyF/VimSpeak",
+     "date": "2013-05-05",
+     "score": 0.82
+    }
+   ]
+  },
+  {
+   "id": "gap-19248518",
+   "tier": "grey_zone",
+   "request": "An open‑source platform to collect, discuss, and coordinate climate‑change ideas and solutions.",
+   "ask_title": "Ask HN: Is There Any Interest in an Open Source Solution for Climate Change",
+   "hn_url": "https://news.ycombinator.com/item?id=19248518",
+   "date": "2019-02-25",
+   "points": 26,
+   "comments": 14,
+   "commenters_say": "does not exist",
+   "best_score": 0.83,
+   "candidates": [
+    {
+     "title": "your-priorities-app",
+     "url": "https://github.com/CitizensFoundation/your-priorities-app",
+     "date": "2014-08-22",
+     "score": 0.83
+    },
+    {
+     "title": "plots2",
+     "url": "https://github.com/publiclab/plots2",
+     "date": "2013-06-05",
+     "score": 0.82
+    },
+    {
+     "title": "openideal",
+     "url": "https://github.com/linnovate/openideal",
+     "date": "2014-02-07",
+     "score": 0.8
+    }
+   ]
+  },
+  {
+   "id": "gap-36830583",
+   "tier": "grey_zone",
+   "request": "A browser extension that shades AI‑generated text based on detection confidence, fading it toward the background color.",
+   "ask_title": "Ask HN: Is there a browser plugin that will fade AI generated text to gray?",
+   "hn_url": "https://news.ycombinator.com/item?id=36830583",
+   "date": "2023-07-22",
+   "points": 7,
+   "comments": 12,
+   "commenters_say": "does not exist",
+   "best_score": 0.84,
+   "candidates": [
+    {
+     "title": "UserScript to detect GPT generated comments on Hacker News",
+     "url": "https://github.com/chryzsh/GPTCommentDetector",
+     "date": "2022-12-08",
+     "score": 0.84
+    },
+    {
+     "title": "Is this Chrome extension a useful application of AI?",
+     "url": "https://crammer.app/",
+     "date": "2020-08-19",
+     "score": 0.5
+    },
+    {
+     "title": "Domai.nr Chrome Extension",
+     "url": "https://news.ycombinator.com/item?id=2784741",
+     "date": "2011-07-20",
+     "score": 0.47
+    }
+   ]
+  },
+  {
+   "id": "gap-27820141",
+   "tier": "grey_zone",
+   "request": "A tool that automatically generates a GUI from incoming structured data streams (JSON, MessagePack, etc.)",
+   "ask_title": "Ask HN: Is there an automatic GUI builder from structured data?",
+   "hn_url": "https://news.ycombinator.com/item?id=27820141",
+   "date": "2021-07-13",
+   "points": 5,
+   "comments": 6,
+   "commenters_say": "partly exists",
+   "best_score": 0.84,
+   "candidates": [
+    {
+     "title": "EverLayout",
+     "url": "https://github.com/acrocat/EverLayout",
+     "date": "2017-02-04",
+     "score": 0.84
+    },
+    {
+     "title": "oui",
+     "url": "https://github.com/wearekuva/oui",
+     "date": "2016-02-26",
+     "score": 0.83
+    },
+    {
+     "title": "Instantly turn any API into a native app, with a single JSON markup",
+     "url": "https://news.ycombinator.com/item?id=11868903",
+     "date": "2016-06-09",
+     "score": 0.82
+    }
+   ]
+  }
+ ]
+}

@@ -72,7 +72,12 @@ tampoco señalan una herramienta existente. Lista completa: [`data/eval/gap_cand
 uv sync && uv run pytest              # tests: corren en un clon limpio, sin red ni datos locales
 uv run gapfinder gaps report          # regenera data/eval/gap_candidates.md (necesita los datos locales)
 uv run gapfinder review               # colas de revisión humana (ídem)
+uv run gapfinder gaps site            # regenera site/data.json para el sitio público (ídem)
+python3 -m http.server -d site 8000   # ver el sitio en http://localhost:8000
 ```
+
+El sitio (`site/`) es estático: `index.html` + `data.json`, sin build. Se puede servir tal cual desde cualquier
+hosting estático.
 
 El corpus (`data/corpus.db`, 1,8 GB), los embeddings, el índice BM25 y los veredictos del verificador
 (`data/phase3/*.jsonl`) no están en el repo; el corpus se reconstruye con `ingest`, `embed` y `bm25` (ver Fase 1 y
